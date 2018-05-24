@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC4A057C-60A2-4627-A4D9-BDD23A142755}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AgoraMobileStandardNet</RootNamespace>
+    <AssemblyName>AgoraMobileStandardNet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SearchDialogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ListPrestationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ListPeoplePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ListEventsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DetailPeoplePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CustomContentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nonetwork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchDialogPage.xaml.cs">
+      <DependentUpon>SearchDialogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Pages\ListPrestationsPage.xaml.cs">
+      <DependentUpon>ListPrestationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IDataStore.cs" />
+    <Compile Include="Services\SQLData.cs" />
+    <Compile Include="Services\WebServiceData.cs" />
+    <Compile Include="Models\CountParticipants.cs" />
+    <Compile Include="Models\Evenement.cs" />
+    <Compile Include="Models\InscriptionParticipant.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\PresenceParticipant.cs" />
+    <Compile Include="Models\Prestation.cs" />
+    <Compile Include="Pages\ListPeoplePage.xaml.cs">
+      <DependentUpon>ListPeoplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListEventsPage.xaml.cs">
+      <DependentUpon>ListEventsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\EvenementCell.cs" />
+    <Compile Include="ViewModels\InscriptionCell.cs" />
+    <Compile Include="ViewModels\ParticipantCell.cs" />
+    <Compile Include="ViewModels\PrestationCell.cs" />
+    <Compile Include="Pages\DetailPeoplePage.xaml.cs">
+      <DependentUpon>DetailPeoplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Interfaces\IPersonalFolder.cs" />
+    <Compile Include="Interfaces\INetTools.cs" />
+    <Compile Include="Interfaces\IScanPage.cs" />
+    <Compile Include="Interfaces\ISpinner.cs" />
+    <Compile Include="Helpers\SpinnerDisplay.cs" />
+    <Compile Include="Interfaces\IsPrestationFiltered.cs" />
+    <Compile Include="Interfaces\IsManifFiltered.cs" />
+    <Compile Include="Interfaces\IsParticipantFiltered.cs" />
+    <Compile Include="Pages\CustomContentPage.xaml.cs">
+      <DependentUpon>CustomContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\PageTitleViewModel.cs" />
+    <Compile Include="Services\ImportBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="backarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

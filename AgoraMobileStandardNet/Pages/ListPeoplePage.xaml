@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AgoraMobileStandardNet.Pages.ListPeoplePage" xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
+    <StackLayout>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+            <StackLayout x:Name="DataLayout" Grid.Row="0">
+            </StackLayout>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnScan" Text="Scan" Grid.Column="0" />
+                <Button x:Name="BtnSearch" Image="" Text="Rechercher" Grid.Column="1" />
+            </Grid>
+        </Grid>
+    </StackLayout>
+</custom:CustomContentPage>

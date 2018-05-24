@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="AgoraMobileStandardNet.Pages.CustomContentPage"
+             ControlTemplate="{StaticResource MainPageTemplate}">
+    <ContentPage.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <ControlTemplate x:Key="MainPageTemplate">
+                <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                       <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <BoxView BackgroundColor="Aqua" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" />
+                    <Image Source="backarrow.png"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           Grid.Row="1"
+                           Grid.Column="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoBack" />
+                        </Image.GestureRecognizers>
+                        </Image>
+                           
+                   
+                    <Label x:Name="LblTitle" Text="{TemplateBinding BindingContext.Title}" HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           BackgroundColor="Transparent" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" />
+                    <Image x:Name="ImgNoNetwork"  
+                           Source="nonetwork.png"
+                           IsVisible="{TemplateBinding BindingContext.IsHorsConnexionVisible}"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="1" />
+                    <Button Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="1" Clicked="DisplayActionSheet">
+                        <Button.Text>Menu</Button.Text>
+                    </Button>
+                    <ContentPresenter VerticalOptions="FillAndExpand" 
+                                      HorizontalOptions="FillAndExpand" 
+                                      Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" />
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
+</ContentPage>

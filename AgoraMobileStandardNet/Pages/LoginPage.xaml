@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AgoraMobileStandardNet.Pages.LoginPage">
+<StackLayout VerticalOptions="Center"
+                 Spacing="20"
+                 Padding="20">
+        <Label Text="Login" HorizontalOptions="Center" />
+        <Entry Placeholder="Login" 
+               x:Name="TxtLogin" />
+        <Entry Placeholder="Password"
+               x:Name="TxtPassword"
+               IsPassword="true" />
+        <Entry Placeholder="#000"
+               x:Name="TxtSlot" />
+        <Button x:Name="BtnLogin" 
+                Text="Login" TextColor="White"
+                BackgroundColor="#77D065"
+                />
+        <Button x:Name="BtnHorsConnexion"
+                Text="Mode Hors Ligne" TextColor="Black"
+                BackgroundColor="Gray"
+                />
+        <Label x:Name="ErrorMsg" TextColor="Red" />
+                </StackLayout>
+</ContentPage>

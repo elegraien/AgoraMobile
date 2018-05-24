@@ -1,0 +1,27 @@
+Function=xamarin_timezone_get_data
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/mscorlib.dll
+Function=CreateZStream
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/System.dll
+Function=xamarin_get_block_descriptor
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/mtouch-cache/Link/Xamarin.iOS.dll
+Function=mono_pmip
