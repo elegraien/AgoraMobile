@@ -13,8 +13,7 @@ namespace AgoraMobileStandardNet.Pages
         List<Prestation> prestations;
         ListView listView;
         private int idEvent;
-        //SpinnerDisplay sd;
-
+ 
         // Pour l'accueil
         int NbPresentsAccueil { get; set; }
         int NbTotalAccueil { get; set; }
@@ -26,9 +25,6 @@ namespace AgoraMobileStandardNet.Pages
 
             this.idEvent = idEvent;
 
-            // Le Spinner
-            //sd = new SpinnerDisplay();
-            //sd.Show();
 
             // Le titre
             this.Title = eventName;
@@ -37,25 +33,23 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
 
             DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement
-            // Si pas de token ou erreur : on revient à la page d'accueil
-            string token = Global.GetSettings(TypeSettings.Token);
-            if (string.IsNullOrEmpty(token))
-                await Navigation.PopAsync();
+
 
             // Les WSData
             WebServiceData<CountParticipants> wsDataCP = new WebServiceData<CountParticipants>(
-              token,
+              this.Token,
               Global.WS_COUNT_PARTICIPANTS + "?id=" + idEvent,
                 "GET",
                 idEvent
 
               );
             WebServiceData<Prestation> wsDataP = new WebServiceData<Prestation>(
-                token,
+                this.Token,
                 Global.WS_GET_PRESTATIONS + idEvent.ToString(),
                 "GET",
                 idEvent

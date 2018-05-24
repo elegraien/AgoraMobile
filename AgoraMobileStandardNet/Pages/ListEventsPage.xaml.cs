@@ -38,18 +38,17 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
+
             DataLayout.Children.Clear();
 
             // Récupération des events
-            // Si pas de token ou erreur : on revient à la page d'accueil
-            string token = Global.GetSettings(TypeSettings.Token);
-            if (string.IsNullOrEmpty(token))
-                await Navigation.PopAsync();
+
 
             // Appelle le Web Service
             //evenements = GetEvents(token);
             WebServiceData<Evenement> webServiceData = new WebServiceData<Evenement>(
-                token,
+                this.Token,
                 Global.WS_GET_EVENTS
             );
 

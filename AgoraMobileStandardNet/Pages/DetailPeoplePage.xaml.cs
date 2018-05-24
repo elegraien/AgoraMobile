@@ -33,12 +33,10 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
  
             // Récupération des participants
-            // Si pas de token ou erreur : on revient à la page d'accueil
-            string token = Global.GetSettings(TypeSettings.Token);
-            if (string.IsNullOrEmpty(token))
-                await Navigation.PopAsync();
+
 
             // Appelle le Web Service
             string url = "";
@@ -48,7 +46,7 @@ namespace AgoraMobileStandardNet.Pages
                 url = Global.WS_GET_PARTICIPANT_DETAILS + "?id=" + idPeople;
 
             WebServiceData<Participant> wsData = new WebServiceData<Participant>(
-                token,
+                this.Token,
                 url,
                 "GET",
                 this.idManif,
@@ -76,7 +74,7 @@ namespace AgoraMobileStandardNet.Pages
             else
                 url = Global.WS_GET_PARTICIPANT_PRESENCE + "?id=" + idPeople;
             WebServiceData<PresenceParticipant> wsData2 = new WebServiceData<PresenceParticipant>(
-                token,
+                this.Token,
                 url,
                 "GET",
                 idManif,
@@ -104,7 +102,7 @@ namespace AgoraMobileStandardNet.Pages
             else
                 url = Global.WS_GET_PARTICIPANT_INSCRIPTIONS + "?id=" + idPeople;
             WebServiceData<InscriptionParticipant> wsData3 = new WebServiceData<InscriptionParticipant>(
-                 token,
+                 this.Token,
                  url,
                 "GET",
                 idManif,

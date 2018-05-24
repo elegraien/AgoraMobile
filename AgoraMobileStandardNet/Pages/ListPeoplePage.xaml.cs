@@ -18,11 +18,9 @@ namespace AgoraMobileStandardNet.Pages
         ListView listView;
         int? idPrestation;
         int idEvent;
-        //ZXingScannerPage scanPage;
-        IScanPage scanPage;
-        //SpinnerDisplay sd;
 
-        string token;
+        IScanPage scanPage;
+
 
         public ListPeoplePage(int idEvent, int? idPrestation, int nbTotal, int nbPresents, string prestationName)
         {
@@ -39,6 +37,8 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
+
             DataLayout.Children.Clear();
 
             // Les boutons en bas
@@ -62,10 +62,6 @@ namespace AgoraMobileStandardNet.Pages
  
 
             // Récupération des participants
-            // Si pas de token ou erreur : on revient à la page d'accueil
-            this.token = Global.GetSettings(TypeSettings.Token);
-            if (string.IsNullOrEmpty(this.token))
-                await Navigation.PopAsync();
 
             // TEST
             //SendPresenceAck("2032368"); //, this.idPrestation);
@@ -79,7 +75,7 @@ namespace AgoraMobileStandardNet.Pages
                 url = Global.WS_GET_PARTICIPANTS + "?id=" + this.idEvent + "&StartRecord=0&RecordsCount=100";
 
             WebServiceData<Participant> wsData = new WebServiceData<Participant>(
-                this.token,
+                this.Token,
                 url,
                 "GET",
                 idEvent,
@@ -218,7 +214,7 @@ namespace AgoraMobileStandardNet.Pages
                 url = Global.WS_SET_PARTICIPANT_PRESENCE_SS_PRESTA + "/" + paramA09;
 
             WebServiceData<SetPresenceRetour> wsData = new WebServiceData<SetPresenceRetour>(
-                this.token,
+                this.Token,
                 url,
                 "POST"
             );
@@ -243,7 +239,7 @@ namespace AgoraMobileStandardNet.Pages
         private string getParameterByName(string url, string paramName)
         {
             try
-            {
+            { 
                 Uri newUri = new Uri(url);
                 // On découpe les paramètres
                 string query = newUri.Query;

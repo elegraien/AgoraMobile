@@ -11,6 +11,7 @@ namespace AgoraMobileStandardNet.Pages
     public partial class CustomContentPage : ContentPage
     {
 		PageTitleViewModel pageTitleViewModel;
+
 		// Pour le binding du titre de la page
 		public new string Title
 		{
@@ -20,7 +21,8 @@ namespace AgoraMobileStandardNet.Pages
         // Loading spinner
         public SpinnerDisplay SpinnerDisplay { get; set; }
 
-
+        // Le token 
+        public string Token { get; set; }
 
 		// Le titre passé en Binding
 
@@ -80,6 +82,16 @@ namespace AgoraMobileStandardNet.Pages
             }
         }
 
+        protected override async void OnAppearing()
+        {
+            
+            // Récupération des participants
+            // Si pas de token ou erreur : on revient à la page d'accueil
+            this.Token = Global.GetSettings(TypeSettings.Token);
+            if (string.IsNullOrEmpty(this.Token))
+                await Navigation.PopAsync();
+
+        }
     }
 
 

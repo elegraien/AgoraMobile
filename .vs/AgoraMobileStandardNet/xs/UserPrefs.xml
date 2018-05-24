@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{BD4AD3C9-5ADD-443C-807F-305A3639EBF7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs">
+    <Files>
+      <File FileName="AgoraMobileStandardNet/Services/ImportBase.cs" Line="19" Column="76" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="105" Column="28" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="87" Column="13" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="46" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="52" Column="27" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="242" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F3B7B95C-BF6C-416A-ACEE-D10B66DD2E08" />
+  <MultiItemStartupConfigurations />
+</Properties>
