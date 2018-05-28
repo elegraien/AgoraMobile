@@ -59,8 +59,8 @@
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Threading.Tasks.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Threading.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Runtime.Extensions.dll
-/Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Net.Primitives.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Linq.dll
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Net.Primitives.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Collections.Concurrent.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Reflection.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/android/assets/System.Linq.Expressions.dll

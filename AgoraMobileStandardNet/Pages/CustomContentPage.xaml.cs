@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AgoraMobileStandardNet.Helpers;
+using AgoraMobileStandardNet.Interfaces;
 using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Pages
@@ -8,7 +9,7 @@ namespace AgoraMobileStandardNet.Pages
     /// <summary>
     /// La classe de base pour les pages, avec une navigation et un Back, un titre de page, un menu déroulant (A FAIRE !!!)
     /// </summary>
-    public partial class CustomContentPage : ContentPage
+    public partial class CustomContentPage<T> : ContentPage
     {
 		PageTitleViewModel pageTitleViewModel;
 
@@ -34,6 +35,7 @@ namespace AgoraMobileStandardNet.Pages
 
 			InitializeComponent();
 
+
             // Le spinner
             SpinnerDisplay = new SpinnerDisplay();
             SpinnerDisplay.Show();
@@ -58,6 +60,7 @@ namespace AgoraMobileStandardNet.Pages
 
  
         }
+
 
 
 
@@ -92,6 +95,22 @@ namespace AgoraMobileStandardNet.Pages
                 await Navigation.PopAsync();
 
         }
+
+        // NE FONCTIONNE PAS ! ON NE PEUT PAS FAIRE D'HERITAGE D'UNE PAGE GENERIC en XAML !!!
+        /// <summary>
+        /// A surcharger pour renvoyer les datas 
+        /// </summary>
+        /// <returns>The instances.</returns>
+        /// <param name="idEvent">Identifier event.</param>
+        /// <param name="idPrestation">Identifier prestation.</param>
+        /// <param name="idParticipant">Identifier participant.</param>
+        protected virtual List<T> GetInstances(int? idEvent=null, 
+                                                        int? idPrestation=null, 
+                                                        int? idParticipant=null)
+        {
+            return null;
+        }
+
     }
 
 

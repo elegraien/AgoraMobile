@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AgoraMobileStandardNet.Pages.ListPeoplePage" xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
+<custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                        xmlns:models="clr-namespace:AgoraMobileStandardNet.Models"
+                         x:Class="AgoraMobileStandardNet.Pages.ListPeoplePage" 
+              x:TypeArguments="models:Participant"
+                         xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>

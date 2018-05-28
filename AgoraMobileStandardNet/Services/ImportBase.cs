@@ -10,13 +10,14 @@ namespace AgoraMobileStandardNet.Services
         }
 
         /// <summary>
-        /// Récupération des données et stockage en base
+        /// Récupération des données d'une manif (prestat + présences + participants) et stockage en base
         /// </summary>
-        public void DownloadData()
+        public void DownloadData(int idEvent)
         {
             // On va simuler le click sur toutes les prestations d'un Event, puis sur chaque Guest d'une prestation
-            // car le système  decahce fonctionne déjà
+            // car le système  de cache fonctionne déjà
             // On ne passe donc pas par les méthodes de l'appli Cordova !!!
+
         }
     }
 }

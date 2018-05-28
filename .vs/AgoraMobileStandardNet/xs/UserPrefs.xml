@@ -1,12 +1,20 @@
 ﻿<Properties StartupConfiguration="{BD4AD3C9-5ADD-443C-807F-305A3639EBF7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Services/ImportBase.cs" Line="19" Column="76" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="105" Column="28" />
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="87" Column="13" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="46" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="52" Column="27" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="242" Column="15" />
+      <File FileName="AgoraMobileStandardNet/Services/ImportBase.cs" Line="20" Column="13" />
+      <File FileName="AgoraMobileStandardNet/Global.cs" Line="19" Column="91" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml" Line="51" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="36" Column="6" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="96" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml" Line="7" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Models/Evenement.cs" Line="6" Column="40" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="28" Column="13" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml" Line="6" Column="31" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="70" Column="13" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="7" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="42" Column="93" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml" Line="7" Column="1" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

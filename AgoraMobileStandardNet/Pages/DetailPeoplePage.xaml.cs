@@ -9,12 +9,15 @@ using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Pages
 {
-    public partial class DetailPeoplePage : CustomContentPage
+    public partial class DetailPeoplePage : CustomContentPage<Participant>
     {
-        SpinnerDisplay sd;
+        //SpinnerDisplay sd;
         int? idPrestation;
         int idPeople;
         int idManif;
+        // la liste des cellules de participations
+        List<TempInscriptionForCell> inscriptionsCells = new List<TempInscriptionForCell>();
+            
 
 
         public DetailPeoplePage(int idPeople, int idManif, int? idPrestation)
@@ -26,17 +29,47 @@ namespace AgoraMobileStandardNet.Pages
             this.idManif = idManif;
 
             // Le Spinner
-            sd = new SpinnerDisplay();
-            sd.Show();
+            //sd = new SpinnerDisplay();
+            //sd.Show();
 
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
- 
-            // Récupération des participants
 
+            // Récupération des participants
+            var participants = GetInstances(this.idManif, this.idPrestation, this.idPeople);
+
+
+
+
+            // On affiche le participant
+            Participant participant = participants[0];
+            FullName.Text = participant.FirstName + " " + participant.LastName;
+            Categorie.Text = participant.Category;
+            Societe.Text = participant.Company;
+            Email.Text = participant.Email;
+            Telephone.Text = participant.Telephone;
+
+            // On ajoute la liste des participations
+            listView.RowHeight = 120;
+            listView.ItemsSource = inscriptionsCells;
+            listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
+
+            SpinnerDisplay.Hide();
+        }
+
+        /// <summary>
+        /// Récupération de l'instance et des inscriptions
+        /// </summary>
+        /// <returns>The instances.</returns>
+        /// <param name="idEvent">Identifier event.</param>
+        /// <param name="idPrestation">Identifier prestation.</param>
+        /// <param name="idParticipant">Identifier participant.</param>
+        protected override List<Participant> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        {
+            List<Participant> instances = null;
 
             // Appelle le Web Service
             string url = "";
@@ -53,16 +86,18 @@ namespace AgoraMobileStandardNet.Pages
                 this.idPrestation,
                 this.idPeople
             );
-            List<Participant> participants = null;
+
             if (!wsData.IsHorsConnexion)
             {
-                participants = wsData.GetData((jsonObject) =>
-               {
-                   return new Participant(jsonObject, idManif, idPrestation);
-               }, null).Result;
-            } else {
+                instances = wsData.GetData((jsonObject) =>
+                {
+                    return new Participant(jsonObject, idManif, idPrestation);
+                }, null).Result;
+            }
+            else
+            {
                 // On récupère la ligne dans la liste
-                participants = wsData.RetrieveAllFromCache().Where(X => X.Id == idPeople).ToList();
+                instances = wsData.RetrieveAllFromCache().Where(X => X.Id == idPeople).ToList();
             }
 
             // Présence sur l'accueil :
@@ -81,6 +116,7 @@ namespace AgoraMobileStandardNet.Pages
                 idPrestation,
                 idPeople
             );
+
             List<PresenceParticipant> presences = null;
             // On récupère la liste des dates de validation pour le people passé en paramètre pour l'accueil principal !!
             if (!wsData2.IsHorsConnexion)
@@ -89,7 +125,9 @@ namespace AgoraMobileStandardNet.Pages
                 {
                     return new PresenceParticipant(jsonobject);
                 }, null).Result;
-            } else {
+            }
+            else
+            {
                 presences = wsData2.RetrieveAllFromCache().Where(X => X.IdParticipant == idPeople).ToList();
             }
 
@@ -116,21 +154,22 @@ namespace AgoraMobileStandardNet.Pages
                 {
                     return new InscriptionParticipant(jsonobject);
                 }, null).Result;
-            } else {
+            }
+            else
+            {
                 // On trie sur le idPeople
                 inscriptions = wsData3.RetrieveAllFromCache().Where(X => X.IdParticipant == this.idPeople).ToList();
             }
 
- 
-            // la liste des cellules de participations
-            List<TempInscriptionForCell> inscriptionsCells = new List<TempInscriptionForCell>();
+
             // Uniquement la 1ère ligne
             if (presences.Count >= 1)
             {
                 var cell = new TempInscriptionForCell(presences[0]);
                 // On ajoute la / les dates
-                for (int i = 1; i < presences.Count; i++) {
-                    
+                for (int i = 1; i < presences.Count; i++)
+                {
+
                     cell.ValidationDateList.Add(TempInscriptionForCell.GetValidationDateText(presences[i].DatePresence));
 
                 }
@@ -140,21 +179,7 @@ namespace AgoraMobileStandardNet.Pages
                 inscriptionsCells.Add(new TempInscriptionForCell(inscription));
 
 
-
-            // On affiche le participant
-            Participant participant = participants[0];
-            FullName.Text = participant.FirstName + " " + participant.LastName;
-            Categorie.Text = participant.Category;
-            Societe.Text = participant.Company;
-            Email.Text = participant.Email;
-            Telephone.Text = participant.Telephone;
-
-            // On ajoute la liste des participations
-            listView.RowHeight = 120;
-            listView.ItemsSource = inscriptionsCells;
-            listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
-
-            sd.Hide();
+            return instances;
         }
     }
 }

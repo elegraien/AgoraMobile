@@ -111,6 +111,7 @@
     </Compile>
     <Compile Include="ViewModels\PageTitleViewModel.cs" />
     <Compile Include="Services\ImportBase.cs" />
+    <Compile Include="Interfaces\IBaseModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

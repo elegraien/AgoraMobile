@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="AgoraMobileStandardNet.Pages.DetailPeoplePage"
-             xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
+                       xmlns:models="clr-namespace:AgoraMobileStandardNet.Models"
+              x:Class="AgoraMobileStandardNet.Pages.DetailPeoplePage"
+               x:TypeArguments="models:Participant"
+            xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
 <StackLayout Orientation="Vertical">
         <Label x:Name="FullName" HorizontalOptions="CenterAndExpand" />
         <Label x:Name="Categorie" HorizontalOptions="CenterAndExpand" />

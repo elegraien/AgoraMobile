@@ -27,3 +27,4 @@
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.CustomContentPage.xaml.g.cs
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.pdb
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache

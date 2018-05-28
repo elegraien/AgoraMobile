@@ -12,7 +12,7 @@ using AgoraMobileStandardNet.Helpers;
 
 namespace AgoraMobileStandardNet.Pages
 {
-    public partial class ListPeoplePage : CustomContentPage
+    public partial class ListPeoplePage : CustomContentPage<Participant>
     {
         List<Participant> participants;
         ListView listView;
@@ -59,12 +59,45 @@ namespace AgoraMobileStandardNet.Pages
 
             // Affichage de la liste des participants
             // --------------------------------------
- 
+
 
             // Récupération des participants
 
             // TEST
             //SendPresenceAck("2032368"); //, this.idPrestation);
+            participants = GetInstances(this.idEvent, this.idPrestation);
+
+
+
+            // Peuple la liste des evenements
+            listView = new ListView();
+            listView.RowHeight = 80;
+            listView.ItemsSource = participants;
+            listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
+            DataLayout.Children.Add(listView);
+
+            // Fin téléchargement
+            //sd.Hide();
+            SpinnerDisplay.Hide();
+
+            // Gère le click sur un item
+            listView.ItemSelected += (sender, e) =>
+            {
+                HandlePeopleClicked(sender, e);
+            };
+
+        }
+
+        /// <summary>
+        /// Gets the instances.
+        /// </summary>
+        /// <returns>The instances.</returns>
+        /// <param name="idEvent">Identifier event.</param>
+        /// <param name="idPrestation">Identifier prestation.</param>
+        /// <param name="idParticipant">Identifier participant.</param>
+        protected override List<Participant> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        {
+            List<Participant> instances = null;
 
             // Appelle le Web Service
             string url = "";
@@ -84,39 +117,23 @@ namespace AgoraMobileStandardNet.Pages
 
             if (!wsData.IsHorsConnexion)
             {
-                participants = wsData.GetData((jsonObject) =>
+                instances = wsData.GetData((jsonObject) =>
                 {
-                    return new Participant(jsonObject, idEvent, idPrestation);
+                    return new Participant(jsonObject, idEvent.Value, idPrestation);
                 }, null).Result;
             }
             else
             {
                 // Récupère le cache et filtre
-                participants = wsData.RetrieveAllFromCache().Where(X => X.IdManif == this.idEvent).ToList();
+                instances = wsData.RetrieveAllFromCache().Where(X => X.IdManif == this.idEvent).ToList();
                 if (this.idPrestation.HasValue)
-                    participants = participants.Where(X => X.IdPrestation == this.idPrestation.Value).ToList();
+                    instances = instances.Where(X => X.IdPrestation == this.idPrestation.Value).ToList();
                 else
-                    participants = participants.Where(X => X.IdPrestation == null).ToList();
+                    instances = instances.Where(X => X.IdPrestation == null).ToList();
 
             }
 
-
-            // Peuple la liste des evenements
-            listView = new ListView();
-            listView.RowHeight = 80;
-            listView.ItemsSource = participants;
-            listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
-            DataLayout.Children.Add(listView);
-
-            // Fin téléchargement
-            //sd.Hide();
-            SpinnerDisplay.Hide();
-
-            // Gère le click sur un item
-            listView.ItemSelected += (sender, e) =>
-            {
-                HandlePeopleClicked(sender, e);
-            };
+            return instances;
 
         }
 

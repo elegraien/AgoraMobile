@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Json;
 using SQLite;
+using AgoraMobileStandardNet.Interfaces;
 
 namespace AgoraMobileStandardNet.Models
 {
-    public class Evenement 
+    public class Evenement : IBaseModel
     {
         [PrimaryKey]
         public int Id { get; set; }
