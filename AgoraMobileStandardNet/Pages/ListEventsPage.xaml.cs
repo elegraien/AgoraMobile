@@ -63,7 +63,7 @@ namespace AgoraMobileStandardNet.Pages
             {
                 evenements = webServiceData.RetrieveAllFromCache();
             }*/
-            this.evenements = new ListEventsData(Token).GetInstances();
+            this.evenements = await new ListEventsData(Token).GetInstances();
 
 
             // Peuple la liste des evenements

@@ -38,7 +38,7 @@ namespace AgoraMobileStandardNet.Pages
 
             // Récupération des participants
             var detailPeopleData = new DetailPeopleData(Token);
-            var participants = detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idPeople);
+            var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idPeople);
 
 
 

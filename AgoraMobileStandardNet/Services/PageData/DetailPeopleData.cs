@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Models;
 
 namespace AgoraMobileStandardNet.Services
@@ -24,7 +25,7 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="idEvent">Identifier event.</param>
         /// <param name="idPrestation">Identifier prestation.</param>
         /// <param name="idParticipant">Identifier participant.</param>
-        public List<Participant> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        public async Task<List<Participant>> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
         {
             List<Participant> instances = null;
 
@@ -46,10 +47,13 @@ namespace AgoraMobileStandardNet.Services
 
             if (!wsData.IsHorsConnexion)
             {
-                instances = wsData.GetData((jsonObject) =>
+                // Attention : pour cet appel, on fournit IsInCache = false
+                // Cela signfie qu'on ne veut pas faire un delete du participant en base SQL - ni un insert.
+                // En effet, dans ce cas il y aurait un DELETE sur TOUS les participants de la prestation
+                instances = await wsData.GetData((jsonObject) =>
                 {
                     return new Participant(jsonObject, idEvent.Value, idPrestation);
-                }, null).Result;
+                }, null,false);
             }
             else
             {
@@ -78,10 +82,10 @@ namespace AgoraMobileStandardNet.Services
             // On récupère la liste des dates de validation pour le people passé en paramètre pour l'accueil principal !!
             if (!wsData2.IsHorsConnexion)
             {
-                presences = wsData2.GetData((jsonobject) =>
+                presences = await wsData2.GetData((jsonobject) =>
                 {
                     return new PresenceParticipant(jsonobject);
-                }, null).Result;
+                }, null);
             }
             else
             {
@@ -107,10 +111,10 @@ namespace AgoraMobileStandardNet.Services
             List<InscriptionParticipant> inscriptions = null;
             if (!wsData3.IsHorsConnexion)
             {
-                inscriptions = wsData3.GetData((jsonobject) =>
+                inscriptions = await wsData3.GetData((jsonobject) =>
                 {
                     return new InscriptionParticipant(jsonobject);
-                }, null).Result;
+                }, null);
             }
             else
             {

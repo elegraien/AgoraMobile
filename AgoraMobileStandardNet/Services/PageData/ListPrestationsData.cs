@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Models;
 
 namespace AgoraMobileStandardNet.Services
@@ -17,7 +18,7 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="idEvent">Identifier event.</param>
         /// <param name="idPrestation">Identifier prestation.</param>
         /// <param name="idParticipant">Identifier participant.</param>
-        public List<Prestation> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        public async Task<List<Prestation>> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
         {
             List<Prestation> instances = null;
 
@@ -41,12 +42,12 @@ namespace AgoraMobileStandardNet.Services
             {
 
                 // Récupération de l'accueil
-                List<CountParticipants> partsAccueil =
+                List<CountParticipants> partsAccueil = await
                     wsDataCP.GetData(null, (jsonObject) =>
                     {
                         return new CountParticipants(jsonObject);
                     },
-                   false).Result;
+                   false);
 
 
                 // On récup l'élément
@@ -75,10 +76,10 @@ namespace AgoraMobileStandardNet.Services
 
 
                 // Récupération des prestations
-                instances.AddRange(wsDataP.GetData((jsonObject) =>
+                instances.AddRange(await wsDataP.GetData((jsonObject) =>
                 {
                     return new Prestation(jsonObject);
-                }, null).Result);
+                }, null));
 
                 // Pour chaque prestation, on va récupérer le nb de participants
                 // Sauf accueil
@@ -89,11 +90,11 @@ namespace AgoraMobileStandardNet.Services
                         "&idManif=" + idEvent + "&Prestation=true";
 
                     // Récup du CountParticipants pour chaque prestation
-                    List<CountParticipants> parts = wsDataCP.GetData(null, (jsonObject) =>
+                    List<CountParticipants> parts = await wsDataCP.GetData(null, (jsonObject) =>
                     {
                         return new CountParticipants(jsonObject);
                     },
-                                                                    false).Result;
+                                                                    false);
 
                     // On récup l'élément
                     if (parts.Count == 2)

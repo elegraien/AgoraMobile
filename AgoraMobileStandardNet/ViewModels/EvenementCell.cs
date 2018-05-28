@@ -35,7 +35,7 @@ namespace AgoraMobileStandardNet.ViewModels
 
             var dateLabel = new Label() { 
                 HorizontalOptions = LayoutOptions.FillAndExpand};
-            dateLabel.SetBinding(Label.TextProperty, "StartDate");
+            dateLabel.SetBinding(Label.TextProperty, "ShortStartDate");
 
             var titleLayout = new StackLayout()
             {

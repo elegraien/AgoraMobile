@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
@@ -13,7 +14,7 @@ namespace AgoraMobileStandardNet.Pages
         List<Prestation> prestations;
         ListView listView;
         private int idEvent;
- 
+
         // Pour l'accueil
         int NbPresentsAccueil { get; set; }
         int NbTotalAccueil { get; set; }
@@ -38,9 +39,9 @@ namespace AgoraMobileStandardNet.Pages
             DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement
-            prestations = new ListPrestationsData(Token).GetInstances(this.idEvent);
+            prestations = await new ListPrestationsData(Token).GetInstances(this.idEvent);
 
- 
+
             // Fin téléchargement
             SpinnerDisplay.Hide();
 
@@ -66,10 +67,12 @@ namespace AgoraMobileStandardNet.Pages
         {
             // Attention :
             // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
-            // Liste des actions
-            string[] actions = { "Accueil", "Déconnexion", "Télécharger les listes" };
-
-            var action = await DisplayActionSheet("Actions", "Cancel", null, actions);
+            // Liste des actionsstring[] actions = null;
+            string action = "";
+            if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[]{ "Accueil", "Déconnexion" });
+            else
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[]{ "Accueil", "Déconnexion", "Télécharger les listes" });
 
             // en fonction de l'action demandée...
             // TODO
@@ -81,18 +84,17 @@ namespace AgoraMobileStandardNet.Pages
                     break;
                 case "Télécharger les listes":
                     // Déclenchement du download
-                    DownloadLists();
+                    await DownloadLists();
                     break;
 
             }
         }
 
-        private void DownloadLists()
+        private async Task DownloadLists()
         {
             SpinnerDisplay.Show();
-            return;
             var downloadData = new ImportBase();
-            downloadData.DownloadData(this.Token, this.idEvent);
+            await downloadData.DownloadData(this.Token, this.idEvent);
             SpinnerDisplay.Hide();
         }
         #endregion
@@ -117,7 +119,7 @@ namespace AgoraMobileStandardNet.Pages
                                                               prestation.NbTotal,
                                                               prestation.NbPresents,
                                                              prestation.Title);
- 
+
                 // On déselectionne
                 listView.SelectedItem = null;
 

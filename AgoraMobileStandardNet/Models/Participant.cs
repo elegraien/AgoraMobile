@@ -57,5 +57,10 @@ namespace AgoraMobileStandardNet.Models
             this.IdPrestation = idPrestation;
 
         }
+
+        public override string ToString()
+        {
+            return "Participant : Id: " + Id + " - LastName: " + this.LastName;
+        }
     }
 }

@@ -32,5 +32,11 @@ namespace AgoraMobileStandardNet.Models
             this.DatePresence = DateTime.Parse(dateStr); 
             this.StatusPartA09 = jsonObject["STATUS_PART_A09"];
         }
+
+
+        public override string ToString()
+        {
+            return "Presence : Id: " + Id + " - IdParticipant: " + this.IdParticipant + " - IdPrestation: " + this.IdPrestation;
+        }
     }
 }

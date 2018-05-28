@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using AgoraMobileStandardNet.Interfaces;
 using SQLite;
@@ -111,6 +112,8 @@ namespace AgoraMobileStandardNet.Services
                         
                         conn.Update(instance);
                         isOk = true;
+
+ 
                     }
                 }
             }
@@ -235,7 +238,8 @@ namespace AgoraMobileStandardNet.Services
                         string tableName = typeof(T).Name;
                         string sqlFull = "DELETE FROM " + tableName + " WHERE " + sql; 
                         this.ExecuteSQL(sqlFull, null);
-
+                        // Debug
+                        Debug.WriteLine("Delete : " + sqlFull);
                     }
                     else
                         this.ClearAllData();

@@ -2,6 +2,7 @@
 using AgoraMobileStandardNet.Pages;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
+using System.Threading.Tasks;
 
 namespace AgoraMobileStandardNet.Services
 {
@@ -16,27 +17,32 @@ namespace AgoraMobileStandardNet.Services
         /// <summary>
         /// Récupération des données d'une manif (prestat + présences + participants) et stockage en base
         /// </summary>
-        public void DownloadData(string token, int idEvent)
+        public async Task DownloadData(string token, int idEvent)
         {
             // On va simuler le click sur toutes les prestations d'un Event, puis sur chaque Guest d'une prestation
             // car le système  de cache fonctionne déjà
             // On ne passe donc pas par les méthodes de l'appli Cordova !!!
 
             // Prestations
-            var prestations = new ListPrestationsData(token).GetInstances(idEvent);
+            var prestations = await new ListPrestationsData(token).GetInstances(idEvent);
 
             // Liste participants pour chaque prestation
-            foreach(Prestation prestation in prestations) 
+            foreach (Prestation prestation in prestations)
             {
-                var participants = new ListPeopleData(token).GetInstances(idEvent, prestation.Id);
+                // Remarque : pour idPrestation=0 : on transforme en null
+                if (prestation.Id == 0)
+                    prestation.Id = null;
+
+                var participants = await new ListPeopleData(token).GetInstances(idEvent, prestation.Id);
 
                 // Pour chaque participant, on va récupérer les datas
-                foreach(Participant participant in participants)
+                foreach (Participant participant in participants)
                 {
                     var participantData = new DetailPeopleData(token);
-                    var participantDetail = participantData.GetInstances(idEvent, prestation.Id, participant.Id);
+                    var participantDetail = await participantData.GetInstances(idEvent, prestation.Id, participant.Id);
                     var inscriptionCells = participantData.InscriptionsCells;
                 }
+
 
             }
 

@@ -33,6 +33,11 @@ namespace AgoraMobileStandardNet.Models
             this.IdStatusA39 = jsonObject["ID_STATUT_A39"];
             this.IdPrestation = jsonObject["PRESTATION_A10"];
         }
+
+        public override string ToString()
+        {
+            return "Inscription : Id: " + Id + " - IdParticipant: " + this.IdParticipant + " - IdStatusA39: " + this.IdStatusA39;
+        }
     }
 
     /// <summary>

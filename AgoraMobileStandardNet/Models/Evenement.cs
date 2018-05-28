@@ -10,8 +10,11 @@ namespace AgoraMobileStandardNet.Models
         [PrimaryKey]
         public int Id { get; set; }
         public string Title { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+
+        public string ShortStartDate
+        { get { return StartDate.ToString("yyyy-MM-dd"); }}
 
         public Evenement()
         {
@@ -26,8 +29,16 @@ namespace AgoraMobileStandardNet.Models
                 this.Id = 0;
   
             this.Title = jsonObject["Title"];
-            this.StartDate = jsonObject["StartDate"];
-            this.EndDate = jsonObject["EndDate"];
+            // Transfo de la date en format YYYY-MM-DDTHH:mm:SS
+            var dateStr = jsonObject["StartDate"].ToString().Replace("\"", "");
+            this.StartDate = DateTime.Parse(dateStr);
+            dateStr = jsonObject["EndDate"].ToString().Replace("\"", "");
+            this.EndDate = DateTime.Parse(dateStr);
+        }
+
+        public override string ToString()
+        {
+            return "Evenement : Id: " + Id + " - Title: " + this.Title;
         }
     }
 }

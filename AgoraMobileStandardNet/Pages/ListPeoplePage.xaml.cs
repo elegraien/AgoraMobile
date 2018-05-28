@@ -65,7 +65,7 @@ namespace AgoraMobileStandardNet.Pages
 
             // TEST
             //SendPresenceAck("2032368"); //, this.idPrestation);
-            participants = new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
+            participants = await new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
 
 
 

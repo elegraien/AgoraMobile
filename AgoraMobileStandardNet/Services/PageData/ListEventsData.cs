@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Models;
 
 namespace AgoraMobileStandardNet.Services
@@ -19,7 +20,7 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="idEvent">Identifier event.</param>
         /// <param name="idPrestation">Identifier prestation.</param>
         /// <param name="idParticipant">Identifier participant.</param>
-        public List<Evenement> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        public async Task<List<Evenement>> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
         {
             List<Evenement> instances = null;
 
@@ -32,10 +33,10 @@ namespace AgoraMobileStandardNet.Services
 
             if (!webServiceData.IsHorsConnexion)
             {
-                instances = webServiceData.GetData((jsonObject) =>
+                instances = await webServiceData.GetData((jsonObject) =>
                 {
                     return new Evenement(jsonObject);
-                }, null).Result;
+                }, null);
             }
             else
             {

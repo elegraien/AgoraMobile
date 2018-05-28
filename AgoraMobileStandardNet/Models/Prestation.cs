@@ -73,5 +73,10 @@ namespace AgoraMobileStandardNet.Models
             this.Title = jsonObject["LIBELLE"];
             this.IdManif = jsonObject["NUM_MANIF"];
         }
+
+        public override string ToString()
+        {
+            return "Prestation : Id: " + Id + " - IdManif: " + this.IdManif + " - Title: " + this.Title;
+        }
     }
 }
