@@ -13,9 +13,6 @@
 /Users/cnavelot/Projects/AgoraMobileStandardNet/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.dll
 /Users/cnavelot/Projects/AgoraMobileStandardNet/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.pdb
 /Users/cnavelot/Projects/AgoraMobileStandardNet/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache
-/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/nonetwork.png
-/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.dll
-/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csproj.CoreCompileInputs.cache
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.App.xaml.g.cs
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.LoginPage.xaml.g.cs
@@ -25,6 +22,8 @@
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.ListEventsPage.xaml.g.cs
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.DetailPeoplePage.xaml.g.cs
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.CustomContentPage.xaml.g.cs
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/nonetwork.png
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.dll
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.dll
 /Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.pdb
-/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache

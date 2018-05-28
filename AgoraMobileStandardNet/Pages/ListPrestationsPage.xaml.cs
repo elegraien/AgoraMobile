@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Pages
 {
-    public partial class ListPrestationsPage : CustomContentPage<Prestation>
+    public partial class ListPrestationsPage : CustomContentPage
     {
         List<Prestation> prestations;
         ListView listView;
@@ -38,7 +38,7 @@ namespace AgoraMobileStandardNet.Pages
             DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement
-            prestations = GetInstances(this.idEvent);
+            prestations = new ListPrestationsData(Token).GetInstances(this.idEvent);
 
  
             // Fin téléchargement
@@ -61,114 +61,43 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
-        /// <summary>
-        /// Gets the instances.
-        /// </summary>
-        /// <returns>The instances.</returns>
-        /// <param name="idEvent">Identifier event.</param>
-        /// <param name="idPrestation">Identifier prestation.</param>
-        /// <param name="idParticipant">Identifier participant.</param>
-        protected override List<Prestation> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
+        #region Surcharge de l'affichage du menu
+        public async override void DisplayActionSheet(object sender, EventArgs e)
         {
-            List<Prestation> instances = null;
+            // Attention :
+            // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
+            // Liste des actions
+            string[] actions = { "Accueil", "Déconnexion", "Télécharger les listes" };
 
-            // Les WSData
-            WebServiceData<CountParticipants> wsDataCP = new WebServiceData<CountParticipants>(
-              this.Token,
-              Global.WS_COUNT_PARTICIPANTS + "?id=" + idEvent,
-                "GET",
-                idEvent
+            var action = await DisplayActionSheet("Actions", "Cancel", null, actions);
 
-              );
-            WebServiceData<Prestation> wsDataP = new WebServiceData<Prestation>(
-                this.Token,
-                Global.WS_GET_PRESTATIONS + idEvent.ToString(),
-                "GET",
-                idEvent
-            );
-
-            // Si le cache est non valide : on cherche les datas, on peuple
-            if (!wsDataP.IsHorsConnexion)
+            // en fonction de l'action demandée...
+            // TODO
+            switch (action)
             {
+                case "Accueil":
+                case "Déconnexion":
+                    await Navigation.PopToRootAsync();
+                    break;
+                case "Télécharger les listes":
+                    // Déclenchement du download
+                    DownloadLists();
+                    break;
 
-                // Récupération de l'accueil
-                List<CountParticipants> partsAccueil =
-                    wsDataCP.GetData(null, (jsonObject) =>
-                    {
-                        return new CountParticipants(jsonObject);
-                    },
-                   false).Result;
-
-
-                // On récup l'élément
-                if (partsAccueil.Count == 2)
-                {
-                    NbTotalAccueil = partsAccueil[0].NbItems;
-                    NbPresentsAccueil = partsAccueil[1].NbItems;
-                }
-
-
-                // Prestation accueil
-                instances = new List<Prestation>();
-                var prestaAccueil = new Prestation()
-                {
-                    Id = 0,
-                    IdManif = idEvent.Value,
-                    NbPresents = NbPresentsAccueil,
-                    NbRemaining = 0,
-                    NbTotal = NbTotalAccueil,
-                    Title = "Accueil Principal",
-                    NbInscritsLabel = NbTotalAccueil.ToString() + " invités"
-                };
-                instances.Add(prestaAccueil);
-
-
-                // Récupération des prestations
-                instances.AddRange(wsDataP.GetData((jsonObject) =>
-                {
-                    return new Prestation(jsonObject);
-                }, null).Result);
-
-                // Pour chaque prestation, on va récupérer le nb de participants
-                // Sauf accueil
-                for (int i = 1; i < prestations.Count; i++)
-                {
-                    Prestation prestation = prestations[i];
-                    wsDataCP.ActionUrl = Global.WS_COUNT_PARTICIPANTS + "?id=" + prestation.Id +
-                        "&idManif=" + idEvent + "&Prestation=true";
-
-                    // Récup du CountParticipants pour chaque prestation
-                    List<CountParticipants> parts = wsDataCP.GetData(null, (jsonObject) =>
-                    {
-                        return new CountParticipants(jsonObject);
-                    },
-                                                                    false).Result;
-
-                    // On récup l'élément
-                    if (parts.Count == 2)
-                    {
-                        prestation.NbPresents = parts[1].NbItems;
-                    }
-
-                }
-
-                // On ajoute la prestation Accueil au cache
-                // APRES le getData qui fait une purge
-                wsDataP.InsertData(prestaAccueil);
-
-
-                // On met à jour les prestations avec le nb d'inscrits
-                wsDataP.UpdateData(prestations);
             }
-            else
-            {
-                // On récupère les datas du cache
-                instances = wsDataP.RetrieveAllFromCache();
-            }
-
-            return instances;
-
         }
+
+        private void DownloadLists()
+        {
+            SpinnerDisplay.Show();
+            return;
+            var downloadData = new ImportBase();
+            downloadData.DownloadData(this.Token, this.idEvent);
+            SpinnerDisplay.Hide();
+        }
+        #endregion
+
+
 
         public void HandlePrestationClicked(object sender, SelectedItemChangedEventArgs e)
         {

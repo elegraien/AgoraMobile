@@ -112,6 +112,12 @@
     <Compile Include="ViewModels\PageTitleViewModel.cs" />
     <Compile Include="Services\ImportBase.cs" />
     <Compile Include="Interfaces\IBaseModel.cs" />
+    <Compile Include="Services\PageData\IPageData.cs" />
+    <Compile Include="Services\PageData\ListEventsData.cs" />
+    <Compile Include="Services\PageData\TokenClass.cs" />
+    <Compile Include="Services\PageData\ListPrestationsData.cs" />
+    <Compile Include="Services\PageData\ListPeopleData.cs" />
+    <Compile Include="Services\PageData\DetailPeopleData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -124,6 +130,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Interfaces\" />
     <Folder Include="images\" />
+    <Folder Include="Services\PageData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

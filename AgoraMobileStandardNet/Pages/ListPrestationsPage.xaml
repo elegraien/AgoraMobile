@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:models="clr-namespace:AgoraMobileStandardNet.Models"
              x:Class="AgoraMobileStandardNet.Pages.ListPrestationsPage" 
-             x:TypeArguments="models:Prestation"
              xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
     <StackLayout x:Name="SLayout">
         

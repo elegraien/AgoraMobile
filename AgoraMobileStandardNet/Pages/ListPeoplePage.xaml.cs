@@ -12,7 +12,7 @@ using AgoraMobileStandardNet.Helpers;
 
 namespace AgoraMobileStandardNet.Pages
 {
-    public partial class ListPeoplePage : CustomContentPage<Participant>
+    public partial class ListPeoplePage : CustomContentPage
     {
         List<Participant> participants;
         ListView listView;
@@ -65,7 +65,7 @@ namespace AgoraMobileStandardNet.Pages
 
             // TEST
             //SendPresenceAck("2032368"); //, this.idPrestation);
-            participants = GetInstances(this.idEvent, this.idPrestation);
+            participants = new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
 
 
 
@@ -88,55 +88,7 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
-        /// <summary>
-        /// Gets the instances.
-        /// </summary>
-        /// <returns>The instances.</returns>
-        /// <param name="idEvent">Identifier event.</param>
-        /// <param name="idPrestation">Identifier prestation.</param>
-        /// <param name="idParticipant">Identifier participant.</param>
-        protected override List<Participant> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
-        {
-            List<Participant> instances = null;
-
-            // Appelle le Web Service
-            string url = "";
-            if (idPrestation.HasValue)
-                url = Global.WS_GET_PARTICIPANTS + "?id=" + this.idPrestation.Value + "&idManif=" + idEvent +
-                            "&Prestation=true&StartRecord=0&RecordsCount=100";
-            else
-                url = Global.WS_GET_PARTICIPANTS + "?id=" + this.idEvent + "&StartRecord=0&RecordsCount=100";
-
-            WebServiceData<Participant> wsData = new WebServiceData<Participant>(
-                this.Token,
-                url,
-                "GET",
-                idEvent,
-                idPrestation
-            );
-
-            if (!wsData.IsHorsConnexion)
-            {
-                instances = wsData.GetData((jsonObject) =>
-                {
-                    return new Participant(jsonObject, idEvent.Value, idPrestation);
-                }, null).Result;
-            }
-            else
-            {
-                // Récupère le cache et filtre
-                instances = wsData.RetrieveAllFromCache().Where(X => X.IdManif == this.idEvent).ToList();
-                if (this.idPrestation.HasValue)
-                    instances = instances.Where(X => X.IdPrestation == this.idPrestation.Value).ToList();
-                else
-                    instances = instances.Where(X => X.IdPrestation == null).ToList();
-
-            }
-
-            return instances;
-
-        }
-
+ 
         public void HandlePeopleClicked(object sender, SelectedItemChangedEventArgs e)
         {
             // On checke la ligne sélectionnée
