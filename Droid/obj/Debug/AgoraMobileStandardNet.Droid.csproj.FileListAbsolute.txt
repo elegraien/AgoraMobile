@@ -88,3 +88,5 @@
 /Users/cnavelot/Projects/AgoraMobileStandardNet/Droid/obj/Debug/linksrc/Xamarin.Forms.Core.dll.mdb
 /Users/cnavelot/Projects/AgoraMobileStandardNet/Droid/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.dll.mdb
 /Users/cnavelot/Projects/AgoraMobileStandardNet/Droid/obj/Debug/linksrc/Xamarin.Forms.Xaml.dll.mdb
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/AgoraMobileStandardNet.Droid.csprojResolveAssemblyReference.cache
+/Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/obj/Debug/AgoraMobileStandardNet.Droid.csproj.CoreCompileInputs.cache

@@ -129,6 +129,24 @@ namespace AgoraMobileStandardNet.Services
 
         }
 
+        public bool DeleteData(T instance)
+        {
+            bool isOk = false;
+            try {
+                using (var conn = new SQLiteConnection(this.DBPath))
+                {
+                    conn.Delete(instance);
+                    isOk = true;
+                }
+            }
+            catch(SQLiteException ex)
+            {
+                isOk = false;
+                HandleException(ex);
+            }
+            return isOk;
+        }
+
         /// <summary>
         /// Execute une requete arbitraire
         /// </summary>
@@ -328,7 +346,8 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="ex">Ex.</param>
         private void HandleException(Exception ex)
         {
-            
+            // TODO !!
+            Debug.WriteLine(ex.Message);
         }
     }
 }

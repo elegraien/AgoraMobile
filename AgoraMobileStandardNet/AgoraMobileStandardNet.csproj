@@ -75,7 +75,6 @@
     <Compile Include="Pages\ListPrestationsPage.xaml.cs">
       <DependentUpon>ListPrestationsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\IDataStore.cs" />
     <Compile Include="Services\SQLData.cs" />
     <Compile Include="Services\WebServiceData.cs" />
     <Compile Include="Models\CountParticipants.cs" />
@@ -118,6 +117,8 @@
     <Compile Include="Services\PageData\ListPrestationsData.cs" />
     <Compile Include="Services\PageData\ListPeopleData.cs" />
     <Compile Include="Services\PageData\DetailPeopleData.cs" />
+    <Compile Include="Models\ValidatePresence.cs" />
+    <Compile Include="Services\ValidatePresenceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

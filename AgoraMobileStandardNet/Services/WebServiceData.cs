@@ -62,10 +62,8 @@ namespace AgoraMobileStandardNet.Services
 
         /// <summary>
         /// Récupère les données du WS et décode le JSON dans la bonne instance
-        /// NOUVEAU : gère le cache
         /// </summary>
         /// <returns>The data.</returns>
-        /// <param name="DecodeJSON">Decode json.</param>
         public async Task<List<T>> GetData(Func<JsonObject, T> DecodeJSONObject,
                                Func<JsonPrimitive, T> DecodeJSONPrimitive,
                               bool isInCache = true)

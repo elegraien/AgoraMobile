@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
@@ -13,17 +14,17 @@ namespace AgoraMobileStandardNet.Pages
     {
         //SpinnerDisplay sd;
         int? idPrestation;
-        int idPeople;
+        int idParticipant;
         int idManif;
-           
 
 
-        public DetailPeoplePage(int idPeople, int idManif, int? idPrestation)
+
+        public DetailPeoplePage(int idParticipant, int idManif, int? idPrestation)
         {
             InitializeComponent();
 
             this.idPrestation = idPrestation;
-            this.idPeople = idPeople;
+            this.idParticipant = idParticipant;
             this.idManif = idManif;
 
             // Le Spinner
@@ -36,9 +37,18 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
+            // Le bouton en bas
+            // ------------------
+            BtnValidate.Clicked += async (sender, e) =>
+            {
+                // Validation de la présence
+                await BtnValidateClicked(sender, e);
+
+            };
+
             // Récupération des participants
             var detailPeopleData = new DetailPeopleData(Token);
-            var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idPeople);
+            var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idParticipant);
 
 
 
@@ -59,5 +69,20 @@ namespace AgoraMobileStandardNet.Pages
             SpinnerDisplay.Hide();
         }
 
-      }
+        #region Button Actions
+        private async Task BtnValidateClicked(object sender, EventArgs e)
+        {
+            // On prépare la validation de la présence
+            var validateService = new ValidatePresenceService(this.Token);
+
+            // On ajoute la ligne à valider
+            validateService.AddNewPresence(this.idParticipant, this.idPrestation);
+
+            // On déclenche l'envoi au WS (si besoin)
+            await validateService.Send();
+
+        }
+        #endregion
+
+    }
 }

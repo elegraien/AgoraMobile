@@ -118,7 +118,7 @@ namespace AgoraMobileStandardNet.Services
             }
             else
             {
-                // On trie sur le idPeople
+                // On trie sur le idParticipant
                 inscriptions = wsData3.RetrieveAllFromCache().Where(X => X.IdParticipant == idParticipant.Value).ToList();
             }
 
