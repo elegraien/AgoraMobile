@@ -1,4 +1,5 @@
 ﻿using System;
+using AgoraMobileStandardNet.Interfaces;
 using SQLite;
 
 namespace AgoraMobileStandardNet.Models
@@ -7,7 +8,7 @@ namespace AgoraMobileStandardNet.Models
     /// Cette classe permet d'enregistrer les présences validées sur l'application ; elles
     /// seront ensuite envoyées vers un Web Service
     /// </summary>
-    public class ValidatePresence
+    public class ValidatePresence : IBaseModel 
     {
         [PrimaryKey]
         public int Id { get; set; }

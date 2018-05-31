@@ -123,7 +123,22 @@ namespace AgoraMobileStandardNet.Services
             }
 
 
+            // On crée les cellules de présences
+            generateInscriptionCells(presences, inscriptions);
+
+
+            return instances;
+        }
+
+        /// <summary>
+        /// Crée les cellules pour les inscriptions et les présences
+        /// </summary>
+        /// <param name="presences">Presences.</param>
+        /// <param name="inscriptions">Inscriptions.</param>
+        private void generateInscriptionCells(List<PresenceParticipant> presences, List<InscriptionParticipant> inscriptions)
+        {
             // Uniquement la 1ère ligne
+            this.InscriptionsCells.Clear();
             if (presences.Count >= 1)
             {
                 var cell = new TempInscriptionForCell(presences[0]);
@@ -138,10 +153,27 @@ namespace AgoraMobileStandardNet.Services
             }
             foreach (InscriptionParticipant inscription in inscriptions)
                 InscriptionsCells.Add(new TempInscriptionForCell(inscription));
-
-
-            return instances;
         }
+
+
+        /// <summary>
+        /// Rafraichit les cellules de présence en lisant dans la base (par exemple, quand on valide une présence)
+        /// </summary>
+        public void RefreshCells(int idParticipant)
+        {
+            // Récupère les données de la base
+            var sqldata1 = new SQLData<PresenceParticipant>();
+            var sqldata2 = new SQLData<InscriptionParticipant>();
+
+            // Présences
+            var presences = sqldata1.RetrieveAll().Where(X => X.IdParticipant == idParticipant).ToList();
+            // Inscriptions
+            var inscriptions = sqldata2.RetrieveAll().Where(X => X.IdParticipant == idParticipant).ToList();
+
+            generateInscriptionCells(presences, inscriptions);
+        }
+
+
 
     }
 }

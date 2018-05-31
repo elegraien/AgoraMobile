@@ -18,6 +18,7 @@ namespace AgoraMobileStandardNet.Pages
         ListView listView;
         int? idPrestation;
         int idEvent;
+        string prestationName;
 
         IScanPage scanPage;
 
@@ -29,6 +30,7 @@ namespace AgoraMobileStandardNet.Pages
 
             this.idPrestation = idPrestation;
             this.idEvent = idEvent;
+            this.prestationName = prestationName;
 
             // Le titre de la page
             this.Title = prestationName;
@@ -78,7 +80,7 @@ namespace AgoraMobileStandardNet.Pages
 
             // Fin téléchargement
             //sd.Hide();
-            SpinnerDisplay.Hide();
+            UserDialogs.HideSpinner();
 
             // Gère le click sur un item
             listView.ItemSelected += (sender, e) =>
@@ -101,7 +103,8 @@ namespace AgoraMobileStandardNet.Pages
                 // La navigation
                 var detailsParticipantPage = new DetailPeoplePage(participant.Id,
                                                                   this.idEvent,
-                                                                 this.idPrestation);
+                                                                 this.idPrestation,
+                                                                 this.prestationName);
                 //NavigationPage navigation = new NavigationPage(listEventsPage);
 
                 // On déselectionne
@@ -237,7 +240,7 @@ namespace AgoraMobileStandardNet.Pages
 
     }
 
-    public class SetPresenceRetour
+    public class SetPresenceRetour : IBaseModel
     {
         public int Id { get; set; }
         public SetPresenceRetour()

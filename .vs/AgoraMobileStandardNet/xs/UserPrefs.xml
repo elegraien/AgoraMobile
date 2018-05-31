@@ -1,34 +1,26 @@
 ﻿<Properties StartupConfiguration="{BD4AD3C9-5ADD-443C-807F-305A3639EBF7}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Services/ValidatePresenceService.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" Line="121" Column="48" />
-      <File FileName="AgoraMobileStandardNet/Models/ValidatePresence.cs" Line="22" Column="9" />
-      <File FileName="AgoraMobileStandardNet/Models/Prestation.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="99" Column="23" />
-      <File FileName="AgoraMobileStandardNet/Services/ImportBase.cs" Line="36" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/TokenClass.cs" Line="5" Column="82" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/IPageData.cs" Line="7" Column="82" />
-      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="117" Column="88" />
-      <File FileName="AgoraMobileStandardNet/Services/SQLData.cs" Line="144" Column="30" />
-      <File FileName="AgoraMobileStandardNet/Global.cs" Line="6" Column="18" />
-      <File FileName="AgoraMobileStandardNet/Interfaces/INetTools.cs" Line="11" Column="26" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml" Line="22" Column="45" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="22" Column="89" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="76" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="128" Column="1" />
-      <File FileName="iOS/CodePCL/NetTools.cs" Line="35" Column="1" />
-      <File FileName="Droid/CodePCL/NetTools.cs" Line="7" Column="30" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="114" Column="10" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="112" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="44" Column="17" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="32" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="108" Column="82" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="76" Column="34" />
+      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="330" Column="122" />
+      <File FileName="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" Line="114" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="131" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Models/ValidatePresence.cs" Line="10" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Services/ValidatePresenceService.cs" relfile="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" line="116" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" line="76" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Services/ValidatePresenceService.cs" relfile="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" line="100" column="1" />
+      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" line="79" column="1" />
+      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" relfile="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" line="114" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F3B7B95C-BF6C-416A-ACEE-D10B66DD2E08" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D92E7587-5E00-4552-8432-42F111E78F46" />
   <MultiItemStartupConfigurations />
 </Properties>

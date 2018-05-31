@@ -7,7 +7,7 @@ using SQLite;
 
 namespace AgoraMobileStandardNet.Models
 {
-    public class PresenceParticipant : IsParticipantFiltered, IsPrestationFiltered
+    public class PresenceParticipant : IBaseModel, IsParticipantFiltered, IsPrestationFiltered
     {
         // JSON : {[{"DATE_PRESENCE": "2017-02-08T16:06:36", "ID": 17491, "ID_PART_A09": 1692915, "STATUS_PART_A09": 3}]}
 

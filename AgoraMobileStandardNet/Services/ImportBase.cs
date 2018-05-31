@@ -30,16 +30,17 @@ namespace AgoraMobileStandardNet.Services
             foreach (Prestation prestation in prestations)
             {
                 // Remarque : pour idPrestation=0 : on transforme en null
-                if (prestation.Id == 0)
-                    prestation.Id = null;
+                int? prestationId = prestation.Id;
+                if (prestationId == 0)
+                    prestationId = null;
 
-                var participants = await new ListPeopleData(token).GetInstances(idEvent, prestation.Id);
+                var participants = await new ListPeopleData(token).GetInstances(idEvent, prestationId);
 
                 // Pour chaque participant, on va récupérer les datas
                 foreach (Participant participant in participants)
                 {
                     var participantData = new DetailPeopleData(token);
-                    var participantDetail = await participantData.GetInstances(idEvent, prestation.Id, participant.Id);
+                    var participantDetail = await participantData.GetInstances(idEvent, prestationId, participant.Id);
                     var inscriptionCells = participantData.InscriptionsCells;
                 }
 

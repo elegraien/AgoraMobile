@@ -6,10 +6,10 @@ using SQLite;
 
 namespace AgoraMobileStandardNet.Models
 {
-    public class Prestation : IsManifFiltered
+    public class Prestation : IBaseModel, IsManifFiltered
     {
         [PrimaryKey]
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public int NbTotal { get; set; }
         public int NbRemaining { get; set; }
         public string Title { get; set; }

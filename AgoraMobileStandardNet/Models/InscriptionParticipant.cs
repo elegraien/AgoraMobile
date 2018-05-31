@@ -6,7 +6,7 @@ using SQLite;
 
 namespace AgoraMobileStandardNet.Models
 {
-    public class InscriptionParticipant : IsParticipantFiltered, IsPrestationFiltered
+    public class InscriptionParticipant : IBaseModel, IsParticipantFiltered, IsPrestationFiltered
     {
 
         [PrimaryKey]

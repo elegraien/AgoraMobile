@@ -12,7 +12,7 @@ namespace AgoraMobileStandardNet.Services
 {
 
 
-    public class WebServiceData<T> where T : new()
+    public class WebServiceData<T> where T : IBaseModel, new()
     {
         public string Token { get; set; }
         public string Method { get; set; }

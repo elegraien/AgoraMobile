@@ -100,8 +100,8 @@
     <Compile Include="Interfaces\IPersonalFolder.cs" />
     <Compile Include="Interfaces\INetTools.cs" />
     <Compile Include="Interfaces\IScanPage.cs" />
-    <Compile Include="Interfaces\ISpinner.cs" />
-    <Compile Include="Helpers\SpinnerDisplay.cs" />
+    <Compile Include="Interfaces\IUserDialogs.cs" />
+    <Compile Include="Helpers\UserDialogs.cs" />
     <Compile Include="Interfaces\IsPrestationFiltered.cs" />
     <Compile Include="Interfaces\IsManifFiltered.cs" />
     <Compile Include="Interfaces\IsParticipantFiltered.cs" />

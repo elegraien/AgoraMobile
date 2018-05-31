@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
 using AgoraMobileStandardNet.ViewModels;
 using Xamarin.Forms;
+
 
 namespace AgoraMobileStandardNet.Pages
 {
@@ -17,9 +19,10 @@ namespace AgoraMobileStandardNet.Pages
         int idParticipant;
         int idManif;
 
+        DetailPeopleData detailPeopleData;
 
 
-        public DetailPeoplePage(int idParticipant, int idManif, int? idPrestation)
+        public DetailPeoplePage(int idParticipant, int idManif, int? idPrestation, string title)
         {
             InitializeComponent();
 
@@ -27,9 +30,9 @@ namespace AgoraMobileStandardNet.Pages
             this.idParticipant = idParticipant;
             this.idManif = idManif;
 
-            // Le Spinner
-            //sd = new SpinnerDisplay();
-            //sd.Show();
+            // Le titre
+            this.Title = title;
+
 
         }
 
@@ -47,7 +50,7 @@ namespace AgoraMobileStandardNet.Pages
             };
 
             // Récupération des participants
-            var detailPeopleData = new DetailPeopleData(Token);
+            detailPeopleData = new DetailPeopleData(Token);
             var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idParticipant);
 
 
@@ -66,7 +69,7 @@ namespace AgoraMobileStandardNet.Pages
             listView.ItemsSource = detailPeopleData.InscriptionsCells;
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
 
-            SpinnerDisplay.Hide();
+            UserDialogs.HideSpinner();
         }
 
         #region Button Actions
@@ -76,10 +79,56 @@ namespace AgoraMobileStandardNet.Pages
             var validateService = new ValidatePresenceService(this.Token);
 
             // On ajoute la ligne à valider
-            validateService.AddNewPresence(this.idParticipant, this.idPrestation);
+            var validate = validateService.AddNewPresence(this.idParticipant, this.idPrestation);
 
             // On déclenche l'envoi au WS (si besoin)
-            await validateService.Send();
+            if (validate != null)
+            {
+                // On envoie uniquement en cas de connexion
+                if (!Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                {
+                    //await validateService.SendAll();
+                    // Attention : si participant déjà enregistré : erreur 403
+                    try
+                    {
+                        await validateService.Send(validate);
+                    }
+                    catch (WebException ex)
+                    {
+                        HttpWebResponse objresponse = ex.Response as HttpWebResponse;
+                        if (objresponse.StatusCode == HttpStatusCode.Forbidden)
+                        {
+                            // 403 : le participant a déjà été enregistré aujourd'hui
+                            // Message d'erreur
+                            this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                            return;
+                        }
+                    }
+                } else {
+                    // Hors connexion : on vérifie juste si l'utilisateur n'est pas déjà présent dans la table SQL
+
+                    // Attention : si pas de prestation : on a le droit d'enregistrer plusieurs fois la présence
+                    // Si il y a une prestation, en revanche, on doit vérifier qu'il n'est pas déjà inscrit
+
+                    if (validate.IdPrestation.HasValue &&
+                        validateService.IsInscriptionAlreadyRecorded(validate))
+                    {
+                        // Déjà trouvé : message d'erreur
+                        this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                            
+                        return;
+                    }
+
+                }
+
+                // On marque dans la base la présence dans la table qui va bien (pour voir graphiquement que la présence a été enregistrée)
+                validateService.ValidateSQLOnly(validate);
+            } // else Afficher un lessage d'erreur ?
+
+            // On réaffiche la liste des présences 
+            detailPeopleData.RefreshCells(this.idParticipant);
+            listView.ItemsSource = detailPeopleData.InscriptionsCells;
+            listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
 
         }
         #endregion

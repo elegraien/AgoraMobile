@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using AgoraMobileStandardNet.Interfaces;
 using SQLite;
 using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Services
 {
-    public class SQLData<T> where T:new()
+    public class SQLData<T> where T : IBaseModel, new()
     {
         private string DBPath { get; set; }
         //private IPersonalFolder personalFolder;
@@ -16,7 +17,7 @@ namespace AgoraMobileStandardNet.Services
         public SQLData()
         {
             var documents = DependencyService.Get<IPersonalFolder>().GetPersonalFolderPath();
-                // System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            // System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
             DBPath = Path.Combine(documents, "agora_sqlite.db");
 
@@ -25,7 +26,8 @@ namespace AgoraMobileStandardNet.Services
 
         public void CreateTable()
         {
-            using (var conn = new SQLiteConnection(this.DBPath)) {
+            using (var conn = new SQLiteConnection(this.DBPath))
+            {
                 if (!TableExists(conn))
                     conn.CreateTable<T>();
             }
@@ -48,11 +50,11 @@ namespace AgoraMobileStandardNet.Services
                     isOk = true;
                 }
             }
-            catch(SQLiteException ex)
+            catch (SQLiteException ex)
             {
-                
+
                 HandleException(ex);
- 
+
             }
 
             return isOk;
@@ -74,8 +76,17 @@ namespace AgoraMobileStandardNet.Services
             catch (SQLiteException ex)
             {
                 HandleException(ex);
- 
+
             }
+        }
+
+        /// <summary>
+        /// Renvoie le Id le plus grand de la table
+        /// </summary>
+        /// <returns>The last identifier.</returns>
+        public int GetLastId()
+        {
+            return this.RetrieveAll().Select(x => x.Id).Max();
         }
 
         public List<T> RetrieveAll()
@@ -91,7 +102,7 @@ namespace AgoraMobileStandardNet.Services
             catch (SQLiteException ex)
             {
                 HandleException(ex);
-             }
+            }
 
             return results;
         }
@@ -109,11 +120,11 @@ namespace AgoraMobileStandardNet.Services
                 {
                     foreach (T instance in instances)
                     {
-                        
+
                         conn.Update(instance);
                         isOk = true;
 
- 
+
                     }
                 }
             }
@@ -129,17 +140,55 @@ namespace AgoraMobileStandardNet.Services
 
         }
 
+        /// <summary>
+        /// Pour mettre à jour une donnée
+        /// </summary>
+        /// <returns><c>true</c>, if data was updated, <c>false</c> otherwise.</returns>
+        /// <param name="instance">Instance.</param>
+        public bool UpdateData(T instance)
+        {
+            bool isOk = false;
+            try
+            {
+                using (var conn = new SQLiteConnection(this.DBPath))
+                {
+
+
+                    conn.Update(instance);
+                    isOk = true;
+
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                //Console.Write(ex.Message);
+                isOk = false;
+                HandleException(ex);
+            }
+
+
+            return isOk;
+
+        }
+
+
+        /// <summary>
+        /// Pour supprimer une donnée
+        /// </summary>
+        /// <returns><c>true</c>, if data was deleted, <c>false</c> otherwise.</returns>
+        /// <param name="instance">Instance.</param>
         public bool DeleteData(T instance)
         {
             bool isOk = false;
-            try {
+            try
+            {
                 using (var conn = new SQLiteConnection(this.DBPath))
                 {
                     conn.Delete(instance);
                     isOk = true;
                 }
             }
-            catch(SQLiteException ex)
+            catch (SQLiteException ex)
             {
                 isOk = false;
                 HandleException(ex);
@@ -168,7 +217,7 @@ namespace AgoraMobileStandardNet.Services
             catch (SQLiteException ex)
             {
                 HandleException(ex);
- 
+
             }
 
             return ret;
@@ -194,7 +243,7 @@ namespace AgoraMobileStandardNet.Services
             catch (SQLiteException ex)
             {
                 HandleException(ex);
- 
+
             }
 
             return instances;
@@ -254,7 +303,7 @@ namespace AgoraMobileStandardNet.Services
                     if (sql != "")
                     {
                         string tableName = typeof(T).Name;
-                        string sqlFull = "DELETE FROM " + tableName + " WHERE " + sql; 
+                        string sqlFull = "DELETE FROM " + tableName + " WHERE " + sql;
                         this.ExecuteSQL(sqlFull, null);
                         // Debug
                         Debug.WriteLine("Delete : " + sqlFull);
@@ -279,50 +328,50 @@ namespace AgoraMobileStandardNet.Services
                 using (var conn = new SQLiteConnection(this.DBPath))
                 {
                     // On récupère les data avec le/les paramètres fournis en entrée
-                T testT = new T();
+                    T testT = new T();
 
-                // On crée la requête
+                    // On crée la requête
 
-                string sql = "";
-                if (testT is IsPrestationFiltered)
-                {
-                    if (idPrestation.HasValue)
+                    string sql = "";
+                    if (testT is IsPrestationFiltered)
+                    {
+                        if (idPrestation.HasValue)
                             sql = "IdPrestation=" + idPrestation.Value;
-                    else
-                        sql = "IdPrestation is NULL";
+                        else
+                            sql = "IdPrestation is NULL";
 
-                }
-                if (testT is IsManifFiltered)
-                {
-                    // !!! Il faut récupérer l'IdManif !!
-                    // On supprimer toutes les datas avec cet Id Manif
-                    if (sql != "")
-                        sql += " AND ";
-                    if (idManif.HasValue)
+                    }
+                    if (testT is IsManifFiltered)
+                    {
+                        // !!! Il faut récupérer l'IdManif !!
+                        // On supprimer toutes les datas avec cet Id Manif
+                        if (sql != "")
+                            sql += " AND ";
+                        if (idManif.HasValue)
                             sql += "IdManif=" + idManif.Value;
-                    else
-                        sql += "IdManif is NULL";
+                        else
+                            sql += "IdManif is NULL";
 
 
-                }
-                if (testT is IsParticipantFiltered)
-                {
-                    if (sql != "")
-                        sql += " AND ";
-                    if (idParticipant.HasValue)
+                    }
+                    if (testT is IsParticipantFiltered)
+                    {
+                        if (sql != "")
+                            sql += " AND ";
+                        if (idParticipant.HasValue)
                             sql += "IdParticipant=" + idParticipant.Value;
+                        else
+                            sql += "IdParticipant is NULL";
+
+                    }
+
+                    string tableName = typeof(T).Name;
+
+                    if (sql != "")
+                        instances = this.GetInstances("SELECT * FROM " + tableName + " WHERE " + sql, null);
                     else
-                        sql += "IdParticipant is NULL";
+                        instances = this.GetInstances("SELECT * FROM " + tableName);
 
-                }
-
-                string tableName = typeof(T).Name;
-
-                if (sql != "")
-                    instances = this.GetInstances("SELECT * FROM " + tableName + " WHERE " + sql, null);
-                else
-                    instances = this.GetInstances("SELECT * FROM " + tableName);
- 
                 }
             }
             catch (Exception ex)

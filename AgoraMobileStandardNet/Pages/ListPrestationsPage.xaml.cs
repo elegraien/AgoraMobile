@@ -43,7 +43,7 @@ namespace AgoraMobileStandardNet.Pages
 
 
             // Fin téléchargement
-            SpinnerDisplay.Hide();
+            UserDialogs.HideSpinner();
 
 
             // Peuple la liste des prestations
@@ -92,10 +92,10 @@ namespace AgoraMobileStandardNet.Pages
 
         private async Task DownloadLists()
         {
-            SpinnerDisplay.Show();
+            UserDialogs.ShowSpinner();
             var downloadData = new ImportBase();
             await downloadData.DownloadData(this.Token, this.idEvent);
-            SpinnerDisplay.Hide();
+            UserDialogs.HideSpinner();
         }
         #endregion
 
@@ -114,8 +114,11 @@ namespace AgoraMobileStandardNet.Pages
                 // Attention !! Si on a cliqué sur Accueil, on a modifié son id à 0
                 // pour le cache.
                 // Néanmoins, pour faire l'appel à la page, on remet NULL
+                int? prestationId = prestation.Id;
+                if (prestationId== 0)
+                    prestationId = null;
                 var listParticipantsPage = new ListPeoplePage(prestation.IdManif,
-                                                              (prestation.Id == 0 ? null : prestation.Id),
+                                                              prestationId,
                                                               prestation.NbTotal,
                                                               prestation.NbPresents,
                                                              prestation.Title);

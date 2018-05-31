@@ -75,7 +75,7 @@ namespace AgoraMobileStandardNet.Pages
 
             // Fin téléchargement
             //sd.Hide();
-            this.SpinnerDisplay.Hide();
+            this.UserDialogs.HideSpinner();
 
             // Gère le click sur un item
             listView.ItemSelected += (sender, e) =>

@@ -14,13 +14,13 @@ namespace AgoraMobileStandardNet.Pages
 {
     public partial class LoginPage : ContentPage
     {
-        SpinnerDisplay sd;
+        UserDialogs sd;
 
         public LoginPage()
         {
             InitializeComponent();
 
-            sd = new SpinnerDisplay();
+            sd = new UserDialogs();
 
  
 
@@ -36,7 +36,7 @@ namespace AgoraMobileStandardNet.Pages
             // -------------------
             BtnLogin.Clicked += async (sender, e) =>
             {
-                sd.Show();
+                sd.ShowSpinner();
 
                 // On sort du hors connexion
                 Global.SetSettings(TypeSettings.IsHorsConnexion, false);
@@ -55,12 +55,12 @@ namespace AgoraMobileStandardNet.Pages
 
                 }
 
-                sd.Hide();
+                sd.HideSpinner();
             };
 
             BtnHorsConnexion.Clicked += async (sender, e) =>
             {
-                sd.Show();
+                sd.ShowSpinner();
 
                 // On passe en mode hors connexion
                 Global.SetSettings(TypeSettings.IsHorsConnexion, true);

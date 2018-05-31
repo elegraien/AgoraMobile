@@ -23,7 +23,7 @@ namespace AgoraMobileStandardNet.Pages
 
 
         // Loading spinner
-        public SpinnerDisplay SpinnerDisplay { get; set; }
+        public UserDialogs UserDialogs { get; set; }
 
         // Le token 
         public string Token { get; set; }
@@ -40,8 +40,8 @@ namespace AgoraMobileStandardNet.Pages
 
 
             // Le spinner
-            SpinnerDisplay = new SpinnerDisplay();
-            SpinnerDisplay.Show();
+            UserDialogs = new UserDialogs();
+            UserDialogs.ShowSpinner();
 
 
             // pour enlever la barre de navigation par défaut
@@ -111,6 +111,11 @@ namespace AgoraMobileStandardNet.Pages
             if (string.IsNullOrEmpty(this.Token))
                 await Navigation.PopAsync();
 
+        }
+
+        public void ShowAlert(string title, string message)
+        {
+            this.UserDialogs.ShowAlert(title, message);
         }
 
         // NE FONCTIONNE PAS ! ON NE PEUT PAS FAIRE D'HERITAGE D'UNE PAGE GENERIC en XAML !!!
