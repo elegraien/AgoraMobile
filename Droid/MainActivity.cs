@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Acr.UserDialogs;
 
 namespace AgoraMobileStandardNet.Droid
 {
@@ -21,6 +22,9 @@ namespace AgoraMobileStandardNet.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            // User Dialogs
+            Acr.UserDialogs.UserDialogs.Init(this);
 
             LoadApplication(new App());
         }

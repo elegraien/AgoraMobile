@@ -19,11 +19,12 @@ namespace AgoraMobileStandardNet.Pages
         int? idPrestation;
         int idEvent;
         string prestationName;
+        int nbInscrits;
 
         IScanPage scanPage;
 
 
-        public ListPeoplePage(int idEvent, int? idPrestation, int nbTotal, int nbPresents, string prestationName)
+        public ListPeoplePage(int idEvent, int? idPrestation, int nbTotal, int nbPresents, int nbInscrits, string prestationName)
         {
 
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace AgoraMobileStandardNet.Pages
             this.idPrestation = idPrestation;
             this.idEvent = idEvent;
             this.prestationName = prestationName;
+            this.nbInscrits = nbInscrits;
 
             // Le titre de la page
             this.Title = prestationName;
@@ -65,28 +67,41 @@ namespace AgoraMobileStandardNet.Pages
 
             // Récupération des participants
 
-            // TEST
-            //SendPresenceAck("2032368"); //, this.idPrestation);
             participants = await new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
 
-
-
-            // Peuple la liste des evenements
-            listView = new ListView();
-            listView.RowHeight = 80;
-            listView.ItemsSource = participants;
-            listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
-            DataLayout.Children.Add(listView);
-
-            // Fin téléchargement
-            //sd.Hide();
-            UserDialogs.HideSpinner();
-
-            // Gère le click sur un item
-            listView.ItemSelected += (sender, e) =>
+            // Attention : si il n'y a pas de participants alors que nbInscrits !=0 ET Hors Connexion :
+            // Cela signifie qu'on n'a jamais récupéré les données, on affiche un message d'erreur
+            if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion) &&
+               this.nbInscrits != 0 &&
+                participants.Count == 0)
             {
-                HandlePeopleClicked(sender, e);
-            };
+              
+                UserDialogs.HideSpinner();
+
+                // Affichage du message
+                this.UserDialogs.ShowAlert("Erreur", "Attention : vous êtes Hors Connexion et vous n'avez pas téléchargé les listes préalablement !");
+
+            }
+            else
+            {
+
+                // Peuple la liste des evenements
+                listView = new ListView();
+                listView.RowHeight = 80;
+                listView.ItemsSource = participants;
+                listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
+                DataLayout.Children.Add(listView);
+
+                // Fin téléchargement
+                //sd.Hide();
+                UserDialogs.HideSpinner();
+
+                // Gère le click sur un item
+                listView.ItemSelected += (sender, e) =>
+                {
+                    HandlePeopleClicked(sender, e);
+                };
+            }
 
         }
 
@@ -173,6 +188,10 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="paramA09">Parameter a09.</param>
         private void SendPresenceAck(string paramA09) //, int? idPrestation)
         {
 

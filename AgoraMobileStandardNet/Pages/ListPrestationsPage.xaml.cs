@@ -121,6 +121,7 @@ namespace AgoraMobileStandardNet.Pages
                                                               prestationId,
                                                               prestation.NbTotal,
                                                               prestation.NbPresents,
+                                                              prestation.NbInscrits,
                                                              prestation.Title);
 
                 // On déselectionne

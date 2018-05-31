@@ -11,6 +11,7 @@ namespace AgoraMobileStandardNet.Models
         [PrimaryKey]
         public int Id { get; set; }
         public int NbTotal { get; set; }
+        public int NbInscrits { get { return NbTotal - NbRemaining; } }
         public int NbRemaining { get; set; }
         public string Title { get; set; }
         public int IdManif { get; set; }
