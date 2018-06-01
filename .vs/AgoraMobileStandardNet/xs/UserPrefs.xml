@@ -1,35 +1,20 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Services/SQLData.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="114" Column="10" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="100" Column="26" />
-      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="39" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="46" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="83" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="76" Column="34" />
-      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="334" Column="28" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" Line="114" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="131" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Models/ValidatePresence.cs" Line="10" Column="19" />
-      <File FileName="AgoraMobileStandardNet/Models/Prestation.cs" Line="14" Column="72" />
-      <File FileName="iOS/CodePCL/UserDialogs.cs" Line="15" Column="61" />
-      <File FileName="iOS/CodePCL/PersonalFolder.cs" Line="1" Column="1" />
-      <File FileName="Droid/CodePCL/PersonalFolder.cs" Line="1" Column="1" />
-      <File FileName="Droid/MainActivity.cs" Line="28" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Helpers/UserDialogs.cs" Line="23" Column="1" />
-      <File FileName="Droid/CodePCL/UserDialogs.cs" Line="34" Column="10" />
+      <File FileName="Source Not Available" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="82" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="47" Column="35" />
+      <File FileName="AgoraMobileStandardNet/Services/SQLData.cs" Line="87" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" line="79" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" relfile="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" line="114" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AutreMachine/AgoraMobile/Droid/CodePCL/PersonalFolder.cs" relfile="Droid/CodePCL/PersonalFolder.cs" line="21" column="1" />
+      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" line="79" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D92E7587-5E00-4552-8432-42F111E78F46" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D26597FD-A9AD-4A24-AC2D-C071DCF2595D" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid PreferredExecutionTarget="Android.00e3e406273dbbb1" />
 </Properties>

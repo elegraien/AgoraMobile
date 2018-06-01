@@ -86,7 +86,11 @@ namespace AgoraMobileStandardNet.Services
         /// <returns>The last identifier.</returns>
         public int GetLastId()
         {
-            return this.RetrieveAll().Select(x => x.Id).Max();
+            var ids = this.RetrieveAll().Select(x => x.Id);
+            if (ids.Any())
+                return ids.Max();
+            else
+                return 0;
         }
 
         public List<T> RetrieveAll()

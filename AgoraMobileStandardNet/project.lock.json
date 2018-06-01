@@ -517,18 +517,18 @@
     ".NETPortable,Version=v4.5,Profile=Profile111": []
   },
   "packageFolders": {
-    "/Users/cnavelot/.nuget/packages/": {}
+    "/Users/christiannavelot/.nuget/packages/": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
+      "projectUniqueName": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
       "projectName": "AgoraMobileStandardNet",
-      "projectPath": "/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
-      "projectJsonPath": "/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/project.json",
-      "packagesPath": "/Users/cnavelot/.nuget/packages/",
+      "projectPath": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
+      "projectJsonPath": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/project.json",
+      "packagesPath": "/Users/christiannavelot/.nuget/packages/",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "/Users/cnavelot/.config/NuGet/NuGet.Config"
+        "/Users/christiannavelot/.config/NuGet/NuGet.Config"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}

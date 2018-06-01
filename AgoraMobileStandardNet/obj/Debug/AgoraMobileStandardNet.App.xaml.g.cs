@@ -11,7 +11,7 @@
 namespace AgoraMobileStandardNet {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

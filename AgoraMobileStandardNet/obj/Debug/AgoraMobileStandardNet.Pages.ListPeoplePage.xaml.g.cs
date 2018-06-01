@@ -11,8 +11,8 @@
 namespace AgoraMobileStandardNet.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Volumes/Storage/Github/AutreMachine/AgoraMobile/AgoraMobileStandardNet/Pages/Lis" +
-        "tPeoplePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/ListPeoplePage.x" +
+        "aml")]
     public partial class ListPeoplePage : global::AgoraMobileStandardNet.Pages.CustomContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
