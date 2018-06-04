@@ -70,6 +70,7 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
+            // Le Spinner
             this.UserDialogs.ShowSpinner();
 
             DataLayout.Children.Clear();

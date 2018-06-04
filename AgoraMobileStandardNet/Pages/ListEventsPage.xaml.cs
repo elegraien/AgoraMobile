@@ -41,28 +41,12 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
+            // Le Spinner
+            this.UserDialogs.ShowSpinner();
+
             DataLayout.Children.Clear();
 
             // Récupération des events
-
-
-            // Appelle le Web Service
-            /*WebServiceData<Evenement> webServiceData = new WebServiceData<Evenement>(
-                this.Token,
-                Global.WS_GET_EVENTS
-            );
-
-            if (!webServiceData.IsHorsConnexion)
-            {
-                evenements = webServiceData.GetData((jsonObject) =>
-                {
-                    return new Evenement(jsonObject);
-                }, null).Result;
-            }
-            else
-            {
-                evenements = webServiceData.RetrieveAllFromCache();
-            }*/
             this.evenements = await new ListEventsData(Token).GetInstances();
 
 

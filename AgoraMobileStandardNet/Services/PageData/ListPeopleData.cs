@@ -27,9 +27,9 @@ namespace AgoraMobileStandardNet.Services
             string url = "";
             if (idPrestation.HasValue)
                 url = Global.WS_GET_PARTICIPANTS + "?id=" + idPrestation.Value + "&idManif=" + idEvent +
-                            "&Prestation=true&StartRecord=0&RecordsCount=100";
+                            "&Prestation=true";
             else
-                url = Global.WS_GET_PARTICIPANTS + "?id=" + idEvent + "&StartRecord=0&RecordsCount=100";
+                url = Global.WS_GET_PARTICIPANTS + "?id=" + idEvent;
 
             WebServiceData<Participant> wsData = new WebServiceData<Participant>(
                 this.Token,
@@ -44,7 +44,10 @@ namespace AgoraMobileStandardNet.Services
                 instances = await wsData.GetData((jsonObject) =>
                 {
                     return new Participant(jsonObject, idEvent.Value, idPrestation);
-                }, null);
+                }, 
+                                                 null,
+                                                true,
+                                                5);
             }
             else
             {

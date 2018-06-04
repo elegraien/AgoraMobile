@@ -112,6 +112,36 @@ namespace AgoraMobileStandardNet.Services
         }
 
         /// <summary>
+        /// Récupère une instance avec son Id
+        /// </summary>
+        /// <returns>The t.</returns>
+        /// <param name="id">Identifier.</param>
+        public T GetT(int id)
+        {
+            T result = default(T);
+
+            try
+            {
+                using (var conn = new SQLiteConnection(this.DBPath))
+                {
+                    result = conn.Get<T>(id);
+                }
+
+
+            }
+            catch (SQLiteException ex)
+            {
+                HandleException(ex);
+            }
+            catch(Exception e)
+            {
+                HandleException(e);
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Pour mettre à jour en base un lot d'instances
         /// </summary>
         /// <param name="instances">Instances.</param>

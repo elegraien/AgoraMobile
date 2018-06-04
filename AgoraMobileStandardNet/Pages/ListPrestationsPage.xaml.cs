@@ -36,6 +36,9 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
+            // Le Spinner
+            this.UserDialogs.ShowSpinner();
+
             DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Json;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AgoraMobileStandardNet.Interfaces;
@@ -66,9 +67,10 @@ namespace AgoraMobileStandardNet.Services
         /// <returns>The data.</returns>
         public async Task<List<T>> GetData(Func<JsonObject, T> DecodeJSONObject,
                                Func<JsonPrimitive, T> DecodeJSONPrimitive,
-                              bool isInCache = true)
+                              bool isInCache = true,
+                                          int? RecordsCount = null)
         {
-            // On checke la présence de la table
+            // On checke la présence de la table SI on veut stocker les données en local
             if (isInCache)
             {
                 sqlData.CreateTable();
@@ -89,129 +91,182 @@ namespace AgoraMobileStandardNet.Services
 
                 // Creates HTTP web request
                 string url = Global.URL_BASE + this.ActionUrl;
-                WebRequest request = WebRequest.Create(new Uri(url)) as WebRequest;
-                request.ContentType = "application/json";
 
-                // Method
-                request.Method = this.Method;
-                if (this.Method == "POST")
+
+                // On récupère les données (ou la page de données)
+                if (RecordsCount == null)
+                    instances.AddRange(await getPagedData(DecodeJSONObject, DecodeJSONPrimitive, url, isInCache, null, null));
+                else
                 {
-                    //request.ContentLength = (string.IsNullOrEmpty(this.PostString) ? 0 : this.PostString.Length);
+                    // On pagine
+                    int nbRecords = RecordsCount.Value;
+                    int startRecord = 0;
+                    while (nbRecords == RecordsCount) {
+                        // On récupère la page
+                        var pagedInstances = await getPagedData(DecodeJSONObject, DecodeJSONPrimitive, url, isInCache, startRecord, RecordsCount);
+
+                        // Attention : le WS a été mal codé ! Il renvoie un doubon pour le premier élément !
+                        // Pour éviter le problème, on va vérifier si le 1er élément trouvé n'est pas déjà dans la liste...
+                        if (pagedInstances != null &&
+                            pagedInstances.Count > 0 &&
+                            instances.Where(x => x.Id == pagedInstances.First().Id).Any()) {
+                            // On retire le premier
+                            pagedInstances.Remove(pagedInstances.First());
+                        }
+
+                        instances.AddRange(pagedInstances);
+                        nbRecords = pagedInstances.Count;
+                        startRecord += nbRecords;
+                    }
                 }
+            }
 
-                // Token
-                if (!string.IsNullOrEmpty(this.Token))
-                    request.Headers["AgoraEvent-Token"] = this.Token;
-
+            return instances;
 
 
-                // Sends the request
-                await Task.Run(() =>
+        }
+
+        /// <summary>
+        /// Pour récupérer un bloc de données
+        /// </summary>
+        /// <returns>The paged data.</returns>
+        /// <param name="DecodeJSONObject">Decode JSONO bject.</param>
+        /// <param name="DecodeJSONPrimitive">Decode JSONP rimitive.</param>
+        /// <param name="isInCache">If set to <c>true</c> is in cache.</param>
+        /// <param name="recordsCount">Records count.</param>
+        private async Task<List<T>> getPagedData(Func<JsonObject, T> DecodeJSONObject,
+                               Func<JsonPrimitive, T> DecodeJSONPrimitive,
+                                                 string url,
+                              bool isInCache = true,
+                                                 int? startRecord = null,
+                                                 int? recordsCount = null)
+        {
+            List<T> instances = new List<T>();
+
+            // On prend en compte si il le faut le paramètre RecordsCount pour paginer la récupération
+            if (recordsCount.HasValue && startRecord.HasValue)
+                url += "&StartRecord=" + startRecord.Value + "&RecordsCount=" + recordsCount.Value;
+            
+
+            WebRequest request = WebRequest.Create(new Uri(url)) as WebRequest;
+            request.ContentType = "application/json";
+
+            // Method
+            request.Method = this.Method;
+            if (this.Method == "POST")
+            {
+                //request.ContentLength = (string.IsNullOrEmpty(this.PostString) ? 0 : this.PostString.Length);
+            }
+
+            // Token
+            if (!string.IsNullOrEmpty(this.Token))
+                request.Headers["AgoraEvent-Token"] = this.Token;
+
+
+
+            // Sends the request
+            await Task.Run(() =>
+            {
+                try
                 {
-                    try
+
+  
+
+                    using (WebResponse response = DependencyService.Get<INetTools>().GetResponse(request)) // request.GetResponse(); // await request.GetResponseAsync())
                     {
-                        // Message pour dire que le chargement a commencé
-                        //MessagingCenter.Send<WebServiceData<T>>(this, "LoadingStarted");
+                        // Si on est passé sans exception : on a le droit de se logger
 
-
-                        using (WebResponse response = DependencyService.Get<INetTools>().GetResponse(request)) // request.GetResponse(); // await request.GetResponseAsync())
+                        // Le stream
+                        using (Stream stream = DependencyService.Get<INetTools>().GetResponseStream(response)) // response.GetResponseStream())
                         {
-                            // Si on est passé sans exception : on a le droit de se logger
+                            // Build the JSON doc
+                            JsonValue jsonDoc = JsonObject.Load(stream);
 
-                            // Le stream
-                            using (Stream stream = DependencyService.Get<INetTools>().GetResponseStream(response)) // response.GetResponseStream())
+
+                            // On parse le résultat sous forme d'events et on renvoie
+                            string temp = jsonDoc.ToString();
+
+                            if (jsonDoc is JsonArray)
                             {
-                                // Build the JSON doc
-                                JsonValue jsonDoc = JsonObject.Load(stream);
-
-
-                                // On parse le résultat sous forme d'events et on renvoie
-                                string temp = jsonDoc.ToString();
-
-                                if (jsonDoc is JsonArray)
+                                // Tableau : on parse ligne à ligne
+                                for (int i = 0; i < jsonDoc.Count; i++)
                                 {
-                                    // Tableau : on parse ligne à ligne
-                                    for (int i = 0; i < jsonDoc.Count; i++)
+                                    var currentJsonNode = jsonDoc[i];
+                                    T instance = default(T);
+                                    if (currentJsonNode is JsonObject)
                                     {
-                                        var currentJsonNode = jsonDoc[i];
-                                        T instance = default(T);
-                                        if (currentJsonNode is JsonObject)
-                                        {
-                                            instance = DecodeJSONObject((JsonObject)currentJsonNode);
-                                            instances.Add(instance);
-                                        }
-                                        if (currentJsonNode is JsonPrimitive)
-                                        {
-                                            instance = DecodeJSONPrimitive((JsonPrimitive)currentJsonNode);
-                                            instances.Add(instance);
-                                        }
-
-                                        // On ajoute au cache
-                                        if (isInCache)
-                                        {
-                                            sqlData.InsertData(instance);
-
-                                            // Debug
-                                            Debug.WriteLine("Insert : " + instance.ToString());
-
-                                        }
+                                        instance = DecodeJSONObject((JsonObject)currentJsonNode);
+                                        instances.Add(instance);
                                     }
-
-
-                                }
-                                else
-                                {
-                                    // 1 seule instance
-                                    T instance = DecodeJSONObject((JsonObject)jsonDoc);
-                                    instances.Add(instance);
+                                    if (currentJsonNode is JsonPrimitive)
+                                    {
+                                        instance = DecodeJSONPrimitive((JsonPrimitive)currentJsonNode);
+                                        instances.Add(instance);
+                                    }
 
                                     // On ajoute au cache
                                     if (isInCache)
                                     {
-                                        sqlData.InsertData(instance);
+                                        this.InsertData(instance);
 
                                         // Debug
                                         Debug.WriteLine("Insert : " + instance.ToString());
 
                                     }
                                 }
+
+
+                            }
+                            else
+                            {
+                                // 1 seule instance
+                                T instance = DecodeJSONObject((JsonObject)jsonDoc);
+                                instances.Add(instance);
+
+                                // On ajoute au cache
+                                if (isInCache)
+                                {
+                                    this.InsertData(instance);
+
+                                    // Debug
+                                    Debug.WriteLine("Insert : " + instance.ToString());
+
+                                }
                             }
                         }
-
                     }
-                    catch (WebException ex)
+
+                }
+                catch (WebException ex)
+                {
+                    HttpWebResponse objresponse = ex.Response as HttpWebResponse;
+                    if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
                     {
-                        HttpWebResponse objresponse = ex.Response as HttpWebResponse;
-                        if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
-                        {
-                            // 401
-
-                        }
-                        else
-                        {
-                            // Générique
-
-                        }
+                        // 401
 
                     }
-                    catch (Exception e)
+                    else
                     {
-                        string msg = e.Message;
-                    }
-                    finally
-                    {
-                        // Loading terminé
-                        //MessagingCenter.Send<WebServiceData<T>>(this, "LoadingFinished");
+                        // Générique
 
                     }
 
-                    return instances;
-                });
-            }
+                }
+                catch (Exception e)
+                {
+                    string msg = e.Message;
+                }
+                finally
+                {
+                    // Loading terminé
+                    //MessagingCenter.Send<WebServiceData<T>>(this, "LoadingFinished");
+
+                }
+
+                //return instances;
+            });
 
             return instances;
-
-
         }
 
         /// <summary>
@@ -243,7 +298,21 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="instances">Instances.</param>
         public void InsertData(T instance)
         {
-            sqlData.InsertData(instance);
+            // Attention : Si id=0 : on n'ajoute pas
+            if (instance.Id == 0)
+            {
+
+                // Debug
+                Debug.WriteLine("ERREUR d'Insert - id=0 : " + instance.ToString());
+
+                return;
+            }
+
+            // On vérifie si l'instance n'existe pas déjà, auquel cas on l'update
+            if (instance.Id != 0 && sqlData.GetT(instance.Id) != null)
+                sqlData.UpdateData(instance);
+            else
+                sqlData.InsertData(instance);
         }
 
     }
