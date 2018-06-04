@@ -34,13 +34,14 @@ namespace AgoraMobileStandardNet.Services
         /// </summary>
         /// <param name="idParticipant">Identifier participant.</param>
         /// <param name="idPrestation">Identifier prestation.</param>
-        public ValidatePresence AddNewPresence(int idParticipant, int? idPrestation)
+        public ValidatePresence AddNewPresence(int idParticipant, int? idPrestation, bool isEBillet = false)
         {
             var newValidate = new ValidatePresence()
             {
                 IdParticipant = idParticipant,
                 IdPrestation = idPrestation,
-                DatePresence = DateTime.Now
+                DatePresence = DateTime.Now,
+                IsEBillet = isEBillet
             };
 
             // On cherche le nouvel Id (car on stocke en local quelque chose qui ne vient pas d'un WS)
@@ -70,9 +71,14 @@ namespace AgoraMobileStandardNet.Services
             }
 
             // Creates HTTP web request
+            // Attention : Si EBIllet : on ajoute un paramètre àl'URL d'envoi
             string url = Global.URL_BASE;
             if (validatePresence.IdPrestation.HasValue)
+            {
                 url += Global.WS_SET_PARTICIPANT_INSCRIPTION_PRESTATION + "?id=" + validatePresence.IdParticipant;
+                if (validatePresence.IsEBillet)
+                    url += "&ebillet=true&idPrestation=" + validatePresence.IdPrestation.Value;
+            }
             else
                 url += Global.WS_SET_PARTICIPANT_PRESENCE_SS_PRESTA + validatePresence.IdParticipant;
 
@@ -122,54 +128,6 @@ namespace AgoraMobileStandardNet.Services
                             // Résultat : "[\"1692915\", \"2FAVAND\", \"Nicolas\"]"
                             isOk = true;
 
-                            /* if (jsonDoc is JsonArray)
-                             {
-                                 // Tableau : on parse ligne à ligne
-                                 for (int i = 0; i < jsonDoc.Count; i++)
-                                 {
-                                     var currentJsonNode = jsonDoc[i];
-                                     T instance = default(T);
-                                     if (currentJsonNode is JsonObject)
-                                     {
-                                         instance = DecodeJSONObject((JsonObject)currentJsonNode);
-                                         instances.Add(instance);
-                                     }
-                                     if (currentJsonNode is JsonPrimitive)
-                                     {
-                                         instance = DecodeJSONPrimitive((JsonPrimitive)currentJsonNode);
-                                         instances.Add(instance);
-                                     }
-
-                                     // On ajoute au cache
-                                     if (isInCache)
-                                     {
-                                         sqlData.InsertData(instance);
-
-                                         // Debug
-                                         Debug.WriteLine("Insert : " + instance.ToString());
-
-                                     }
-                                 }
-
-
-                             }
-                             else
-                             {
-                                 // 1 seule instance
-                                 T instance = DecodeJSONObject((JsonObject)jsonDoc);
-                                 instances.Add(instance);
-
-                                 // On ajoute au cache
-                                 if (isInCache)
-                                 {
-                                     sqlData.InsertData(instance);
-
-                                     // Debug
-                                     Debug.WriteLine("Insert : " + instance.ToString());
-
-                                 }
-                             }
-                             */
                         }
                     }
 
@@ -180,20 +138,25 @@ namespace AgoraMobileStandardNet.Services
                 {
                     isOk = false;
                     HttpWebResponse objresponse = ex.Response as HttpWebResponse;
-                    if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                    if (objresponse.StatusCode == HttpStatusCode.Unauthorized ||
+                        objresponse.StatusCode == HttpStatusCode.Forbidden ||
+                       objresponse.StatusCode == HttpStatusCode.NotFound)
                     {
                         // 401
-
-                    }
-                    else if (objresponse.StatusCode == HttpStatusCode.Forbidden)
-                    {
                         // 403 : le participant a déjà été enregistré aujourd'hui
+                        // On enlève de la base et
                         // rethrow
+                       sqlData.DeleteData(validatePresence);
+
                         throw ex;
 
-                    } else 
+                    }
+                    else 
                     {
                         // Générique
+                        sqlData.DeleteData(validatePresence);
+
+                        throw ex;
                     }
 
                 }

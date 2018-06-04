@@ -9,6 +9,9 @@ using System.Json;
 using AgoraMobileStandardNet.ViewModels;
 using AgoraMobileStandardNet.Interfaces;
 using AgoraMobileStandardNet.Helpers;
+using System.Net;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AgoraMobileStandardNet.Pages
 {
@@ -20,8 +23,10 @@ namespace AgoraMobileStandardNet.Pages
         int idEvent;
         string prestationName;
         int nbInscrits;
+        int nbPresents;
 
         IScanPage scanPage;
+
 
 
         public ListPeoplePage(int idEvent, int? idPrestation, int nbTotal, int nbPresents, int nbInscrits, string prestationName)
@@ -33,9 +38,31 @@ namespace AgoraMobileStandardNet.Pages
             this.idEvent = idEvent;
             this.prestationName = prestationName;
             this.nbInscrits = nbInscrits;
+            this.nbPresents = nbPresents;
 
             // Le titre de la page
             this.Title = prestationName;
+
+            // Les boutons en bas
+            // ------------------
+
+                BtnScan.Clicked += async (sender, e) =>
+                {
+                    // Ouverture du scan
+                    await BtnScanClicked(sender, e);
+
+                };
+
+
+
+                BtnSearch.Clicked += async (sender, e) =>
+                {
+                    // Ouverture de la modale de recherche
+                    await BtnSearchClicked(sender, e);
+                };
+
+            // On RAZ le SearchString
+            Global.SetSettings(TypeSettings.SearchString, "");
 
         }
 
@@ -43,22 +70,16 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
+            this.UserDialogs.ShowSpinner();
+
             DataLayout.Children.Clear();
 
-            // Les boutons en bas
-            // ------------------
-            BtnScan.Clicked += (sender, e) =>
-            {
-                // Ouverture du scan
-                BtnScanClicked(sender, e);
-
-            };
-
-            BtnSearch.Clicked += (sender, e) =>
-            {
-                // Ouverture de la modale de recherche
-                BtnSearchClicked(sender, e);
-            };
+            // Si Search String : on l'affiche sur le bouton
+            var searchString = Global.GetSettings(TypeSettings.SearchString);
+            if (!string.IsNullOrEmpty(searchString))
+                BtnSearch.Text = "Rechercher *";
+            else
+                BtnSearch.Text = "Rechercher";
 
 
             // Affichage de la liste des participants
@@ -66,8 +87,11 @@ namespace AgoraMobileStandardNet.Pages
 
 
             // Récupération des participants
-
             participants = await new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
+
+            // filtrage éventuel
+            if (!string.IsNullOrEmpty(searchString))
+                participants = participants.Where(X => X.FirstName.ToLower().Contains(searchString.ToLower()) || X.LastName.ToLower().Contains(searchString.ToLower())).ToList();
 
             // Attention : si il n'y a pas de participants alors que nbInscrits !=0 ET Hors Connexion :
             // Cela signifie qu'on n'a jamais récupéré les données, on affiche un message d'erreur
@@ -79,28 +103,41 @@ namespace AgoraMobileStandardNet.Pages
                 UserDialogs.HideSpinner();
 
                 // Affichage du message
-                this.UserDialogs.ShowAlert("Erreur", "Attention : vous êtes Hors Connexion et vous n'avez pas téléchargé les listes préalablement !");
+                await this.UserDialogs.ShowAlert("Erreur", "Attention : vous êtes Hors Connexion et vous n'avez pas téléchargé les listes préalablement !");
 
             }
             else
             {
+                if (participants.Count > 0)
+                {
 
-                // Peuple la liste des evenements
-                listView = new ListView();
-                listView.RowHeight = 80;
-                listView.ItemsSource = participants;
-                listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
-                DataLayout.Children.Add(listView);
+                    // Peuple la liste des evenements si il y en a...
+                    listView = new ListView();
+                    listView.RowHeight = 80;
+                    listView.ItemsSource = participants;
+                    listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
+                    DataLayout.Children.Add(listView);
+
+ 
+                    // Gère le click sur un item
+                    listView.ItemSelected += (sender, e) =>
+                    {
+                        HandlePeopleClicked(sender, e);
+                    };
+                } else {
+                    // Aucun participant trouvé
+                    var newLabel = new Label();
+                    if (!string.IsNullOrEmpty(searchString))
+                        newLabel.Text = "Aucun participant trouvé pour la recherche de \"" + searchString + "\".";
+                    else
+                        newLabel.Text = "Aucun participant trouvé.";
+                    DataLayout.Children.Add(newLabel);
+                }
 
                 // Fin téléchargement
                 //sd.Hide();
                 UserDialogs.HideSpinner();
 
-                // Gère le click sur un item
-                listView.ItemSelected += (sender, e) =>
-                {
-                    HandlePeopleClicked(sender, e);
-                };
             }
 
         }
@@ -141,49 +178,66 @@ namespace AgoraMobileStandardNet.Pages
 
 
         #region Button Actions
-        private void BtnScanClicked(object sender, EventArgs e)
+        private async Task BtnScanClicked(object sender, EventArgs e)
         {
             // Ouverture de la page de scan
-            // !!! ATTENTION ! Ne marche pas
-            // il faudrait plutôt faire une interface et utiliser DependencyService pour injecter
-            // le service de Scan
             scanPage = DependencyService.Get<IScanPage>(); // new ZXingScannerPage();
+
+            if (scanPage.scannerPage.IsScanning)
+                return;
+
+            scanPage.scannerPage.IsScanning = true;
+            if (scanPage.scannerPage.Parent == null) {
+                // On affiche la page
+                await Navigation.PushModalAsync(scanPage.scannerPage); //.PushAsync(scanPage.scannerPage);
+            } 
 
             // Le check des résultats
             scanPage.scannerPage.OnScanResult += (result) =>
             {
+                // Pour éviter de le faire tant que le client n'a pas validé
+                if (scanPage.scannerPage.IsScanning == false)
+                    return;
+                
                 // On stoppe le scan
                 scanPage.scannerPage.IsScanning = false;
 
                 // On retire la page et on montre le résultat
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await Navigation.PopAsync();
-
+ 
                     // On essaye de récupérer le code IdA09 si il existe et on appelle le WS
                     string paramA09 = getParameterByName(result.Text, "IdA09");
                     if (!string.IsNullOrEmpty(paramA09))
                     {
-                        await DisplayAlert("Scanned barcode", paramA09, "OK");
+                        //await DisplayAlert("Scanned barcode", paramA09, "OK");
 
-                        SendPresenceAck(paramA09); //, this.idPrestation);
+                        await SendPresenceAck(paramA09); //, this.idPrestation);
+
+                    } else {
+                        // Message d'erreur
+                        await this.ShowAlert("Attention", "Erreur de la validation d'un invité par QR Code.");
+
 
                     }
+
+  
+                    await Navigation.PopModalAsync(); //.PopAsync();
+
 
                 });
             };
 
-            scanPage.scannerPage.IsAnalyzing = true;
-
-            // On affiche la page
-            Navigation.PushAsync(scanPage.scannerPage);
         }
 
-        private void BtnSearchClicked(object sender, EventArgs e)
+        private async Task BtnSearchClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new SearchDialogPage());
-            //  A FAIRE
-            // TODO
+            var searchPage = new SearchDialogPage();
+            /*if (searchPage != null)
+                searchPage.Parent = this;*/
+            await Navigation.PushModalAsync(searchPage);
+           
+
 
 
         }
@@ -192,38 +246,82 @@ namespace AgoraMobileStandardNet.Pages
         /// TODO
         /// </summary>
         /// <param name="paramA09">Parameter a09.</param>
-        private void SendPresenceAck(string paramA09) //, int? idPrestation)
+        private async Task SendPresenceAck(string paramA09) //, int? idPrestation)
         {
 
+            int idParticipant;
+            if (!int.TryParse(paramA09, out idParticipant))
+            {
+                //await this.ShowAlert("Attention", "Problème de lecture du QR Code.");
+                await this.DisplayAlert("Attention", "Problème de lecture du QR Code.", "Cancel");
+                       
+                return;
+            }
+
             // On appelle le WS pour signifier la présence
+            // On passe par validateService
+            // On prépare la validation de la présence
+            var validateService = new ValidatePresenceService(this.Token);
 
-            // Appelle le Web Service
-            string url = "";
-            if (this.idPrestation.HasValue)
-                url = Global.WS_SET_PARTICIPANT_INSCRIPTION_PRESTATION + "?id=" + paramA09 + "&ebillet=true&idPrestation=" + this.idPrestation.Value;
-            else
-                url = Global.WS_SET_PARTICIPANT_PRESENCE_SS_PRESTA + "/" + paramA09;
+            // On ajoute la ligne à valider
+            var validate = validateService.AddNewPresence(idParticipant, this.idPrestation, true);
 
-            WebServiceData<SetPresenceRetour> wsData = new WebServiceData<SetPresenceRetour>(
-                this.Token,
-                url,
-                "POST"
-            );
-
-            if (!wsData.IsHorsConnexion)
+            // On déclenche l'envoi au WS (si besoin)
+            if (validate != null)
             {
-                // Récupère L'Id en retour
-
-                var retour = wsData.GetData((jsonObject) =>
+                // On envoie uniquement en cas de connexion
+                if (!Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
                 {
-                    return new SetPresenceRetour(jsonObject);
-                }, null);
-            }
-            else
-            {
-                // Récupère le cache
+                    //await validateService.SendAll();
+                    // Attention : si participant déjà enregistré : erreur 403
+                    try
+                    {
+                        await validateService.Send(validate);
+                    }
+                    catch (WebException ex)
+                    {
+                        HttpWebResponse objresponse = ex.Response as HttpWebResponse;
+                        if (objresponse.StatusCode == HttpStatusCode.Forbidden)
+                        {
+                            // 403 : le participant a déjà été enregistré aujourd'hui
+                            // Message d'erreur
+                            await this.ShowAlert("Attention", "Le billet a déjà été enregistré.");
+                            return;
+                        } else if (objresponse.StatusCode == HttpStatusCode.NotFound ||
+                                  objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            // 404 ou 401 : billet non valide
+                            //await this.ShowAlert("Attention", "Le billet n'est pas valide.");
+                            await this.DisplayAlert("Attention", "Le billet n'est pas valide.", "Cancel");
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    // Hors connexion : on vérifie juste si l'utilisateur n'est pas déjà présent dans la table SQL
+
+                    // Attention : si pas de prestation : on a le droit d'enregistrer plusieurs fois la présence
+                    // Si il y a une prestation, en revanche, on doit vérifier qu'il n'est pas déjà inscrit
+
+                    if (validate.IdPrestation.HasValue &&
+                        validateService.IsInscriptionAlreadyRecorded(validate))
+                    {
+                        // Déjà trouvé : message d'erreur
+                        await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+
+                        return;
+                    }
+
+                }
+            } else {
+                // Pb à l'insertion des données ??
 
             }
+
+
+            return;
+
 
         }
 
@@ -234,7 +332,7 @@ namespace AgoraMobileStandardNet.Pages
                 Uri newUri = new Uri(url);
                 // On découpe les paramètres
                 string query = newUri.Query;
-                if (query.StartsWith("?"))
+                if (query.StartsWith("?", StringComparison.CurrentCultureIgnoreCase))
                     query = query.Substring(1);
 
                 string[] paramValues = query.Split('&');
@@ -248,6 +346,7 @@ namespace AgoraMobileStandardNet.Pages
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("Erreur : " + ex.Message);
                 return string.Empty;
             }
 
@@ -259,7 +358,7 @@ namespace AgoraMobileStandardNet.Pages
 
     }
 
-    public class SetPresenceRetour : IBaseModel
+    /*public class SetPresenceRetour : IBaseModel
     {
         public int Id { get; set; }
         public SetPresenceRetour()
@@ -271,6 +370,6 @@ namespace AgoraMobileStandardNet.Pages
         {
 
         }
-    }
+    }*/
 
 }

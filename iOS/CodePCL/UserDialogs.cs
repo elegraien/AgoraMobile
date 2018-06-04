@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Acr.UserDialogs;
 using AgoraMobileStandardNet.Interfaces;
 using AgoraMobileStandardNet.iOS;
@@ -32,9 +33,9 @@ namespace AgoraMobileStandardNet.iOS
             _progressDialog.Hide();
         }
 
-        public void ShowAlert(string title, string message)
+        public async Task ShowAlert(string title, string message)
         {
-            Acr.UserDialogs.UserDialogs.Instance.Alert(message, title);
+            await Acr.UserDialogs.UserDialogs.Instance.AlertAsync(message, title);
         }
     }
 }

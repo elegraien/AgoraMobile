@@ -143,6 +143,7 @@ namespace AgoraMobileStandardNet
         LoginSaved,
         PasswordSaved,
         IsHorsConnexion,
-        LastHorsConnexionDate // La date de dernier passage en hors connexion
+        LastHorsConnexionDate, // La date de dernier passage en hors connexion
+        SearchString
     }
 }

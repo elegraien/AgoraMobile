@@ -16,6 +16,8 @@ namespace AgoraMobileStandardNet.Pages
     {
         UserDialogs sd;
 
+        private string token { get; set; }
+
         public LoginPage()
         {
             InitializeComponent();
@@ -48,6 +50,13 @@ namespace AgoraMobileStandardNet.Pages
                 // Si Ok : on passe à la liste
                 if (isOk)
                 {
+                    // Puisqu'on a du réseau, on en profite pour envoyer les invitations créées en local
+                    if (!string.IsNullOrEmpty(this.token)) {
+                        var validateService = new ValidatePresenceService(this.token);
+                        await validateService.SendAll();
+                       
+                    }
+ 
                     // La navigation
                     var listEventsPage = new ListEventsPage();
 
@@ -114,6 +123,7 @@ namespace AgoraMobileStandardNet.Pages
 
                         // Le résultat renvoyé est le Token, on le stocke ainsi que la date
                         string result = jsonDoc.ToString();
+                        this.token = result;
                         Global.SetSettings(TypeSettings.Token, result);
                         Global.SetSettings(TypeSettings.TokenDate, new DateTime().ToString());
 
@@ -136,7 +146,12 @@ namespace AgoraMobileStandardNet.Pages
                     // Générique
                     ErrorMsg.Text = objresponse.StatusDescription;
                 }
+                await this.DisplayAlert("Erreur", ErrorMsg.Text, "OK");
 
+            }
+            catch (Exception ex)
+            {
+                await this.DisplayAlert("Erreur", "Une erreur est survenue : " + ex.Message, "OK");
             }
 
             return isLogged;

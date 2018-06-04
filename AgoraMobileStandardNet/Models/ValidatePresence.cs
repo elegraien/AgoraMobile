@@ -21,6 +21,9 @@ namespace AgoraMobileStandardNet.Models
         // Date de validation de présence
         public DateTime DatePresence { get; set; }
 
+        // La présence est elle validée par un scan de billet ?
+        public bool IsEBillet { get; set; }
+
         public ValidatePresence()
         {
         }

@@ -4,6 +4,7 @@ using AgoraMobileStandardNet.Interfaces;
 using AgoraMobileStandardNet.Droid;
 using Xamarin.Forms;
 using Android.App;
+using System.Threading.Tasks;
 
 [assembly: Dependency(typeof(AgoraMobileStandardNet.Droid.UserDialogs))]
 namespace AgoraMobileStandardNet.Droid
@@ -19,7 +20,7 @@ namespace AgoraMobileStandardNet.Droid
                 MaskType = MaskType.Gradient,
                 Title = "Chargement..."
             };
-            _progressDialog = new Acr.UserDialogs.ProgressDialog(_progressDialogConfig, (Activity)Xamarin.Forms.Forms.Context);
+            _progressDialog = new Acr.UserDialogs.ProgressDialog(_progressDialogConfig, (MainActivity)Forms.Context); // (Activity)Xamarin.Forms.Forms.Context);
 
 
         }
@@ -35,9 +36,9 @@ namespace AgoraMobileStandardNet.Droid
             _progressDialog.Hide();
         }
 
-        public void ShowAlert(string title, string message)
+        public async Task ShowAlert(string title, string message)
         {
-            Acr.UserDialogs.UserDialogs.Instance.Alert(message, title);
+            await Acr.UserDialogs.UserDialogs.Instance.AlertAsync(message, title, "Ok");
         }
     }
 }

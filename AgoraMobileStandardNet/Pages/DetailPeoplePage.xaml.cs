@@ -100,7 +100,7 @@ namespace AgoraMobileStandardNet.Pages
                         {
                             // 403 : le participant a déjà été enregistré aujourd'hui
                             // Message d'erreur
-                            this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                            await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
                             return;
                         }
                     }
@@ -114,7 +114,7 @@ namespace AgoraMobileStandardNet.Pages
                         validateService.IsInscriptionAlreadyRecorded(validate))
                     {
                         // Déjà trouvé : message d'erreur
-                        this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                        await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
                             
                         return;
                     }

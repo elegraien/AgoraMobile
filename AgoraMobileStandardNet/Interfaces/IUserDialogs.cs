@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Threading.Tasks;
+
 namespace AgoraMobileStandardNet.Interfaces
 {
     public interface IUserDialogs
     {
         void ShowSpinner();
         void HideSpinner();
-        void ShowAlert(string title, string message);
+        Task ShowAlert(string title, string message);
     }
 }

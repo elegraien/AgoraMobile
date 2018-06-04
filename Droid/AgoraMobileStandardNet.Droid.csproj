@@ -178,6 +178,7 @@
     <Compile Include="CodePCL\PersonalFolder.cs" />
     <Compile Include="CodePCL\NetTools.cs" />
     <Compile Include="CodePCL\UserDialogs.cs" />
+    <Compile Include="CodePCL\ScanPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

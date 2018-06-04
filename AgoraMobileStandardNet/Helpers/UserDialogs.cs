@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Interfaces;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
@@ -28,9 +29,9 @@ namespace AgoraMobileStandardNet.Helpers
             userDialogs.HideSpinner();
         }
 
-        public void ShowAlert(string title, string message)
+        public async Task ShowAlert(string title, string message)
         {
-            userDialogs.ShowAlert(title, message);
+            await userDialogs.ShowAlert(title, message);
         }
 
 

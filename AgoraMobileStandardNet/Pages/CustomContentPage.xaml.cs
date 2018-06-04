@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Interfaces;
 using Xamarin.Forms;
@@ -113,9 +114,9 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
-        public void ShowAlert(string title, string message)
+        public async Task ShowAlert(string title, string message)
         {
-            this.UserDialogs.ShowAlert(title, message);
+            await this.UserDialogs.ShowAlert(title, message);
         }
 
         // NE FONCTIONNE PAS ! ON NE PEUT PAS FAIRE D'HERITAGE D'UNE PAGE GENERIC en XAML !!!
