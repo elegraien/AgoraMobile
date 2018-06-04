@@ -49,11 +49,17 @@ namespace AgoraMobileStandardNet.Pages
 
             };
 
+            // Affichage des données
+            await displayData();
+
+            UserDialogs.HideSpinner();
+        }
+
+        private async Task displayData()
+        {
             // Récupération des participants
             detailPeopleData = new DetailPeopleData(Token);
             var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idParticipant);
-
-
 
 
             // On affiche le participant
@@ -68,8 +74,6 @@ namespace AgoraMobileStandardNet.Pages
             listView.RowHeight = 120;
             listView.ItemsSource = detailPeopleData.InscriptionsCells;
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
-
-            UserDialogs.HideSpinner();
         }
 
         #region Button Actions
@@ -115,7 +119,8 @@ namespace AgoraMobileStandardNet.Pages
                     {
                         // Déjà trouvé : message d'erreur
                         await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
-                            
+
+
                         return;
                     }
 
@@ -126,9 +131,19 @@ namespace AgoraMobileStandardNet.Pages
             } // else Afficher un lessage d'erreur ?
 
             // On réaffiche la liste des présences 
-            detailPeopleData.RefreshCells(this.idParticipant);
+            /*detailPeopleData.RefreshCells(this.idParticipant);
             listView.ItemsSource = detailPeopleData.InscriptionsCells;
-            listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
+            listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));*/
+
+            // OK
+            await this.ShowAlert("OK", "Le participant a été correctement enregistré.");
+
+            UserDialogs.ShowSpinner();
+            // Affichage des données
+            await displayData();
+            UserDialogs.HideSpinner();
+
+           
 
         }
         #endregion
