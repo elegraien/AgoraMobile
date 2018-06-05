@@ -13,7 +13,7 @@
                        <RowDefinition Height="50" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="Aqua" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" />
+                    <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" />
                     <Image Source="backarrow.png"
                            HeightRequest="30"
                            WidthRequest="30"
@@ -34,9 +34,16 @@
                            HeightRequest="30"
                            WidthRequest="30"
                            Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="1" />
-                    <Button Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="1" Clicked="DisplayActionSheet">
-                        <Button.Text>Menu</Button.Text>
-                    </Button>
+                    <Image Source="hamburger.png"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           Grid.Row="1"
+                           Grid.Column="6">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DisplayActionSheet" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
                     <ContentPresenter VerticalOptions="FillAndExpand" 
                                       HorizontalOptions="FillAndExpand" 
                                       Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" />

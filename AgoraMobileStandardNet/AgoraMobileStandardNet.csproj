@@ -123,6 +123,7 @@
   <ItemGroup>
     <None Include="project.json" />
     <None Include="backarrow.png" />
+    <None Include="hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />

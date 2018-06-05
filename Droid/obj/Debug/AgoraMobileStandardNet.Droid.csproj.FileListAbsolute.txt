@@ -259,6 +259,7 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.cs.flag
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.txt
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/uploadflags.txt
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/hamburger.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.Droid.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/Mono.Android.pdb

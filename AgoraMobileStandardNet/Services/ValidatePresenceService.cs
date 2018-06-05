@@ -72,7 +72,7 @@ namespace AgoraMobileStandardNet.Services
 
             // Creates HTTP web request
             // Attention : Si EBIllet : on ajoute un paramètre àl'URL d'envoi
-            string url = Global.URL_BASE;
+            string url = Global.GetUrlBase();
             if (validatePresence.IdPrestation.HasValue)
             {
                 url += Global.WS_SET_PARTICIPANT_INSCRIPTION_PRESTATION + "?id=" + validatePresence.IdParticipant;

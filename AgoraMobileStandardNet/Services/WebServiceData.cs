@@ -90,7 +90,7 @@ namespace AgoraMobileStandardNet.Services
 
 
                 // Creates HTTP web request
-                string url = Global.URL_BASE + this.ActionUrl;
+                string url = Global.GetUrlBase() + this.ActionUrl;
 
 
                 // On récupère les données (ou la page de données)

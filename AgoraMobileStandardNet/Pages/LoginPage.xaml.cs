@@ -33,6 +33,11 @@ namespace AgoraMobileStandardNet.Pages
             string passwordOk = Global.GetSettings(TypeSettings.PasswordSaved);
             if (!string.IsNullOrEmpty(passwordOk))
                 TxtPassword.Text = passwordOk;
+            string slotOK = Global.GetSettings(TypeSettings.DBChosen);
+            if (!string.IsNullOrEmpty(slotOK))
+                TxtSlot.Text = slotOK;
+            else
+                TxtSlot.Text = "#000";  // Par défaut
 
             // Gestion des boutons
             // -------------------
@@ -45,7 +50,7 @@ namespace AgoraMobileStandardNet.Pages
                 //Global.SetSettings(TypeSettings.LastHorsConnexionDate, null);
 
                 // Tentative de login
-                bool isOk = await Login(TxtLogin.Text, TxtPassword.Text, "000");
+                bool isOk = await Login(TxtLogin.Text, TxtPassword.Text, TxtSlot.Text);
 
                 // Si Ok : on passe à la liste
                 if (isOk)
@@ -88,11 +93,11 @@ namespace AgoraMobileStandardNet.Pages
         /// <param name="login">Login.</param>
         /// <param name="password">Password.</param>
         /// <param name="code">Code.</param>
-        public async Task<bool> Login(string login, string password, string code)
+        public async Task<bool> Login(string login, string password, string slot)
         {
 
             // Creates HTTP web request
-            string url = Global.URL_BASE + Global.WS_LOGIN;
+            string url = Global.GetUrlBase(slot) + Global.WS_LOGIN;
             WebRequest request = WebRequest.Create(new Uri(url)) as WebRequest;
             request.ContentType = "application/json";
             request.Method = "POST";
@@ -126,6 +131,9 @@ namespace AgoraMobileStandardNet.Pages
                         this.token = result;
                         Global.SetSettings(TypeSettings.Token, result);
                         Global.SetSettings(TypeSettings.TokenDate, new DateTime().ToString());
+
+                        // On stocke aussi le URlBase demandé
+                        Global.SetSettings(TypeSettings.DBChosen, slot);
 
                         // On stocke aussi le login OK et le mot de passe ok pour pré remplir
                         Global.SetSettings(TypeSettings.LoginSaved, login);

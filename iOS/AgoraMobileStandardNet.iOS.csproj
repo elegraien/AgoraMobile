@@ -158,12 +158,15 @@
     <ImageAsset Include="Assets.xcassets\nonetwork.imageset\nonetwork.png" />
     <ImageAsset Include="Assets.xcassets\backarrow.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\backarrow.imageset\backarrow.png" />
+    <ImageAsset Include="Assets.xcassets\hamburger.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\hamburger.imageset\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="CodePCL\" />
     <Folder Include="Assets.xcassets\nonetwork.imageset\" />
     <Folder Include="Assets.xcassets\backarrow.imageset\" />
+    <Folder Include="Assets.xcassets\hamburger.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

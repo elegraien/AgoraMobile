@@ -6,7 +6,10 @@ namespace AgoraMobileStandardNet
     public class Global
     {
         // L'Url de base pour les Web Services
-        public static string URL_BASE = "http://recette.apiagora.com/api/";
+        public static string URL_BASE_000 = "http://recette.apiagora.com/api/";
+        public static string URL_BASE_001 = "http://bnp.apiagora.com/api/";
+        public static string URL_BASE_002 = "http://agora.orange.com/api/";
+        //public static string URL_BASE_999 = "http://localhost:6814/api/";
 
         // Les Gets
         public static string WS_LOGIN = "authentication/authenticate";
@@ -38,6 +41,42 @@ namespace AgoraMobileStandardNet
             "Groupe",
             "Absent"
         };
+
+        /// <summary>
+        /// Pour récupérer la bonne URL de base (en fonction du choix à la connexion)
+        /// </summary>
+        /// <returns>The URL base.</returns>
+        public static string GetUrlBase()
+        {
+            var dbChoice = GetSettings(TypeSettings.DBChosen);
+
+            return GetUrlBase(dbChoice);
+
+        }
+
+        public static string GetUrlBase(string slot)
+        {
+            if (string.IsNullOrEmpty(slot))
+                return URL_BASE_000;
+
+            switch (slot)
+            {
+                case "#000":
+                    return URL_BASE_000;
+
+                case "#001":
+                    return URL_BASE_001;
+
+                case "#002":
+                    return URL_BASE_002;
+
+                case "#999":
+                default:
+                    return URL_BASE_000;
+
+            }
+
+        }
 
         #region Gestion des Prefs
         // Gestion des prefs
@@ -144,6 +183,7 @@ namespace AgoraMobileStandardNet
         PasswordSaved,
         IsHorsConnexion,
         LastHorsConnexionDate, // La date de dernier passage en hors connexion
-        SearchString
+        SearchString,
+        DBChosen    // La DB choisie (#000, #001...)
     }
 }
