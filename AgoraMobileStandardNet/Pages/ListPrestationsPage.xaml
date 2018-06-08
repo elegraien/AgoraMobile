@@ -6,6 +6,6 @@
              xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
     <StackLayout x:Name="SLayout">
         
-        <StackLayout x:Name="DataLayout" />
+        <StackLayout x:Name="DataLayout" VerticalOptions="FillAndExpand" />
     </StackLayout>
 </custom:CustomContentPage>

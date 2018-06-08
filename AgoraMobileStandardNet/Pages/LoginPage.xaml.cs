@@ -69,7 +69,7 @@ namespace AgoraMobileStandardNet.Pages
 
                 }
 
-                sd.HideSpinner();
+
             };
 
             BtnHorsConnexion.Clicked += async (sender, e) =>

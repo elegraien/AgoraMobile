@@ -29,7 +29,7 @@ namespace AgoraMobileStandardNet.Pages
             BtnSearch.Clicked += async (sender, e) =>
             {
                 // On stocke le critère de recherche dans le parent
-                await Launch(TxtSearch.Text.Trim());
+                await Launch(TxtSearch.Text);
 
             };
 
@@ -45,6 +45,9 @@ namespace AgoraMobileStandardNet.Pages
 
         private async Task Launch(string searchString)
         {
+            if (!string.IsNullOrEmpty(searchString))
+                searchString = searchString.Trim();
+            
             Global.SetSettings(TypeSettings.SearchString, searchString);
             await Navigation.PopModalAsync();
         }

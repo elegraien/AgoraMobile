@@ -35,6 +35,17 @@ namespace AgoraMobileStandardNet.Pages
             // Le titre
             this.Title = eventName;
 
+            // L'init de la listView
+             DataLayout.Children.Clear();
+            DataLayout.Children.Add(this.ListView);
+
+
+            // Gère le click sur un item
+            this.ListView.ItemSelected += (sender, e) =>
+            {
+                HandlePrestationClicked(sender, e);
+            };
+
         }
 
         protected override async void OnAppearing()
@@ -44,12 +55,10 @@ namespace AgoraMobileStandardNet.Pages
             // Le Spinner
             this.UserDialogs.ShowSpinner();
 
-            DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement
             prestationsData = new ListPrestationsData(Token);
             prestations = await prestationsData.GetInstances(this.idEvent);
-
 
 
 
@@ -59,15 +68,7 @@ namespace AgoraMobileStandardNet.Pages
                 
                 this.ListView.ItemsSource = prestations;
                 this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
-                DataLayout.Children.Add(this.ListView);
-
-
-                // Gère le click sur un item
-                this.ListView.ItemSelected += (sender, e) =>
-                {
-                    HandlePrestationClicked(sender, e);
-                };
-            }
+             }
             else
             {
                 // Aucun presta trouvé
@@ -136,6 +137,10 @@ namespace AgoraMobileStandardNet.Pages
 
         public void HandlePrestationClicked(object sender, SelectedItemChangedEventArgs e)
         {
+            // A t'on déjà sélectionné un item ?
+            if (HasAlreadySelectedItem)
+                return;
+
             // On checke la ligne sélectionnée
             if (e.SelectedItem is Prestation)
             {

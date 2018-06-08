@@ -18,12 +18,14 @@ namespace AgoraMobileStandardNet.Pages
     public partial class ListPeoplePage : CustomContentPage
     {
         List<Participant> participants;
-        ListView listView;
+        //ListView listView;
         int? idPrestation;
         int idEvent;
         string prestationName;
         int nbInscrits;
         int nbPresents;
+
+        ListPeopleData peopleData;
 
         IScanPage scanPage;
 
@@ -46,23 +48,35 @@ namespace AgoraMobileStandardNet.Pages
             // Les boutons en bas
             // ------------------
 
-                BtnScan.Clicked += async (sender, e) =>
-                {
+            BtnScan.Clicked += async (sender, e) =>
+            {
                     // Ouverture du scan
                     await BtnScanClicked(sender, e);
 
-                };
+            };
 
 
 
-                BtnSearch.Clicked += async (sender, e) =>
-                {
+            BtnSearch.Clicked += async (sender, e) =>
+            {
                     // Ouverture de la modale de recherche
                     await BtnSearchClicked(sender, e);
-                };
+            };
 
             // On RAZ le SearchString
             Global.SetSettings(TypeSettings.SearchString, "");
+
+
+            // L'init de la listview
+            DataLayout.Children.Clear();
+            DataLayout.Children.Add(this.ListView);
+
+
+            // Gère le click sur un item
+            this.ListView.ItemSelected += (sender, e) =>
+            {
+                HandlePeopleClicked(sender, e);
+            };
 
         }
 
@@ -73,8 +87,7 @@ namespace AgoraMobileStandardNet.Pages
             // Le Spinner
             this.UserDialogs.ShowSpinner();
 
-            DataLayout.Children.Clear();
-
+ 
             // Si Search String : on l'affiche sur le bouton
             var searchString = Global.GetSettings(TypeSettings.SearchString);
             if (!string.IsNullOrEmpty(searchString))
@@ -88,7 +101,8 @@ namespace AgoraMobileStandardNet.Pages
 
 
             // Récupération des participants
-            participants = await new ListPeopleData(Token).GetInstances(this.idEvent, this.idPrestation);
+            peopleData = new ListPeopleData(Token);
+            participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
 
             // filtrage éventuel
             if (!string.IsNullOrEmpty(searchString))
@@ -100,7 +114,7 @@ namespace AgoraMobileStandardNet.Pages
                this.nbInscrits != 0 &&
                 participants.Count == 0)
             {
-              
+
                 UserDialogs.HideSpinner();
 
                 // Affichage du message
@@ -113,19 +127,13 @@ namespace AgoraMobileStandardNet.Pages
                 {
 
                     // Peuple la liste des evenements si il y en a...
-                    listView = new ListView();
-                    listView.RowHeight = 80;
-                    listView.ItemsSource = participants;
-                    listView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
-                    DataLayout.Children.Add(listView);
-
- 
-                    // Gère le click sur un item
-                    listView.ItemSelected += (sender, e) =>
-                    {
-                        HandlePeopleClicked(sender, e);
-                    };
-                } else {
+                    /*listView = new ListView();
+                    listView.RowHeight = 80;*/
+                    this.ListView.ItemsSource = participants;
+                    this.ListView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
+                 }
+                else
+                {
                     // Aucun participant trouvé
                     var newLabel = new Label();
                     if (!string.IsNullOrEmpty(searchString))
@@ -136,16 +144,25 @@ namespace AgoraMobileStandardNet.Pages
                 }
 
                 // Fin téléchargement
-                //sd.Hide();
                 UserDialogs.HideSpinner();
 
             }
 
         }
 
- 
+        public override async Task RefreshListView()
+        {
+            this.ListView.ItemsSource = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+
+        }
+
+
         public void HandlePeopleClicked(object sender, SelectedItemChangedEventArgs e)
         {
+            // A t'on déjà sélectionné un item ?
+            if (HasAlreadySelectedItem)
+                return;
+
             // On checke la ligne sélectionnée
             if (e.SelectedItem is Participant)
             {
@@ -161,7 +178,7 @@ namespace AgoraMobileStandardNet.Pages
                 //NavigationPage navigation = new NavigationPage(listEventsPage);
 
                 // On déselectionne
-                listView.SelectedItem = null;
+                this.ListView.SelectedItem = null;
 
                 Navigation.PushAsync(detailsParticipantPage);
             }
@@ -188,10 +205,11 @@ namespace AgoraMobileStandardNet.Pages
                 return;
 
             scanPage.scannerPage.IsScanning = true;
-            if (scanPage.scannerPage.Parent == null) {
+            if (scanPage.scannerPage.Parent == null)
+            {
                 // On affiche la page
                 await Navigation.PushModalAsync(scanPage.scannerPage); //.PushAsync(scanPage.scannerPage);
-            } 
+            }
 
             // Le check des résultats
             scanPage.scannerPage.OnScanResult += (result) =>
@@ -199,14 +217,14 @@ namespace AgoraMobileStandardNet.Pages
                 // Pour éviter de le faire tant que le client n'a pas validé
                 if (scanPage.scannerPage.IsScanning == false)
                     return;
-                
+
                 // On stoppe le scan
                 scanPage.scannerPage.IsScanning = false;
 
                 // On retire la page et on montre le résultat
                 Device.BeginInvokeOnMainThread(async () =>
                 {
- 
+
                     // On essaye de récupérer le code IdA09 si il existe et on appelle le WS
                     string paramA09 = getParameterByName(result.Text, "IdA09");
                     if (!string.IsNullOrEmpty(paramA09))
@@ -215,14 +233,16 @@ namespace AgoraMobileStandardNet.Pages
 
                         await SendPresenceAck(paramA09); //, this.idPrestation);
 
-                    } else {
+                    }
+                    else
+                    {
                         // Message d'erreur
                         await this.ShowAlert("Attention", "Erreur de la validation d'un invité par QR Code.");
 
 
                     }
 
-  
+
                     await Navigation.PopModalAsync(); //.PopAsync();
 
 
@@ -237,7 +257,7 @@ namespace AgoraMobileStandardNet.Pages
             /*if (searchPage != null)
                 searchPage.Parent = this;*/
             await Navigation.PushModalAsync(searchPage);
-           
+
 
 
 
@@ -255,7 +275,7 @@ namespace AgoraMobileStandardNet.Pages
             {
                 //await this.ShowAlert("Attention", "Problème de lecture du QR Code.");
                 await this.DisplayAlert("Attention", "Problème de lecture du QR Code.", "Cancel");
-                       
+
                 return;
             }
 
@@ -288,8 +308,9 @@ namespace AgoraMobileStandardNet.Pages
                             // Message d'erreur
                             await this.ShowAlert("Attention", "Le billet a déjà été enregistré.");
                             return;
-                        } else if (objresponse.StatusCode == HttpStatusCode.NotFound ||
-                                  objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                        }
+                        else if (objresponse.StatusCode == HttpStatusCode.NotFound ||
+                                objresponse.StatusCode == HttpStatusCode.Unauthorized)
                         {
                             // 404 ou 401 : billet non valide
                             //await this.ShowAlert("Attention", "Le billet n'est pas valide.");
@@ -315,7 +336,9 @@ namespace AgoraMobileStandardNet.Pages
                     }
 
                 }
-            } else {
+            }
+            else
+            {
                 // Pb à l'insertion des données ??
 
             }
@@ -329,7 +352,7 @@ namespace AgoraMobileStandardNet.Pages
         private string getParameterByName(string url, string paramName)
         {
             try
-            { 
+            {
                 Uri newUri = new Uri(url);
                 // On découpe les paramètres
                 string query = newUri.Query;

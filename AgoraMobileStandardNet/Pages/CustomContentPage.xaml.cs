@@ -26,6 +26,8 @@ namespace AgoraMobileStandardNet.Pages
         // Une listView (configurée avec PullToRefresh)
         public ListView ListView;
 
+        // Bool pour éviter l'ouverture de plusieurs pages filles
+        internal bool  HasAlreadySelectedItem = false;
 
 
         // Loading spinner
@@ -46,10 +48,12 @@ namespace AgoraMobileStandardNet.Pages
 
             // Création de la listView
             this.ListView = new ListView();
-            // LE Pull to Refresh
-            this.ListView.IsPullToRefreshEnabled = true;
-            this.ListView.RefreshCommand = RefreshCommand;
-            //listView.SetBinding(listView.IsRefreshing ,  IsRefreshing); 
+            // LE Pull to Refresh SAUF hors connexion
+            if (!Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+            {
+                this.ListView.IsPullToRefreshEnabled = true;
+                this.ListView.RefreshCommand = RefreshCommand;
+            }
             this.ListView.RowHeight = 80;
 
             // Le spinner
@@ -120,6 +124,14 @@ namespace AgoraMobileStandardNet.Pages
         }
         #endregion
 
+        #region Pour éviter d'ouvrir 2 pages filles...
+        protected override void OnDisappearing()
+        {
+            HasAlreadySelectedItem = true;
+            base.OnDisappearing();
+        }
+#endregion
+
         /// <summary>
         /// Click sur Retour arrière
         /// </summary>
@@ -157,6 +169,8 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            // On désactive la protection pour éviter 2 pages ouvertes
+            HasAlreadySelectedItem = false;
 
             // Récupération des participants
             // Si pas de token ou erreur : on revient à la page d'accueil

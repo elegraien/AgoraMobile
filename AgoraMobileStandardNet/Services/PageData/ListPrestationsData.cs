@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AgoraMobileStandardNet.Models;
 
@@ -116,6 +117,8 @@ namespace AgoraMobileStandardNet.Services
             {
                 // On récupère les datas du cache
                 instances = wsDataP.RetrieveAllFromCache();
+                if (idEvent.HasValue)
+                    instances = instances.Where( Xamarin=> Xamarin.IdManif == idEvent.Value).ToList();
             }
 
             return instances;
