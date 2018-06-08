@@ -22,6 +22,9 @@ namespace AgoraMobileStandardNet.Pages
             set { pageTitleViewModel.Title = value; }
         }
 
+        // Une listView (configurée avec PullToRefresh)
+        ListView listView;
+
 
         // Loading spinner
         public UserDialogs UserDialogs { get; set; }
@@ -39,6 +42,7 @@ namespace AgoraMobileStandardNet.Pages
 
             InitializeComponent();
 
+            // Création de la listView
 
             // Le spinner
             UserDialogs = new UserDialogs();

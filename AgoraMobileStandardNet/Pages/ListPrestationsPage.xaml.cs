@@ -59,7 +59,7 @@ namespace AgoraMobileStandardNet.Pages
                 // LE Pull to Refresh
                 listView.IsPullToRefreshEnabled = true;
                 listView.RefreshCommand = RefreshCommand;
-                //listView.SetBinding(listView. ,  IsRefreshing); 
+                //listView.SetBinding(listView.IsRefreshing ,  IsRefreshing); 
 
                 listView.RowHeight = 80;
                 listView.ItemsSource = prestations;
@@ -96,6 +96,7 @@ namespace AgoraMobileStandardNet.Pages
             set {
                 _isRefreshing = value;
                 OnPropertyChanged(nameof(IsRefreshing));
+
             }
         }
 
@@ -113,6 +114,7 @@ namespace AgoraMobileStandardNet.Pages
 
 
                     IsRefreshing = false;
+                    listView.IsRefreshing = false;
                 });
             }
         }
