@@ -51,21 +51,34 @@ namespace AgoraMobileStandardNet.Pages
 
 
             // Peuple la liste des evenements
-            listView = new ListView();
-            listView.RowHeight = 80;
-            listView.ItemsSource = evenements;
-            listView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
-            DataLayout.Children.Add(listView);
+            if (this.evenements.Count > 0)
+            {
+                listView = new ListView();
+                listView.RowHeight = 80;
+                listView.ItemsSource = evenements;
+                listView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
+                DataLayout.Children.Add(listView);
+
+                // Gère le click sur un item
+                listView.ItemSelected += (sender, e) =>
+                {
+                    HandleEvenementClicked(sender, e);
+                };
+            } else {
+                // Aucun evt trouvé
+                var newLabel = new Label();
+                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                    newLabel.Text = "Hors connexion : aucune donnée n'a été chargée préalablement.";
+                else
+                    newLabel.Text = "Aucun événement trouvé.";
+                DataLayout.Children.Add(newLabel);
+            }
 
             // Fin téléchargement
             //sd.Hide();
             this.UserDialogs.HideSpinner();
 
-            // Gère le click sur un item
-            listView.ItemSelected += (sender, e) =>
-            {
-                HandleEvenementClicked(sender, e);
-            };
+
         }
 
  

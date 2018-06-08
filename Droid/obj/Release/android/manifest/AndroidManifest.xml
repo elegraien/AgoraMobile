@@ -3,6 +3,7 @@
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="AgoraMobileStandardNet" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon">
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="AgoraMobileStandardNet.Droid" android:theme="@style/MyTheme" android:name="md55acf35803388e664275f9791f4d3b79e.MainActivity">
       <intent-filter>

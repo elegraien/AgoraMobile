@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
@@ -14,6 +15,9 @@ namespace AgoraMobileStandardNet.Pages
         List<Prestation> prestations;
         ListView listView;
         private int idEvent;
+
+        // Les data
+        private ListPrestationsData prestationsData;
 
         // Pour l'accueil
         int NbPresentsAccueil { get; set; }
@@ -42,27 +46,75 @@ namespace AgoraMobileStandardNet.Pages
             DataLayout.Children.Clear();
 
             // Récupération des prestations pour l'événement
-            prestations = await new ListPrestationsData(Token).GetInstances(this.idEvent);
+            prestationsData = new ListPrestationsData(Token);
+            prestations = await prestationsData.GetInstances(this.idEvent);
 
+
+
+
+            // Peuple la liste des prestations
+            if (this.prestations.Count > 0)
+            {
+                listView = new ListView();
+                // LE Pull to Refresh
+                listView.IsPullToRefreshEnabled = true;
+                listView.RefreshCommand = RefreshCommand;
+                //listView.SetBinding(listView. ,  IsRefreshing); 
+
+                listView.RowHeight = 80;
+                listView.ItemsSource = prestations;
+                listView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
+                DataLayout.Children.Add(listView);
+                //sd.Hide();
+
+                // Gère le click sur un item
+                listView.ItemSelected += (sender, e) =>
+                {
+                    HandlePrestationClicked(sender, e);
+                };
+            }
+            else
+            {
+                // Aucun presta trouvé
+                var newLabel = new Label();
+                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                    newLabel.Text = "Hors connexion : aucune prestation n'a été chargée préalablement.";
+                else
+                    newLabel.Text = "Aucune prestation trouvée.";
+                DataLayout.Children.Add(newLabel);
+            }
 
             // Fin téléchargement
             UserDialogs.HideSpinner();
 
 
-            // Peuple la liste des prestations
-            listView = new ListView();
-            listView.RowHeight = 80;
-            listView.ItemsSource = prestations;
-            listView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
-            DataLayout.Children.Add(listView);
-            //sd.Hide();
+        }
 
-            // Gère le click sur un item
-            listView.ItemSelected += (sender, e) =>
+        private bool _isRefreshing = false;
+        public bool IsRefreshing {
+            get { return _isRefreshing; }
+            set {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
+        public ICommand RefreshCommand
+        {
+            get
             {
-                HandlePrestationClicked(sender, e);
-            };
+                return new Command(async () =>
+                {
+                    IsRefreshing = true;
 
+                    // Refresh des données
+                    prestations = await prestationsData.GetInstances(this.idEvent);
+                    listView.ItemsSource = prestations;
+
+
+                    IsRefreshing = false;
+                });
+            }
         }
 
         #region Surcharge de l'affichage du menu
@@ -73,9 +125,9 @@ namespace AgoraMobileStandardNet.Pages
             // Liste des actionsstring[] actions = null;
             string action = "";
             if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
-                action = await DisplayActionSheet("Actions", "Cancel", null, new string[]{ "Accueil", "Déconnexion" });
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion" });
             else
-                action = await DisplayActionSheet("Actions", "Cancel", null, new string[]{ "Accueil", "Déconnexion", "Télécharger les listes" });
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion", "Télécharger les listes" });
 
             // en fonction de l'action demandée...
             // TODO
@@ -118,7 +170,7 @@ namespace AgoraMobileStandardNet.Pages
                 // pour le cache.
                 // Néanmoins, pour faire l'appel à la page, on remet NULL
                 int? prestationId = prestation.Id;
-                if (prestationId== 0)
+                if (prestationId == 0)
                     prestationId = null;
                 var listParticipantsPage = new ListPeoplePage(prestation.IdManif,
                                                               prestationId,
