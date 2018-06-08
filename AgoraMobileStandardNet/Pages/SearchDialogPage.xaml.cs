@@ -8,6 +8,7 @@ namespace AgoraMobileStandardNet.Pages
     public partial class SearchDialogPage : ContentPage
     {
         //private ListPeoplePage parent;
+        public ListPeoplePage ParentPage;
 
         /*public SearchDialogPage(ListPeoplePage parent)
         {
@@ -49,6 +50,12 @@ namespace AgoraMobileStandardNet.Pages
                 searchString = searchString.Trim();
             
             Global.SetSettings(TypeSettings.SearchString, searchString);
+            // On force le rechargement et on clear les résultats
+            if (ParentPage != null)
+            {
+                ParentPage.ForceReloadData = true;
+
+            }
             await Navigation.PopModalAsync();
         }
     }

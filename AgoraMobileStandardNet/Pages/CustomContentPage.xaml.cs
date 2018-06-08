@@ -29,6 +29,9 @@ namespace AgoraMobileStandardNet.Pages
         // Bool pour éviter l'ouverture de plusieurs pages filles
         internal bool  HasAlreadySelectedItem = false;
 
+        // Un booléen pour forcer le refresh des datas quand on affiche la page à nouveau
+        // En principe, on ne rafraichit pas (pour éviter un reload inutile) dans OnAppearing
+        internal bool ForceReloadData = false;
 
         // Loading spinner
         public UserDialogs UserDialogs { get; set; }
@@ -47,14 +50,7 @@ namespace AgoraMobileStandardNet.Pages
             InitializeComponent();
 
             // Création de la listView
-            this.ListView = new ListView();
-            // LE Pull to Refresh SAUF hors connexion
-            if (!Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
-            {
-                this.ListView.IsPullToRefreshEnabled = true;
-                this.ListView.RefreshCommand = RefreshCommand;
-            }
-            this.ListView.RowHeight = 80;
+            CreateListView();
 
             // Le spinner
             UserDialogs = new UserDialogs();
@@ -83,6 +79,20 @@ namespace AgoraMobileStandardNet.Pages
 
 
         }
+
+        public void CreateListView()
+        {
+            // Création de la listView
+            this.ListView = new ListView();
+            // LE Pull to Refresh SAUF hors connexion
+            if (!Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+            {
+                this.ListView.IsPullToRefreshEnabled = true;
+                this.ListView.RefreshCommand = RefreshCommand;
+            }
+            this.ListView.RowHeight = 80;
+        }
+
         #region Gestion du Pull To Refresh
         private bool _isRefreshing = false;
         public bool IsRefreshing
@@ -172,11 +182,26 @@ namespace AgoraMobileStandardNet.Pages
             // On désactive la protection pour éviter 2 pages ouvertes
             HasAlreadySelectedItem = false;
 
-            // Récupération des participants
+            // Récupération du token
             // Si pas de token ou erreur : on revient à la page d'accueil
             this.Token = Global.GetSettings(TypeSettings.Token);
             if (string.IsNullOrEmpty(this.Token))
                 await Navigation.PopAsync();
+
+            // ATTENTION : si une liste est remplie, cela veut dire qu'on fait un Back
+            if (!ForceReloadData && ListView.ItemsSource != null && ListView.ItemsSource.GetEnumerator() != null)
+            {
+                // La liste est déjà remplie
+                this.UserDialogs.HideSpinner();
+                return;
+            } else {
+                // Le Spinner
+                this.UserDialogs.ShowSpinner();
+
+                // On repasse le forceReload...
+                ForceReloadData = false;
+
+            }
 
         }
 
@@ -185,20 +210,7 @@ namespace AgoraMobileStandardNet.Pages
             await this.UserDialogs.ShowAlert(title, message);
         }
 
-        // NE FONCTIONNE PAS ! ON NE PEUT PAS FAIRE D'HERITAGE D'UNE PAGE GENERIC en XAML !!!
-        /// <summary>
-        /// A surcharger pour renvoyer les datas 
-        /// </summary>
-        /// <returns>The instances.</returns>
-        /// <param name="idEvent">Identifier event.</param>
-        /// <param name="idPrestation">Identifier prestation.</param>
-        /// <param name="idParticipant">Identifier participant.</param>
-        /*protected virtual List<T> GetInstances(int? idEvent=null, 
-                                                        int? idPrestation=null, 
-                                                        int? idParticipant=null)
-        {
-            return null;
-        }*/
+
 
     }
 

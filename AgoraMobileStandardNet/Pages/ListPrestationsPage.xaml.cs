@@ -52,10 +52,7 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
-            // Le Spinner
-            this.UserDialogs.ShowSpinner();
-
-
+ 
             // Récupération des prestations pour l'événement
             prestationsData = new ListPrestationsData(Token);
             prestations = await prestationsData.GetInstances(this.idEvent);

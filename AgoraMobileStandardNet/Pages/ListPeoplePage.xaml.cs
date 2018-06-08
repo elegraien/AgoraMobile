@@ -82,12 +82,26 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            // Attention : si on a forcé le Reload, on efface la listView
+            // Il faut le mettre avant le Base sinon ForceReload est remis à false
+            if (ForceReloadData)
+            {
+                // On détruit / recrée la ListView
+                // L'init de la listview
+                DataLayout.Children.Clear();
+                CreateListView();
+                DataLayout.Children.Add(this.ListView);
+
+                // Gère le click sur un item
+                this.ListView.ItemSelected += (sender, e) =>
+                {
+                    HandlePeopleClicked(sender, e);
+                };
+            }
+
             base.OnAppearing();
 
-            // Le Spinner
-            this.UserDialogs.ShowSpinner();
-
- 
+  
             // Si Search String : on l'affiche sur le bouton
             var searchString = Global.GetSettings(TypeSettings.SearchString);
             if (!string.IsNullOrEmpty(searchString))
@@ -254,8 +268,9 @@ namespace AgoraMobileStandardNet.Pages
         private async Task BtnSearchClicked(object sender, EventArgs e)
         {
             var searchPage = new SearchDialogPage();
-            /*if (searchPage != null)
-                searchPage.Parent = this;*/
+            searchPage.ParentPage = this;
+
+
             await Navigation.PushModalAsync(searchPage);
 
 
