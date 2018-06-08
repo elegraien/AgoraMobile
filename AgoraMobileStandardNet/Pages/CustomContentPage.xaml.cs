@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Interfaces;
 using Xamarin.Forms;
@@ -23,7 +24,8 @@ namespace AgoraMobileStandardNet.Pages
         }
 
         // Une listView (configurée avec PullToRefresh)
-        ListView listView;
+        public ListView ListView;
+
 
 
         // Loading spinner
@@ -43,6 +45,12 @@ namespace AgoraMobileStandardNet.Pages
             InitializeComponent();
 
             // Création de la listView
+            this.ListView = new ListView();
+            // LE Pull to Refresh
+            this.ListView.IsPullToRefreshEnabled = true;
+            this.ListView.RefreshCommand = RefreshCommand;
+            //listView.SetBinding(listView.IsRefreshing ,  IsRefreshing); 
+            this.ListView.RowHeight = 80;
 
             // Le spinner
             UserDialogs = new UserDialogs();
@@ -71,13 +79,53 @@ namespace AgoraMobileStandardNet.Pages
 
 
         }
+        #region Gestion du Pull To Refresh
+        private bool _isRefreshing = false;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+
+            }
+        }
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    IsRefreshing = true;
+
+                    // Refresh des données
+                    //this.ListView.ItemsSource = await GetRefreshedData();;
+                    await RefreshListView();
+
+                    IsRefreshing = false;
+                    this.ListView.IsRefreshing = false;
+                });
+            }
+        }
+
+        /// <summary>
+        /// A surcharger pour rafraichir la ListView avec les data refreshed du Pull To Refresh
+        /// </summary>
+        /// <returns>The refreshed data.</returns>
+        public virtual async Task RefreshListView()
+        {
+            
+        }
+        #endregion
 
         /// <summary>
         /// Click sur Retour arrière
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-		public void GoBack(object sender, EventArgs e)
+        public void GoBack(object sender, EventArgs e)
         {
             Navigation.PopAsync();
         }

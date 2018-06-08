@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using AgoraMobileStandardNet.Helpers;
+using AgoraMobileStandardNet.Interfaces;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
 using AgoraMobileStandardNet.ViewModels;
@@ -13,7 +14,7 @@ namespace AgoraMobileStandardNet.Pages
     public partial class ListPrestationsPage : CustomContentPage
     {
         List<Prestation> prestations;
-        ListView listView;
+        //ListView listView;
         private int idEvent;
 
         // Les data
@@ -55,20 +56,14 @@ namespace AgoraMobileStandardNet.Pages
             // Peuple la liste des prestations
             if (this.prestations.Count > 0)
             {
-                listView = new ListView();
-                // LE Pull to Refresh
-                listView.IsPullToRefreshEnabled = true;
-                listView.RefreshCommand = RefreshCommand;
-                //listView.SetBinding(listView.IsRefreshing ,  IsRefreshing); 
+                
+                this.ListView.ItemsSource = prestations;
+                this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
+                DataLayout.Children.Add(this.ListView);
 
-                listView.RowHeight = 80;
-                listView.ItemsSource = prestations;
-                listView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
-                DataLayout.Children.Add(listView);
-                //sd.Hide();
 
                 // Gère le click sur un item
-                listView.ItemSelected += (sender, e) =>
+                this.ListView.ItemSelected += (sender, e) =>
                 {
                     HandlePrestationClicked(sender, e);
                 };
@@ -90,34 +85,15 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
-        private bool _isRefreshing = false;
-        public bool IsRefreshing {
-            get { return _isRefreshing; }
-            set {
-                _isRefreshing = value;
-                OnPropertyChanged(nameof(IsRefreshing));
-
-            }
-        }
-
-        public ICommand RefreshCommand
+        /// <summary>
+        /// Refreshs the list view.
+        /// </summary>
+        /// <returns>The list view.</returns>
+        public override async Task RefreshListView()
         {
-            get
-            {
-                return new Command(async () =>
-                {
-                    IsRefreshing = true;
-
-                    // Refresh des données
-                    prestations = await prestationsData.GetInstances(this.idEvent);
-                    listView.ItemsSource = prestations;
-
-
-                    IsRefreshing = false;
-                    listView.IsRefreshing = false;
-                });
-            }
+            this.ListView.ItemsSource = await prestationsData.GetInstances(this.idEvent);
         }
+
 
         #region Surcharge de l'affichage du menu
         public async override void DisplayActionSheet(object sender, EventArgs e)
@@ -182,7 +158,7 @@ namespace AgoraMobileStandardNet.Pages
                                                              prestation.Title);
 
                 // On déselectionne
-                listView.SelectedItem = null;
+                this.ListView.SelectedItem = null;
 
                 Navigation.PushAsync(listParticipantsPage);
             }
