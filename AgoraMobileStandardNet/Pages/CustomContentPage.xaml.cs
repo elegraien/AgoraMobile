@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using AgoraMobileStandardNet.Helpers;
 using AgoraMobileStandardNet.Interfaces;
+using AgoraMobileStandardNet.Services;
 using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Pages
@@ -27,7 +28,13 @@ namespace AgoraMobileStandardNet.Pages
         public ListView ListView;
 
         // Bool pour éviter l'ouverture de plusieurs pages filles
-        internal bool  HasAlreadySelectedItem = false;
+        internal bool HasAlreadySelectedItem = false;
+
+        // L'Id event (utilisé pour ImportBase)
+        internal int idEvent = -1;
+
+        // Bool pour afficher l'option "Télécharger les listes" dans le menu haut droit
+        internal bool MustDisplayDownloadLists = false;
 
         // Un booléen pour forcer le refresh des datas quand on affiche la page à nouveau
         // En principe, on ne rafraichit pas (pour éviter un reload inutile) dans OnAppearing
@@ -130,7 +137,7 @@ namespace AgoraMobileStandardNet.Pages
         /// <returns>The refreshed data.</returns>
         public virtual async Task RefreshListView()
         {
-            
+
         }
         #endregion
 
@@ -140,7 +147,7 @@ namespace AgoraMobileStandardNet.Pages
             HasAlreadySelectedItem = true;
             base.OnDisappearing();
         }
-#endregion
+        #endregion
 
         /// <summary>
         /// Click sur Retour arrière
@@ -152,16 +159,19 @@ namespace AgoraMobileStandardNet.Pages
             Navigation.PopAsync();
         }
 
+        #region Surcharge de l'affichage du menu
         public async virtual void DisplayActionSheet(object sender, EventArgs e)
         {
             // Attention :
             // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
-            // Liste des actions
-            var actions = new List<string>();
-            actions.Add("Accueil");
-            actions.Add("Déconnexion");
-           
-            var action = await DisplayActionSheet("Actions", "Cancel", null, actions.ToArray<string>());
+            // Liste des actionsstring[] actions = null;
+            string action = "";
+            if (MustDisplayDownloadLists && 
+                !Global.GetSettingsBool(TypeSettings.IsHorsConnexion) &&
+               this.idEvent != -1)
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion", "Télécharger les listes" });
+            else
+                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion" });
 
             // en fonction de l'action demandée...
             // TODO
@@ -171,11 +181,31 @@ namespace AgoraMobileStandardNet.Pages
                 case "Déconnexion":
                     await Navigation.PopToRootAsync();
                     break;
-                
+                case "Télécharger les listes":
+                    // Déclenchement du download
+                    await DownloadLists();
+                    break;
+
             }
         }
 
- 
+        private async Task DownloadLists()
+        {
+            if (this.idEvent == -1)
+                return;
+            
+            UserDialogs.ShowSpinner();
+            var downloadData = new ImportBase();
+            await downloadData.DownloadData(this.Token, this.idEvent);
+            UserDialogs.HideSpinner();
+
+            // Le message
+            await this.UserDialogs.ShowAlert("OK", "Les listes ont été correctement téléchargées.");
+
+        }
+        #endregion
+
+
 
         protected override async void OnAppearing()
         {
@@ -194,7 +224,9 @@ namespace AgoraMobileStandardNet.Pages
                 // La liste est déjà remplie
                 this.UserDialogs.HideSpinner();
                 return;
-            } else {
+            }
+            else
+            {
                 // Le Spinner
                 this.UserDialogs.ShowSpinner();
 

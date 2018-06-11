@@ -6,7 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/cnavelot/Projects/AgoraMobileStandardNet/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/actool/partial-info.plist</string>
+			<string>/Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/actool/bundle/Assets.car</string>
+			<string>/Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.3.1/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

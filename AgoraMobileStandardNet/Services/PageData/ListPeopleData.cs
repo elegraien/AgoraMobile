@@ -47,7 +47,7 @@ namespace AgoraMobileStandardNet.Services
                 }, 
                                                  null,
                                                 true,
-                                                5);
+                                                Global.NB_ITEMS_PER_BLOCK);
             }
             else
             {

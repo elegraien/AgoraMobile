@@ -1,6 +1,5 @@
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/bin/Release/nonetwork.png
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/bin/Release/AgoraMobileStandardNet.dll
-/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.csproj.CoreCompileInputs.cache
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.App.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.Pages.LoginPage.xaml.g.cs
@@ -11,3 +10,4 @@
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.Pages.DetailPeoplePage.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.Pages.CustomContentPage.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.dll
+/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache

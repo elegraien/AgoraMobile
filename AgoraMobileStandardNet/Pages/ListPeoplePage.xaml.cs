@@ -20,7 +20,7 @@ namespace AgoraMobileStandardNet.Pages
         List<Participant> participants;
         //ListView listView;
         int? idPrestation;
-        int idEvent;
+        //int idEvent;
         string prestationName;
         int nbInscrits;
         int nbPresents;
@@ -44,6 +44,16 @@ namespace AgoraMobileStandardNet.Pages
 
             // Le titre de la page
             this.Title = prestationName;
+
+            // La barre en haut sous le titre de la page
+            this.SummaryPresent.Text = string.Format("{0} présent{2} / {1} inscrit{3}", 
+                                                     nbPresents, 
+                                                     nbInscrits,
+                                                     (nbPresents > 1 ? "s" : ""),
+                                                     (nbInscrits > 1 ? "s" : ""));
+
+            // Dans le menu haut droit, il faut afficher Télécharger les listes
+            this.MustDisplayDownloadLists = true;
 
             // Les boutons en bas
             // ------------------

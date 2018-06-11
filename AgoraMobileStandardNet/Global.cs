@@ -11,6 +11,9 @@ namespace AgoraMobileStandardNet
         public static string URL_BASE_002 = "http://agora.orange.com/api/";
         //public static string URL_BASE_999 = "http://localhost:6814/api/";
 
+        // Le nb d'items People à télécharger par block
+        public static int NB_ITEMS_PER_BLOCK = 300;
+
         // Les Gets
         public static string WS_LOGIN = "authentication/authenticate";
         public static string WS_GET_EVENTS = "methods/MobileApp/GetEventsList";

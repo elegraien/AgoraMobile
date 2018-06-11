@@ -1,27 +1,12 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Services/ValidatePresenceService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="53" Column="30" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="55" Column="2" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/ListPrestationsData.cs" Line="121" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/IPageData.cs" Line="9" Column="22" />
-      <File FileName="AgoraMobileStandardNet/Models/Prestation.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="65" Column="25" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="52" Column="13" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="89" Column="51" />
-      <File FileName="Source Not Available" />
-      <File FileName="AgoraMobileStandardNet/Helpers/UserDialogs.cs" Line="29" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/ListEventsData.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/TokenClass.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/SQLData.cs" Line="19" Column="26" />
-      <File FileName="AgoraMobileStandardNet/Services/ImportBase.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="61" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/SearchDialogPage.xaml.cs" Line="57" Column="17" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml" Line="9" Column="72" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml" Line="15" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="18" Column="11" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="203" Column="98" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="139" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="20" Column="11" />
       <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="26" Column="28" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="200" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -29,7 +14,6 @@
     <BreakpointStore>
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="242" column="1" />
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="257" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" line="61" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

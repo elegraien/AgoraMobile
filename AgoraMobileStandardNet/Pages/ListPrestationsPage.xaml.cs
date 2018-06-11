@@ -15,7 +15,7 @@ namespace AgoraMobileStandardNet.Pages
     {
         List<Prestation> prestations;
         //ListView listView;
-        private int idEvent;
+        //private int idEvent;
 
         // Les data
         private ListPrestationsData prestationsData;
@@ -31,6 +31,8 @@ namespace AgoraMobileStandardNet.Pages
 
             this.idEvent = idEvent;
 
+            // Dans le menu haut droit, il faut afficher Télécharger les listes
+            this.MustDisplayDownloadLists = true;
 
             // Le titre
             this.Title = eventName;
@@ -94,7 +96,7 @@ namespace AgoraMobileStandardNet.Pages
 
 
         #region Surcharge de l'affichage du menu
-        public async override void DisplayActionSheet(object sender, EventArgs e)
+        /*public async override void DisplayActionSheet(object sender, EventArgs e)
         {
             // Attention :
             // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
@@ -127,7 +129,7 @@ namespace AgoraMobileStandardNet.Pages
             var downloadData = new ImportBase();
             await downloadData.DownloadData(this.Token, this.idEvent);
             UserDialogs.HideSpinner();
-        }
+        }*/
         #endregion
 
 

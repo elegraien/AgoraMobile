@@ -17,18 +17,18 @@ namespace AgoraMobileStandardNet.Pages
         //SpinnerDisplay sd;
         int? idPrestation;
         int idParticipant;
-        int idManif;
+        //int idEvent;
 
         DetailPeopleData detailPeopleData;
 
 
-        public DetailPeoplePage(int idParticipant, int idManif, int? idPrestation, string title)
+        public DetailPeoplePage(int idParticipant, int idEvent, int? idPrestation, string title)
         {
             InitializeComponent();
 
             this.idPrestation = idPrestation;
             this.idParticipant = idParticipant;
-            this.idManif = idManif;
+            this.idEvent = idEvent;
 
             // Le titre
             this.Title = title;
@@ -59,7 +59,7 @@ namespace AgoraMobileStandardNet.Pages
         {
             // Récupération des participants
             detailPeopleData = new DetailPeopleData(Token);
-            var participants = await detailPeopleData.GetInstances(this.idManif, this.idPrestation, this.idParticipant);
+            var participants = await detailPeopleData.GetInstances(this.idEvent, this.idPrestation, this.idParticipant);
 
 
             // On affiche le participant
