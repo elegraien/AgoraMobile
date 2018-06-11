@@ -18,6 +18,7 @@ namespace AgoraMobileStandardNet.Pages
     {
 		// Titre de la page
         List<Evenement> evenements;
+        List<Evenement> evenementsToDisplay;
         //ListView listView;
         ListEventsData eventsData;
 
@@ -49,28 +50,41 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
-             
+            // Suppression des anciens composnats
+            DataLayout.Children.Clear();
+            DataLayout.Children.Add(this.ListView);
+
             // Récupération des events
-            eventsData = new ListEventsData(Token);
-            this.evenements = await eventsData.GetInstances();
+            if (evenements == null || evenements.Count == 0)
+            {
+                eventsData = new ListEventsData(Token);
+                this.evenements = await eventsData.GetInstances();
+            }
+
+            // filtrage éventuel
+            if (!string.IsNullOrEmpty(SearchString))
+                evenementsToDisplay = evenements.Where(X => X.Title.ToLower().Contains(SearchString.ToLower())).ToList();
+            else
+                evenementsToDisplay = evenements;
 
 
             // Peuple la liste des evenements
-            if (this.evenements.Count > 0)
+            this.ListView.ItemsSource = evenementsToDisplay;
+            this.ListView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
+            if (this.evenementsToDisplay.Count == 0)
             {
-                /*listView = new ListView();
-                listView.RowHeight = 80;*/
-                this.ListView.ItemsSource = evenements;
-                this.ListView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
- 
- 
-            } else {
                 // Aucun evt trouvé
                 var newLabel = new Label();
                 if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
                     newLabel.Text = "Hors connexion : aucune donnée n'a été chargée préalablement.";
                 else
-                    newLabel.Text = "Aucun événement trouvé.";
+                {
+                    if (!string.IsNullOrEmpty(SearchString))
+                        newLabel.Text = "Aucun événement trouvé pour la recherche de \"" + SearchString + "\".";
+                    else
+                        newLabel.Text = "Aucun événement trouvé.";
+
+                }
                 DataLayout.Children.Add(newLabel);
             }
 
@@ -83,6 +97,9 @@ namespace AgoraMobileStandardNet.Pages
 
         public override async Task RefreshListView()
         {
+            // Pour gérer le bouton Rechercher
+            await base.RefreshListView();
+
             this.ListView.ItemsSource = await eventsData.GetInstances();
         }
 

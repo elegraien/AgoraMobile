@@ -72,14 +72,14 @@ namespace AgoraMobileStandardNet.Pages
 
 
 
-            BtnSearch.Clicked += async (sender, e) =>
+           /* BtnSearch.Clicked += async (sender, e) =>
             {
                     // Ouverture de la modale de recherche
                     await BtnSearchClicked(sender, e);
             };
 
             // On RAZ le SearchString
-            Global.SetSettings(TypeSettings.SearchString, "");
+            Global.SetSettings(TypeSettings.SearchString, "");*/
 
 
             // L'init de la listview

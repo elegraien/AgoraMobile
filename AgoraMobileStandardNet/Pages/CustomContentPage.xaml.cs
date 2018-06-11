@@ -52,6 +52,8 @@ namespace AgoraMobileStandardNet.Pages
         {
             get { return this.FindByName<Button>("BtnSearch"); }
         }
+        // Un flag pour savoir si on a déjà mis l'event (pour éviter de le répéter) : à remplace r par quelque chose de plus élégant ???
+        private bool searchBtnAlreadyHasAClickedEbvent = false;
 
         // Loading spinner
         public UserDialogs UserDialogs { get; set; }
@@ -99,6 +101,7 @@ namespace AgoraMobileStandardNet.Pages
             {
                 pageTitleViewModel.IsHorsConnexionVisible = false;
             }
+
 
 
         }
@@ -162,6 +165,59 @@ namespace AgoraMobileStandardNet.Pages
         }
 
         #endregion
+
+        protected override async void OnAppearing()
+        {
+            // Gestion du bouton Rechercher
+            // ----------------------------
+            // S'il existe...
+            if (SearchButton != null && !searchBtnAlreadyHasAClickedEbvent)
+            {
+                SearchButton.Clicked += async (sender, e) =>
+                {
+                    // Ouverture de la modale de recherche
+                    await BtnSearchClicked(sender, e);
+                };
+                searchBtnAlreadyHasAClickedEbvent = true;
+            }
+
+
+            // On modifie l'éventuel titre du bouton rechercher
+            // Si Search String : on l'affiche sur le bouton
+            if (SearchButton != null)
+            {
+                if (!string.IsNullOrEmpty(SearchString))
+                    SearchButton.Text = "Rechercher *";
+                else
+                    SearchButton.Text = "Rechercher";
+            }
+
+            // On désactive la protection pour éviter 2 pages ouvertes
+            HasAlreadySelectedItem = false;
+
+            // Récupération du token
+            // Si pas de token ou erreur : on revient à la page d'accueil
+            this.Token = Global.GetSettings(TypeSettings.Token);
+            if (string.IsNullOrEmpty(this.Token))
+                await Navigation.PopAsync();
+
+            // ATTENTION : si une liste est remplie, cela veut dire qu'on fait un Back
+            if (ListView.ItemsSource != null && ListView.ItemsSource.GetEnumerator() != null)
+            {
+                // La liste est déjà remplie
+                this.UserDialogs.HideSpinner();
+                return;
+            }
+            else
+            {
+                // Le Spinner
+                this.UserDialogs.ShowSpinner();
+
+
+
+            }
+
+        }
 
         #region Pour éviter d'ouvrir 2 pages filles...
         protected override void OnDisappearing()
@@ -229,44 +285,7 @@ namespace AgoraMobileStandardNet.Pages
 
 
 
-        protected override async void OnAppearing()
-        {
-            // On modifie l'éventuel titre du bouton rechercher
-            // Si Search String : on l'affiche sur le bouton
-            if (SearchButton != null)
-            {
-                if (!string.IsNullOrEmpty(SearchString))
-                    SearchButton.Text = "Rechercher *";
-                else
-                    SearchButton.Text = "Rechercher";
-            }
 
-            // On désactive la protection pour éviter 2 pages ouvertes
-            HasAlreadySelectedItem = false;
-
-            // Récupération du token
-            // Si pas de token ou erreur : on revient à la page d'accueil
-            this.Token = Global.GetSettings(TypeSettings.Token);
-            if (string.IsNullOrEmpty(this.Token))
-                await Navigation.PopAsync();
-
-            // ATTENTION : si une liste est remplie, cela veut dire qu'on fait un Back
-            if (ListView.ItemsSource != null && ListView.ItemsSource.GetEnumerator() != null)
-            {
-                // La liste est déjà remplie
-                this.UserDialogs.HideSpinner();
-                return;
-            }
-            else
-            {
-                // Le Spinner
-                this.UserDialogs.ShowSpinner();
-
-
-
-            }
-
-        }
 
         public async Task ShowAlert(string title, string message)
         {

@@ -36,11 +36,11 @@ namespace AgoraMobileStandardNet.Pages
 
             // Le bouton en bas
             // ------------------
-            BtnSearch.Clicked += async (sender, e) =>
+            /*BtnSearch.Clicked += async (sender, e) =>
             {
                 // Ouverture de la modale de recherche
                 await BtnSearchClicked(sender, e);
-            };
+            };*/
 
             // Le titre
             this.Title = eventName;
