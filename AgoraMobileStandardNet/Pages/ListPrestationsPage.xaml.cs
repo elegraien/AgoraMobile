@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using AgoraMobileStandardNet.Helpers;
@@ -14,9 +15,8 @@ namespace AgoraMobileStandardNet.Pages
     public partial class ListPrestationsPage : CustomContentPage
     {
         List<Prestation> prestations;
-        //ListView listView;
-        //private int idEvent;
-
+        List<Prestation> prestationsToDisplay;
+ 
         // Les data
         private ListPrestationsData prestationsData;
 
@@ -33,6 +33,14 @@ namespace AgoraMobileStandardNet.Pages
 
             // Dans le menu haut droit, il faut afficher Télécharger les listes
             this.MustDisplayDownloadLists = true;
+
+            // Le bouton en bas
+            // ------------------
+            BtnSearch.Clicked += async (sender, e) =>
+            {
+                // Ouverture de la modale de recherche
+                await BtnSearchClicked(sender, e);
+            };
 
             // Le titre
             this.Title = eventName;
@@ -54,28 +62,43 @@ namespace AgoraMobileStandardNet.Pages
         {
             base.OnAppearing();
 
- 
-            // Récupération des prestations pour l'événement
-            prestationsData = new ListPrestationsData(Token);
-            prestations = await prestationsData.GetInstances(this.idEvent);
+            // Suppression des anciens composnats
+            DataLayout.Children.Clear();
+            DataLayout.Children.Add(this.ListView);
 
+
+            // Récupération des prestations pour l'événement
+            if (prestations == null || prestations.Count == 0)
+            {
+                prestationsData = new ListPrestationsData(Token);
+                prestations = await prestationsData.GetInstances(this.idEvent);
+            }
+
+            // filtrage éventuel
+            if (!string.IsNullOrEmpty(SearchString))
+                prestationsToDisplay = prestations.Where(X => X.Title.ToLower().Contains(SearchString.ToLower())).ToList();
+            else
+                prestationsToDisplay = prestations;
 
 
             // Peuple la liste des prestations
-            if (this.prestations.Count > 0)
+            this.ListView.ItemsSource = prestationsToDisplay;
+            this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
+            if (this.prestationsToDisplay.Count == 0)
             {
-                
-                this.ListView.ItemsSource = prestations;
-                this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
-             }
-            else
-            {
-                // Aucun presta trouvé
+                // Aucune presta trouvé
                 var newLabel = new Label();
                 if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
                     newLabel.Text = "Hors connexion : aucune prestation n'a été chargée préalablement.";
                 else
-                    newLabel.Text = "Aucune prestation trouvée.";
+                {
+                    if (!string.IsNullOrEmpty(SearchString))
+                        newLabel.Text = "Aucune prestation trouvée pour la recherche de \"" + SearchString + "\".";
+                    else
+                        newLabel.Text = "Aucune prestation trouvée.";
+
+                }
+
                 DataLayout.Children.Add(newLabel);
             }
 
@@ -91,46 +114,12 @@ namespace AgoraMobileStandardNet.Pages
         /// <returns>The list view.</returns>
         public override async Task RefreshListView()
         {
-            this.ListView.ItemsSource = await prestationsData.GetInstances(this.idEvent);
+            // Pour gérer le bouton Rechercher
+            await base.RefreshListView();
+
+            prestations = await prestationsData.GetInstances(this.idEvent);
+             this.ListView.ItemsSource = prestations;
         }
-
-
-        #region Surcharge de l'affichage du menu
-        /*public async override void DisplayActionSheet(object sender, EventArgs e)
-        {
-            // Attention :
-            // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
-            // Liste des actionsstring[] actions = null;
-            string action = "";
-            if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
-                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion" });
-            else
-                action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion", "Télécharger les listes" });
-
-            // en fonction de l'action demandée...
-            // TODO
-            switch (action)
-            {
-                case "Accueil":
-                case "Déconnexion":
-                    await Navigation.PopToRootAsync();
-                    break;
-                case "Télécharger les listes":
-                    // Déclenchement du download
-                    await DownloadLists();
-                    break;
-
-            }
-        }
-
-        private async Task DownloadLists()
-        {
-            UserDialogs.ShowSpinner();
-            var downloadData = new ImportBase();
-            await downloadData.DownloadData(this.Token, this.idEvent);
-            UserDialogs.HideSpinner();
-        }*/
-        #endregion
 
 
 

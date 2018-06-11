@@ -36,9 +36,22 @@ namespace AgoraMobileStandardNet.Pages
         // Bool pour afficher l'option "Télécharger les listes" dans le menu haut droit
         internal bool MustDisplayDownloadLists = false;
 
-        // Un booléen pour forcer le refresh des datas quand on affiche la page à nouveau
-        // En principe, on ne rafraichit pas (pour éviter un reload inutile) dans OnAppearing
-        internal bool ForceReloadData = false;
+        // La chaine de recherche (pour le cas où la page ait un bouton de Recherche)
+        internal string SearchString
+        {
+            get { return Global.GetSettings(SearchKey); }
+            set { Global.SetSettings(SearchKey, value); }
+        }
+        // La clé pour la chaine de recherche (une clé par page = 1 chaine par page)
+        internal string SearchKey
+        {
+            get { return TypeSettings.SearchString + this.GetType().Name; }
+        }
+        // Le bouton (éventuel ? ) de recherche
+        internal Button SearchButton
+        {
+            get { return this.FindByName<Button>("BtnSearch"); }
+        }
 
         // Loading spinner
         public UserDialogs UserDialogs { get; set; }
@@ -58,6 +71,9 @@ namespace AgoraMobileStandardNet.Pages
 
             // Création de la listView
             CreateListView();
+
+            // On efface la clé de recherche au premier chargement
+            SearchString = "";
 
             // Le spinner
             UserDialogs = new UserDialogs();
@@ -137,8 +153,14 @@ namespace AgoraMobileStandardNet.Pages
         /// <returns>The refreshed data.</returns>
         public virtual async Task RefreshListView()
         {
+            // On RAZ la SearchString
+            SearchString = "";
+            // Et on remet le titre du bouton
+            if (SearchButton != null)
+                SearchButton.Text = "Rechercher";
 
         }
+
         #endregion
 
         #region Pour éviter d'ouvrir 2 pages filles...
@@ -166,7 +188,7 @@ namespace AgoraMobileStandardNet.Pages
             // Si on est en mode HORS CONNEXION, on a accès à des items de menu spécifiques
             // Liste des actionsstring[] actions = null;
             string action = "";
-            if (MustDisplayDownloadLists && 
+            if (MustDisplayDownloadLists &&
                 !Global.GetSettingsBool(TypeSettings.IsHorsConnexion) &&
                this.idEvent != -1)
                 action = await DisplayActionSheet("Actions", "Cancel", null, new string[] { "Accueil", "Déconnexion", "Télécharger les listes" });
@@ -193,7 +215,7 @@ namespace AgoraMobileStandardNet.Pages
         {
             if (this.idEvent == -1)
                 return;
-            
+
             UserDialogs.ShowSpinner();
             var downloadData = new ImportBase();
             await downloadData.DownloadData(this.Token, this.idEvent);
@@ -209,6 +231,16 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
+            // On modifie l'éventuel titre du bouton rechercher
+            // Si Search String : on l'affiche sur le bouton
+            if (SearchButton != null)
+            {
+                if (!string.IsNullOrEmpty(SearchString))
+                    SearchButton.Text = "Rechercher *";
+                else
+                    SearchButton.Text = "Rechercher";
+            }
+
             // On désactive la protection pour éviter 2 pages ouvertes
             HasAlreadySelectedItem = false;
 
@@ -219,7 +251,7 @@ namespace AgoraMobileStandardNet.Pages
                 await Navigation.PopAsync();
 
             // ATTENTION : si une liste est remplie, cela veut dire qu'on fait un Back
-            if (!ForceReloadData && ListView.ItemsSource != null && ListView.ItemsSource.GetEnumerator() != null)
+            if (ListView.ItemsSource != null && ListView.ItemsSource.GetEnumerator() != null)
             {
                 // La liste est déjà remplie
                 this.UserDialogs.HideSpinner();
@@ -230,8 +262,7 @@ namespace AgoraMobileStandardNet.Pages
                 // Le Spinner
                 this.UserDialogs.ShowSpinner();
 
-                // On repasse le forceReload...
-                ForceReloadData = false;
+
 
             }
 
@@ -242,6 +273,18 @@ namespace AgoraMobileStandardNet.Pages
             await this.UserDialogs.ShowAlert(title, message);
         }
 
+
+        #region Gestion de la page de Search
+        internal async Task BtnSearchClicked(object sender, EventArgs e)
+        {
+            var searchPage = new SearchDialogPage(this);
+            //searchPage.ParentPage = this;
+
+
+            await Navigation.PushModalAsync(searchPage);
+
+        }
+        #endregion
 
 
     }

@@ -8,17 +8,15 @@ namespace AgoraMobileStandardNet.Pages
     public partial class SearchDialogPage : ContentPage
     {
         //private ListPeoplePage parent;
-        public ListPeoplePage ParentPage;
+        private CustomContentPage ParentPage;
+        //private string SearchKey;
 
-        /*public SearchDialogPage(ListPeoplePage parent)
+
+        public SearchDialogPage(CustomContentPage parent) //, string SearchKey)
         {
-            this.parent = parent;
-        }*/
+            this.ParentPage = parent;
+            //this.SearchKey = SearchKey;
 
-
-
-        public SearchDialogPage()
-        {
             InitializeComponent();
 
             BtnCancel.Clicked += async (sender, e) =>
@@ -39,7 +37,7 @@ namespace AgoraMobileStandardNet.Pages
                 await Launch(TxtSearch.Text.Trim());
             };
 
-            var searchString = Global.GetSettings(TypeSettings.SearchString);
+            var searchString = Global.GetSettings(ParentPage.SearchKey);
             if (!string.IsNullOrEmpty(searchString))
                 TxtSearch.Text = searchString;
         }
@@ -49,13 +47,8 @@ namespace AgoraMobileStandardNet.Pages
             if (!string.IsNullOrEmpty(searchString))
                 searchString = searchString.Trim();
             
-            Global.SetSettings(TypeSettings.SearchString, searchString);
-            // On force le rechargement et on clear les résultats
-            if (ParentPage != null)
-            {
-                ParentPage.ForceReloadData = true;
+            Global.SetSettings(ParentPage.SearchKey, searchString);
 
-            }
             await Navigation.PopModalAsync();
         }
     }

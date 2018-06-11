@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Global.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="18" Column="11" />
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="203" Column="98" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="139" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="76" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="40" Column="17" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="129" Column="1" />
       <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="1" Column="1" />
       <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="20" Column="11" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="26" Column="28" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="24" Column="89" />
+      <File FileName="AgoraMobileStandardNet/Services/PageData/ListPeopleData.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/SearchDialogPage.xaml.cs" Line="12" Column="9" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml" Line="11" Column="94" />
+      <File FileName="AgoraMobileStandardNet/Global.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -14,6 +18,8 @@
     <BreakpointStore>
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="242" column="1" />
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="257" column="1" />
+      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" line="75" column="28" />
+      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" line="46" column="68" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

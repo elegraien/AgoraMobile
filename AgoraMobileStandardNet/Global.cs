@@ -83,12 +83,20 @@ namespace AgoraMobileStandardNet
 
         #region Gestion des Prefs
         // Gestion des prefs
-        public static string GetSettings(TypeSettings typeSettings)
+        public static string GetSettings(string key)
         {
             if (CrossSettings.IsSupported)
-                return CrossSettings.Current.GetValueOrDefault(typeSettings.ToString(), string.Empty);
+                return CrossSettings.Current.GetValueOrDefault(key, string.Empty);
             else
                 return "";
+        }
+        public static string GetSettings(TypeSettings typeSettings)
+        {
+            /*if (CrossSettings.IsSupported)
+                return CrossSettings.Current.GetValueOrDefault(typeSettings.ToString(), string.Empty);
+            else
+                return "";*/
+            return GetSettings(typeSettings.ToString());
         }
 
         public static bool GetSettingsBool(TypeSettings typeSettings)
@@ -135,9 +143,15 @@ namespace AgoraMobileStandardNet
             return ret;
         }
 
+        public static void SetSettings(string key, string value)
+        {
+            CrossSettings.Current.AddOrUpdateValue(key, value);
+
+        }
         public static void SetSettings(TypeSettings typeSettings, string value)
         {
-            CrossSettings.Current.AddOrUpdateValue(typeSettings.ToString(), value);
+            //CrossSettings.Current.AddOrUpdateValue(typeSettings.ToString(), value);
+            SetSettings(typeSettings.ToString(), value);
         }
 
         public static void SetSettings(TypeSettings typeSettings, bool value)

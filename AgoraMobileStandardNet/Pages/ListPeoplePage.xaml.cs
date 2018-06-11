@@ -17,7 +17,12 @@ namespace AgoraMobileStandardNet.Pages
 {
     public partial class ListPeoplePage : CustomContentPage
     {
+        // La liste des participants chargée
         List<Participant> participants;
+
+        // LA liste des participants à afficher (et filtrée)
+        List<Participant> participantsToDisplay;
+
         //ListView listView;
         int? idPrestation;
         //int idEvent;
@@ -92,45 +97,30 @@ namespace AgoraMobileStandardNet.Pages
 
         protected override async void OnAppearing()
         {
-            // Attention : si on a forcé le Reload, on efface la listView
-            // Il faut le mettre avant le Base sinon ForceReload est remis à false
-            if (ForceReloadData)
-            {
-                // On détruit / recrée la ListView
-                // L'init de la listview
-                DataLayout.Children.Clear();
-                CreateListView();
-                DataLayout.Children.Add(this.ListView);
-
-                // Gère le click sur un item
-                this.ListView.ItemSelected += (sender, e) =>
-                {
-                    HandlePeopleClicked(sender, e);
-                };
-            }
+            
 
             base.OnAppearing();
 
-  
-            // Si Search String : on l'affiche sur le bouton
-            var searchString = Global.GetSettings(TypeSettings.SearchString);
-            if (!string.IsNullOrEmpty(searchString))
-                BtnSearch.Text = "Rechercher *";
-            else
-                BtnSearch.Text = "Rechercher";
+            // Suppression des anciens composnats
+            DataLayout.Children.Clear();
+            DataLayout.Children.Add(this.ListView);
 
-
+ 
             // Affichage de la liste des participants
             // --------------------------------------
 
-
             // Récupération des participants
-            peopleData = new ListPeopleData(Token);
-            participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+            if (participants == null || participants.Count == 0)
+            {
+                peopleData = new ListPeopleData(Token);
+                participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+            }
 
             // filtrage éventuel
-            if (!string.IsNullOrEmpty(searchString))
-                participants = participants.Where(X => X.FirstName.ToLower().Contains(searchString.ToLower()) || X.LastName.ToLower().Contains(searchString.ToLower())).ToList();
+            if (!string.IsNullOrEmpty(SearchString))
+                participantsToDisplay = participants.Where(X => X.FirstName.ToLower().Contains(SearchString.ToLower()) || X.LastName.ToLower().Contains(SearchString.ToLower())).ToList();
+            else
+                participantsToDisplay = participants;
 
             // Attention : si il n'y a pas de participants alors que nbInscrits !=0 ET Hors Connexion :
             // Cela signifie qu'on n'a jamais récupéré les données, on affiche un message d'erreur
@@ -147,21 +137,16 @@ namespace AgoraMobileStandardNet.Pages
             }
             else
             {
-                if (participants.Count > 0)
-                {
+                // LA liste à afficher
+                this.ListView.ItemsSource = participantsToDisplay;
+                this.ListView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
 
-                    // Peuple la liste des evenements si il y en a...
-                    /*listView = new ListView();
-                    listView.RowHeight = 80;*/
-                    this.ListView.ItemsSource = participants;
-                    this.ListView.ItemTemplate = new DataTemplate(typeof(ParticipantCell));
-                 }
-                else
+                if (participantsToDisplay.Count == 0)
                 {
                     // Aucun participant trouvé
                     var newLabel = new Label();
-                    if (!string.IsNullOrEmpty(searchString))
-                        newLabel.Text = "Aucun participant trouvé pour la recherche de \"" + searchString + "\".";
+                    if (!string.IsNullOrEmpty(SearchString))
+                        newLabel.Text = "Aucun participant trouvé pour la recherche de \"" + SearchString + "\".";
                     else
                         newLabel.Text = "Aucun participant trouvé.";
                     DataLayout.Children.Add(newLabel);
@@ -176,7 +161,10 @@ namespace AgoraMobileStandardNet.Pages
 
         public override async Task RefreshListView()
         {
-            this.ListView.ItemsSource = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+            await base.RefreshListView();
+
+            participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+            this.ListView.ItemsSource = participants;
 
         }
 
@@ -275,18 +263,6 @@ namespace AgoraMobileStandardNet.Pages
 
         }
 
-        private async Task BtnSearchClicked(object sender, EventArgs e)
-        {
-            var searchPage = new SearchDialogPage();
-            searchPage.ParentPage = this;
-
-
-            await Navigation.PushModalAsync(searchPage);
-
-
-
-
-        }
 
         /// <summary>
         /// TODO
@@ -407,18 +383,6 @@ namespace AgoraMobileStandardNet.Pages
 
     }
 
-    /*public class SetPresenceRetour : IBaseModel
-    {
-        public int Id { get; set; }
-        public SetPresenceRetour()
-        {
 
-        }
-
-        public SetPresenceRetour(JsonObject jsonObject)
-        {
-
-        }
-    }*/
 
 }
