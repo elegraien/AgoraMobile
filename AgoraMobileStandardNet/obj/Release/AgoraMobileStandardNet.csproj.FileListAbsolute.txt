@@ -10,4 +10,3 @@
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.Pages.DetailPeoplePage.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.Pages.CustomContentPage.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.dll
-/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Release/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache

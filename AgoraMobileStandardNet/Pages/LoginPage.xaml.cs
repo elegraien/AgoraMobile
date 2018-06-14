@@ -24,7 +24,7 @@ namespace AgoraMobileStandardNet.Pages
 
             sd = new UserDialogs();
 
- 
+
 
             // On pré remplit les zones si on les avait stockées
             string loginOk = Global.GetSettings(TypeSettings.LoginSaved);
@@ -56,12 +56,13 @@ namespace AgoraMobileStandardNet.Pages
                 if (isOk)
                 {
                     // Puisqu'on a du réseau, on en profite pour envoyer les invitations créées en local
-                    if (!string.IsNullOrEmpty(this.token)) {
+                    if (!string.IsNullOrEmpty(this.token))
+                    {
                         var validateService = new ValidatePresenceService(this.token);
                         await validateService.SendAll();
-                       
+
                     }
- 
+
                     // La navigation
                     var listEventsPage = new ListEventsPage();
 
@@ -86,6 +87,14 @@ namespace AgoraMobileStandardNet.Pages
             };
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // On efface le message d'erreur quand on revient sur la page
+            ErrorMsg.Text = ""; 
+        }
+
         /// <summary>
         /// Vérification du login / password
         /// </summary>
@@ -104,16 +113,19 @@ namespace AgoraMobileStandardNet.Pages
 
             string postString = string.Format("{{\"login\":\"{0}\",\"password\":\"{1}\"}}", login, password);
             //request.ContentLength = postString.Length;
-            StreamWriter requestWriter = new StreamWriter(await request.GetRequestStreamAsync());
-            requestWriter.Write(postString);
-            requestWriter.Flush();
-            //requestWriter.Close();
-
-            bool isLogged = false;
 
             // Sends the request
+            bool isLogged = false;
+
             try
             {
+
+                StreamWriter requestWriter = new StreamWriter(await request.GetRequestStreamAsync());
+                requestWriter.Write(postString);
+                requestWriter.Flush();
+                //requestWriter.Close();
+
+
                 using (WebResponse response = await request.GetResponseAsync())
                 {
                     // Si on est passé sans exception : on a le droit de se logger
@@ -143,8 +155,10 @@ namespace AgoraMobileStandardNet.Pages
             }
             catch (WebException ex)
             {
+                sd.HideSpinner();
+
                 HttpWebResponse objresponse = ex.Response as HttpWebResponse;
-                if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                if (objresponse != null && objresponse.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     // 401
                     ErrorMsg.Text = "Login / Password non autorisé";
@@ -152,13 +166,19 @@ namespace AgoraMobileStandardNet.Pages
                 else
                 {
                     // Générique
-                    ErrorMsg.Text = objresponse.StatusDescription;
+                    if (objresponse != null)
+                        ErrorMsg.Text = objresponse.StatusDescription;
+                    else
+                        ErrorMsg.Text = "Problème de connexion / réseau inaccessible.";
                 }
                 await this.DisplayAlert("Erreur", ErrorMsg.Text, "OK");
 
             }
             catch (Exception ex)
             {
+                sd.HideSpinner();
+
+ 
                 await this.DisplayAlert("Erreur", "Une erreur est survenue : " + ex.Message, "OK");
             }
 
