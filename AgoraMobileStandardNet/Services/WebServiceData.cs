@@ -101,7 +101,8 @@ namespace AgoraMobileStandardNet.Services
                     // On pagine
                     int nbRecords = RecordsCount.Value;
                     int startRecord = 0;
-                    while (nbRecords == RecordsCount) {
+                    while (nbRecords == RecordsCount)
+                    {
                         // On récupère la page
                         var pagedInstances = await getPagedData(DecodeJSONObject, DecodeJSONPrimitive, url, isInCache, startRecord, RecordsCount);
 
@@ -109,7 +110,8 @@ namespace AgoraMobileStandardNet.Services
                         // Pour éviter le problème, on va vérifier si le 1er élément trouvé n'est pas déjà dans la liste...
                         if (pagedInstances != null &&
                             pagedInstances.Count > 0 &&
-                            instances.Where(x => x.Id == pagedInstances.First().Id).Any()) {
+                            instances.Where(x => x.Id == pagedInstances.First().Id).Any())
+                        {
                             // On retire le premier
                             pagedInstances.Remove(pagedInstances.First());
                         }
@@ -141,12 +143,13 @@ namespace AgoraMobileStandardNet.Services
                                                  int? startRecord = null,
                                                  int? recordsCount = null)
         {
+
             List<T> instances = new List<T>();
 
             // On prend en compte si il le faut le paramètre RecordsCount pour paginer la récupération
             if (recordsCount.HasValue && startRecord.HasValue)
                 url += "&StartRecord=" + startRecord.Value + "&RecordsCount=" + recordsCount.Value;
-            
+
 
             WebRequest request = WebRequest.Create(new Uri(url)) as WebRequest;
             request.ContentType = "application/json";
@@ -170,7 +173,7 @@ namespace AgoraMobileStandardNet.Services
                 try
                 {
 
-  
+
 
                     using (WebResponse response = DependencyService.Get<INetTools>().GetResponse(request)) // request.GetResponse(); // await request.GetResponseAsync())
                     {
@@ -240,30 +243,34 @@ namespace AgoraMobileStandardNet.Services
                 catch (WebException ex)
                 {
                     HttpWebResponse objresponse = ex.Response as HttpWebResponse;
-                    if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                    if (objresponse != null)
                     {
-                        // 401
+                        if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            // 401
+                            throw new Exception("Problème : accès au serveur non autorisé.");
 
-                    }
-                    else
-                    {
-                        // Générique
+                        }
+                        else
+                        {
+                            // Générique
+                            throw new Exception(ex.Message);
 
+                        }
+                    } else {
+                        // Pb de connexion réseau
+                        throw new Exception("Problème de connexion réseau");
                     }
+                        
 
                 }
                 catch (Exception e)
                 {
                     string msg = e.Message;
-                }
-                finally
-                {
-                    // Loading terminé
-                    //MessagingCenter.Send<WebServiceData<T>>(this, "LoadingFinished");
 
+                    throw new Exception(e.Message);
                 }
 
-                //return instances;
             });
 
             return instances;

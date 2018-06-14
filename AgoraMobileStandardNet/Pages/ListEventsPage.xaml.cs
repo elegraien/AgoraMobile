@@ -58,7 +58,19 @@ namespace AgoraMobileStandardNet.Pages
             if (evenements == null || evenements.Count == 0)
             {
                 eventsData = new ListEventsData(Token);
-                this.evenements = await eventsData.GetInstances();
+
+                // Récupération des instances et ge stion des erreurs réseau
+                try
+                {
+                    this.evenements = await eventsData.GetInstances();
+                }
+                catch(Exception e)
+                {
+                    // Le message d'erreur
+                    UserDialogs.HideSpinner();
+                    await UserDialogs.ShowAlert("Erreur", e.Message);
+                    return;
+                }
             }
 
             // filtrage éventuel

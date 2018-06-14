@@ -113,7 +113,19 @@ namespace AgoraMobileStandardNet.Pages
             if (participants == null || participants.Count == 0)
             {
                 peopleData = new ListPeopleData(Token);
-                participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+
+                // Récupération des instances et ge stion des erreurs réseau
+                try
+                {
+                    participants = await peopleData.GetInstances(this.idEvent, this.idPrestation);
+                }
+                catch (Exception e)
+                {
+                    // Le message d'erreur
+                    UserDialogs.HideSpinner();
+                    await UserDialogs.ShowAlert("Erreur", e.Message);
+                    return;
+                }
             }
 
             // filtrage éventuel

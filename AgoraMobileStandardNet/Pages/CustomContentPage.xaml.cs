@@ -237,6 +237,7 @@ namespace AgoraMobileStandardNet.Pages
             Navigation.PopAsync();
         }
 
+
         #region Surcharge de l'affichage du menu
         public async virtual void DisplayActionSheet(object sender, EventArgs e)
         {

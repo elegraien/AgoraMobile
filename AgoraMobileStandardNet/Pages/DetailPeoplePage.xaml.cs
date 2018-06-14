@@ -59,8 +59,19 @@ namespace AgoraMobileStandardNet.Pages
         {
             // Récupération des participants
             detailPeopleData = new DetailPeopleData(Token);
-            var participants = await detailPeopleData.GetInstances(this.idEvent, this.idPrestation, this.idParticipant);
-
+            List<Participant> participants ;
+            // Récupération des instances et ge stion des erreurs réseau
+            try
+            {
+                participants = await detailPeopleData.GetInstances(this.idEvent, this.idPrestation, this.idParticipant);
+            }
+            catch (Exception e)
+            {
+                // Le message d'erreur
+                UserDialogs.HideSpinner();
+                await UserDialogs.ShowAlert("Erreur", e.Message);
+                return;
+            }
 
             // On affiche le participant
             Participant participant = participants[0];

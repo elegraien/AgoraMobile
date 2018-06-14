@@ -21,6 +21,7 @@ namespace AgoraMobileStandardNet.Services
         /// <param name="idParticipant">Identifier participant.</param>
         public async Task<List<Prestation>> GetInstances(int? idEvent = null, int? idPrestation = null, int? idParticipant = null)
         {
+
             List<Prestation> instances = null;
 
             // Les WSData

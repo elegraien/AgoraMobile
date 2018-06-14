@@ -71,7 +71,19 @@ namespace AgoraMobileStandardNet.Pages
             if (prestations == null || prestations.Count == 0)
             {
                 prestationsData = new ListPrestationsData(Token);
-                prestations = await prestationsData.GetInstances(this.idEvent);
+
+                // Récupération des instances et ge stion des erreurs réseau
+                try
+                {
+                    prestations = await prestationsData.GetInstances(this.idEvent);
+               }
+                catch (Exception e)
+                {
+                    // Le message d'erreur
+                    UserDialogs.HideSpinner();
+                    await UserDialogs.ShowAlert("Erreur", e.Message);
+                    return;
+                }
             }
 
             // filtrage éventuel
