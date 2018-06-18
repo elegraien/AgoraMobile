@@ -59,8 +59,10 @@ namespace AgoraMobileStandardNet.Pages
                     if (!string.IsNullOrEmpty(this.token))
                     {
                         var validateService = new ValidatePresenceService(this.token);
-                        await validateService.SendAll();
-
+                        bool test = await validateService.SendAll();
+                        // Pour l'instant, on ne fait rien du retour...
+                        await this.DisplayAlert("Information", "Les validations faites en Hors Connexion viennent d'être envoyées.", "OK");
+ 
                     }
 
                     // La navigation

@@ -311,7 +311,8 @@ namespace AgoraMobileStandardNet.Pages
                     try
                     {
                         await validateService.Send(validate);
-                    }
+                        await this.DisplayAlert("OK", "Le billet est validé.", "OK");
+                     }
                     catch (WebException ex)
                     {
                         HttpWebResponse objresponse = ex.Response as HttpWebResponse;
@@ -330,6 +331,11 @@ namespace AgoraMobileStandardNet.Pages
                             await this.DisplayAlert("Attention", "Le billet n'est pas valide.", "Cancel");
                             return;
                         }
+                    }
+                    catch (Exception e) {
+                        // Erreur
+                        await this.DisplayAlert("Attention", e.Message, "Cancel");
+                        return;
                     }
                 }
                 else

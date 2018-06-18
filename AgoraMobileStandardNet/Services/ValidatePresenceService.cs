@@ -57,7 +57,7 @@ namespace AgoraMobileStandardNet.Services
         }
 
         /// <summary>
-        /// Envoie un validatePresence en attente
+        /// Envoie un validatePresence en attente ; renvoie un message d'erreur éventuellement (sinon OK)
         /// </summary>
         /// <returns>The send.</returns>
         /// <param name="validatePresence">Validate presence.</param>
@@ -67,7 +67,8 @@ namespace AgoraMobileStandardNet.Services
             if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
             {
                 // On sort
-                return;
+                throw new Exception("Attention : hors connexion.");
+
             }
 
             // Creates HTTP web request
@@ -93,6 +94,8 @@ namespace AgoraMobileStandardNet.Services
                 request.Headers["AgoraEvent-Token"] = this.Token;
 
             //request.ContentLength = 0; // (string.IsNullOrEmpty(this.PostString) ? 0 : this.PostString.Length);
+            // On passe un param vide ??? Sinon, l'appel plante...
+            // Pas très élégant, mais je ne vois pas comment faire mieux
             var stream2 = await request.GetRequestStreamAsync();
             using (var writer = new StreamWriter(stream2))
             {
@@ -164,6 +167,7 @@ namespace AgoraMobileStandardNet.Services
                 {
                     isOk = false;
                     string msg = e.Message;
+                    throw e;
                 }
                 finally
                 {
@@ -185,13 +189,15 @@ namespace AgoraMobileStandardNet.Services
         /// <summary>
         /// Envoie tous les ValidatePresence en attente
         /// </summary>
-        public async Task SendAll()
+        public async Task<bool> SendAll()
         {
+            bool isOk = true;
+
             // Sauf si Hors connexion
             if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
             {
                 // On sort
-                return;
+                return false;
             }
 
             // Boucle sur toutes les lignes pour les appels de Web Service
@@ -199,9 +205,27 @@ namespace AgoraMobileStandardNet.Services
 
             foreach (ValidatePresence instance in validatePresences)
             {
-                await Send(instance);
+                // On checke si il y a une erreur type 40x
+                try
+                {
+                    await Send(instance);
+                }
+                catch (WebException ex)
+                {
+                    HttpWebResponse objresponse = ex.Response as HttpWebResponse;
+                    if (objresponse.StatusCode == HttpStatusCode.Unauthorized ||
+                        objresponse.StatusCode == HttpStatusCode.Forbidden ||
+                       objresponse.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        // Déjà enregistré : OK mais on mettra un message pour l'indiquer
+                        isOk = false;
+
+                    } 
+                }
 
             }
+
+            return isOk;
 
         }
 
