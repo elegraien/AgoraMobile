@@ -19,11 +19,21 @@ namespace AgoraMobileStandardNet.Services
     {
         private SQLData<ValidatePresence> sqlData;
         private string Token;
+        private bool isSilentExceptions;
 
-        public ValidatePresenceService(string token)
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="token">Token.</param>
+        /// <param name="isSilentException">Si false : les Exceptions à l'envoi ne sont pas levées ; si tru, elles le sont.</param>
+        public ValidatePresenceService(string token, bool? isSilentExceptions = false)
         {
             sqlData = new SQLData<ValidatePresence>();
             this.Token = token;
+            if (isSilentExceptions.HasValue)
+                this.isSilentExceptions = isSilentExceptions.Value;
+            else
+                this.isSilentExceptions = false;
 
             // On crée la table au besoin
             sqlData.CreateTable();
@@ -109,7 +119,7 @@ namespace AgoraMobileStandardNet.Services
             // Sends the request
             await Task.Run(() =>
             {
-                bool isOk = false;
+                bool mustDelete = false;
 
                 try
                 {
@@ -129,7 +139,7 @@ namespace AgoraMobileStandardNet.Services
                             // On parse le résultat 
                             string temp = jsonDoc.ToString();
                             // Résultat : "[\"1692915\", \"2FAVAND\", \"Nicolas\"]"
-                            isOk = true;
+                            mustDelete = true;
 
                         }
                     }
@@ -139,49 +149,51 @@ namespace AgoraMobileStandardNet.Services
                 // Attention : si on est déjà inscrit, on renvoie un 403
                 catch (WebException ex)
                 {
-                    isOk = false;
                     HttpWebResponse objresponse = ex.Response as HttpWebResponse;
                     if (objresponse.StatusCode == HttpStatusCode.Unauthorized ||
                         objresponse.StatusCode == HttpStatusCode.Forbidden ||
                        objresponse.StatusCode == HttpStatusCode.NotFound)
                     {
-                        // 401
-                        // 403 : le participant a déjà été enregistré aujourd'hui
+                        mustDelete = true;
+                    
+                        // 401 : Session expirée ou / Impossible d'identifier le billet
+                        // 403 : le participant a déjà été enregistré aujourd'hui / auparavant
+                        // 404 : Billet non valide / vérifiez que le participant fait partie de la liste d'invités
                         // On enlève de la base et
                         // rethrow
-                       sqlData.DeleteData(validatePresence);
+                       //sqlData.DeleteData(validatePresence);
 
-                        throw ex;
+                        if (!isSilentExceptions)
+                            throw ex;
 
                     }
                     else 
                     {
                         // Générique
-                        sqlData.DeleteData(validatePresence);
+                        mustDelete = false;
+                        //sqlData.DeleteData(validatePresence);
 
-                        throw ex;
+                        if (!isSilentExceptions)
+                            throw ex;
                     }
 
                 }
                 catch (Exception e)
                 {
-                    isOk = false;
-                    string msg = e.Message;
+                    mustDelete = false;
+
                     throw e;
                 }
                 finally
                 {
-                    // Loading terminé
-                    //MessagingCenter.Send<WebServiceData<T>>(this, "LoadingFinished");
-
+                    // Si la donnée a été correctement envoyée : on la supprime de la table ValidatePresence
+                    // TODO
+                    if (mustDelete)
+                        sqlData.DeleteData(validatePresence);
 
                 }
 
-                // Si la donnée a été correctement envoyée : on la supprime de la table ValidatePresence
-                // TODO
-                if (isOk)
-                    sqlData.DeleteData(validatePresence);
-
+  
 
             });
         }
@@ -202,6 +214,9 @@ namespace AgoraMobileStandardNet.Services
 
             // Boucle sur toutes les lignes pour les appels de Web Service
             List<ValidatePresence> validatePresences = sqlData.RetrieveAll();
+
+            if (validatePresences.Count() == 0)
+                return false;
 
             foreach (ValidatePresence instance in validatePresences)
             {

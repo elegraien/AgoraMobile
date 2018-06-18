@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Global.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="278" Column="44" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="316" Column="12" />
       <File FileName="Source Not Available" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="313" Column="25" />
-      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="206" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="335" Column="2" />
+      <File FileName="AgoraMobileStandardNet/Services/ValidatePresenceService.cs" Line="182" Column="21" />
       <File FileName="AgoraMobileStandardNet/Models/ValidatePresence.cs" Line="11" Column="18" />
-      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="62" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="49" Column="73" />
       <File FileName="AgoraMobileStandardNet/Global.cs" Line="106" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="62" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -15,7 +16,6 @@
     <BreakpointStore>
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="245" column="1" />
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="269" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" line="61" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -310,11 +310,12 @@ namespace AgoraMobileStandardNet.Pages
 
 
 
-        public async Task ShowAlert(string title, string message)
+        /*public async Task ShowAlert(string title, string message)
+
         {
             await this.UserDialogs.ShowAlert(title, message);
         }
-
+*/
 
         #region Gestion de la page de Search
         internal async Task BtnSearchClicked(object sender, EventArgs e)

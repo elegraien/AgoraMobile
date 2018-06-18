@@ -58,10 +58,12 @@ namespace AgoraMobileStandardNet.Pages
                     // Puisqu'on a du réseau, on en profite pour envoyer les invitations créées en local
                     if (!string.IsNullOrEmpty(this.token))
                     {
-                        var validateService = new ValidatePresenceService(this.token);
-                        bool test = await validateService.SendAll();
-                        // Pour l'instant, on ne fait rien du retour...
-                        await this.DisplayAlert("Information", "Les validations faites en Hors Connexion viennent d'être envoyées.", "OK");
+                        var validateService = new ValidatePresenceService(this.token, true);
+                        if (await validateService.SendAll())
+                        {
+                            // Pour l'instant, on ne fait rien du retour...
+                            await this.DisplayAlert("Information", "Les modifiations faites en Hors Connexion viennent d'être exportées.", "OK");
+                        }
  
                     }
 

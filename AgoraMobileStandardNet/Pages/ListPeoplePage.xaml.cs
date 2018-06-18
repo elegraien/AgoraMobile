@@ -261,7 +261,7 @@ namespace AgoraMobileStandardNet.Pages
                     else
                     {
                         // Message d'erreur
-                        await this.ShowAlert("Attention", "Erreur de la validation d'un invité par QR Code.");
+                        await this.DisplayAlert("Attention", "Erreur de la validation d'un invité par QR Code.", "Cancel");
 
 
                     }
@@ -320,15 +320,19 @@ namespace AgoraMobileStandardNet.Pages
                         {
                             // 403 : le participant a déjà été enregistré aujourd'hui
                             // Message d'erreur
-                            await this.ShowAlert("Attention", "Le billet a déjà été enregistré.");
+                            await this.DisplayAlert("Attention", "Le billet a déjà été enregistré, le numéro du billet a déjà été scanné auparavant.", "OK");
                             return;
                         }
-                        else if (objresponse.StatusCode == HttpStatusCode.NotFound ||
-                                objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                        else if (objresponse.StatusCode == HttpStatusCode.NotFound)
                         {
-                            // 404 ou 401 : billet non valide
-                            //await this.ShowAlert("Attention", "Le billet n'est pas valide.");
+                            // 404 : billet non valide
                             await this.DisplayAlert("Attention", "Le billet n'est pas valide.", "Cancel");
+                            return;
+                        }
+                        else if (objresponse.StatusCode == HttpStatusCode.Unauthorized)
+                        {
+                            // 401 : impossible d'identifier le numéro du billet
+                           await this.DisplayAlert("Attention", "Impossible d'identifier le numéro du billet, veuillez vérifier les informations de celui ci.", "Cancel");
                             return;
                         }
                     }
@@ -349,7 +353,7 @@ namespace AgoraMobileStandardNet.Pages
                         validateService.IsInscriptionAlreadyRecorded(validate))
                     {
                         // Déjà trouvé : message d'erreur
-                        await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                        await this.DisplayAlert("Attention", "Le participant a déjà été enregistré.", "OK");
 
                         return;
                     }

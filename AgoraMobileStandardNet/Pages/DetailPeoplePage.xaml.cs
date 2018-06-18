@@ -115,9 +115,30 @@ namespace AgoraMobileStandardNet.Pages
                         {
                             // 403 : le participant a déjà été enregistré aujourd'hui
                             // Message d'erreur
-                            await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                            await this.DisplayAlert("Attention", "Le participant a déjà été enregistré aujourd'hui.", "OK");
                             return;
+                        } else if (objresponse.StatusCode == HttpStatusCode.Unauthorized) {
+                            // 401 : Votre session a expiré
+                            await this.DisplayAlert("Attention", "Votre session a expiré, veuillez vous identifier à nouveau.", "Cancel");
+                            return;
+ 
+                        } else if (objresponse.StatusCode == HttpStatusCode.NotFound) {
+                            // 404 : PArticipant pas sur la liste d'invités
+                            await this.DisplayAlert("Attention", "Veuillez vérifier que le participant fait partie de la liste d'invités.", "Cancel");
+                            return;
+
+                        } else {
+                            await this.DisplayAlert("Attention", "Erreur lors de la validation d'un invité en ligne.", "Cancel");
+                            return;
+
                         }
+                            
+                    }
+                    catch(Exception ex2)
+                    {
+                        await this.DisplayAlert("Attention", "Erreur lors de la validation d'un invité en ligne : " + ex2.Message, "Cancel");
+                        return;
+
                     }
                 } else {
                     // Hors connexion : on vérifie juste si l'utilisateur n'est pas déjà présent dans la table SQL
@@ -129,7 +150,7 @@ namespace AgoraMobileStandardNet.Pages
                         validateService.IsInscriptionAlreadyRecorded(validate))
                     {
                         // Déjà trouvé : message d'erreur
-                        await this.ShowAlert("Attention", "Le participant a déjà été enregistré.");
+                        await this.DisplayAlert("Attention", "Le participant a déjà été enregistré.", "Cancel");
 
 
                         return;
@@ -147,7 +168,7 @@ namespace AgoraMobileStandardNet.Pages
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));*/
 
             // OK
-            await this.ShowAlert("OK", "Le participant a été correctement enregistré.");
+            await this.DisplayAlert("OK", "Le participant a été correctement enregistré.", "OK");
 
             UserDialogs.ShowSpinner();
             // Affichage des données
