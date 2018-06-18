@@ -1,47 +1,16 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs">
     <Files>
-      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="73" Column="18" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPrestationsPage.xaml.cs" Line="86" Column="18" />
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml" Line="58" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="240" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="263" Column="1" />
       <File FileName="Source Not Available" />
-      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="146" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/ListPrestationsData.cs" Line="24" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/ListPeopleData.cs" Line="24" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml.cs" Line="121" Column="17" />
-      <File FileName="AgoraMobileStandardNet/Services/PageData/DetailPeopleData.cs" Line="32" Column="13" />
-      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="AgoraMobileStandardNet" expanded="True">
-            <Node name="AgoraMobileStandardNet" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="CustomContentPage.xaml" expanded="True" />
-                <Node name="DetailPeoplePage.xaml" expanded="True">
-                  <Node name="DetailPeoplePage.xaml.cs" selected="True" />
-                </Node>
-                <Node name="ListEventsPage.xaml" expanded="True" />
-                <Node name="ListPeoplePage.xaml" expanded="True" />
-                <Node name="ListPrestationsPage.xaml" expanded="True" />
-                <Node name="LoginPage.xaml" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="PageData" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="245" column="1" />
       <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="269" column="1" />
+      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" relfile="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" line="261" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

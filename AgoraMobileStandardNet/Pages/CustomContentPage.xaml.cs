@@ -257,7 +257,29 @@ namespace AgoraMobileStandardNet.Pages
             switch (action)
             {
                 case "Accueil":
+                    // Accueil revient à la liste des événements
+                    int nbLevelsToRemove = 0;
+                    switch (this.GetType().Name) {
+                        case "ListEventsPage":
+                            break;
+                        case "ListPrestationsPage":
+                            nbLevelsToRemove = 1;
+                            break;
+                        case "ListPeoplePage":
+                            nbLevelsToRemove = 2;
+                            break;
+                        case "DetailPeoplePage":
+                            nbLevelsToRemove = 3;
+                            break;
+
+                    }
+                    while(nbLevelsToRemove > 0) {
+                        Navigation.RemovePage(this);
+                        nbLevelsToRemove--;
+                    }
+                    break;
                 case "Déconnexion":
+                    // Revient à la page de Login
                     await Navigation.PopToRootAsync();
                     break;
                 case "Télécharger les listes":
