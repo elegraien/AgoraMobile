@@ -160,6 +160,10 @@
     <ImageAsset Include="Assets.xcassets\backarrow.imageset\backarrow.png" />
     <ImageAsset Include="Assets.xcassets\hamburger.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\hamburger.imageset\hamburger.png" />
+    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\haut_accueil.png" />
+    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\bas_accueil.png" />
+    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -167,6 +171,8 @@
     <Folder Include="Assets.xcassets\nonetwork.imageset\" />
     <Folder Include="Assets.xcassets\backarrow.imageset\" />
     <Folder Include="Assets.xcassets\hamburger.imageset\" />
+    <Folder Include="Assets.xcassets\haut_accueil.imageset\" />
+    <Folder Include="Assets.xcassets\bas_accueil.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

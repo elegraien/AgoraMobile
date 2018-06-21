@@ -31,13 +31,19 @@ namespace AgoraMobileStandardNet.Droid
 			public const int backarrow = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int hamburger = 2130771971;
+			public const int bas-accueil = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int icon = 2130771972;
+			public const int hamburger = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int nonetwork = 2130771973;
+			public const int haut-accueil = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int icon = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int nonetwork = 2130771975;
 			
 			static Drawable()
 			{

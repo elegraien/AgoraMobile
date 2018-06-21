@@ -24,7 +24,8 @@ namespace AgoraMobileStandardNet.Pages
 
             sd = new UserDialogs();
 
-
+            // On retire la barre de navigation
+            NavigationPage.SetHasNavigationBar(this, false);
 
             // On pré remplit les zones si on les avait stockées
             string loginOk = Global.GetSettings(TypeSettings.LoginSaved);
@@ -71,6 +72,7 @@ namespace AgoraMobileStandardNet.Pages
                     var listEventsPage = new ListEventsPage();
 
                     await Navigation.PushAsync(listEventsPage);
+                    //Application.Current.MainPage = new NavigationPage(listEventsPage);
 
                 }
 

@@ -234,7 +234,8 @@ namespace AgoraMobileStandardNet.Pages
         /// <param name="e">E.</param>
         public void GoBack(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+
+                Navigation.PopAsync();
         }
 
 

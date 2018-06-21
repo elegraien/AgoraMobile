@@ -12,7 +12,7 @@ namespace AgoraMobileStandardNet
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage()); // new AgoraMobileFormsPage();
+            MainPage = new NavigationPage(new LoginPage()); 
 
             
        }
