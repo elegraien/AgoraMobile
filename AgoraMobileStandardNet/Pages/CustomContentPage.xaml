@@ -17,6 +17,7 @@
                         </Image.GestureRecognizers>
                     </Image>
                     <Label x:Name="LblTitle" Text="{TemplateBinding BindingContext.Title}" FontSize="Default" 
+                           FontAttributes="Bold"
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
                            HorizontalOptions="FillAndExpand"
                            BackgroundColor="Transparent" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" />

@@ -3,12 +3,12 @@
     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
                 <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="10" />
             </Grid.RowDefinitions>
-            <StackLayout x:Name="DataLayout" VerticalOptions="FillAndExpand" Grid.Column="0" Grid.Row="0" />
-            <Button x:Name="BtnSearch" Image="" Text="Rechercher" Grid.Column="0" Grid.Row="1" />
+            <SearchBar x:Name="SearchBar" Grid.Row="0" />
+            <StackLayout x:Name="DataLayout" VerticalOptions="FillAndExpand" Grid.Row="1" />
         </Grid>
     </StackLayout>
 </custom:CustomContentPage>

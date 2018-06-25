@@ -37,9 +37,9 @@ namespace AgoraMobileStandardNet.Pages
                 await Launch(TxtSearch.Text.Trim());
             };
 
-            var searchString = Global.GetSettings(ParentPage.SearchKey);
-            if (!string.IsNullOrEmpty(searchString))
-                TxtSearch.Text = searchString;
+           // var searchString = Global.GetSettings(ParentPage.SearchKey);
+            //if (!string.IsNullOrEmpty(searchString))
+              //  TxtSearch.Text = searchString;
         }
 
         private async Task Launch(string searchString)
@@ -47,7 +47,7 @@ namespace AgoraMobileStandardNet.Pages
             if (!string.IsNullOrEmpty(searchString))
                 searchString = searchString.Trim();
             
-            Global.SetSettings(ParentPage.SearchKey, searchString);
+            //Global.SetSettings(ParentPage.SearchKey, searchString);
 
             await Navigation.PopModalAsync();
         }

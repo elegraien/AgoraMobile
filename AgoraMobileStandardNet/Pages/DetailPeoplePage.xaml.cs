@@ -37,6 +37,7 @@ namespace AgoraMobileStandardNet.Pages
             this.Title = title;
 
 
+ 
         }
 
         protected override async void OnAppearing()
@@ -85,7 +86,9 @@ namespace AgoraMobileStandardNet.Pages
             Telephone.Text = participant.Telephone;
 
             // On ajoute la liste des participations
-            listView.RowHeight = 120;
+            // La listeview a des lignes de hauteur différentes
+            this.listView.HasUnevenRows = true;
+            //listView.RowHeight = 120;
             listView.ItemsSource = detailPeopleData.InscriptionsCells;
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
         }

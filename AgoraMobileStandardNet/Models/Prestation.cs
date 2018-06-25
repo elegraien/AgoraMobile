@@ -79,5 +79,7 @@ namespace AgoraMobileStandardNet.Models
         {
             return "Prestation : Id: " + Id + " - IdManif: " + this.IdManif + " - Title: " + this.Title;
         }
+
+
     }
 }

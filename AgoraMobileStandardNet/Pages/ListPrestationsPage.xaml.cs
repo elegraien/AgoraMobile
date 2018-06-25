@@ -16,7 +16,9 @@ namespace AgoraMobileStandardNet.Pages
     {
         List<Prestation> prestations;
         List<Prestation> prestationsToDisplay;
- 
+
+        Label noPrestationLabel;
+
         // Les data
         private ListPrestationsData prestationsData;
 
@@ -34,19 +36,12 @@ namespace AgoraMobileStandardNet.Pages
             // Dans le menu haut droit, il faut afficher Télécharger les listes
             this.MustDisplayDownloadLists = true;
 
-            // Le bouton en bas
-            // ------------------
-            /*BtnSearch.Clicked += async (sender, e) =>
-            {
-                // Ouverture de la modale de recherche
-                await BtnSearchClicked(sender, e);
-            };*/
 
             // Le titre
             this.Title = eventName;
 
             // L'init de la listView
-             DataLayout.Children.Clear();
+            DataLayout.Children.Clear();
             DataLayout.Children.Add(this.ListView);
 
 
@@ -55,6 +50,10 @@ namespace AgoraMobileStandardNet.Pages
             {
                 HandlePrestationClicked(sender, e);
             };
+
+            // La hauteur de la ligne
+            this.ListView.RowHeight = 100;
+ 
 
         }
 
@@ -76,7 +75,7 @@ namespace AgoraMobileStandardNet.Pages
                 try
                 {
                     prestations = await prestationsData.GetInstances(this.idEvent);
-               }
+                }
                 catch (Exception e)
                 {
                     // Le message d'erreur
@@ -87,36 +86,53 @@ namespace AgoraMobileStandardNet.Pages
             }
 
             // filtrage éventuel
-            if (!string.IsNullOrEmpty(SearchString))
-                prestationsToDisplay = prestations.Where(X => X.Title.ToLower().Contains(SearchString.ToLower())).ToList();
-            else
-                prestationsToDisplay = prestations;
-
-
-            // Peuple la liste des prestations
-            this.ListView.ItemsSource = prestationsToDisplay;
-            this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
-            if (this.prestationsToDisplay.Count == 0)
-            {
-                // Aucune presta trouvé
-                var newLabel = new Label();
-                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
-                    newLabel.Text = "Hors connexion : aucune prestation n'a été chargée préalablement.";
-                else
-                {
-                    if (!string.IsNullOrEmpty(SearchString))
-                        newLabel.Text = "Aucune prestation trouvée pour la recherche de \"" + SearchString + "\".";
-                    else
-                        newLabel.Text = "Aucune prestation trouvée.";
-
-                }
-
-                DataLayout.Children.Add(newLabel);
-            }
+            await FilterData();
 
             // Fin téléchargement
             UserDialogs.HideSpinner();
 
+
+        }
+
+        public override async Task FilterData(string searchText)
+        {
+            if (!string.IsNullOrEmpty(searchText))
+                prestationsToDisplay = prestations.Where(X => X.Title.ToLower().Contains(searchText.ToLower())).ToList();
+            else
+                prestationsToDisplay = prestations;
+
+            // On crée la liste des presta à afficher
+            List<PrestationWithColor> prestationWithColors = new List<PrestationWithColor>();
+            foreach (var prestation in prestationsToDisplay)
+                prestationWithColors.Add(new PrestationWithColor(prestation));
+
+            // Peuple la liste des prestations
+            this.ListView.ItemsSource = prestationWithColors; // prestationsToDisplay;
+            this.ListView.ItemTemplate = new DataTemplate(typeof(PrestationCell));
+
+            if (this.prestationsToDisplay.Count == 0)
+            {
+                // Aucune presta trouvé
+                if (noPrestationLabel == null)
+                    noPrestationLabel = new Label();
+                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                    noPrestationLabel.Text = "Hors connexion : aucune prestation n'a été chargée préalablement.";
+                else
+                {
+                    if (!string.IsNullOrEmpty(searchText))
+                        noPrestationLabel.Text = "Aucune prestation trouvée pour la recherche de \"" + searchText + "\".";
+                    else
+                        noPrestationLabel.Text = "Aucune prestation trouvée.";
+
+                }
+
+                DataLayout.Children.Add(noPrestationLabel);
+            }
+            else
+            {
+                if (noPrestationLabel != null) 
+                    DataLayout.Children.Remove(noPrestationLabel);
+            }
 
         }
 
@@ -130,7 +146,12 @@ namespace AgoraMobileStandardNet.Pages
             await base.RefreshListView();
 
             prestations = await prestationsData.GetInstances(this.idEvent);
-             this.ListView.ItemsSource = prestations;
+            // On crée la liste des presta à afficher
+            List<PrestationWithColor> prestationWithColors = new List<PrestationWithColor>();
+            foreach (var prestation in prestations)
+                prestationWithColors.Add(new PrestationWithColor(prestation));
+
+            this.ListView.ItemsSource = prestationWithColors;
         }
 
 

@@ -119,6 +119,7 @@
     <Compile Include="Services\PageData\DetailPeopleData.cs" />
     <Compile Include="Models\ValidatePresence.cs" />
     <Compile Include="Services\ValidatePresenceService.cs" />
+    <Compile Include="ViewModels\PrestationWithColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

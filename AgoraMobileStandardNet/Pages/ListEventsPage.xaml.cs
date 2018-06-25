@@ -19,7 +19,6 @@ namespace AgoraMobileStandardNet.Pages
 		// Titre de la page
         List<Evenement> evenements;
         List<Evenement> evenementsToDisplay;
-        //ListView listView;
         ListEventsData eventsData;
 
         Label noEventLabel;
@@ -75,54 +74,18 @@ namespace AgoraMobileStandardNet.Pages
             }
 
             // filtrage éventuel
-            FilterData();
- /*           
-            if (!string.IsNullOrEmpty(SearchString))
-                evenementsToDisplay = evenements.Where(X => X.Title.ToLower().Contains(SearchString.ToLower())).ToList();
-            else
-                evenementsToDisplay = evenements;
-
-
-            // Peuple la liste des evenements
-            this.ListView.ItemsSource = evenementsToDisplay;
-            this.ListView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
-            if (this.evenementsToDisplay.Count == 0)
-            {
-                // Aucun evt trouvé
-                var newLabel = new Label();
-                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
-                    newLabel.Text = "Hors connexion : aucune donnée n'a été chargée préalablement.";
-                else
-                {
-                    if (!string.IsNullOrEmpty(SearchString))
-                        newLabel.Text = "Aucun événement trouvé pour la recherche de \"" + SearchString + "\".";
-                    else
-                        newLabel.Text = "Aucun événement trouvé.";
-
-                }
-                DataLayout.Children.Add(newLabel);
-            }*/
+            await FilterData();
 
 
             // Fin téléchargement
            this.UserDialogs.HideSpinner();
 
-           /* SearchBar.TextChanged += (sender, e) =>
-            {
-                SearchTextChanged(sender, e);
-            };
-
-            SearchBar.SearchButtonPressed += (sender, e) =>
-            {
-                SearchCommand();
-            };*/
-
+ 
         }
 
-        public override void FilterData(string searchText)
+        public override async Task FilterData(string searchText)
         {
-            //var text = SearchBar.Text;
-
+ 
             if (!string.IsNullOrEmpty(searchText))
                 evenementsToDisplay = evenements.Where(X => X.Title.ToLower().Contains(searchText.ToLower())).ToList();
             else
@@ -141,8 +104,8 @@ namespace AgoraMobileStandardNet.Pages
                     noEventLabel.Text = "Hors connexion : aucune donnée n'a été chargée préalablement.";
                 else
                 {
-                    if (!string.IsNullOrEmpty(SearchString))
-                        noEventLabel.Text = "Aucun événement trouvé pour la recherche de \"" + SearchString + "\".";
+                    if (!string.IsNullOrEmpty(searchText))
+                        noEventLabel.Text = "Aucun événement trouvé pour la recherche de \"" + searchText + "\".";
                     else
                         noEventLabel.Text = "Aucun événement trouvé.";
 

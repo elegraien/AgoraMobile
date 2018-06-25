@@ -11,6 +11,7 @@ namespace AgoraMobileStandardNet.ViewModels
             var image = new Image { HorizontalOptions = LayoutOptions.Start };
             image.WidthRequest = 40;
             image.HeightRequest = 40;
+            image.Source = FileImageSource.FromFile("picto_invite.png");
 
             // Le titre
             var titleLayout = CreateLayoutTitle();
@@ -19,30 +20,32 @@ namespace AgoraMobileStandardNet.ViewModels
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(20, 10, 20, 10),
                 Children = { image, titleLayout }
             };
 
             View = viewLayout;
 
+            this.Height = 120;
+
         }
 
         StackLayout CreateLayoutTitle()
         {
-            var titleLabel = new Label() { HorizontalOptions = LayoutOptions.FillAndExpand };
+            var titleLabel = new Label() { 
+                HorizontalOptions = LayoutOptions.FillAndExpand ,
+                FontSize = 16,
+                FontAttributes = FontAttributes.Bold
+            };
             titleLabel.SetBinding(Label.TextProperty, "Title");
 
-            /*var dateLabel = new Label()
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand
-            };
-            // On récupère la valeur de ValidationDate
-
-            dateLabel.SetBinding(Label.TextProperty, "ValidationDate");
-*/
 
             var dateList = new ListView()
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                HasUnevenRows = false,
+                RowHeight = 24
             };
             dateList.SetBinding(ListView.ItemsSourceProperty, "ValidationDateList");
 

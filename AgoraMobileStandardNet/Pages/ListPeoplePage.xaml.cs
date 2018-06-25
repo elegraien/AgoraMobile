@@ -34,6 +34,7 @@ namespace AgoraMobileStandardNet.Pages
 
         IScanPage scanPage;
 
+        Label noPeopleLabel;
 
 
         public ListPeoplePage(int idEvent, int? idPrestation, int nbTotal, int nbPresents, int nbInscrits, string prestationName)
@@ -69,17 +70,6 @@ namespace AgoraMobileStandardNet.Pages
                     await BtnScanClicked(sender, e);
 
             };
-
-
-
-           /* BtnSearch.Clicked += async (sender, e) =>
-            {
-                    // Ouverture de la modale de recherche
-                    await BtnSearchClicked(sender, e);
-            };
-
-            // On RAZ le SearchString
-            Global.SetSettings(TypeSettings.SearchString, "");*/
 
 
             // L'init de la listview
@@ -129,8 +119,18 @@ namespace AgoraMobileStandardNet.Pages
             }
 
             // filtrage éventuel
-            if (!string.IsNullOrEmpty(SearchString))
-                participantsToDisplay = participants.Where(X => X.FirstName.ToLower().Contains(SearchString.ToLower()) || X.LastName.ToLower().Contains(SearchString.ToLower())).ToList();
+            await FilterData();
+
+            // Fin téléchargement
+            UserDialogs.HideSpinner();
+
+
+        }
+
+        public override async Task FilterData(string searchText)
+        {
+            if (!string.IsNullOrEmpty(searchText))
+                participantsToDisplay = participants.Where(X => X.FirstName.ToLower().Contains(searchText.ToLower()) || X.LastName.ToLower().Contains(searchText.ToLower())).ToList();
             else
                 participantsToDisplay = participants;
 
@@ -141,7 +141,6 @@ namespace AgoraMobileStandardNet.Pages
                 participants.Count == 0)
             {
 
-                UserDialogs.HideSpinner();
 
                 // Affichage du message
                 await this.UserDialogs.ShowAlert("Erreur", "Attention : vous êtes Hors Connexion et vous n'avez pas téléchargé les listes préalablement !");
@@ -156,19 +155,20 @@ namespace AgoraMobileStandardNet.Pages
                 if (participantsToDisplay.Count == 0)
                 {
                     // Aucun participant trouvé
-                    var newLabel = new Label();
-                    if (!string.IsNullOrEmpty(SearchString))
-                        newLabel.Text = "Aucun participant trouvé pour la recherche de \"" + SearchString + "\".";
+                    if (noPeopleLabel == null)
+                        noPeopleLabel = new Label();
+                    if (!string.IsNullOrEmpty(searchText))
+                        noPeopleLabel.Text = "Aucun participant trouvé pour la recherche de \"" + searchText + "\".";
                     else
-                        newLabel.Text = "Aucun participant trouvé.";
-                    DataLayout.Children.Add(newLabel);
+                        noPeopleLabel.Text = "Aucun participant trouvé.";
+                    DataLayout.Children.Add(noPeopleLabel);
+                } else {
+                    if (noPeopleLabel != null)
+                        DataLayout.Children.Remove(noPeopleLabel);
                 }
 
-                // Fin téléchargement
-                UserDialogs.HideSpinner();
 
             }
-
         }
 
         public override async Task RefreshListView()

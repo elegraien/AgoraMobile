@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                        xmlns:models="clr-namespace:AgoraMobileStandardNet.Models"
-                         x:Class="AgoraMobileStandardNet.Pages.ListPeoplePage" 
-                          xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
+<custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:AgoraMobileStandardNet.Models" x:Class="AgoraMobileStandardNet.Pages.ListPeoplePage" xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
     <StackLayout>
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label x:Name="SummaryPresent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            <StackLayout x:Name="DataLayout" Grid.Row="1">
+            <SearchBar x:Name="SearchBar" Grid.Row="0" />
+            <Label x:Name="SummaryPresent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" BackgroundColor="#FF8800" TextColor="White" />
+            <StackLayout x:Name="DataLayout" Grid.Row="2">
             </StackLayout>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Button x:Name="BtnScan" Text="Scan" Grid.Column="0" />
-                <Button x:Name="BtnSearch" Image="" Text="Rechercher" Grid.Column="1" />
-            </Grid>
+            <StackLayout VerticalOptions="Center" Spacing="10" Padding="10" Grid.Row="3">
+                <Button x:Name="BtnScan" Text="SCAN" BackgroundColor="#DD7700" TextColor="White" />
+            </StackLayout>
         </Grid>
     </StackLayout>
 </custom:CustomContentPage>

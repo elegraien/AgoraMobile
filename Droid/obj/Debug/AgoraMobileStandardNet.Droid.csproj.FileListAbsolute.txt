@@ -267,6 +267,9 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bouton_connexion.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/retour.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_manifestation.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_prestation.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_accueil.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_invite.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.Droid.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/Mono.Android.pdb

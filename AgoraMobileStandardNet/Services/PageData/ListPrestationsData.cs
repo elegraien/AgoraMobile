@@ -71,7 +71,7 @@ namespace AgoraMobileStandardNet.Services
                     NbPresents = NbPresentsAccueil,
                     NbRemaining = 0,
                     NbTotal = NbTotalAccueil,
-                    Title = "Accueil Principal",
+                    Title = "Accueil sur site",
                     NbInscritsLabel = NbTotalAccueil.ToString() + " invités"
                 };
                 instances.Add(prestaAccueil);

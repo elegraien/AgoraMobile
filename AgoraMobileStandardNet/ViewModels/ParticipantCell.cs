@@ -11,18 +11,18 @@ namespace AgoraMobileStandardNet.ViewModels
             var image = new Image { HorizontalOptions = LayoutOptions.Start };
             image.WidthRequest = 40;
             image.HeightRequest = 40;
+            image.Source = FileImageSource.FromFile("picto_invite.png");
 
             // Le titre
             var titleLayout = CreateLayoutTitle();
 
 
-            // Le bouton à droite
-            var btn = new Button() { Image = (Xamarin.Forms.FileImageSource)FileImageSource.FromFile("") };
-
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = { image, titleLayout, btn }
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(20, 10, 60, 10),
+                Children = { image, titleLayout }
             };
 
             View = viewLayout;
@@ -31,13 +31,18 @@ namespace AgoraMobileStandardNet.ViewModels
         StackLayout CreateLayoutTitle()
         {
             // Nom
-            var nameLabel = new Label() { HorizontalOptions = LayoutOptions.FillAndExpand };
+            var nameLabel = new Label() { 
+                HorizontalOptions = LayoutOptions.FillAndExpand ,
+                FontSize = 16,
+                FontAttributes = FontAttributes.Bold
+            };
             nameLabel.SetBinding(Label.TextProperty, "LastName");
 
             // Prénom
             var firstNameLabel = new Label()
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                FontSize = 12
             };
             firstNameLabel.SetBinding(Label.TextProperty, "FirstName");
 
@@ -46,6 +51,7 @@ namespace AgoraMobileStandardNet.ViewModels
             {
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 Orientation = StackOrientation.Vertical,
+                Padding = new Thickness(20, 0, 20, 0),
                 Children = { nameLabel, firstNameLabel }
             };
 

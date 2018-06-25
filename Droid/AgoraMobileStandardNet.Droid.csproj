@@ -204,6 +204,9 @@
     <AndroidResource Include="Resources\drawable\bouton_connexion.png" />
     <AndroidResource Include="Resources\drawable\retour.png" />
     <AndroidResource Include="Resources\drawable\picto_manifestation.png" />
+    <AndroidResource Include="Resources\drawable\picto_prestation.png" />
+    <AndroidResource Include="Resources\drawable\picto_accueil.png" />
+    <AndroidResource Include="Resources\drawable\picto_invite.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CodePCL\" />
