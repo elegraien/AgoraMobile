@@ -14,7 +14,7 @@ namespace AgoraMobileStandardNet.Models
         public DateTime EndDate { get; set; }
 
         public string ShortStartDate
-        { get { return StartDate.ToString("yyyy-MM-dd"); }}
+        { get { return StartDate.ToString("d MMM yyyy"); }}
 
         public Evenement()
         {

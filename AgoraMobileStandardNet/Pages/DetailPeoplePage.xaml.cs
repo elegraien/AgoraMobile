@@ -26,6 +26,9 @@ namespace AgoraMobileStandardNet.Pages
         {
             InitializeComponent();
 
+            // On masque la barre de recherche
+            //this.HideSearchBar();
+
             this.idPrestation = idPrestation;
             this.idParticipant = idParticipant;
             this.idEvent = idEvent;

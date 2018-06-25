@@ -11,18 +11,18 @@ namespace AgoraMobileStandardNet.ViewModels
             var image = new Image { HorizontalOptions = LayoutOptions.Start };
             image.WidthRequest = 40;
             image.HeightRequest = 40;
+            image.Source = FileImageSource.FromFile("picto_manifestation.png");
 
             // Le titre
             var titleLayout = CreateLayoutTitle();
 
 
-            // Le bouton à droite
-            var btn = new Button() { Image = (Xamarin.Forms.FileImageSource)FileImageSource.FromFile("") };
 
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = { image, titleLayout, btn }
+                Padding = new Thickness(20,10),
+                Children = { image, titleLayout }
             };
 
             View = viewLayout;
@@ -30,7 +30,10 @@ namespace AgoraMobileStandardNet.ViewModels
 
         StackLayout CreateLayoutTitle()
         {
-            var nameLabel = new Label() { HorizontalOptions = LayoutOptions.FillAndExpand };
+            var nameLabel = new Label() { HorizontalOptions = LayoutOptions.FillAndExpand, 
+                FontSize = 16,
+            FontAttributes = FontAttributes.Bold
+            };
             nameLabel.SetBinding(Label.TextProperty, "Title");
 
             var dateLabel = new Label() { 
@@ -41,6 +44,7 @@ namespace AgoraMobileStandardNet.ViewModels
             {
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 Orientation = StackOrientation.Vertical,
+                Padding = new Thickness(20,10,20,10),
                 Children = { nameLabel, dateLabel }
             };
 

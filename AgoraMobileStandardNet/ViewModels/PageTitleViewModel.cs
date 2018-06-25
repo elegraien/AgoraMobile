@@ -1,17 +1,26 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows.Input;
+using AgoraMobileStandardNet.Pages;
 using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet
 {
 	public class PageTitleViewModel : INotifyPropertyChanged
     {
+        public CustomContentPage ParentPage { get; set; }
+
 		private string _title = "";
 
 		public string Title { get { return _title; }
 			set
 			{
-				_title = value;
+                // Limite de caractères
+                int limit = 20;
+                if (value.Length > limit)
+                    _title = value.Substring(0, limit) + "...";
+                else
+				    _title = value;
 				OnPropertyChanged("Title");
 			}}
 
@@ -28,7 +37,7 @@ namespace AgoraMobileStandardNet
         }
 
 
-
+ 
         public PageTitleViewModel()
         {
 			

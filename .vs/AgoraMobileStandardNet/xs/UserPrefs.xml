@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/App.xaml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="iOS/Info.plist" />
-      <File FileName="Droid/Properties/AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="Droid/Resources/Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/project.json" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/App.xaml" Line="6" Column="15" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml" Line="27" Column="132" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml.cs" Line="217" Column="45" />
+      <File FileName="AgoraMobileStandardNet/ViewModels/PageTitleViewModel.cs" Line="35" Column="2" />
+      <File FileName="Source Not Available" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml" Line="12" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListEventsPage.xaml.cs" Line="153" Column="84" />
+      <File FileName="AgoraMobileStandardNet/Pages/DetailPeoplePage.xaml.cs" Line="30" Column="15" />
+      <File FileName="AgoraMobileStandardNet/ViewModels/EvenementCell.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Models/Evenement.cs" Line="17" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

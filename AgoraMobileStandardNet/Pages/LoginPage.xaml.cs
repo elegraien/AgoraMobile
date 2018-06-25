@@ -42,54 +42,21 @@ namespace AgoraMobileStandardNet.Pages
 
             // Gestion des boutons
             // -------------------
+            /*var tapGesture = new TapGestureRecognizer();
+            tapGesture.Tapped += async (s,e) => {
+                await BtnLogin_Clicked(sd, e);
+            };
+            BtnLoginBis.GestureRecognizers.Add(tapGesture);
+*/
+
             BtnLogin.Clicked += async (sender, e) =>
             {
-                sd.ShowSpinner();
-
-                // On sort du hors connexion
-                Global.SetSettings(TypeSettings.IsHorsConnexion, false);
-                //Global.SetSettings(TypeSettings.LastHorsConnexionDate, null);
-
-                // Tentative de login
-                bool isOk = await Login(TxtLogin.Text, TxtPassword.Text, TxtSlot.Text);
-
-                // Si Ok : on passe à la liste
-                if (isOk)
-                {
-                    // Puisqu'on a du réseau, on en profite pour envoyer les invitations créées en local
-                    if (!string.IsNullOrEmpty(this.token))
-                    {
-                        var validateService = new ValidatePresenceService(this.token, true);
-                        if (await validateService.SendAll())
-                        {
-                            // Pour l'instant, on ne fait rien du retour...
-                            await this.DisplayAlert("Information", "Les modifiations faites en Hors Connexion viennent d'être exportées.", "OK");
-                        }
- 
-                    }
-
-                    // La navigation
-                    var listEventsPage = new ListEventsPage();
-
-                    await Navigation.PushAsync(listEventsPage);
-                    //Application.Current.MainPage = new NavigationPage(listEventsPage);
-
-                }
-
-
+                await BtnLogin_Clicked(sender, e);
             };
 
             BtnHorsConnexion.Clicked += async (sender, e) =>
             {
-                sd.ShowSpinner();
-
-                // On passe en mode hors connexion
-                Global.SetSettings(TypeSettings.IsHorsConnexion, true);
-                Global.SetSettings(TypeSettings.LastHorsConnexionDate, new DateTime());
-
-                // Pas de login, on bascule sur la récupération des datas dans chaque page
-                var listEventsPage = new ListEventsPage();
-                await Navigation.PushAsync(listEventsPage);
+                await BtnHorsConnexion_Clicked(sender, e);
             };
         }
 
@@ -100,6 +67,57 @@ namespace AgoraMobileStandardNet.Pages
             // On efface le message d'erreur quand on revient sur la page
             ErrorMsg.Text = ""; 
         }
+
+        #region Button events
+        private async Task BtnLogin_Clicked(object source, EventArgs e)
+        {
+            sd.ShowSpinner();
+
+            // On sort du hors connexion
+            Global.SetSettings(TypeSettings.IsHorsConnexion, false);
+            //Global.SetSettings(TypeSettings.LastHorsConnexionDate, null);
+
+            // Tentative de login
+            bool isOk = await Login(TxtLogin.Text, TxtPassword.Text, TxtSlot.Text);
+
+            // Si Ok : on passe à la liste
+            if (isOk)
+            {
+                // Puisqu'on a du réseau, on en profite pour envoyer les invitations créées en local
+                if (!string.IsNullOrEmpty(this.token))
+                {
+                    var validateService = new ValidatePresenceService(this.token, true);
+                    if (await validateService.SendAll())
+                    {
+                        // Pour l'instant, on ne fait rien du retour...
+                        await this.DisplayAlert("Information", "Les modifiations faites en Hors Connexion viennent d'être exportées.", "OK");
+                    }
+
+                }
+
+                // La navigation
+                var listEventsPage = new ListEventsPage();
+
+                await Navigation.PushAsync(listEventsPage);
+                //Application.Current.MainPage = new NavigationPage(listEventsPage);
+
+            }
+
+        }
+
+        private async Task BtnHorsConnexion_Clicked(object source, EventArgs e)
+        {
+            sd.ShowSpinner();
+
+            // On passe en mode hors connexion
+            Global.SetSettings(TypeSettings.IsHorsConnexion, true);
+            Global.SetSettings(TypeSettings.LastHorsConnexionDate, new DateTime());
+
+            // Pas de login, on bascule sur la récupération des datas dans chaque page
+            var listEventsPage = new ListEventsPage();
+            await Navigation.PushAsync(listEventsPage);
+        }
+        #endregion
 
         /// <summary>
         /// Vérification du login / password

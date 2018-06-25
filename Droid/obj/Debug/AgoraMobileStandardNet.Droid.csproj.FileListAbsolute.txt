@@ -263,6 +263,10 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.cs.flag
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.txt
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/uploadflags.txt
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bouton_hors_ligne.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bouton_connexion.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/retour.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_manifestation.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.Droid.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/Mono.Android.pdb

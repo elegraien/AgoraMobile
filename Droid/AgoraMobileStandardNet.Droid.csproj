@@ -200,6 +200,10 @@
     <AndroidResource Include="Resources\drawable\haut_accueil.png" />
     <AndroidResource Include="Resources\drawable\bas_accueil.png" />
     <AndroidResource Include="Resources\drawable\logo_agora_check_in.png" />
+    <AndroidResource Include="Resources\drawable\bouton_hors_ligne.png" />
+    <AndroidResource Include="Resources\drawable\bouton_connexion.png" />
+    <AndroidResource Include="Resources\drawable\retour.png" />
+    <AndroidResource Include="Resources\drawable\picto_manifestation.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CodePCL\" />

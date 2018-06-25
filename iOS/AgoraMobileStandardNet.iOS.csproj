@@ -164,6 +164,16 @@
     <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\haut_accueil.png" />
     <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\bas_accueil.png" />
     <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\logo_agora_check_in.png" />
+    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\bouton_connexion.png" />
+    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\bouton_hors_ligne.png" />
+    <ImageAsset Include="Assets.xcassets\retour.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\retour.imageset\retour.png" />
+    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\picto_manifestation.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -173,6 +183,11 @@
     <Folder Include="Assets.xcassets\hamburger.imageset\" />
     <Folder Include="Assets.xcassets\haut_accueil.imageset\" />
     <Folder Include="Assets.xcassets\bas_accueil.imageset\" />
+    <Folder Include="Assets.xcassets\logo_agora_check_in.imageset\" />
+    <Folder Include="Assets.xcassets\bouton_hors_ligne.imageset\" />
+    <Folder Include="Assets.xcassets\bouton_connexion.imageset\" />
+    <Folder Include="Assets.xcassets\retour.imageset\" />
+    <Folder Include="Assets.xcassets\picto_manifestation.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

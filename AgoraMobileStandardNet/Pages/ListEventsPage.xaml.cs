@@ -22,6 +22,7 @@ namespace AgoraMobileStandardNet.Pages
         //ListView listView;
         ListEventsData eventsData;
 
+        Label noEventLabel;
  
 		public ListEventsPage() : base()
         {
@@ -74,6 +75,8 @@ namespace AgoraMobileStandardNet.Pages
             }
 
             // filtrage éventuel
+            FilterData();
+ /*           
             if (!string.IsNullOrEmpty(SearchString))
                 evenementsToDisplay = evenements.Where(X => X.Title.ToLower().Contains(SearchString.ToLower())).ToList();
             else
@@ -98,15 +101,60 @@ namespace AgoraMobileStandardNet.Pages
 
                 }
                 DataLayout.Children.Add(newLabel);
-            }
+            }*/
 
 
             // Fin téléchargement
            this.UserDialogs.HideSpinner();
 
+           /* SearchBar.TextChanged += (sender, e) =>
+            {
+                SearchTextChanged(sender, e);
+            };
+
+            SearchBar.SearchButtonPressed += (sender, e) =>
+            {
+                SearchCommand();
+            };*/
 
         }
 
+        public override void FilterData(string searchText)
+        {
+            //var text = SearchBar.Text;
+
+            if (!string.IsNullOrEmpty(searchText))
+                evenementsToDisplay = evenements.Where(X => X.Title.ToLower().Contains(searchText.ToLower())).ToList();
+            else
+                evenementsToDisplay = evenements;
+
+
+            // Peuple la liste des evenements
+            this.ListView.ItemsSource = evenementsToDisplay;
+            this.ListView.ItemTemplate = new DataTemplate(typeof(EvenementCell));
+            if (this.evenementsToDisplay.Count == 0)
+            {
+                // Aucun evt trouvé
+                if (noEventLabel == null)
+                    noEventLabel = new Label();
+                if (Global.GetSettingsBool(TypeSettings.IsHorsConnexion))
+                    noEventLabel.Text = "Hors connexion : aucune donnée n'a été chargée préalablement.";
+                else
+                {
+                    if (!string.IsNullOrEmpty(SearchString))
+                        noEventLabel.Text = "Aucun événement trouvé pour la recherche de \"" + SearchString + "\".";
+                    else
+                        noEventLabel.Text = "Aucun événement trouvé.";
+
+                }
+                DataLayout.Children.Add(noEventLabel);
+
+            } else {
+                if (noEventLabel != null) DataLayout.Children.Remove(noEventLabel);
+            }
+        }
+
+ 
         public override async Task RefreshListView()
         {
             // Pour gérer le bouton Rechercher

@@ -6,14 +6,17 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Image Source="haut_accueil.png" Grid.Row="0"/>
-        <StackLayout VerticalOptions="Center" Spacing="20" Padding="20" Grid.Row="1">
-            <Label Text="Login" HorizontalOptions="Center" />
-            <Entry Placeholder="Login" x:Name="TxtLogin" />
-            <Entry Placeholder="Password" x:Name="TxtPassword" IsPassword="true" />
-            <Entry Placeholder="#000" x:Name="TxtSlot" />
-            <Button x:Name="BtnLogin" Text="Login" TextColor="White" BackgroundColor="#77D065" />
-            <Button x:Name="BtnHorsConnexion" Text="Mode Hors Ligne" TextColor="Black" BackgroundColor="Gray" />
+        <Image Source="haut_accueil.png" Grid.Row="0" />
+        <StackLayout VerticalOptions="Center" Spacing="15" Padding="15" Grid.Row="1">
+            <Image Source="logo_agora_check_in.png" WidthRequest="117" HeightRequest="140" />
+            <Entry Placeholder="Login" x:Name="TxtLogin" FontSize="Small" />
+            <Entry Placeholder="Password" x:Name="TxtPassword" IsPassword="true" FontSize="Small" />
+            <Entry Placeholder="#000" x:Name="TxtSlot" FontSize="Micro" />
+            <StackLayout WidthRequest="200" IsClippedToBounds="true">
+                <Button x:Name="BtnLogin" BorderRadius="10" BorderWidth="5" Text="Connexion" TextColor="White" BackgroundColor="#DD5500">
+                </Button>
+                <Button x:Name="BtnHorsConnexion" Text="Mode Hors Ligne" TextColor="Black" BackgroundColor="Gray" />
+            </StackLayout>
             <Label x:Name="ErrorMsg" TextColor="Red" />
         </StackLayout>
         <Image Source="bas_accueil.png" Grid.Row="2" />

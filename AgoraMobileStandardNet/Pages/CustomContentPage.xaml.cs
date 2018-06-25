@@ -47,13 +47,13 @@ namespace AgoraMobileStandardNet.Pages
         {
             get { return TypeSettings.SearchString + this.GetType().Name; }
         }
-        // Le bouton (éventuel ? ) de recherche
-        internal Button SearchButton
+        // La barre de search
+        internal SearchBar SearchBar
         {
-            get { return this.FindByName<Button>("BtnSearch"); }
+            get { return this.FindByName<SearchBar>("SearchBar"); }
         }
         // Un flag pour savoir si on a déjà mis l'event (pour éviter de le répéter) : à remplace r par quelque chose de plus élégant ???
-        private bool searchBtnAlreadyHasAClickedEbvent = false;
+        private bool searchBtnAlreadyHasAClickedEvent = false;
 
         // Loading spinner
         public UserDialogs UserDialogs { get; set; }
@@ -67,6 +67,7 @@ namespace AgoraMobileStandardNet.Pages
         {
             // Pour modifier les données bindées du ControlTemplate
             pageTitleViewModel = new PageTitleViewModel();
+            pageTitleViewModel.ParentPage = this;
             BindingContext = pageTitleViewModel;
 
             InitializeComponent();
@@ -103,6 +104,7 @@ namespace AgoraMobileStandardNet.Pages
             }
 
 
+  
 
         }
 
@@ -119,6 +121,7 @@ namespace AgoraMobileStandardNet.Pages
             this.ListView.RowHeight = 80;
         }
 
+ 
         #region Gestion du Pull To Refresh
         private bool _isRefreshing = false;
         public bool IsRefreshing
@@ -157,21 +160,66 @@ namespace AgoraMobileStandardNet.Pages
         public virtual async Task RefreshListView()
         {
             // On RAZ la SearchString
-            SearchString = "";
-            // Et on remet le titre du bouton
-            if (SearchButton != null)
-                SearchButton.Text = "Rechercher";
+            if (SearchBar != null)
+                SearchBar.Text = "";
+            
 
         }
 
+        #endregion
+
+        #region Gestion de la recherche
+        /// <summary>
+        /// A surcharger dans les filles pour lancer le filtrage des données
+        /// </summary>
+        public virtual void FilterData(string searchText)
+        {
+        }
+
+        public void FilterData()
+        {
+            if (SearchBar != null)
+                FilterData(SearchBar.Text);
+            else
+                FilterData("");
+        }
+
+        public void SearchTextChanged(object sender, TextChangedEventArgs textChangedEventArgs)
+        {
+            if (string.IsNullOrEmpty(textChangedEventArgs.NewTextValue))
+            {
+                // Cancel Pressed
+                FilterData("");
+            }
+        }
+
+ 
         #endregion
 
         protected override async void OnAppearing()
         {
             // Gestion du bouton Rechercher
             // ----------------------------
+            // Le search
+            if (SearchBar != null && !searchBtnAlreadyHasAClickedEvent)
+            {
+                SearchBar.TextChanged += (sender, e) =>
+                {
+                    SearchTextChanged(sender, e);
+                };
+
+                SearchBar.SearchButtonPressed += (sender, e) =>
+                {
+
+                    FilterData(SearchBar.Text);
+                };
+
+                searchBtnAlreadyHasAClickedEvent = true;
+ 
+            }
+
             // S'il existe...
-            if (SearchButton != null && !searchBtnAlreadyHasAClickedEbvent)
+            /*if (SearchButton != null && !searchBtnAlreadyHasAClickedEbvent)
             {
                 SearchButton.Clicked += async (sender, e) =>
                 {
@@ -179,18 +227,18 @@ namespace AgoraMobileStandardNet.Pages
                     await BtnSearchClicked(sender, e);
                 };
                 searchBtnAlreadyHasAClickedEbvent = true;
-            }
+            }*/
 
 
             // On modifie l'éventuel titre du bouton rechercher
             // Si Search String : on l'affiche sur le bouton
-            if (SearchButton != null)
+            /*if (SearchButton != null)
             {
                 if (!string.IsNullOrEmpty(SearchString))
                     SearchButton.Text = "Rechercher *";
                 else
                     SearchButton.Text = "Rechercher";
-            }
+            }*/
 
             // On désactive la protection pour éviter 2 pages ouvertes
             HasAlreadySelectedItem = false;
@@ -212,8 +260,6 @@ namespace AgoraMobileStandardNet.Pages
             {
                 // Le Spinner
                 this.UserDialogs.ShowSpinner();
-
-
 
             }
 
