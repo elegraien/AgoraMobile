@@ -1,26 +1,20 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/App.xaml">
     <Files>
+      <File FileName="iOS/Info.plist" />
+      <File FileName="Droid/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Droid/Resources/Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/project.json" Line="1" Column="1" />
       <File FileName="AgoraMobileStandardNet/App.xaml" Line="6" Column="15" />
-      <File FileName="AgoraMobileStandardNet/App.xaml.cs" Line="15" Column="56" />
-      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml" Line="21" Column="15" />
-      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml.cs" Line="87" Column="70" />
-      <File FileName="AgoraMobileStandardNet/Helpers/UserDialogs.cs" Line="21" Column="32" />
-      <File FileName="iOS/CodePCL/UserDialogs.cs" Line="1" Column="1" />
-      <File FileName="Droid/CodePCL/UserDialogs.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Helpers/Settings.cs" Line="1" Column="1" />
-      <File FileName="AgoraMobileStandardNet/Global.cs" Line="106" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="245" column="1" />
-      <Breakpoint file="/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/Services/WebServiceData.cs" relfile="AgoraMobileStandardNet/Services/WebServiceData.cs" line="269" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D26597FD-A9AD-4A24-AC2D-C071DCF2595D" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D26597FD-A9AD-4A24-AC2D-C071DCF2595D" automaticSigning="False" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid PreferredExecutionTarget="Android.Android_Accelerated_Oreo" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid PreferredExecutionTarget="Android.00e3e406273dbbb1" />
 </Properties>

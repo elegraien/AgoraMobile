@@ -11,7 +11,11 @@ using Acr.UserDialogs;
 
 namespace AgoraMobileStandardNet.Droid
 {
-    [Activity(Label = "AgoraMobileStandardNet.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "AgoraMobileStandardNet.Droid", 
+              Icon = "@drawable/icon", Theme = "@style/MyTheme", 
+              MainLauncher = true, 
+              ScreenOrientation = ScreenOrientation.Portrait,
+              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
