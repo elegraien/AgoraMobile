@@ -79,7 +79,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.avanti-technologies.Agora-Mobile-Forms Development</CodesignProvision>
+    <CodesignProvision>iOS Dev Agora Mobile</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -180,6 +180,16 @@
     <ImageAsset Include="Assets.xcassets\picto_accueil.imageset\picto_accueil.png" />
     <ImageAsset Include="Assets.xcassets\picto_invite.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\picto_invite.imageset\picto_invite.png" />
+    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\fond_profil_utilisateur.png" />
+    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\picto_profil_utilisateur.png" />
+    <ImageAsset Include="Assets.xcassets\accueil.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\accueil.imageset\accueil.png" />
+    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\picto_atelier.png" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -197,6 +207,11 @@
     <Folder Include="Assets.xcassets\picto_prestation.imageset\" />
     <Folder Include="Assets.xcassets\picto_accueil.imageset\" />
     <Folder Include="Assets.xcassets\picto_invite.imageset\" />
+    <Folder Include="Assets.xcassets\fond_profil_utilisateur.imageset\" />
+    <Folder Include="Assets.xcassets\picto_profil_utilisateur.imageset\" />
+    <Folder Include="Assets.xcassets\accueil.imageset\" />
+    <Folder Include="Assets.xcassets\picto_atelier.imageset\" />
+    <Folder Include="Assets.xcassets\menu.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

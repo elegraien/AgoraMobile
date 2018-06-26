@@ -16,7 +16,7 @@ namespace AgoraMobileStandardNet
 			set
 			{
                 // Limite de caractères
-                int limit = 20;
+                int limit = 30;
                 if (value.Length > limit)
                     _title = value.Substring(0, limit) + "...";
                 else

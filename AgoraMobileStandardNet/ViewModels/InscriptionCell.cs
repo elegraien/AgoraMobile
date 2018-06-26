@@ -9,9 +9,10 @@ namespace AgoraMobileStandardNet.ViewModels
         {
             // L'image à gauche
             var image = new Image { HorizontalOptions = LayoutOptions.Start };
-            image.WidthRequest = 40;
-            image.HeightRequest = 40;
-            image.Source = FileImageSource.FromFile("picto_invite.png");
+            image.WidthRequest = 20;
+            image.HeightRequest = 20;
+            //image.Source = FileImageSource.FromFile("picto_invite.png");
+            image.SetBinding(Image.SourceProperty, "ImageSource");
 
             // Le titre
             var titleLayout = CreateLayoutTitle();
@@ -27,7 +28,10 @@ namespace AgoraMobileStandardNet.ViewModels
 
             View = viewLayout;
 
-            this.Height = 120;
+            // La hauteur de la ligne
+            this.SetBinding(ListView.RowHeightProperty, "Height");
+
+            //this.Height = 120;
 
         }
 
@@ -40,26 +44,38 @@ namespace AgoraMobileStandardNet.ViewModels
             };
             titleLabel.SetBinding(Label.TextProperty, "Title");
 
-
+            /*
             var dateList = new ListView()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HasUnevenRows = false,
                 RowHeight = 24
+
             };
             dateList.SetBinding(ListView.ItemsSourceProperty, "ValidationDateList");
+            */
+            var tempList = new Label()
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                WidthRequest=300,
+                TextColor = Color.DarkRed
+            };
+            tempList.SetBinding(Label.TextProperty, "TempList");
 
             // Le libellé à droite
             var lblStatus = new Label()
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                WidthRequest=150,
+                VerticalTextAlignment = TextAlignment.Center
             };
             lblStatus.SetBinding(Label.TextProperty, "Status");
+            lblStatus.SetBinding(Label.TextColorProperty, "StatusColor");
 
             var horLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = {dateList, lblStatus}
+                Children = {tempList, lblStatus}
             };
 
 
@@ -67,7 +83,8 @@ namespace AgoraMobileStandardNet.ViewModels
             {
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 Orientation = StackOrientation.Vertical,
-                Children = { titleLabel, horLayout }
+                Children = { titleLabel, horLayout },
+                Padding=10
             };
 
             return titleLayout;

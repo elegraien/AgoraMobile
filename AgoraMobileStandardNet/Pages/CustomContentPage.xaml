@@ -10,26 +10,21 @@
                         <RowDefinition Height="50" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" />
-                    <Image Source="retour.png" HeightRequest="10" WidthRequest="10" Grid.Row="1" Grid.Column="0" Margin="10">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="GoBack" />
-                        </Image.GestureRecognizers>
-                    </Image>
-                    <Label x:Name="LblTitle" Text="{TemplateBinding BindingContext.Title}" FontSize="Default" 
-                           FontAttributes="Bold"
-                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
-                           HorizontalOptions="FillAndExpand"
-                           BackgroundColor="Transparent" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" />
-                    <Image x:Name="ImgNoNetwork" Source="nonetwork.png" IsVisible="{TemplateBinding BindingContext.IsHorsConnexionVisible}" 
-                           HeightRequest="25" WidthRequest="25" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="1" />
-                    <Image Source="hamburger.png" HeightRequest="25" WidthRequest="25" Grid.Row="1" Grid.Column="6">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="DisplayActionSheet" />
-                        </Image.GestureRecognizers>
-                    </Image>
-
-                    <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" />
+                    <StackLayout Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="10,0,30,0">
+                        <Image Source="retour.png" HeightRequest="30" WidthRequest="30">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoBack" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="LblTitle" Text="{TemplateBinding BindingContext.Title}" FontSize="Default" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" />
+                        <Image x:Name="ImgNoNetwork" Source="nonetwork.png" IsVisible="{TemplateBinding BindingContext.IsHorsConnexionVisible}" HeightRequest="25" WidthRequest="25" />
+                        <Image Source="menu.png" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="DisplayActionSheet" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2" />
                 </Grid>
             </ControlTemplate>
         </ResourceDictionary>

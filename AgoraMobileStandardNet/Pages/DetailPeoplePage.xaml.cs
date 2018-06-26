@@ -93,6 +93,12 @@ namespace AgoraMobileStandardNet.Pages
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
         }
 
+        public override async Task RefreshListView()
+        {
+            // Rien de spécial
+            await displayData();
+        }
+
         #region Button Actions
         private async Task BtnValidateClicked(object sender, EventArgs e)
         {

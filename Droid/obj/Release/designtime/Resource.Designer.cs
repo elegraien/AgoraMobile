@@ -28,16 +28,61 @@ namespace AgoraMobileStandardNet.Droid
 		{
 			
 			// aapt resource value: 0x7F010002
-			public const int backarrow = 2130771970;
+			public const int accueil = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int hamburger = 2130771971;
+			public const int backarrow = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int icon = 2130771972;
+			public const int bas_accueil = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int nonetwork = 2130771973;
+			public const int bouton_connexion = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int bouton_hors_ligne = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int fond_profil_utilisateur = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int hamburger = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int haut_accueil = 2130771977;
+			
+			// aapt resource value: 0x7F010010
+			public const int icon = 2130771984;
+			
+			// aapt resource value: 0x7F010011
+			public const int logo_agora_check_in = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int menu = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int nonetwork = 2130771987;
+			
+			// aapt resource value: 0x7F010014
+			public const int picto_accueil = 2130771988;
+			
+			// aapt resource value: 0x7F010015
+			public const int picto_atelier = 2130771989;
+			
+			// aapt resource value: 0x7F010016
+			public const int picto_invite = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int picto_manifestation = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int picto_prestation = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int picto_profil_utilisateur = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int retour = 2130772000;
 			
 			static Drawable()
 			{

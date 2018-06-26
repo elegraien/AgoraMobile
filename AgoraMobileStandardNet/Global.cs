@@ -1,5 +1,6 @@
 ﻿using System;
 using Plugin.Settings;
+using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet
 {
@@ -43,6 +44,20 @@ namespace AgoraMobileStandardNet
             "Non inscrit",
             "Groupe",
             "Absent"
+        };
+
+        // Les couleurs des status d'inscription
+        public static Color[] StatusColors = new Color[] {
+            Color.Black,
+            Color.Black,
+            Color.Black,
+            Color.DarkGreen,
+            Color.Black,
+            Color.Black,
+            Color.Black,
+            Color.Black,
+            Color.Black
+
         };
 
         /// <summary>

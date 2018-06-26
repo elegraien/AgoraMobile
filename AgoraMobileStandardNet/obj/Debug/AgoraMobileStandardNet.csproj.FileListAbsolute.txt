@@ -31,7 +31,6 @@
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/bin/Debug/nonetwork.png
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.dll
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/bin/Debug/AgoraMobileStandardNet.pdb
-/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csprojResolveAssemblyReference.cache
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.csproj.CoreCompileInputs.cache
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.App.xaml.g.cs
 /Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/obj/Debug/AgoraMobileStandardNet.Pages.LoginPage.xaml.g.cs

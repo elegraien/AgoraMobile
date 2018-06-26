@@ -14,10 +14,10 @@
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.5": {
+      "SQLitePCLRaw.bundle_green/1.1.11": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.5"
+          "SQLitePCLRaw.core": "1.1.11"
         },
         "compile": {
           "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
@@ -28,7 +28,7 @@
           "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.5": {
+      "SQLitePCLRaw.core/1.1.11": {
         "type": "package",
         "compile": {
           "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
@@ -37,7 +37,7 @@
           "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
         }
       },
-      "System.Json/4.4.0": {
+      "System.Json/4.5.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/System.Json.dll": {}
@@ -57,20 +57,21 @@
           "lib/netstandard1.0/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Forms/3.1.0.583944": {
         "type": "package",
         "compile": {
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll": {},
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Platform.dll": {},
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll": {}
+          "lib/netstandard1.0/Xamarin.Forms.Core.dll": {},
+          "lib/netstandard1.0/Xamarin.Forms.Platform.dll": {},
+          "lib/netstandard1.0/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll": {},
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Platform.dll": {},
-          "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll": {}
+          "lib/netstandard1.0/Xamarin.Forms.Core.dll": {},
+          "lib/netstandard1.0/Xamarin.Forms.Platform.dll": {},
+          "lib/netstandard1.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
-          "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.targets": {}
+          "build/netstandard1.0/Xamarin.Forms.props": {},
+          "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
       "ZXing.Net.Mobile/2.4.1": {
@@ -118,10 +119,10 @@
         "sqlite-net-pcl.nuspec"
       ]
     },
-    "SQLitePCLRaw.bundle_green/1.1.5": {
-      "sha512": "rz+SPgp57CAWkEfCJmWqHXMd+fSqhgYmzOdjkSbCQ3OEG0I3+vUlycElvy5zTi0GAYg5pVrmRqbquotS0985CQ==",
+    "SQLitePCLRaw.bundle_green/1.1.11": {
+      "sha512": "Hqp8IF/RLjbypkLm+t+1RqAX8EKuWEkj7wkLXplfENQoPnE127cvTmaDvaQKtt7a5QsD/HNjFDr1z5f9q2wdPg==",
       "type": "package",
-      "path": "sqlitepclraw.bundle_green/1.1.5",
+      "path": "sqlitepclraw.bundle_green/1.1.11",
       "files": [
         "build/wp8/SQLitePCLRaw.bundle_green.targets",
         "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
@@ -159,14 +160,14 @@
         "lib/wp8/_._",
         "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
         "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512",
+        "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/1.1.5": {
-      "sha512": "NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
+    "SQLitePCLRaw.core/1.1.11": {
+      "sha512": "QT17CyQAQIbTCu6pW5+uVA8BXqRzquiDI1tr5Un6c1YZcQydPmGPuYYng9xMs2UHUDYHbTu+JDkp55WR+qo9bQ==",
       "type": "package",
-      "path": "sqlitepclraw.core/1.1.5",
+      "path": "sqlitepclraw.core/1.1.11",
       "files": [
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -183,15 +184,16 @@
         "lib/win8/SQLitePCLRaw.core.dll",
         "lib/win81/SQLitePCLRaw.core.dll",
         "lib/wpa81/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.1.1.5.nupkg.sha512",
+        "sqlitepclraw.core.1.1.11.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "System.Json/4.4.0": {
-      "sha512": "txVNAZPZZ3j4guKSLfP+kSmcmhdCGrAeQExSoGAHXwpXKtooK4EZ2mPK4SFH0GQhB+J+7JFv/9XblHQ7wNcHdA==",
+    "System.Json/4.5.0": {
+      "sha512": "Lpup+/LIKjJy5QboIpL3A+9Xn+N5ScbQkNK6UiflEGD+IbPtAf9TY7tT/xY4asWRAGepvMEEd/1NVA775PcMFg==",
       "type": "package",
-      "path": "system.json/4.4.0",
+      "path": "system.json/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/Xamarinmac20/_._",
@@ -208,7 +210,7 @@
         "ref/xamarinios10/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.json.4.4.0.nupkg.sha512",
+        "system.json.4.5.0.nupkg.sha512",
         "system.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -280,15 +282,17 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.Forms/2.5.0.122203": {
-      "sha512": "qg7A2IXbVV/5u9qqeiDhRMwpVEsbWKBxzeAtD0rTuntmaDB1Z7WuBg5IK2VBklJbKe2Ps8V9zBfEwgJIqPVJUw==",
+    "Xamarin.Forms/3.1.0.583944": {
+      "sha512": "q4AGFr8k9z6v5u++COV6M5TEZ8Oh8iiU3inVysapL5j75bhKfbcU2RizgZxTQ7+2CdlzVK+Dz+nyFx4JFh0Cwg==",
       "type": "package",
-      "path": "xamarin.forms/2.5.0.122203",
+      "path": "xamarin.forms/3.1.0.583944",
       "files": [
+        ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
         "build/netstandard1.0/Mono.Cecil.Rocks.dll",
         "build/netstandard1.0/Mono.Cecil.dll",
+        "build/netstandard1.0/System.CodeDom.dll",
         "build/netstandard1.0/Xamarin.Forms.Build.Tasks.dll",
         "build/netstandard1.0/Xamarin.Forms.Core.dll",
         "build/netstandard1.0/Xamarin.Forms.DefaultItems.props",
@@ -296,15 +300,18 @@
         "build/netstandard1.0/Xamarin.Forms.Xaml.dll",
         "build/netstandard1.0/Xamarin.Forms.props",
         "build/netstandard1.0/Xamarin.Forms.targets",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Mdb.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Pdb.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Rocks.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Build.Tasks.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.DefaultItems.targets",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.targets",
+        "build/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "build/netstandard2.0/Mono.Cecil.dll",
+        "build/netstandard2.0/System.CodeDom.dll",
+        "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
+        "build/netstandard2.0/Xamarin.Forms.Core.dll",
+        "build/netstandard2.0/Xamarin.Forms.DefaultItems.props",
+        "build/netstandard2.0/Xamarin.Forms.DefaultItems.targets",
+        "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "build/netstandard2.0/Xamarin.Forms.props",
+        "build/netstandard2.0/Xamarin.Forms.targets",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
@@ -318,16 +325,8 @@
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
-        "lib/WP80/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/WP80/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/WP80/Xamarin.Forms.Core.dll",
-        "lib/WP80/Xamarin.Forms.Core.pdb",
-        "lib/WP80/Xamarin.Forms.Core.xml",
-        "lib/WP80/Xamarin.Forms.Platform.WP8.dll",
-        "lib/WP80/Xamarin.Forms.Platform.dll",
-        "lib/WP80/Xamarin.Forms.Xaml.dll",
-        "lib/WP80/Xamarin.Forms.Xaml.pdb",
-        "lib/WP80/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Core.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Platform.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Platform.macOS.dll",
@@ -335,14 +334,12 @@
         "lib/Xamarin.iOS10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/Xamarin.iOS10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll.mdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll.mdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll",
@@ -382,25 +379,32 @@
         "lib/netstandard1.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/netstandard1.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/netstandard1.0/Xamarin.Forms.Core.dll",
-        "lib/netstandard1.0/Xamarin.Forms.Core.dll.mdb",
         "lib/netstandard1.0/Xamarin.Forms.Core.pdb",
         "lib/netstandard1.0/Xamarin.Forms.Core.xml",
         "lib/netstandard1.0/Xamarin.Forms.Platform.dll",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.dll",
-        "lib/netstandard1.0/Xamarin.Forms.Xaml.dll.mdb",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.pdb",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll.mdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Platform.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll.mdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Platform.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.xml",
+        "lib/tizen40/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/tizen40/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/tizen40/Xamarin.Forms.Core.dll",
+        "lib/tizen40/Xamarin.Forms.Core.pdb",
+        "lib/tizen40/Xamarin.Forms.Core.xml",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.pdb",
+        "lib/tizen40/Xamarin.Forms.Platform.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.pdb",
+        "lib/tizen40/Xamarin.Forms.Xaml.xml",
         "lib/uap10.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/uap10.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/uap10.0/Xamarin.Forms.Core.dll",
@@ -410,55 +414,20 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "lib/win81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/win81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/win81/Xamarin.Forms.Core.dll",
-        "lib/win81/Xamarin.Forms.Core.xml",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.dll",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.pri",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/FormsProgressBarStyle.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/FormsTextBoxStyle.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Resources.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/TabletResources.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Xamarin.Forms.Platform.WinRT.Tablet.xr.xml",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.dll",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/win81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
-        "lib/win81/Xamarin.Forms.Platform.dll",
-        "lib/win81/Xamarin.Forms.Xaml.dll",
-        "lib/win81/Xamarin.Forms.Xaml.xml",
-        "lib/wpa81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/wpa81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/wpa81/Xamarin.Forms.Core.dll",
-        "lib/wpa81/Xamarin.Forms.Core.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.dll",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.pri",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/FormsProgressBarStyle.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/FormsTextBoxStyle.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/PhoneResources.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Resources.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/SearchBox.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Xamarin.Forms.Platform.WinRT.Phone.xr.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.dll",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.dll",
-        "lib/wpa81/Xamarin.Forms.Xaml.dll",
-        "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.5.0.122203.nupkg.sha512",
+        "xamarin.forms.3.1.0.583944.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -505,11 +474,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "SQLitePCLRaw.bundle_green >= 1.1.5",
-      "SQLitePCLRaw.core >= 1.1.5",
-      "System.Json >= 4.4.0",
+      "SQLitePCLRaw.bundle_green >= 1.1.11",
+      "SQLitePCLRaw.core >= 1.1.11",
+      "System.Json >= 4.5.0",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.Forms >= 2.5.0.122203",
+      "Xamarin.Forms >= 3.1.0.583944",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1",
       "sqlite-net-pcl >= 1.4.118"
@@ -536,11 +505,11 @@
     },
     "dependencies": {
       "sqlite-net-pcl": "1.4.118",
-      "SQLitePCLRaw.bundle_green": "1.1.5",
-      "SQLitePCLRaw.core": "1.1.5",
-      "System.Json": "4.4.0",
+      "SQLitePCLRaw.bundle_green": "1.1.11",
+      "SQLitePCLRaw.core": "1.1.11",
+      "System.Json": "4.5.0",
       "Xam.Plugins.Settings": "3.1.1",
-      "Xamarin.Forms": "2.5.0.122203",
+      "Xamarin.Forms": "3.1.0.583944",
       "ZXing.Net.Mobile": "2.4.1",
       "ZXing.Net.Mobile.Forms": "2.4.1"
     },

@@ -2,28 +2,31 @@
 <custom:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:AgoraMobileStandardNet.Models" x:Class="AgoraMobileStandardNet.Pages.DetailPeoplePage" xmlns:custom="clr-namespace:AgoraMobileStandardNet.Pages;assembly=AgoraMobileStandardNet">
     <Grid VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
-            <Label x:Name="FullName" HorizontalOptions="CenterAndExpand" />
-            <Label x:Name="Categorie" HorizontalOptions="CenterAndExpand" />
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Société :" />
-                <Label x:Name="Societe" />
+        <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" BackgroundColor="#DD7700" Padding="10">
+            <Image Source="picto_profil_utilisateur.png" WidthRequest="60" HeightRequest="60"/>
+            <Label x:Name="FullName" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="White" FontAttributes="Bold"/>
+            <Label x:Name="Categorie" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Société :" TextColor="White" />
+                <Label x:Name="Societe" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Email :" />
-                <Label x:Name="Email" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Email :" TextColor="White"/>
+                <Label x:Name="Email" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Téléphone :" />
-                <Label x:Name="Telephone" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Téléphone :" TextColor="White"/>
+                <Label x:Name="Telephone" TextColor="White" FontAttributes="Bold"/>
             </StackLayout>
-            <ListView x:Name="listView">
-            </ListView>
         </StackLayout>
-        <Button x:Name="BtnValidate" Image="" Text="Valider la présence" Grid.Column="0" Grid.Row="1" />
+        <ListView x:Name="listView" Grid.Row="1">
+        </ListView>
+        <StackLayout VerticalOptions="Center" Spacing="10" Padding="10" Grid.Column="0" Grid.Row="2">
+            <Button x:Name="BtnValidate" Text="VALIDER LA PRESENCE" BackgroundColor="#DD7700" TextColor="White" />
+        </StackLayout>
     </Grid>
 </custom:CustomContentPage>

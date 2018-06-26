@@ -260,9 +260,6 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/haut_accueil.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bas_accueil.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/logo_agora_check_in.png
-/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.cs.flag
-/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.txt
-/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/uploadflags.txt
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bouton_hors_ligne.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/bouton_connexion.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/retour.png
@@ -270,6 +267,14 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_prestation.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_accueil.png
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_invite.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/fond_profil_utilisateur.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_profil_utilisateur.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/accueil.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/picto_atelier.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/menu.png
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.cs.flag
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/R.txt
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/uploadflags.txt
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.Droid.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/Mono.Android.pdb

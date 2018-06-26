@@ -3,6 +3,7 @@ using System.Json;
 using System.Collections.Generic;
 using AgoraMobileStandardNet.Interfaces;
 using SQLite;
+using Xamarin.Forms;
 
 namespace AgoraMobileStandardNet.Models
 {
@@ -48,6 +49,35 @@ namespace AgoraMobileStandardNet.Models
         public string Title { get; set;}
         public List<string> ValidationDateList { get; set; }
         public string Status { get; set; }
+        public int Height {
+            get { return 24 * ValidationDateList.Count + 40; }
+        }
+        // La couleur du status
+        public Color StatusColor {get; set;}
+
+        public string TempList {
+            get { string temp = ""; 
+                foreach(var str in ValidationDateList) {
+                    temp += str + "\n";
+                }
+
+                return temp;
+            }
+        }
+
+        // Le nom de l'icone à afficher
+        public ImageSource ImageSource
+        {
+            get
+            {
+
+                if (this.Title.ToLower().StartsWith("accueil", StringComparison.CurrentCultureIgnoreCase))
+                    return FileImageSource.FromFile("accueil.png");
+                else
+                    return FileImageSource.FromFile("picto_atelier.png");
+
+            }
+        }
 
         public TempInscriptionForCell()
         {
@@ -61,6 +91,7 @@ namespace AgoraMobileStandardNet.Models
             this.ValidationDateList.Add(GetValidationDateText(ip.DatePresence));
 
             this.Status = Global.StatutsParticipant[ip.IdStatusA39];
+            this.StatusColor = Global.StatusColors[ip.IdStatusA39];
         }
 
         public TempInscriptionForCell(PresenceParticipant pp)
@@ -70,6 +101,7 @@ namespace AgoraMobileStandardNet.Models
             this.ValidationDateList.Add(GetValidationDateText(pp.DatePresence));
 
             this.Status = Global.StatutsParticipant[pp.StatusPartA09];
+            this.StatusColor = Global.StatusColors[pp.StatusPartA09];
         }
 
         /// <summary>
