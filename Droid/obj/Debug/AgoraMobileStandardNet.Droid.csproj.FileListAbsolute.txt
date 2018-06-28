@@ -277,6 +277,7 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/uploadflags.txt
 /Volumes/Storage/Github/AgoraMobile/Droid/bin/Debug/Plugin.Settings.Abstractions.dll.mdb
 /Volumes/Storage/Github/AgoraMobile/Droid/bin/Debug/Plugin.Settings.dll.mdb
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/res/drawable/check.png
 /Volumes/Storage/Github/AgoraMobile/Droid/bin/Debug/Mono.Android.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.Droid.pdb
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Debug/linksrc/AgoraMobileStandardNet.pdb

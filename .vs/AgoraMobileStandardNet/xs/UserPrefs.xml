@@ -1,13 +1,18 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/8.3.3-2/lib/xamarin.android/xbuild/Xamarin/Android/Xamarin.Android.Common.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgoraMobileStandardNet/ViewModels/PageTitleViewModel.cs">
     <Files>
-      <File FileName="Droid/obj/Debug/android/manifest/AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="Droid/Properties/AndroidManifest.xml" Line="7" Column="12" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Droid/Resources/values/styles.xml" Line="1" Column="1" />
-      <File FileName="Droid/packages.config" Line="1" Column="1" />
-      <File FileName="iOS/packages.config" Line="14" Column="12" />
-      <File FileName="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/8.3.3-2/lib/xamarin.android/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1193" Column="2" />
+      <File FileName="AgoraMobileStandardNet/Pages/ListPeoplePage.xaml" Line="20" Column="28" />
+      <File FileName="AgoraMobileStandardNet/Services/PageData/ListEventsData.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Services/PageData/IPageData.cs" Line="1" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Services/PageData/ListPeopleData.cs" Line="64" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Models/Participant.cs" Line="58" Column="1" />
+      <File FileName="AgoraMobileStandardNet/Services/WebServiceData.cs" Line="267" Column="1" />
+      <File FileName="AgoraMobileStandardNet/ViewModels/ParticipantCell.cs" Line="24" Column="24" />
+      <File FileName="AgoraMobileStandardNet/ViewModels/InscriptionCell.cs" Line="78" Column="64" />
+      <File FileName="AgoraMobileStandardNet/Models/InscriptionParticipant.cs" Line="53" Column="74" />
+      <File FileName="AgoraMobileStandardNet/Pages/CustomContentPage.xaml" Line="23" Column="85" />
+      <File FileName="AgoraMobileStandardNet/Pages/LoginPage.xaml" Line="18" Column="85" />
+      <File FileName="AgoraMobileStandardNet/ViewModels/PageTitleViewModel.cs" Line="19" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

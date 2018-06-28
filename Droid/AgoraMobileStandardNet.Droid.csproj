@@ -221,6 +221,7 @@
     <AndroidResource Include="Resources\drawable\accueil.png" />
     <AndroidResource Include="Resources\drawable\picto_atelier.png" />
     <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\check.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CodePCL\" />

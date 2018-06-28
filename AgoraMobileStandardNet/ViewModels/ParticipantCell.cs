@@ -16,13 +16,19 @@ namespace AgoraMobileStandardNet.ViewModels
             // Le titre
             var titleLayout = CreateLayoutTitle();
 
+            // L'icone de check de prsence à droite
+            var imageCheck = new Image { HorizontalOptions = LayoutOptions.End };
+            imageCheck.WidthRequest = 30;
+            imageCheck.HeightRequest = 30;
+            imageCheck.Source = FileImageSource.FromFile("check.png");
+            imageCheck.SetBinding(Image.IsVisibleProperty, "IsPresenceValidee");
 
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                Padding = new Thickness(20, 10, 60, 10),
-                Children = { image, titleLayout }
+                Padding = new Thickness(20, 10, 20, 10),
+                Children = { image, titleLayout, imageCheck }
             };
 
             View = viewLayout;

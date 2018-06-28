@@ -190,6 +190,8 @@
     <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\picto_atelier.png" />
     <ImageAsset Include="Assets.xcassets\menu.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\menu.imageset\menu.png" />
+    <ImageAsset Include="Assets.xcassets\check.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\check.imageset\check.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -212,6 +214,7 @@
     <Folder Include="Assets.xcassets\accueil.imageset\" />
     <Folder Include="Assets.xcassets\picto_atelier.imageset\" />
     <Folder Include="Assets.xcassets\menu.imageset\" />
+    <Folder Include="Assets.xcassets\check.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

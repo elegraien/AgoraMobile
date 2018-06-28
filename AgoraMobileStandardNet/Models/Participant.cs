@@ -18,6 +18,7 @@ namespace AgoraMobileStandardNet.Models
         public string Company { get; set; }
         public string Category { get; set; }
         public DateTime? DatePresence { get; set; } 
+        public bool IsPresenceValidee { get; set; }
 
         // La manif
         public int IdManif { get; set; }
@@ -52,6 +53,7 @@ namespace AgoraMobileStandardNet.Models
                 this.DatePresence = null;
             }*/
             this.Telephone = jsonObject["Tel"];
+            this.IsPresenceValidee = jsonObject["IsPresenceValidee"];
 
             this.IdManif = idManif;
             this.IdPrestation = idPrestation;

@@ -44,20 +44,11 @@ namespace AgoraMobileStandardNet.ViewModels
             };
             titleLabel.SetBinding(Label.TextProperty, "Title");
 
-            /*
-            var dateList = new ListView()
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                HasUnevenRows = false,
-                RowHeight = 24
 
-            };
-            dateList.SetBinding(ListView.ItemsSourceProperty, "ValidationDateList");
-            */
             var tempList = new Label()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                WidthRequest=300,
+                WidthRequest=200,
                 TextColor = Color.DarkRed
             };
             tempList.SetBinding(Label.TextProperty, "TempList");
@@ -66,8 +57,10 @@ namespace AgoraMobileStandardNet.ViewModels
             var lblStatus = new Label()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                WidthRequest=150,
-                VerticalTextAlignment = TextAlignment.Center
+                WidthRequest=50,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.End,
+                MinimumWidthRequest = 40
             };
             lblStatus.SetBinding(Label.TextProperty, "Status");
             lblStatus.SetBinding(Label.TextColorProperty, "StatusColor");
@@ -75,13 +68,14 @@ namespace AgoraMobileStandardNet.ViewModels
             var horLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
                 Children = {tempList, lblStatus}
             };
 
 
             var titleLayout = new StackLayout()
             {
-                HorizontalOptions = LayoutOptions.StartAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
                 Orientation = StackOrientation.Vertical,
                 Children = { titleLabel, horLayout },
                 Padding=10

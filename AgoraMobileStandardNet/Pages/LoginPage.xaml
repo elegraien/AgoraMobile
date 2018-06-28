@@ -15,7 +15,7 @@
             <StackLayout WidthRequest="200" IsClippedToBounds="true">
                 <Button x:Name="BtnLogin" BorderRadius="10" BorderWidth="5" Text="Connexion" TextColor="White" BackgroundColor="#DD5500">
                 </Button>
-                <Button x:Name="BtnHorsConnexion" Text="Mode Hors Ligne" TextColor="Black" BackgroundColor="Gray" />
+                <Button x:Name="BtnHorsConnexion" BorderRadius="10" BorderWidth="5" Text="Mode Hors Ligne" TextColor="Black" BackgroundColor="Gray" />
             </StackLayout>
             <Label x:Name="ErrorMsg" TextColor="Red" />
         </StackLayout>

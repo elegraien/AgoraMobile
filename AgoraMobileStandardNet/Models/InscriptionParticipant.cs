@@ -50,7 +50,7 @@ namespace AgoraMobileStandardNet.Models
         public List<string> ValidationDateList { get; set; }
         public string Status { get; set; }
         public int Height {
-            get { return 24 * ValidationDateList.Count + 40; }
+            get { return Math.Max(24 * ValidationDateList.Count + 40, 60); }
         }
         // La couleur du status
         public Color StatusColor {get; set;}
@@ -60,6 +60,8 @@ namespace AgoraMobileStandardNet.Models
                 foreach(var str in ValidationDateList) {
                     temp += str + "\n";
                 }
+
+                
 
                 return temp;
             }
