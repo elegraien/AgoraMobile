@@ -9,6 +9,7 @@ namespace AgoraMobileStandardNet.ViewModels
         {
             // La hauteur de la ligne
             this.SetBinding(ListView.RowHeightProperty, "Height");
+            this.ForceUpdateSize();
 
             // L'image à gauche
             var image = new Image { HorizontalOptions = LayoutOptions.Start };

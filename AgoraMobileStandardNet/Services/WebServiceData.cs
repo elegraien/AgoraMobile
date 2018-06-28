@@ -319,7 +319,13 @@ namespace AgoraMobileStandardNet.Services
             if (instance.Id != 0 && sqlData.GetT(instance.Id) != null)
                 sqlData.UpdateData(instance);
             else
-                sqlData.InsertData(instance);
+            {
+                if (!sqlData.InsertData(instance))
+                {
+                    // Problème ?
+                    string temp = "";
+                }
+            }
         }
 
     }

@@ -116,6 +116,9 @@ namespace AgoraMobileStandardNet.Pages
                     await UserDialogs.ShowAlert("Erreur", e.Message);
                     return;
                 }
+            } else {
+                // On revient sur la page : il faut rafraichir depuis la base de données
+                participants = await peopleData.RefreshFromSQL(this.idEvent, this.idPrestation);
             }
 
             // filtrage éventuel
