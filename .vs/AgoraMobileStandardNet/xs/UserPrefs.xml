@@ -1,15 +1,21 @@
 ﻿<Properties StartupConfiguration="{93DDF2B0-C56E-438F-8BDC-75575E5EF148}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/values/styles.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/8.3.3-2/lib/xamarin.android/xbuild/Xamarin/Android/Xamarin.Android.Common.targets">
     <Files>
-      <File FileName="Droid/Resources/values/styles.xml" Line="28" Column="1" />
+      <File FileName="Droid/obj/Debug/android/manifest/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Droid/Properties/AndroidManifest.xml" Line="7" Column="12" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Droid/Resources/values/styles.xml" Line="1" Column="1" />
+      <File FileName="Droid/packages.config" Line="1" Column="1" />
+      <File FileName="iOS/packages.config" Line="14" Column="12" />
+      <File FileName="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/8.3.3-2/lib/xamarin.android/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1193" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D26597FD-A9AD-4A24-AC2D-C071DCF2595D" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid PreferredExecutionTarget="Android.00e3e406273dbbb1" />
+  <MonoDevelop.Ide.ItemProperties.AgoraMobileStandardNet.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.00e3e406273dbbb1" AndroidDesignerPreferredTheme="MainTheme" />
 </Properties>

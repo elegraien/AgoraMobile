@@ -14,6 +14,9 @@ SQLitePCLRaw.provider.e_sqlite3
 System.Collections
 System.Runtime
 System.Threading.Tasks
+Xamarin.Android.Arch.Core.Common
+Xamarin.Android.Arch.Lifecycle.Common
+Xamarin.Android.Arch.Lifecycle.Runtime
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Annotations
 Xamarin.Android.Support.Compat

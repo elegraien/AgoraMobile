@@ -120,7 +120,6 @@
     <Compile Include="Models\ValidatePresence.cs" />
     <Compile Include="Services\ValidatePresenceService.cs" />
     <Compile Include="ViewModels\PrestationWithColor.cs" />
-    <Compile Include="ViewModels\InscriptionWithHeight.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
