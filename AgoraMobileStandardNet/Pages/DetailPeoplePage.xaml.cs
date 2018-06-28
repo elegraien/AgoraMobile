@@ -88,7 +88,8 @@ namespace AgoraMobileStandardNet.Pages
             // On ajoute la liste des participations
             // La listeview a des lignes de hauteur différentes
             this.listView.HasUnevenRows = true;
-            //listView.RowHeight = 120;
+
+
             listView.ItemsSource = detailPeopleData.InscriptionsCells;
             listView.ItemTemplate = new DataTemplate(typeof(InscriptionCell));
         }

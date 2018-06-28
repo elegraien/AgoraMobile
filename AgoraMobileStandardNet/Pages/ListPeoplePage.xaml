@@ -7,6 +7,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
             </Grid.RowDefinitions>
             <SearchBar x:Name="SearchBar" Grid.Row="0" />
             <Label x:Name="SummaryPresent" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" BackgroundColor="#FF8800" TextColor="White" />

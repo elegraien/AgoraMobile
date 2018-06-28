@@ -21,6 +21,9 @@
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/System.Net.Http.dll
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/System.Runtime.Serialization.dll
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/System.Xml.dll
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Core.Common.dll
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Lifecycle.Common.dll
+/Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Lifecycle.Runtime.dll
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Support.Animated.Vector.Drawable.dll
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Support.Annotations.dll
 /Volumes/Storage/Github/AgoraMobile/Droid/obj/Release/android/assets/Xamarin.Android.Support.Compat.dll

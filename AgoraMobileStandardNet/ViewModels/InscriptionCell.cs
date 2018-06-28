@@ -7,6 +7,9 @@ namespace AgoraMobileStandardNet.ViewModels
     {
         public InscriptionCell()
         {
+            // La hauteur de la ligne
+            this.SetBinding(ListView.RowHeightProperty, "Height");
+
             // L'image à gauche
             var image = new Image { HorizontalOptions = LayoutOptions.Start };
             image.WidthRequest = 20;
@@ -28,9 +31,7 @@ namespace AgoraMobileStandardNet.ViewModels
 
             View = viewLayout;
 
-            // La hauteur de la ligne
-            this.SetBinding(ListView.RowHeightProperty, "Height");
-
+ 
             //this.Height = 120;
 
         }

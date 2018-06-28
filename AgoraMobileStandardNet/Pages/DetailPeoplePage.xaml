@@ -5,6 +5,7 @@
             <RowDefinition Height="250" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
         </Grid.RowDefinitions>
         <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" BackgroundColor="#DD7700" Padding="10">
             <Image Source="picto_profil_utilisateur.png" WidthRequest="60" HeightRequest="60"/>

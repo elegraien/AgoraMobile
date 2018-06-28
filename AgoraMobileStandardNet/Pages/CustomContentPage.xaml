@@ -32,6 +32,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,10,0,0" />
     </ContentPage.Padding>
 </ContentPage>

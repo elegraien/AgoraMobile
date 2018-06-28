@@ -26,11 +26,9 @@
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/SQLite-net.pdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/SQLite-net.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Core.pdb
-/Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Core.dll.mdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Core.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Platform.iOS.pdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Xaml.pdb
-/Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Xaml.dll.mdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/Xamarin.Forms.Xaml.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/ar/Xamarin.Forms.Platform.iOS.resources.dll
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Release/ca/Xamarin.Forms.Platform.iOS.resources.dll
@@ -74,5 +72,6 @@
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/optimized/
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/AgoraMobileStandardNet.iOS.csprojResolveAssemblyReference.cache
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/AgoraMobileStandardNet.iOS.csproj.CoreCompileInputs.cache
+/Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/XamlC.stamp
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/AgoraMobileStandardNet.iOS.exe
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Release/AgoraMobileStandardNet.iOS.pdb

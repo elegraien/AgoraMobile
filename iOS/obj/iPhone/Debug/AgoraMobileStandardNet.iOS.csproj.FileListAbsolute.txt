@@ -105,11 +105,9 @@
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/SQLite-net.pdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/SQLite-net.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Core.pdb
-/Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Core.dll.mdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Core.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Platform.iOS.pdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.pdb
-/Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.xml
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
 /Volumes/Storage/Github/AgoraMobile/iOS/bin/iPhone/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
@@ -155,3 +153,4 @@
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.4/coremlc/_PartialAppManifest.items
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.4/coremlc/_BundleResourceWithLogicalName.items
 /Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/device-builds/iphone8.1-11.4/optimized/
+/Volumes/Storage/Github/AgoraMobile/iOS/obj/iPhone/Debug/XamlC.stamp

@@ -770,13 +770,13 @@ bl _p_32
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
-.word 0xd28012e0
+.word 0xd2801420
 .word 0xaa1103e1
 bl _p_33
 
@@ -951,7 +951,7 @@ bl _p_34
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #384]
-.word 0x92800ef0
+.word 0x92800cf0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -1015,7 +1015,7 @@ ldr x15, [x16, #400]
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
 
@@ -1682,7 +1682,7 @@ bl _p_42
 .word 0x910003bf
 .word 0xa8cb7bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -1728,7 +1728,7 @@ ldr x0, [x16, #456]
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -2103,7 +2103,7 @@ add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x1, [x16, #584]
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941cc30
+.word 0xf941e830
 .word 0xd63f0200
 .word 0xf90013a0
 
@@ -4764,7 +4764,7 @@ ldr x0, [x16, #744]
 .word 0x8b100231
 .word 0x9100023f
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -4891,7 +4891,7 @@ bl _p_63
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -4943,7 +4943,7 @@ bl _p_64
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -4993,7 +4993,7 @@ bl _p_65
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -5041,7 +5041,7 @@ bl _p_66
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -5094,7 +5094,7 @@ bl _p_67
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -5153,7 +5153,7 @@ System_Runtime_Interop_SafeEventLogWriteHandle_RegisterEventSource_string_string
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5170,7 +5170,7 @@ System_Runtime_Interop_SafeEventLogWriteHandle_ReleaseHandle:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5190,7 +5190,7 @@ System_Runtime_Interop_UnsafeNativeMethods_EventRegister_System_Guid__System_Run
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf90017a3
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5207,7 +5207,7 @@ System_Runtime_Interop_UnsafeNativeMethods_EventUnregister_long:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5225,7 +5225,7 @@ System_Runtime_Interop_UnsafeNativeMethods_EventEnabled_long_System_Runtime_Diag
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5245,7 +5245,7 @@ System_Runtime_Interop_UnsafeNativeMethods_EventWrite_long_System_Runtime_Diagno
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xf90017a3
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5263,7 +5263,7 @@ System_Runtime_Interop_UnsafeNativeMethods_EventActivityIdControl_int_System_Gui
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5288,7 +5288,7 @@ System_Runtime_Interop_UnsafeNativeMethods_ReportEvent_System_Runtime_InteropSer
 .word 0xf9001fa4
 .word 0xf90023a5
 .word 0xf90027a6
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5418,7 +5418,7 @@ ldr x2, [x16, #16]
 .word 0xeb1f035f
 .word 0x10000011
 .word 0x54000400
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5448,15 +5448,15 @@ bl _p_73
 bl _p_74
 bl _p_75
 .word 0xaa0003e1
-.word 0xd2801e40
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
 .word 0x17ffffe9
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
-.word 0xd28012e0
+.word 0xd2801420
 .word 0xaa1103e1
 bl _p_33
 
@@ -5519,7 +5519,7 @@ bl _p_77
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
 
@@ -5569,7 +5569,7 @@ System_Runtime_Diagnostics_DiagnosticsEventProvider_Deregister:
 .loc 12 137 0
 .word 0xf9400ba0
 .word 0xf9400c00
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5702,7 +5702,7 @@ bl _p_78
 .loc 12 211 0
 .word 0xf9400ba0
 .word 0xf9400c00
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5869,7 +5869,7 @@ ldr x1, [x16, #816]
 .word 0xeb1f033f
 .word 0x10000011
 .word 0x54000440
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5891,7 +5891,7 @@ bl _p_69
 .loc 12 678 0
 .word 0xf9401fa0
 .word 0xf9400c00
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5912,7 +5912,7 @@ bl _p_79
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
 
@@ -5936,14 +5936,14 @@ System_Runtime_Diagnostics_DiagnosticsEventProvider_WriteEvent_System_Runtime_Di
 .word 0xeb1f001f
 .word 0x10000011
 .word 0x540001e0
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
 .loc 12 716 0
 .word 0xf9400ba0
 .word 0xf9400c00
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -5952,7 +5952,7 @@ bl _p_69
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
 
@@ -5965,7 +5965,7 @@ System_Runtime_Diagnostics_DiagnosticsEventProvider_SetActivityId_System_Guid_:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -6626,7 +6626,7 @@ bl _p_93
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -6745,7 +6745,7 @@ bl _p_96
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -6950,10 +6950,10 @@ bl _p_101
 .word 0x910003bf
 .word 0xa8c27bfd
 .word 0xd65f03c0
-.word 0xd2802020
+.word 0xd2802160
 .word 0xaa1103e1
 bl _p_33
-.word 0xd28012e0
+.word 0xd2801420
 .word 0xaa1103e1
 bl _p_33
 
@@ -7019,7 +7019,7 @@ bl _p_102
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
 
@@ -7141,7 +7141,7 @@ ldr x0, [x16, #0]
 .word 0xd2806a21
 bl _p_72
 .word 0xaa0003e1
-.word 0xd2801300
+.word 0xd2801440
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -7214,7 +7214,7 @@ bl _p_104
 .word 0xaa0003e1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9405830
+.word 0xf9406030
 .word 0xd63f0200
 .word 0xaa0003f6
 .loc 13 401 0
@@ -7321,7 +7321,7 @@ bl _p_107
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -8485,13 +8485,13 @@ bl _p_134
 .word 0xaa0203e0
 .word 0xaa1a03e1
 .word 0xf9400042
-.word 0xf940f050
+.word 0xf9411450
 .word 0xd63f0200
 .word 0xf94063a1
 .loc 16 308 0
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940ec30
+.word 0xf9410c30
 .word 0xd63f0200
 .word 0xf90033a0
 .loc 16 311 0
@@ -8602,7 +8602,7 @@ bl _p_137
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x0, [x16, #1200]
-.word 0xd2801301
+.word 0xd2801401
 bl _p_4
 .word 0xf94057a1
 .word 0xf90053a0
@@ -8736,7 +8736,7 @@ bl _p_119
 .word 0xf9400c01
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9407850
+.word 0xf9408850
 .word 0xd63f0200
 .loc 16 359 0
 .word 0xf94017a0
@@ -8755,19 +8755,19 @@ bl _p_119
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9407850
+.word 0xf9408850
 .word 0xd63f0200
 .loc 16 364 0
 .word 0xf94023a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 365 0
 .word 0xf94023a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406830
+.word 0xf9407430
 .word 0xd63f0200
 .loc 16 366 0
 .word 0xf9401fa1
@@ -9319,7 +9319,7 @@ bl _p_137
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x0, [x16, #1200]
-.word 0xd2801301
+.word 0xd2801401
 bl _p_4
 .word 0xf940b7a1
 .word 0xf900b3a0
@@ -9346,13 +9346,13 @@ bl _p_139
 .word 0xf94087a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 484 0
 .word 0xf94087a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406830
+.word 0xf9407430
 .word 0xd63f0200
 .loc 16 485 0
 .word 0xf94083a1
@@ -9814,7 +9814,7 @@ bl _p_4
 .word 0xb9000c03
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9409050
+.word 0xf9409850
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xb4000179
@@ -9889,7 +9889,7 @@ bl _p_4
 .word 0xb9000c03
 .word 0xaa0203e0
 .word 0xf9400042
-.word 0xf9409050
+.word 0xf9409850
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xb4000179
@@ -9971,7 +9971,7 @@ bl _p_4
 .word 0xf9402342
 .word 0xaa0303e0
 .word 0xf9400063
-.word 0xf940ac70
+.word 0xf940b870
 .word 0xd63f0200
 .loc 16 569 0
 .word 0xf9002fbf
@@ -10003,7 +10003,7 @@ bl _p_60
 .word 0x910003bf
 .word 0xa8c97bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
 
@@ -10366,7 +10366,7 @@ bl _p_137
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x0, [x16, #1200]
-.word 0xd2801301
+.word 0xd2801401
 bl _p_4
 .word 0xf9404fa1
 .word 0xf9004ba0
@@ -10383,7 +10383,7 @@ bl _p_175
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406830
+.word 0xf9407430
 .word 0xd63f0200
 .loc 16 732 0
 .word 0xf9401ba1
@@ -10528,7 +10528,7 @@ ldr x0, [x16, #1480]
 .word 0xf9400c01
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf941bc30
+.word 0xf941d830
 .word 0xd63f0200
 bl _p_177
 .word 0xf90097a0
@@ -10702,7 +10702,7 @@ bl _p_178
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1544]
-.word 0x928010f0
+.word 0x92800df0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -10713,7 +10713,7 @@ ldr x15, [x16, #1544]
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1552]
-.word 0x928007f0
+.word 0x92800cf0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -10726,7 +10726,7 @@ ldr x15, [x16, #1552]
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x15, [x16, #1560]
-.word 0x92800ef0
+.word 0x92800cf0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -10828,7 +10828,7 @@ bl _p_183
 .word 0xaa0203e0
 .word 0xaa1803e1
 .word 0xf9400042
-.word 0xf9407850
+.word 0xf9408850
 .word 0xd63f0200
 .loc 16 789 0
 .word 0xb98043a0
@@ -10864,7 +10864,7 @@ bl _p_184
 .word 0xaa0203e0
 .word 0xaa1a03e1
 .word 0xf9400042
-.word 0xf9407850
+.word 0xf9408850
 .word 0xd63f0200
 .loc 16 801 0
 .word 0xf90033bf
@@ -10878,7 +10878,7 @@ bl _p_36
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 805 0
 .word 0xf94047be
@@ -10939,7 +10939,7 @@ bl _p_137
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x0, [x16, #1200]
-.word 0xd2801301
+.word 0xd2801401
 bl _p_4
 .word 0xf9404fa1
 .word 0xf9004ba0
@@ -10986,13 +10986,13 @@ bl _p_175
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 829 0
 .word 0xf9401fa1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406830
+.word 0xf9407430
 .word 0xd63f0200
 .loc 16 830 0
 .word 0xf9401ba1
@@ -11110,7 +11110,7 @@ bl _p_137
 adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x0, [x16, #1200]
-.word 0xd2801301
+.word 0xd2801401
 bl _p_4
 .word 0xf9406fa1
 .word 0xf9006ba0
@@ -11269,7 +11269,7 @@ bl _p_119
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 853 0
 .word 0xf9401fa1
@@ -11349,13 +11349,13 @@ ldr x15, [x16, #400]
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf940a430
+.word 0xf940c030
 .word 0xd63f0200
 .loc 16 869 0
 .word 0xf9401ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0xf9406830
+.word 0xf9407430
 .word 0xd63f0200
 .loc 16 870 0
 .word 0xf94017a1
@@ -12249,7 +12249,7 @@ ldr x0, [x16, #0]
 .word 0xd2810161
 bl _p_72
 .word 0xf9002ba0
-.word 0xd2801de0
+.word 0xd2801f20
 bl _p_194
 .word 0xb9001014
 .word 0xf9002fa0
@@ -12277,7 +12277,7 @@ ldr x0, [x16, #0]
 .word 0xd2810161
 bl _p_72
 .word 0xf9002ba0
-.word 0xd2801de0
+.word 0xd2801f20
 bl _p_194
 .word 0xaa0003e2
 .word 0xf9402ba1
@@ -12302,7 +12302,7 @@ ldr x0, [x16, #0]
 .word 0xd28108e1
 bl _p_72
 .word 0xf9002ba0
-.word 0xd2801de0
+.word 0xd2801f20
 bl _p_194
 .word 0xb9001019
 .word 0xf9002fa0
@@ -12330,7 +12330,7 @@ ldr x0, [x16, #0]
 .word 0xd28108e1
 bl _p_72
 .word 0xf9002ba0
-.word 0xd2801de0
+.word 0xd2801f20
 bl _p_194
 .word 0xaa0003e2
 .word 0xf9402ba1
@@ -12505,7 +12505,7 @@ bl _p_196
 .word 0x910003bf
 .word 0xa8c47bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
 
@@ -12971,7 +12971,7 @@ bl _p_202
 .loc 19 134 0
 bl _p_203
 .word 0xf940001e
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -13403,13 +13403,13 @@ ldr x0, [x16, #1656]
 .word 0x910003bf
 .word 0xa8d37bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
-.word 0xd2802100
+.word 0xd2802240
 .word 0xaa1103e1
 bl _p_33
-.word 0xd2801720
+.word 0xd2801860
 .word 0xaa1103e1
 bl _p_33
 
@@ -13712,7 +13712,7 @@ System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_Tr
 .word 0xf9002fa0
 .word 0xf9400ba0
 .word 0xf9400c00
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -13748,7 +13748,7 @@ bl _p_218
 .word 0x93407c00
 .word 0xf9401ba0
 .word 0xb9801800
-.word 0xd2801fe0
+.word 0xd2802120
 .word 0xf2a04000
 bl _mono_create_corlib_exception_0
 bl _p_69
@@ -14035,7 +14035,7 @@ bl _p_96
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -14496,10 +14496,10 @@ System_Array_InternalArray__Insert_T_REF_int_T_REF:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf90013a2
-.word 0xd287abc0
+.word 0xd287c860
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2802000
+.word 0xd2802140
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14517,10 +14517,10 @@ System_Array_InternalArray__RemoveAt_int:
 .word 0x910003fd
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd287abc0
+.word 0xd287c860
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2802000
+.word 0xd2802140
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14611,10 +14611,10 @@ bl _p_230
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 22 150 0
-.word 0xd287b340
+.word 0xd287cfe0
 bl _p_229
 .word 0xaa0003e1
-.word 0xd28021a0
+.word 0xd28022e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14651,10 +14651,10 @@ bl _p_231
 .word 0xa8c37bfd
 .word 0xd65f03c0
 .loc 22 177 0
-.word 0xd284f1a0
+.word 0xd2850e40
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2801320
+.word 0xd2801460
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14744,10 +14744,10 @@ ldr x2, [x16, #16]
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 22 187 0
-.word 0xd284f1a0
+.word 0xd2850e40
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2801320
+.word 0xd2801460
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14883,7 +14883,7 @@ bl _p_237
 .word 0xaa0003f9
 .word 0xb5ffff80
 .word 0x17ffffd0
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -14925,10 +14925,10 @@ System_Array_InternalArray__ICollection_Clear:
 .word 0xa9be7bfd
 .word 0x910003fd
 .word 0xf9000ba0
-.word 0xd287a5c0
+.word 0xd287c260
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2802000
+.word 0xd2802140
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14947,10 +14947,10 @@ System_Array_InternalArray__ICollection_Add_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd287abc0
+.word 0xd287c860
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2802000
+.word 0xd2802140
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -14969,10 +14969,10 @@ System_Array_InternalArray__ICollection_Remove_T_REF_T_REF:
 .word 0xf90013af
 .word 0xf9000ba0
 .word 0xf9000fa1
-.word 0xd287abc0
+.word 0xd287c860
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2802000
+.word 0xd2802140
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -15043,10 +15043,10 @@ bl _p_238
 .word 0xa8c47bfd
 .word 0xd65f03c0
 .loc 22 95 0
-.word 0xd287b340
+.word 0xd287cfe0
 bl _p_229
 .word 0xaa0003e1
-.word 0xd28021a0
+.word 0xd28022e0
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -15161,7 +15161,7 @@ bl _p_237
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffc9
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -15235,7 +15235,7 @@ bl _p_237
 .word 0xaa0003f8
 .word 0xb5ffff80
 .word 0x17ffffce
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -15318,7 +15318,7 @@ bl _p_237
 .word 0xaa0003f7
 .word 0xb5ffff80
 .word 0x17ffffc6
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -15487,18 +15487,18 @@ bl _p_241
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 22 237 0
-.word 0xd28874c0
+.word 0xd2889160
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2801e40
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
 .loc 22 239 0
-.word 0xd2887f80
+.word 0xd2889c20
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2801e40
+.word 0xd2801f80
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -15761,7 +15761,7 @@ bl _p_237
 .word 0xaa0003fa
 .word 0xb5ffff80
 .word 0x17ffffb8
-.word 0xd2801d60
+.word 0xd2801ea0
 .word 0xaa1103e1
 bl _p_33
 
@@ -16088,7 +16088,7 @@ ldr x2, [x16, #16]
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
-.word 0xd2801e20
+.word 0xd2801f60
 .word 0xaa1103e1
 bl _p_33
 
@@ -16302,10 +16302,10 @@ ldr x2, [x16, #16]
 .word 0xa8c77bfd
 .word 0xd65f03c0
 .loc 22 177 0
-.word 0xd284f1a0
+.word 0xd2850e40
 bl _p_229
 .word 0xaa0003e1
-.word 0xd2801320
+.word 0xd2801460
 .word 0xf2a04000
 bl _mono_create_corlib_exception_1
 bl _p_69
@@ -16670,7 +16670,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1792]
 br x16
-.word 3454
+.word 3456
 	.no_dead_strip plt_System_Runtime_FatalException__ctor_string_System_Exception
 plt_System_Runtime_FatalException__ctor_string_System_Exception:
 _p_2:
@@ -16678,7 +16678,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1800]
 br x16
-.word 3456
+.word 3458
 	.no_dead_strip plt_System_Runtime_FatalException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext
 plt_System_Runtime_FatalException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext:
 _p_3:
@@ -16686,7 +16686,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1808]
 br x16
-.word 3458
+.word 3460
 	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
 plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
 _p_4:
@@ -16694,7 +16694,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1816]
 br x16
-.word 3460
+.word 3462
 	.no_dead_strip plt_System_ArgumentOutOfRangeException__ctor_string_object_string
 plt_System_ArgumentOutOfRangeException__ctor_string_object_string:
 _p_5:
@@ -16702,7 +16702,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1824]
 br x16
-.word 3468
+.word 3470
 	.no_dead_strip plt_System_Runtime_ExceptionTrace_TraceException_System_ArgumentOutOfRangeException_System_ArgumentOutOfRangeException
 plt_System_Runtime_ExceptionTrace_TraceException_System_ArgumentOutOfRangeException_System_ArgumentOutOfRangeException:
 _p_6:
@@ -16710,7 +16710,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1832]
 br x16
-.word 3473
+.word 3475
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionErrorIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_HandledExceptionErrorIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_7:
@@ -16718,7 +16718,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1840]
 br x16
-.word 3485
+.word 3487
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionError_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception
 plt_System_Runtime_TraceCore_HandledExceptionError_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception:
 _p_8:
@@ -16726,7 +16726,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1848]
 br x16
-.word 3487
+.word 3489
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionWarningIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_HandledExceptionWarningIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_9:
@@ -16734,7 +16734,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1856]
 br x16
-.word 3489
+.word 3491
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionWarning_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception
 plt_System_Runtime_TraceCore_HandledExceptionWarning_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception:
 _p_10:
@@ -16742,7 +16742,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1864]
 br x16
-.word 3491
+.word 3493
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionVerboseIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_HandledExceptionVerboseIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_11:
@@ -16750,7 +16750,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1872]
 br x16
-.word 3493
+.word 3495
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionVerbose_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception
 plt_System_Runtime_TraceCore_HandledExceptionVerbose_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception:
 _p_12:
@@ -16758,7 +16758,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1880]
 br x16
-.word 3495
+.word 3497
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_HandledExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_13:
@@ -16766,7 +16766,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1888]
 br x16
-.word 3497
+.word 3499
 	.no_dead_strip plt_System_Runtime_TraceCore_HandledException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception
 plt_System_Runtime_TraceCore_HandledException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception:
 _p_14:
@@ -16774,7 +16774,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1896]
 br x16
-.word 3499
+.word 3501
 	.no_dead_strip plt__rgctx_fetch_0
 plt__rgctx_fetch_0:
 _p_15:
@@ -16782,7 +16782,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1904]
 br x16
-.word 3524
+.word 3526
 	.no_dead_strip plt_System_Runtime_ExceptionTrace_TraceException_TException_REF_TException_REF_string
 plt_System_Runtime_ExceptionTrace_TraceException_TException_REF_TException_REF_string:
 _p_16:
@@ -16790,7 +16790,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1912]
 br x16
-.word 3546
+.word 3548
 	.no_dead_strip plt_System_Runtime_TraceCore_ThrowingExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_ThrowingExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_17:
@@ -16798,7 +16798,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1920]
 br x16
-.word 3564
+.word 3566
 	.no_dead_strip plt_System_Runtime_TraceCore_ThrowingException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_string_System_Exception
 plt_System_Runtime_TraceCore_ThrowingException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_string_System_Exception:
 _p_18:
@@ -16806,7 +16806,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1928]
 br x16
-.word 3566
+.word 3568
 	.no_dead_strip plt_System_SystemException__ctor
 plt_System_SystemException__ctor:
 _p_19:
@@ -16814,7 +16814,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1936]
 br x16
-.word 3568
+.word 3570
 	.no_dead_strip plt_System_SystemException__ctor_string_System_Exception
 plt_System_SystemException__ctor_string_System_Exception:
 _p_20:
@@ -16822,7 +16822,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1944]
 br x16
-.word 3573
+.word 3575
 	.no_dead_strip plt_System_SystemException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext
 plt_System_SystemException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext:
 _p_21:
@@ -16830,7 +16830,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1952]
 br x16
-.word 3578
+.word 3580
 	.no_dead_strip plt_System_Runtime_Fx_get_Trace
 plt_System_Runtime_Fx_get_Trace:
 _p_22:
@@ -16838,7 +16838,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1960]
 br x16
-.word 3583
+.word 3585
 	.no_dead_strip plt_System_Runtime_ExceptionTrace__ctor_string_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_ExceptionTrace__ctor_string_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_23:
@@ -16846,7 +16846,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1968]
 br x16
-.word 3585
+.word 3587
 	.no_dead_strip plt_System_Runtime_Fx_InitializeTracing
 plt_System_Runtime_Fx_InitializeTracing:
 _p_24:
@@ -16854,7 +16854,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1976]
 br x16
-.word 3587
+.word 3589
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_DefaultEtwProviderId
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_DefaultEtwProviderId:
 _p_25:
@@ -16862,7 +16862,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1984]
 br x16
-.word 3589
+.word 3591
 	.no_dead_strip plt__jit_icall_mono_generic_class_init
 plt__jit_icall_mono_generic_class_init:
 _p_26:
@@ -16870,7 +16870,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #1992]
 br x16
-.word 3592
+.word 3594
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace__ctor_string_System_Guid
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace__ctor_string_System_Guid:
 _p_27:
@@ -16878,7 +16878,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2000]
 br x16
-.word 3618
+.word 3620
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwProvider
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwProvider:
 _p_28:
@@ -16886,7 +16886,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2008]
 br x16
-.word 3621
+.word 3623
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_RefreshState
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_RefreshState:
 _p_29:
@@ -16894,7 +16894,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2016]
 br x16
-.word 3624
+.word 3626
 	.no_dead_strip plt_System_Delegate_Combine_System_Delegate_System_Delegate
 plt_System_Delegate_Combine_System_Delegate_System_Delegate:
 _p_30:
@@ -16902,7 +16902,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2024]
 br x16
-.word 3627
+.word 3629
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_set_RefreshState_System_Action
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_set_RefreshState_System_Action:
 _p_31:
@@ -16910,7 +16910,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2032]
 br x16
-.word 3632
+.word 3634
 	.no_dead_strip plt_System_Runtime_Fx_UpdateLevel_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_Fx_UpdateLevel_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_32:
@@ -16918,7 +16918,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2040]
 br x16
-.word 3635
+.word 3637
 	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
 plt__jit_icall_mono_arch_throw_corlib_exception:
 _p_33:
@@ -16926,7 +16926,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2048]
 br x16
-.word 3637
+.word 3639
 	.no_dead_strip plt_System_Collections_ObjectModel_ReadOnlyCollection_1_System_Exception_GetEnumerator
 plt_System_Collections_ObjectModel_ReadOnlyCollection_1_System_Exception_GetEnumerator:
 _p_34:
@@ -16934,7 +16934,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2056]
 br x16
-.word 3672
+.word 3674
 	.no_dead_strip plt_System_Runtime_Fx_IsFatal_System_Exception
 plt_System_Runtime_Fx_IsFatal_System_Exception:
 _p_35:
@@ -16942,7 +16942,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2064]
 br x16
-.word 3683
+.word 3685
 	.no_dead_strip plt__jit_icall_mono_thread_self_abort
 plt__jit_icall_mono_thread_self_abort:
 _p_36:
@@ -16950,7 +16950,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2072]
 br x16
-.word 3685
+.word 3687
 	.no_dead_strip plt_System_Runtime_TraceCore_ActionItemCallbackInvokedIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_ActionItemCallbackInvokedIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_37:
@@ -16958,7 +16958,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2080]
 br x16
-.word 3710
+.word 3712
 	.no_dead_strip plt_System_Runtime_TraceCore_ActionItemScheduledIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_ActionItemScheduledIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_38:
@@ -16966,7 +16966,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2088]
 br x16
-.word 3712
+.word 3714
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_SetEnd2EndActivityTracingEnabled_bool
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_SetEnd2EndActivityTracingEnabled_bool:
 _p_39:
@@ -16974,7 +16974,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2096]
 br x16
-.word 3714
+.word 3716
 	.no_dead_strip plt_System_Runtime_Fx_InternalException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext
 plt_System_Runtime_Fx_InternalException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext:
 _p_40:
@@ -16982,7 +16982,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2104]
 br x16
-.word 3717
+.word 3719
 	.no_dead_strip plt_System_Runtime_Fx_UpdateLevel
 plt_System_Runtime_Fx_UpdateLevel:
 _p_41:
@@ -16990,7 +16990,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2112]
 br x16
-.word 3719
+.word 3721
 	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
 plt_wrapper_alloc_object_AllocVector_intptr_intptr:
 _p_42:
@@ -16998,7 +16998,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2120]
 br x16
-.word 3721
+.word 3723
 	.no_dead_strip plt_string_memcpy_byte__byte__int
 plt_string_memcpy_byte__byte__int:
 _p_43:
@@ -17006,7 +17006,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2128]
 br x16
-.word 3729
+.word 3731
 	.no_dead_strip plt_System_Resources_ResourceManager__ctor_string_System_Reflection_Assembly
 plt_System_Resources_ResourceManager__ctor_string_System_Reflection_Assembly:
 _p_44:
@@ -17014,7 +17014,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2136]
 br x16
-.word 3734
+.word 3736
 	.no_dead_strip plt_System_Runtime_TraceCore_IsEtwEventEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace_int
 plt_System_Runtime_TraceCore_IsEtwEventEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace_int:
 _p_45:
@@ -17022,7 +17022,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2144]
 br x16
-.word 3739
+.word 3741
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception:
 _p_46:
@@ -17030,7 +17030,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2152]
 br x16
-.word 3741
+.word 3743
 	.no_dead_strip plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string
 plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string:
 _p_47:
@@ -17038,7 +17038,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2160]
 br x16
-.word 3744
+.word 3746
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTraceToTraceSource_System_Runtime_TraceEventLevel
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTraceToTraceSource_System_Runtime_TraceEventLevel:
 _p_48:
@@ -17046,7 +17046,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2168]
 br x16
-.word 3746
+.word 3748
 	.no_dead_strip plt_System_Runtime_TraceCore_get_ResourceManager
 plt_System_Runtime_TraceCore_get_ResourceManager:
 _p_49:
@@ -17054,7 +17054,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2176]
 br x16
-.word 3748
+.word 3750
 	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object_object_object
 plt_string_Format_System_IFormatProvider_string_object_object_object:
 _p_50:
@@ -17062,7 +17062,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2184]
 br x16
-.word 3750
+.word 3752
 	.no_dead_strip plt_System_Runtime_TraceCore_WriteTraceSource_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_string_System_Runtime_TracePayload
 plt_System_Runtime_TraceCore_WriteTraceSource_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_string_System_Runtime_TracePayload:
 _p_51:
@@ -17070,7 +17070,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2192]
 br x16
-.word 3755
+.word 3757
 	.no_dead_strip plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string_string
 plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string_string:
 _p_52:
@@ -17078,7 +17078,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2200]
 br x16
-.word 3757
+.word 3759
 	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object
 plt_string_Format_System_IFormatProvider_string_object:
 _p_53:
@@ -17086,7 +17086,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2208]
 br x16
-.word 3759
+.word 3761
 	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object_object
 plt_string_Format_System_IFormatProvider_string_object_object:
 _p_54:
@@ -17094,7 +17094,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2216]
 br x16
-.word 3764
+.word 3766
 	.no_dead_strip plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string
 plt_System_Runtime_TraceCore_WriteEtwEvent_System_Runtime_Diagnostics_EtwDiagnosticTrace_int_System_Runtime_Diagnostics_EventTraceActivity_string_string:
 _p_55:
@@ -17102,7 +17102,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2224]
 br x16
-.word 3769
+.word 3771
 	.no_dead_strip plt_string_Format_System_IFormatProvider_string_object__
 plt_string_Format_System_IFormatProvider_string_object__:
 _p_56:
@@ -17110,7 +17110,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2232]
 br x16
-.word 3771
+.word 3773
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventDescriptor__ctor_int_byte_byte_byte_byte_int_long
 plt_System_Runtime_Diagnostics_EventDescriptor__ctor_int_byte_byte_byte_byte_int_long:
 _p_57:
@@ -17118,7 +17118,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2240]
 br x16
-.word 3776
+.word 3778
 	.no_dead_strip plt__jit_icall_mono_monitor_enter_internal
 plt__jit_icall_mono_monitor_enter_internal:
 _p_58:
@@ -17126,7 +17126,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2248]
 br x16
-.word 3779
+.word 3781
 	.no_dead_strip plt_System_Runtime_TraceCore_CreateEventDescriptors
 plt_System_Runtime_TraceCore_CreateEventDescriptors:
 _p_59:
@@ -17134,7 +17134,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2256]
 br x16
-.word 3809
+.word 3811
 	.no_dead_strip plt_System_Threading_Monitor_Exit_object
 plt_System_Threading_Monitor_Exit_object:
 _p_60:
@@ -17142,7 +17142,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2264]
 br x16
-.word 3811
+.word 3813
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_IsEtwProviderEnabled
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_IsEtwProviderEnabled:
 _p_61:
@@ -17150,7 +17150,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2272]
 br x16
-.word 3816
+.word 3818
 	.no_dead_strip plt_System_Runtime_TraceCore_EnsureEventDescriptors
 plt_System_Runtime_TraceCore_EnsureEventDescriptors:
 _p_62:
@@ -17158,7 +17158,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2280]
 br x16
-.word 3819
+.word 3821
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEtwEventEnabled_System_Runtime_Diagnostics_EventDescriptor__bool
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEtwEventEnabled_System_Runtime_Diagnostics_EventDescriptor__bool:
 _p_63:
@@ -17166,7 +17166,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2288]
 br x16
-.word 3821
+.word 3823
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string
 plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string:
 _p_64:
@@ -17174,7 +17174,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2296]
 br x16
-.word 3824
+.word 3826
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string
 plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string:
 _p_65:
@@ -17182,7 +17182,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2304]
 br x16
-.word 3827
+.word 3829
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string
 plt_System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string:
 _p_66:
@@ -17190,7 +17190,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2312]
 br x16
-.word 3830
+.word 3832
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload:
 _p_67:
@@ -17198,7 +17198,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2320]
 br x16
-.word 3833
+.word 3835
 	.no_dead_strip plt_string_Format_string_object
 plt_string_Format_string_object:
 _p_68:
@@ -17206,7 +17206,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2328]
 br x16
-.word 3836
+.word 3838
 	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
 plt__jit_icall_mono_arch_throw_exception:
 _p_69:
@@ -17214,7 +17214,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2336]
 br x16
-.word 3841
+.word 3843
 	.no_dead_strip plt_System_Environment_get_OSVersion
 plt_System_Environment_get_OSVersion:
 _p_70:
@@ -17222,7 +17222,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2344]
 br x16
-.word 3869
+.word 3871
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_EtwRegister
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_EtwRegister:
 _p_71:
@@ -17230,7 +17230,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2352]
 br x16
-.word 3874
+.word 3876
 	.no_dead_strip plt__jit_icall_mono_helper_ldstr
 plt__jit_icall_mono_helper_ldstr:
 _p_72:
@@ -17238,7 +17238,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2360]
 br x16
-.word 3876
+.word 3878
 	.no_dead_strip plt_System_Globalization_CultureInfo_get_CurrentCulture
 plt_System_Globalization_CultureInfo_get_CurrentCulture:
 _p_73:
@@ -17246,7 +17246,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2368]
 br x16
-.word 3896
+.word 3898
 	.no_dead_strip plt_uint_ToString_string_System_IFormatProvider
 plt_uint_ToString_string_System_IFormatProvider:
 _p_74:
@@ -17254,7 +17254,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2376]
 br x16
-.word 3901
+.word 3903
 	.no_dead_strip plt_System_Runtime_InternalSR_EtwRegistrationFailed_object
 plt_System_Runtime_InternalSR_EtwRegistrationFailed_object:
 _p_75:
@@ -17262,7 +17262,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2384]
 br x16
-.word 3906
+.word 3908
 	.no_dead_strip plt_System_GC_SuppressFinalize_object
 plt_System_GC_SuppressFinalize_object:
 _p_76:
@@ -17270,7 +17270,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2392]
 br x16
-.word 3908
+.word 3910
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_Deregister
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_Deregister:
 _p_77:
@@ -17278,7 +17278,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2400]
 br x16
-.word 3913
+.word 3915
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_IsEnabled_byte_long
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_IsEnabled_byte_long:
 _p_78:
@@ -17286,7 +17286,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2408]
 br x16
-.word 3915
+.word 3917
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_SetLastError_int
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_SetLastError_int:
 _p_79:
@@ -17294,7 +17294,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2416]
 br x16
-.word 3917
+.word 3919
 	.no_dead_strip plt_System_Diagnostics_TraceSource_get_Listeners
 plt_System_Diagnostics_TraceSource_get_Listeners:
 _p_80:
@@ -17302,7 +17302,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2424]
 br x16
-.word 3919
+.word 3921
 	.no_dead_strip plt_System_Diagnostics_TraceListenerCollection_Remove_string
 plt_System_Diagnostics_TraceListenerCollection_Remove_string:
 _p_81:
@@ -17310,7 +17310,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2432]
 br x16
-.word 3924
+.word 3926
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_UnsafeRemoveDefaultTraceListener_System_Diagnostics_TraceSource
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_UnsafeRemoveDefaultTraceListener_System_Diagnostics_TraceSource:
 _p_82:
@@ -17318,7 +17318,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2440]
 br x16
-.word 3929
+.word 3931
 	.no_dead_strip plt_System_Diagnostics_TraceListenerCollection_get_Count
 plt_System_Diagnostics_TraceListenerCollection_get_Count:
 _p_83:
@@ -17326,7 +17326,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2448]
 br x16
-.word 3931
+.word 3933
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_FixLevel_System_Diagnostics_SourceLevels
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_FixLevel_System_Diagnostics_SourceLevels:
 _p_84:
@@ -17334,7 +17334,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2456]
 br x16
-.word 3936
+.word 3938
 	.no_dead_strip plt_System_Diagnostics_TraceSource_get_Switch
 plt_System_Diagnostics_TraceSource_get_Switch:
 _p_85:
@@ -17342,7 +17342,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2464]
 br x16
-.word 3938
+.word 3940
 	.no_dead_strip plt_System_Diagnostics_SourceSwitch_set_Level_System_Diagnostics_SourceLevels
 plt_System_Diagnostics_SourceSwitch_set_Level_System_Diagnostics_SourceLevels:
 _p_86:
@@ -17350,7 +17350,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2472]
 br x16
-.word 3943
+.word 3945
 	.no_dead_strip plt_System_Diagnostics_SourceSwitch_get_Level
 plt_System_Diagnostics_SourceSwitch_get_Level:
 _p_87:
@@ -17358,7 +17358,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2480]
 br x16
-.word 3948
+.word 3950
 	.no_dead_strip plt_System_Diagnostics_Process_GetCurrentProcess
 plt_System_Diagnostics_Process_GetCurrentProcess:
 _p_88:
@@ -17366,7 +17366,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2488]
 br x16
-.word 3953
+.word 3955
 	.no_dead_strip plt_System_Diagnostics_Process_get_ProcessName
 plt_System_Diagnostics_Process_get_ProcessName:
 _p_89:
@@ -17374,7 +17374,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2496]
 br x16
-.word 3958
+.word 3960
 	.no_dead_strip plt_System_Diagnostics_Process_get_Id
 plt_System_Diagnostics_Process_get_Id:
 _p_90:
@@ -17382,7 +17382,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2504]
 br x16
-.word 3963
+.word 3965
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_TracingEnabled
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_TracingEnabled:
 _p_91:
@@ -17390,7 +17390,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2512]
 br x16
-.word 3968
+.word 3970
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_Level
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_Level:
 _p_92:
@@ -17398,7 +17398,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2520]
 br x16
-.word 3970
+.word 3972
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTrace_System_Diagnostics_TraceEventType
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTrace_System_Diagnostics_TraceEventType:
 _p_93:
@@ -17406,7 +17406,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2528]
 br x16
-.word 3972
+.word 3974
 	.no_dead_strip plt_System_Text_StringBuilder__ctor_int
 plt_System_Text_StringBuilder__ctor_int:
 _p_94:
@@ -17414,7 +17414,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2536]
 br x16
-.word 3974
+.word 3976
 	.no_dead_strip plt_System_Text_StringBuilder_Append_string
 plt_System_Text_StringBuilder_Append_string:
 _p_95:
@@ -17422,7 +17422,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2544]
 br x16
-.word 3979
+.word 3981
 	.no_dead_strip plt_System_Text_StringBuilder_Append_char
 plt_System_Text_StringBuilder_Append_char:
 _p_96:
@@ -17430,7 +17430,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2552]
 br x16
-.word 3984
+.word 3986
 	.no_dead_strip plt_System_AppDomain_get_CurrentDomain
 plt_System_AppDomain_get_CurrentDomain:
 _p_97:
@@ -17438,7 +17438,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2560]
 br x16
-.word 3989
+.word 3991
 	.no_dead_strip plt_System_AppDomain_add_UnhandledException_System_UnhandledExceptionEventHandler
 plt_System_AppDomain_add_UnhandledException_System_UnhandledExceptionEventHandler:
 _p_98:
@@ -17446,7 +17446,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2568]
 br x16
-.word 3994
+.word 3996
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_SetLevel_System_Diagnostics_SourceLevels
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_SetLevel_System_Diagnostics_SourceLevels:
 _p_99:
@@ -17454,7 +17454,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2576]
 br x16
-.word 3999
+.word 4001
 	.no_dead_strip plt_System_AppDomain_add_DomainUnload_System_EventHandler
 plt_System_AppDomain_add_DomainUnload_System_EventHandler:
 _p_100:
@@ -17462,7 +17462,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2584]
 br x16
-.word 4001
+.word 4003
 	.no_dead_strip plt_System_AppDomain_add_ProcessExit_System_EventHandler
 plt_System_AppDomain_add_ProcessExit_System_EventHandler:
 _p_101:
@@ -17470,7 +17470,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2592]
 br x16
-.word 4006
+.word 4008
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShutdownTracing
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShutdownTracing:
 _p_102:
@@ -17478,7 +17478,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2600]
 br x16
-.word 4011
+.word 4013
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_CreateDefaultSourceString_object
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_CreateDefaultSourceString_object:
 _p_103:
@@ -17486,7 +17486,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2608]
 br x16
-.word 4014
+.word 4016
 	.no_dead_strip plt_System_Diagnostics_StackTrace__ctor_bool
 plt_System_Diagnostics_StackTrace__ctor_bool:
 _p_104:
@@ -17494,7 +17494,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2616]
 br x16
-.word 4016
+.word 4018
 	.no_dead_strip plt_string_op_Equality_string_string
 plt_string_op_Equality_string_string:
 _p_105:
@@ -17502,7 +17502,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2624]
 br x16
-.word 4021
+.word 4023
 	.no_dead_strip plt_string_StartsWith_string_System_StringComparison
 plt_string_StartsWith_string_System_StringComparison:
 _p_106:
@@ -17510,7 +17510,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2632]
 br x16
-.word 4026
+.word 4028
 	.no_dead_strip plt_System_Diagnostics_StackTrace__ctor_int_bool
 plt_System_Diagnostics_StackTrace__ctor_int_bool:
 _p_107:
@@ -17518,7 +17518,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2640]
 br x16
-.word 4031
+.word 4033
 	.no_dead_strip plt_System_TimeSpan_FromMinutes_double
 plt_System_TimeSpan_FromMinutes_double:
 _p_108:
@@ -17526,7 +17526,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2648]
 br x16
-.word 4036
+.word 4038
 	.no_dead_strip plt__jit_icall_mono_monitor_enter_v4_internal
 plt__jit_icall_mono_monitor_enter_v4_internal:
 _p_109:
@@ -17534,7 +17534,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2656]
 br x16
-.word 4041
+.word 4043
 	.no_dead_strip plt_System_DateTime_get_UtcNow
 plt_System_DateTime_get_UtcNow:
 _p_110:
@@ -17542,7 +17542,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2664]
 br x16
-.word 4074
+.word 4076
 	.no_dead_strip plt_System_DateTime_Subtract_System_DateTime
 plt_System_DateTime_Subtract_System_DateTime:
 _p_111:
@@ -17550,7 +17550,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2672]
 br x16
-.word 4079
+.word 4081
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_UnsafeCreateEventLogger_string_System_Runtime_Diagnostics_DiagnosticTraceBase
 plt_System_Runtime_Diagnostics_EventLogger_UnsafeCreateEventLogger_string_System_Runtime_Diagnostics_DiagnosticTraceBase:
 _p_112:
@@ -17558,7 +17558,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2680]
 br x16
-.word 4084
+.word 4086
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 plt_System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__:
 _p_113:
@@ -17566,7 +17566,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2688]
 br x16
-.word 4087
+.word 4089
 	.no_dead_strip plt__jit_icall_mono_arch_rethrow_exception
 plt__jit_icall_mono_arch_rethrow_exception:
 _p_114:
@@ -17574,7 +17574,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2696]
 br x16
-.word 4090
+.word 4092
 	.no_dead_strip plt__jit_icall_mono_thread_get_undeniable_exception
 plt__jit_icall_mono_thread_get_undeniable_exception:
 _p_115:
@@ -17582,7 +17582,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2704]
 br x16
-.word 4120
+.word 4122
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_LogTraceFailure_string_System_Exception
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_LogTraceFailure_string_System_Exception:
 _p_116:
@@ -17590,7 +17590,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2712]
 br x16
-.word 4159
+.word 4161
 	.no_dead_strip plt_System_AppDomain_get_FriendlyName
 plt_System_AppDomain_get_FriendlyName:
 _p_117:
@@ -17598,7 +17598,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2720]
 br x16
-.word 4161
+.word 4163
 	.no_dead_strip plt_System_Diagnostics_TraceSource__ctor_string
 plt_System_Diagnostics_TraceSource__ctor_string:
 _p_118:
@@ -17606,7 +17606,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2728]
 br x16
-.word 4166
+.word 4168
 	.no_dead_strip plt_System_Xml_XmlWriter_WriteElementString_string_string
 plt_System_Xml_XmlWriter_WriteElementString_string_string:
 _p_119:
@@ -17614,7 +17614,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2736]
 br x16
-.word 4171
+.word 4173
 	.no_dead_strip plt_System_Guid__ctor_string
 plt_System_Guid__ctor_string:
 _p_120:
@@ -17622,7 +17622,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2744]
 br x16
-.word 4176
+.word 4178
 	.no_dead_strip plt_System_Collections_Hashtable__ctor
 plt_System_Collections_Hashtable__ctor:
 _p_121:
@@ -17630,7 +17630,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2752]
 br x16
-.word 4181
+.word 4183
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase__ctor_string
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase__ctor_string:
 _p_122:
@@ -17638,7 +17638,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2760]
 br x16
-.word 4186
+.word 4188
 	.no_dead_strip plt_string_Concat_string_string_string
 plt_string_Concat_string_string_string:
 _p_123:
@@ -17646,7 +17646,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2768]
 br x16
-.word 4188
+.word 4190
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateTraceSource
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateTraceSource:
 _p_124:
@@ -17654,7 +17654,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2776]
 br x16
-.word 4193
+.word 4195
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger__ctor_string_System_Runtime_Diagnostics_DiagnosticTraceBase
 plt_System_Runtime_Diagnostics_EventLogger__ctor_string_System_Runtime_Diagnostics_DiagnosticTraceBase:
 _p_125:
@@ -17662,7 +17662,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2784]
 br x16
-.word 4196
+.word 4198
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 plt_System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__:
 _p_126:
@@ -17670,7 +17670,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2792]
 br x16
-.word 4199
+.word 4201
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateEtwProvider_System_Guid
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateEtwProvider_System_Guid:
 _p_127:
@@ -17678,7 +17678,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2800]
 br x16
-.word 4202
+.word 4204
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwTracingEnabled
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwTracingEnabled:
 _p_128:
@@ -17686,7 +17686,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2808]
 br x16
-.word 4205
+.word 4207
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_AddDomainEventHandlersForCleanup
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_AddDomainEventHandlersForCleanup:
 _p_129:
@@ -17694,7 +17694,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2816]
 br x16
-.word 4208
+.word 4210
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTrace_System_Runtime_TraceEventLevel
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_ShouldTrace_System_Runtime_TraceEventLevel:
 _p_130:
@@ -17702,7 +17702,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2824]
 br x16
-.word 4210
+.word 4212
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTraceToEtw_System_Runtime_TraceEventLevel
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTraceToEtw_System_Runtime_TraceEventLevel:
 _p_131:
@@ -17710,7 +17710,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2832]
 br x16
-.word 4212
+.word 4214
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateLegacyTraceCode_System_Runtime_Diagnostics_EventDescriptor__string__int_
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateLegacyTraceCode_System_Runtime_Diagnostics_EventDescriptor__string__int_:
 _p_132:
@@ -17718,7 +17718,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2840]
 br x16
-.word 4215
+.word 4217
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string:
 _p_133:
@@ -17726,7 +17726,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2848]
 br x16
-.word 4218
+.word 4220
 	.no_dead_strip plt_System_Xml_XmlDocument__ctor
 plt_System_Xml_XmlDocument__ctor:
 _p_134:
@@ -17734,7 +17734,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2856]
 br x16
-.word 4221
+.word 4223
 	.no_dead_strip plt_System_Diagnostics_TraceSource_Flush
 plt_System_Diagnostics_TraceSource_Flush:
 _p_135:
@@ -17742,7 +17742,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2864]
 br x16
-.word 4226
+.word 4228
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Take
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Take:
 _p_136:
@@ -17750,7 +17750,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2872]
 br x16
-.word 4231
+.word 4233
 	.no_dead_strip plt_System_IO_StringWriter__ctor_System_Text_StringBuilder_System_IFormatProvider
 plt_System_IO_StringWriter__ctor_System_Text_StringBuilder_System_IFormatProvider:
 _p_137:
@@ -17758,7 +17758,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2880]
 br x16
-.word 4234
+.word 4236
 	.no_dead_strip plt_System_Xml_XmlTextWriter__ctor_System_IO_TextWriter
 plt_System_Xml_XmlTextWriter__ctor_System_IO_TextWriter:
 _p_138:
@@ -17766,7 +17766,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2888]
 br x16
-.word 4239
+.word 4241
 	.no_dead_strip plt_System_Xml_XmlWriter_WriteStartElement_string
 plt_System_Xml_XmlWriter_WriteStartElement_string:
 _p_139:
@@ -17774,7 +17774,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2896]
 br x16
-.word 4244
+.word 4246
 	.no_dead_strip plt_System_Xml_XmlWriter_WriteAttributeString_string_string
 plt_System_Xml_XmlWriter_WriteAttributeString_string_string:
 _p_140:
@@ -17782,7 +17782,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2904]
 br x16
-.word 4249
+.word 4251
 	.no_dead_strip plt_System_Runtime_TraceLevelHelper_LookupSeverity_System_Runtime_TraceEventLevel_System_Runtime_TraceEventOpcode
 plt_System_Runtime_TraceLevelHelper_LookupSeverity_System_Runtime_TraceEventLevel_System_Runtime_TraceEventOpcode:
 _p_141:
@@ -17790,7 +17790,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2912]
 br x16
-.word 4254
+.word 4256
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel:
 _p_142:
@@ -17798,7 +17798,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2920]
 br x16
-.word 4256
+.word 4258
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Return_System_Text_StringBuilder
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Return_System_Text_StringBuilder:
 _p_143:
@@ -17806,7 +17806,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2928]
 br x16
-.word 4259
+.word 4261
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateMsdnTraceCode_string_string
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateMsdnTraceCode_string_string:
 _p_144:
@@ -17814,7 +17814,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2936]
 br x16
-.word 4262
+.word 4264
 	.no_dead_strip plt_int_ToString_System_IFormatProvider
 plt_int_ToString_System_IFormatProvider:
 _p_145:
@@ -17822,7 +17822,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2944]
 br x16
-.word 4265
+.word 4267
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception_bool
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception_bool:
 _p_146:
@@ -17830,7 +17830,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2952]
 br x16
-.word 4270
+.word 4272
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_CreateSourceString_object
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_CreateSourceString_object:
 _p_147:
@@ -17838,7 +17838,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2960]
 br x16
-.word 4273
+.word 4275
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ExceptionToTraceString_System_Exception_int
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ExceptionToTraceString_System_Exception_int:
 _p_148:
@@ -17846,7 +17846,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2968]
 br x16
-.word 4275
+.word 4277
 	.no_dead_strip plt_System_Runtime_TracePayload__ctor_string_string_string_string_string
 plt_System_Runtime_TracePayload__ctor_string_string_string_string_string:
 _p_149:
@@ -17854,7 +17854,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2976]
 br x16
-.word 4278
+.word 4280
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_IsEventEnabled_System_Runtime_Diagnostics_EventDescriptor_
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_IsEventEnabled_System_Runtime_Diagnostics_EventDescriptor_:
 _p_150:
@@ -17862,7 +17862,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2984]
 br x16
-.word 4280
+.word 4282
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceSource__ctor_string
 plt_System_Runtime_Diagnostics_DiagnosticTraceSource__ctor_string:
 _p_151:
@@ -17870,7 +17870,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #2992]
 br x16
-.word 4282
+.word 4284
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_SetTraceSource_System_Diagnostics_TraceSource
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_SetTraceSource_System_Diagnostics_TraceSource:
 _p_152:
@@ -17878,7 +17878,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3000]
 br x16
-.word 4285
+.word 4287
 	.no_dead_strip plt_System_Guid_op_Inequality_System_Guid_System_Guid
 plt_System_Guid_op_Inequality_System_Guid_System_Guid:
 _p_153:
@@ -17886,7 +17886,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3008]
 br x16
-.word 4287
+.word 4289
 	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
 plt__jit_icall_ves_icall_object_new_specific:
 _p_154:
@@ -17894,7 +17894,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3016]
 br x16
-.word 4292
+.word 4294
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwProvider__ctor_System_Guid
 plt_System_Runtime_Diagnostics_EtwProvider__ctor_System_Guid:
 _p_155:
@@ -17902,7 +17902,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3024]
 br x16
-.word 4324
+.word 4326
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownTraceSource
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownTraceSource:
 _p_156:
@@ -17910,7 +17910,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3032]
 br x16
-.word 4327
+.word 4329
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownEtwProvider
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownEtwProvider:
 _p_157:
@@ -17918,7 +17918,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3040]
 br x16
-.word 4330
+.word 4332
 	.no_dead_strip plt_System_Runtime_TraceCore_AppDomainUnloadIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_AppDomainUnloadIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_158:
@@ -17926,7 +17926,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3048]
 br x16
-.word 4333
+.word 4335
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_ProcessName
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_ProcessName:
 _p_159:
@@ -17934,7 +17934,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3056]
 br x16
-.word 4335
+.word 4337
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_ProcessId
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_get_ProcessId:
 _p_160:
@@ -17942,7 +17942,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3064]
 br x16
-.word 4337
+.word 4339
 	.no_dead_strip plt_System_Runtime_TraceCore_AppDomainUnload_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_string_string
 plt_System_Runtime_TraceCore_AppDomainUnload_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_string_string:
 _p_161:
@@ -17950,7 +17950,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3072]
 br x16
-.word 4339
+.word 4341
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_Dispose
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_Dispose:
 _p_162:
@@ -17958,7 +17958,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3080]
 br x16
-.word 4341
+.word 4343
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogCriticalIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_TraceCodeEventLogCriticalIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_163:
@@ -17966,7 +17966,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3088]
 br x16
-.word 4343
+.word 4345
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogVerboseIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_TraceCodeEventLogVerboseIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_164:
@@ -17974,7 +17974,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3096]
 br x16
-.word 4345
+.word 4347
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogInfoIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_TraceCodeEventLogInfoIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_165:
@@ -17982,7 +17982,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3104]
 br x16
-.word 4347
+.word 4349
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogWarningIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_TraceCodeEventLogWarningIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_166:
@@ -17990,7 +17990,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3112]
 br x16
-.word 4349
+.word 4351
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogErrorIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_TraceCodeEventLogErrorIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_167:
@@ -17998,7 +17998,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3120]
 br x16
-.word 4351
+.word 4353
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogCritical_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord
 plt_System_Runtime_TraceCore_TraceCodeEventLogCritical_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord:
 _p_168:
@@ -18006,7 +18006,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3128]
 br x16
-.word 4353
+.word 4355
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogVerbose_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord
 plt_System_Runtime_TraceCore_TraceCodeEventLogVerbose_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord:
 _p_169:
@@ -18014,7 +18014,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3136]
 br x16
-.word 4355
+.word 4357
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogInfo_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord
 plt_System_Runtime_TraceCore_TraceCodeEventLogInfo_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord:
 _p_170:
@@ -18022,7 +18022,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3144]
 br x16
-.word 4357
+.word 4359
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogWarning_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord
 plt_System_Runtime_TraceCore_TraceCodeEventLogWarning_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord:
 _p_171:
@@ -18030,7 +18030,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3152]
 br x16
-.word 4359
+.word 4361
 	.no_dead_strip plt_System_Runtime_TraceCore_TraceCodeEventLogError_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord
 plt_System_Runtime_TraceCore_TraceCodeEventLogError_System_Runtime_Diagnostics_EtwDiagnosticTrace_System_Runtime_Diagnostics_TraceRecord:
 _p_172:
@@ -18038,7 +18038,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3160]
 br x16
-.word 4361
+.word 4363
 	.no_dead_strip plt_System_Runtime_TraceCore_UnhandledExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace
 plt_System_Runtime_TraceCore_UnhandledExceptionIsEnabled_System_Runtime_Diagnostics_EtwDiagnosticTrace:
 _p_173:
@@ -18046,7 +18046,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3168]
 br x16
-.word 4363
+.word 4365
 	.no_dead_strip plt_System_Runtime_TraceCore_UnhandledException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception
 plt_System_Runtime_TraceCore_UnhandledException_System_Runtime_Diagnostics_EtwDiagnosticTrace_string_System_Exception:
 _p_174:
@@ -18054,7 +18054,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3176]
 br x16
-.word 4365
+.word 4367
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int:
 _p_175:
@@ -18062,7 +18062,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3184]
 br x16
-.word 4367
+.word 4369
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteStartElement_System_Xml_XmlTextWriter_string_int_
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteStartElement_System_Xml_XmlTextWriter_string_int_:
 _p_176:
@@ -18070,7 +18070,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3192]
 br x16
-.word 4370
+.word 4372
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_XmlEncode_string
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_XmlEncode_string:
 _p_177:
@@ -18078,7 +18078,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3200]
 br x16
-.word 4373
+.word 4375
 	.no_dead_strip plt_System_Tuple_2_string_string__ctor_string_string
 plt_System_Tuple_2_string_string__ctor_string_string:
 _p_178:
@@ -18086,7 +18086,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3208]
 br x16
-.word 4375
+.word 4377
 	.no_dead_strip plt_System_Collections_Generic_List_1_System_Tuple_2_string_string_Add_System_Tuple_2_string_string
 plt_System_Collections_Generic_List_1_System_Tuple_2_string_string_Add_System_Tuple_2_string_string:
 _p_179:
@@ -18094,7 +18094,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3216]
 br x16
-.word 4386
+.word 4388
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticTraceBase_StackTraceString_System_Exception
 plt_System_Runtime_Diagnostics_DiagnosticTraceBase_StackTraceString_System_Exception:
 _p_180:
@@ -18102,7 +18102,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3224]
 br x16
-.word 4397
+.word 4399
 	.no_dead_strip plt_int_ToString_string_System_IFormatProvider
 plt_int_ToString_string_System_IFormatProvider:
 _p_181:
@@ -18110,7 +18110,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3232]
 br x16
-.word 4399
+.word 4401
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteXmlElementString_System_Xml_XmlTextWriter_string_string_int_
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteXmlElementString_System_Xml_XmlTextWriter_string_string_int_:
 _p_182:
@@ -18118,7 +18118,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3240]
 br x16
-.word 4404
+.word 4406
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetExceptionData_System_Exception
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetExceptionData_System_Exception:
 _p_183:
@@ -18126,7 +18126,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3248]
 br x16
-.word 4407
+.word 4409
 	.no_dead_strip plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetInnerException_System_Exception_int_int
 plt_System_Runtime_Diagnostics_EtwDiagnosticTrace_GetInnerException_System_Exception_int_int:
 _p_184:
@@ -18134,7 +18134,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3256]
 br x16
-.word 4410
+.word 4412
 	.no_dead_strip plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_TryDequeue_System_Text_StringBuilder_
 plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_TryDequeue_System_Text_StringBuilder_:
 _p_185:
@@ -18142,7 +18142,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3264]
 br x16
-.word 4413
+.word 4415
 	.no_dead_strip plt_System_Text_StringBuilder__ctor
 plt_System_Text_StringBuilder__ctor:
 _p_186:
@@ -18150,7 +18150,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3272]
 br x16
-.word 4424
+.word 4426
 	.no_dead_strip plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_get_Count
 plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_get_Count:
 _p_187:
@@ -18158,7 +18158,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3280]
 br x16
-.word 4429
+.word 4431
 	.no_dead_strip plt_System_Text_StringBuilder_Clear
 plt_System_Text_StringBuilder_Clear:
 _p_188:
@@ -18166,7 +18166,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3288]
 br x16
-.word 4440
+.word 4442
 	.no_dead_strip plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_Enqueue_System_Text_StringBuilder
 plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder_Enqueue_System_Text_StringBuilder:
 _p_189:
@@ -18174,7 +18174,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3296]
 br x16
-.word 4445
+.word 4447
 	.no_dead_strip plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder__ctor
 plt_System_Collections_Concurrent_ConcurrentQueue_1_System_Text_StringBuilder__ctor:
 _p_190:
@@ -18182,7 +18182,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3304]
 br x16
-.word 4456
+.word 4458
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider__ctor_System_Guid
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider__ctor_System_Guid:
 _p_191:
@@ -18190,7 +18190,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3312]
 br x16
-.word 4467
+.word 4469
 	.no_dead_strip plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_int_intptr
 plt_System_Runtime_Diagnostics_DiagnosticsEventProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_int_intptr:
 _p_192:
@@ -18198,7 +18198,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3320]
 br x16
-.word 4469
+.word 4471
 	.no_dead_strip plt_System_Runtime_Fx_get_Exception
 plt_System_Runtime_Fx_get_Exception:
 _p_193:
@@ -18206,7 +18206,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3328]
 br x16
-.word 4471
+.word 4473
 	.no_dead_strip plt__jit_icall_mono_helper_newobj_mscorlib
 plt__jit_icall_mono_helper_newobj_mscorlib:
 _p_194:
@@ -18214,7 +18214,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3336]
 br x16
-.word 4473
+.word 4475
 	.no_dead_strip plt_System_Runtime_ExceptionTrace_ArgumentOutOfRange_string_object_string
 plt_System_Runtime_ExceptionTrace_ArgumentOutOfRange_string_object_string:
 _p_195:
@@ -18222,7 +18222,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3344]
 br x16
-.word 4503
+.word 4505
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventDescriptor_Equals_System_Runtime_Diagnostics_EventDescriptor
 plt_System_Runtime_Diagnostics_EventDescriptor_Equals_System_Runtime_Diagnostics_EventDescriptor:
 _p_196:
@@ -18230,7 +18230,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3352]
 br x16
-.word 4505
+.word 4507
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_IsInPartialTrust
 plt_System_Runtime_Diagnostics_EventLogger_IsInPartialTrust:
 _p_197:
@@ -18238,7 +18238,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3360]
 br x16
-.word 4508
+.word 4510
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger__ctor
 plt_System_Runtime_Diagnostics_EventLogger__ctor:
 _p_198:
@@ -18246,7 +18246,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3368]
 br x16
-.word 4511
+.word 4513
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_NormalizeEventLogParameter_string
 plt_System_Runtime_Diagnostics_EventLogger_NormalizeEventLogParameter_string:
 _p_199:
@@ -18254,7 +18254,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3376]
 br x16
-.word 4514
+.word 4516
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessName
 plt_System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessName:
 _p_200:
@@ -18262,7 +18262,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3384]
 br x16
-.word 4517
+.word 4519
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessId
 plt_System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessId:
 _p_201:
@@ -18270,7 +18270,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3392]
 br x16
-.word 4520
+.word 4522
 	.no_dead_strip plt_string_Substring_int_int
 plt_string_Substring_int_int:
 _p_202:
@@ -18278,7 +18278,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3400]
 br x16
-.word 4523
+.word 4525
 	.no_dead_strip plt_System_Security_Principal_WindowsIdentity_GetCurrent
 plt_System_Security_Principal_WindowsIdentity_GetCurrent:
 _p_203:
@@ -18286,7 +18286,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3408]
 br x16
-.word 4528
+.word 4530
 	.no_dead_strip plt_System_Security_Principal_SecurityIdentifier_GetBinaryForm_byte___int
 plt_System_Security_Principal_SecurityIdentifier_GetBinaryForm_byte___int:
 _p_204:
@@ -18294,7 +18294,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3416]
 br x16
-.word 4533
+.word 4535
 	.no_dead_strip plt_System_Runtime_InteropServices_GCHandle_Alloc_object_System_Runtime_InteropServices_GCHandleType
 plt_System_Runtime_InteropServices_GCHandle_Alloc_object_System_Runtime_InteropServices_GCHandleType:
 _p_205:
@@ -18302,7 +18302,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3424]
 br x16
-.word 4538
+.word 4540
 	.no_dead_strip plt_System_Runtime_InteropServices_GCHandle_AddrOfPinnedObject
 plt_System_Runtime_InteropServices_GCHandle_AddrOfPinnedObject:
 _p_206:
@@ -18310,7 +18310,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3432]
 br x16
-.word 4543
+.word 4545
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_TraceEventType_uint16_uint_string___byte___System_Runtime_InteropServices_GCHandle
 plt_System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_TraceEventType_uint16_uint_string___byte___System_Runtime_InteropServices_GCHandle:
 _p_207:
@@ -18318,7 +18318,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3440]
 br x16
-.word 4548
+.word 4550
 	.no_dead_strip plt_intptr_op_Inequality_intptr_intptr
 plt_intptr_op_Inequality_intptr_intptr:
 _p_208:
@@ -18326,7 +18326,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3448]
 br x16
-.word 4551
+.word 4553
 	.no_dead_strip plt_System_Runtime_InteropServices_GCHandle_Free
 plt_System_Runtime_InteropServices_GCHandle_Free:
 _p_209:
@@ -18334,7 +18334,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3456]
 br x16
-.word 4556
+.word 4558
 	.no_dead_strip plt_System_Collections_Generic_Dictionary_2_string_string__ctor_int
 plt_System_Collections_Generic_Dictionary_2_string_string__ctor_int:
 _p_210:
@@ -18342,7 +18342,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3464]
 br x16
-.word 4561
+.word 4563
 	.no_dead_strip plt_System_Collections_Generic_Dictionary_2_string_string_set_Item_string_string
 plt_System_Collections_Generic_Dictionary_2_string_string_set_Item_string_string:
 _p_211:
@@ -18350,7 +18350,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3472]
 br x16
-.word 4572
+.word 4574
 	.no_dead_strip plt_uint16_ToString_System_IFormatProvider
 plt_uint16_ToString_System_IFormatProvider:
 _p_212:
@@ -18358,7 +18358,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3480]
 br x16
-.word 4583
+.word 4585
 	.no_dead_strip plt_uint_ToString_System_IFormatProvider
 plt_uint_ToString_System_IFormatProvider:
 _p_213:
@@ -18366,7 +18366,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3488]
 br x16
-.word 4588
+.word 4590
 	.no_dead_strip plt_string_Concat_string_string
 plt_string_Concat_string_string:
 _p_214:
@@ -18374,7 +18374,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3496]
 br x16
-.word 4593
+.word 4595
 	.no_dead_strip plt_System_Collections_Generic_Dictionary_2_string_string_Add_string_string
 plt_System_Collections_Generic_Dictionary_2_string_string_Add_string_string:
 _p_215:
@@ -18382,7 +18382,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3504]
 br x16
-.word 4598
+.word 4600
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_SafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 plt_System_Runtime_Diagnostics_EventLogger_SafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__:
 _p_216:
@@ -18390,7 +18390,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3512]
 br x16
-.word 4609
+.word 4611
 	.no_dead_strip plt_System_Runtime_ExceptionTrace_TraceHandledException_System_Exception_System_Diagnostics_TraceEventType
 plt_System_Runtime_ExceptionTrace_TraceHandledException_System_Exception_System_Diagnostics_TraceEventType:
 _p_217:
@@ -18398,7 +18398,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3520]
 br x16
-.word 4612
+.word 4614
 	.no_dead_strip plt_System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType
 plt_System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType:
 _p_218:
@@ -18406,7 +18406,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3528]
 br x16
-.word 4614
+.word 4616
 	.no_dead_strip plt_string_IndexOf_char
 plt_string_IndexOf_char:
 _p_219:
@@ -18414,7 +18414,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3536]
 br x16
-.word 4617
+.word 4619
 	.no_dead_strip plt__rgctx_fetch_1
 plt__rgctx_fetch_1:
 _p_220:
@@ -18422,7 +18422,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3544]
 br x16
-.word 4639
+.word 4641
 	.no_dead_strip plt__rgctx_fetch_2
 plt__rgctx_fetch_2:
 _p_221:
@@ -18430,7 +18430,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3552]
 br x16
-.word 4676
+.word 4678
 	.no_dead_strip plt__rgctx_fetch_3
 plt__rgctx_fetch_3:
 _p_222:
@@ -18438,7 +18438,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3560]
 br x16
-.word 4698
+.word 4700
 	.no_dead_strip plt__rgctx_fetch_4
 plt__rgctx_fetch_4:
 _p_223:
@@ -18446,7 +18446,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3568]
 br x16
-.word 4734
+.word 4736
 	.no_dead_strip plt__rgctx_fetch_5
 plt__rgctx_fetch_5:
 _p_224:
@@ -18454,7 +18454,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3576]
 br x16
-.word 4759
+.word 4761
 	.no_dead_strip plt__rgctx_fetch_6
 plt__rgctx_fetch_6:
 _p_225:
@@ -18462,7 +18462,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3584]
 br x16
-.word 4816
+.word 4818
 	.no_dead_strip plt_wrapper_alloc_object_Alloc_intptr
 plt_wrapper_alloc_object_Alloc_intptr:
 _p_226:
@@ -18470,7 +18470,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3592]
 br x16
-.word 4824
+.word 4826
 	.no_dead_strip plt__rgctx_fetch_7
 plt__rgctx_fetch_7:
 _p_227:
@@ -18478,7 +18478,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3600]
 br x16
-.word 4832
+.word 4834
 	.no_dead_strip plt_System_Runtime_ExceptionTrace_BreakOnException_System_Exception
 plt_System_Runtime_ExceptionTrace_BreakOnException_System_Exception:
 _p_228:
@@ -18486,7 +18486,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3608]
 br x16
-.word 4840
+.word 4842
 	.no_dead_strip plt__jit_icall_mono_helper_ldstr_mscorlib
 plt__jit_icall_mono_helper_ldstr_mscorlib:
 _p_229:
@@ -18494,7 +18494,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3616]
 br x16
-.word 4842
+.word 4844
 	.no_dead_strip plt__rgctx_fetch_8
 plt__rgctx_fetch_8:
 _p_230:
@@ -18502,7 +18502,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3624]
 br x16
-.word 4889
+.word 4891
 	.no_dead_strip plt__rgctx_fetch_9
 plt__rgctx_fetch_9:
 _p_231:
@@ -18510,7 +18510,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3632]
 br x16
-.word 4930
+.word 4932
 	.no_dead_strip plt__rgctx_fetch_10
 plt__rgctx_fetch_10:
 _p_232:
@@ -18518,7 +18518,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3640]
 br x16
-.word 4971
+.word 4973
 	.no_dead_strip plt__rgctx_fetch_11
 plt__rgctx_fetch_11:
 _p_233:
@@ -18526,7 +18526,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3648]
 br x16
-.word 5020
+.word 5022
 	.no_dead_strip plt__rgctx_fetch_12
 plt__rgctx_fetch_12:
 _p_234:
@@ -18534,7 +18534,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3656]
 br x16
-.word 5028
+.word 5030
 	.no_dead_strip plt__rgctx_fetch_13
 plt__rgctx_fetch_13:
 _p_235:
@@ -18542,7 +18542,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3664]
 br x16
-.word 5044
+.word 5046
 	.no_dead_strip plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
 _p_236:
@@ -18550,7 +18550,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3672]
 br x16
-.word 5052
+.word 5054
 	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
 plt__jit_icall_mono_thread_interruption_checkpoint:
 _p_237:
@@ -18558,7 +18558,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3680]
 br x16
-.word 5071
+.word 5073
 	.no_dead_strip plt__rgctx_fetch_14
 plt__rgctx_fetch_14:
 _p_238:
@@ -18566,7 +18566,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3688]
 br x16
-.word 5127
+.word 5129
 	.no_dead_strip plt_System_Array_Copy_System_Array_int_System_Array_int_int
 plt_System_Array_Copy_System_Array_int_System_Array_int_int:
 _p_239:
@@ -18574,7 +18574,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3696]
 br x16
-.word 5150
+.word 5152
 	.no_dead_strip plt__rgctx_fetch_15
 plt__rgctx_fetch_15:
 _p_240:
@@ -18582,7 +18582,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3704]
 br x16
-.word 5173
+.word 5175
 	.no_dead_strip plt__rgctx_fetch_16
 plt__rgctx_fetch_16:
 _p_241:
@@ -18590,7 +18590,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3712]
 br x16
-.word 5196
+.word 5198
 	.no_dead_strip plt__rgctx_fetch_17
 plt__rgctx_fetch_17:
 _p_242:
@@ -18598,7 +18598,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3720]
 br x16
-.word 5237
+.word 5239
 	.no_dead_strip plt__rgctx_fetch_18
 plt__rgctx_fetch_18:
 _p_243:
@@ -18606,7 +18606,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3728]
 br x16
-.word 5245
+.word 5247
 	.no_dead_strip plt__rgctx_fetch_19
 plt__rgctx_fetch_19:
 _p_244:
@@ -18614,7 +18614,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3736]
 br x16
-.word 5268
+.word 5270
 	.no_dead_strip plt__rgctx_fetch_20
 plt__rgctx_fetch_20:
 _p_245:
@@ -18622,7 +18622,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3744]
 br x16
-.word 5302
+.word 5304
 	.no_dead_strip plt__rgctx_fetch_21
 plt__rgctx_fetch_21:
 _p_246:
@@ -18630,7 +18630,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3752]
 br x16
-.word 5310
+.word 5312
 	.no_dead_strip plt__rgctx_fetch_22
 plt__rgctx_fetch_22:
 _p_247:
@@ -18638,7 +18638,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3760]
 br x16
-.word 5326
+.word 5328
 	.no_dead_strip plt__rgctx_fetch_23
 plt__rgctx_fetch_23:
 _p_248:
@@ -18646,7 +18646,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3768]
 br x16
-.word 5334
+.word 5336
 	.no_dead_strip plt__jit_icall_mono_delegate_begin_invoke
 plt__jit_icall_mono_delegate_begin_invoke:
 _p_249:
@@ -18654,7 +18654,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3776]
 br x16
-.word 5357
+.word 5359
 	.no_dead_strip plt__jit_icall_mono_delegate_end_invoke
 plt__jit_icall_mono_delegate_end_invoke:
 _p_250:
@@ -18662,7 +18662,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3784]
 br x16
-.word 5386
+.word 5388
 	.no_dead_strip plt__jit_icall_g_free
 plt__jit_icall_g_free:
 _p_251:
@@ -18670,7 +18670,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3792]
 br x16
-.word 5413
+.word 5415
 	.no_dead_strip plt__jit_icall_mono_string_to_utf8str
 plt__jit_icall_mono_string_to_utf8str:
 _p_252:
@@ -18678,7 +18678,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3800]
 br x16
-.word 5422
+.word 5424
 	.no_dead_strip plt__jit_icall_ves_icall_string_new_wrapper
 plt__jit_icall_ves_icall_string_new_wrapper:
 _p_253:
@@ -18686,7 +18686,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3808]
 br x16
-.word 5447
+.word 5449
 	.no_dead_strip plt__rgctx_fetch_24
 plt__rgctx_fetch_24:
 _p_254:
@@ -18694,7 +18694,7 @@ adrp x16, mono_aot_System_ServiceModel_Internals_got@PAGE+0
 add x16, x16, mono_aot_System_ServiceModel_Internals_got@PAGEOFF
 ldr x16, [x16, #3816]
 br x16
-.word 5496
+.word 5498
 plt_end:
 .section __DATA, __bss
 	.align 3
@@ -18808,13 +18808,13 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 223,3824,255,247,66,391195135,0,33596
+	.long 223,3824,255,247,66,391195135,0,33598
 	.long 128,8,8,9,0,25,36904,3296
 	.long 2904,1696,0,2360,2816,2048,0,1384
 	.long 368,3288,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0
-	.byte 67,48,236,114,207,183,168,32,220,108,69,199,64,11,242,53
+	.byte 36,114,206,19,87,70,176,20,215,71,11,145,4,35,116,72
 	.globl _mono_aot_module_System_ServiceModel_Internals_info
 	.align 3
 _mono_aot_module_System_ServiceModel_Internals_info:
@@ -29330,24 +29330,29 @@ LTDIE_145:
 	.byte 5
 	.asciz "System_Xml_XmlWriter"
 
-	.byte 16,16
+	.byte 24,16
 LDIFF_SYM1519=LTDIE_4 - Ldebug_info_start
 	.long LDIFF_SYM1519
-	.byte 2,35,0,0,7
+	.byte 2,35,0,6
+	.asciz "writeNodeBuffer"
+
+LDIFF_SYM1520=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1520
+	.byte 2,35,16,0,7
 	.asciz "System_Xml_XmlWriter"
 
-LDIFF_SYM1520=LTDIE_145 - Ldebug_info_start
-	.long LDIFF_SYM1520
+LDIFF_SYM1521=LTDIE_145 - Ldebug_info_start
+	.long LDIFF_SYM1521
 LTDIE_145_POINTER:
 
 	.byte 13
-LDIFF_SYM1521=LTDIE_145 - Ldebug_info_start
-	.long LDIFF_SYM1521
+LDIFF_SYM1522=LTDIE_145 - Ldebug_info_start
+	.long LDIFF_SYM1522
 LTDIE_145_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1522=LTDIE_145 - Ldebug_info_start
-	.long LDIFF_SYM1522
+LDIFF_SYM1523=LTDIE_145 - Ldebug_info_start
+	.long LDIFF_SYM1523
 LTDIE_146:
 
 	.byte 17
@@ -29356,18 +29361,18 @@ LTDIE_146:
 	.byte 16,7
 	.asciz "System_Collections_IEnumerator"
 
-LDIFF_SYM1523=LTDIE_146 - Ldebug_info_start
-	.long LDIFF_SYM1523
+LDIFF_SYM1524=LTDIE_146 - Ldebug_info_start
+	.long LDIFF_SYM1524
 LTDIE_146_POINTER:
 
 	.byte 13
-LDIFF_SYM1524=LTDIE_146 - Ldebug_info_start
-	.long LDIFF_SYM1524
+LDIFF_SYM1525=LTDIE_146 - Ldebug_info_start
+	.long LDIFF_SYM1525
 LTDIE_146_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1525=LTDIE_146 - Ldebug_info_start
-	.long LDIFF_SYM1525
+LDIFF_SYM1526=LTDIE_146 - Ldebug_info_start
+	.long LDIFF_SYM1526
 LTDIE_147:
 
 	.byte 17
@@ -29376,18 +29381,18 @@ LTDIE_147:
 	.byte 16,7
 	.asciz "System_IDisposable"
 
-LDIFF_SYM1526=LTDIE_147 - Ldebug_info_start
-	.long LDIFF_SYM1526
+LDIFF_SYM1527=LTDIE_147 - Ldebug_info_start
+	.long LDIFF_SYM1527
 LTDIE_147_POINTER:
 
 	.byte 13
-LDIFF_SYM1527=LTDIE_147 - Ldebug_info_start
-	.long LDIFF_SYM1527
+LDIFF_SYM1528=LTDIE_147 - Ldebug_info_start
+	.long LDIFF_SYM1528
 LTDIE_147_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1528=LTDIE_147 - Ldebug_info_start
-	.long LDIFF_SYM1528
+LDIFF_SYM1529=LTDIE_147 - Ldebug_info_start
+	.long LDIFF_SYM1529
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.DictionaryTraceRecord:WriteTo"
 	.asciz "System_Runtime_Diagnostics_DictionaryTraceRecord_WriteTo_System_Xml_XmlWriter"
@@ -29399,47 +29404,47 @@ LDIFF_SYM1528=LTDIE_147 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1529=LTDIE_144_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1529
+LDIFF_SYM1530=LTDIE_144_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1530
 	.byte 1,105,3
 	.asciz "xml"
 
-LDIFF_SYM1530=LTDIE_145_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1530
+LDIFF_SYM1531=LTDIE_145_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1531
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1531=LTDIE_146_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1531
+LDIFF_SYM1532=LTDIE_146_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1532
 	.byte 2,141,56,11
 	.asciz "key"
 
-LDIFF_SYM1532=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1532
+LDIFF_SYM1533=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1533
 	.byte 1,104,11
 	.asciz "value"
 
-LDIFF_SYM1533=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1533
+LDIFF_SYM1534=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1534
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM1534=LTDIE_147_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1534
+LDIFF_SYM1535=LTDIE_147_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1535
 	.byte 3,141,192,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1535=Lfde125_end - Lfde125_start
-	.long LDIFF_SYM1535
+LDIFF_SYM1536=Lfde125_end - Lfde125_start
+	.long LDIFF_SYM1536
 Lfde125_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_DictionaryTraceRecord_WriteTo_System_Xml_XmlWriter
 
-LDIFF_SYM1536=Lme_86 - System_Runtime_Diagnostics_DictionaryTraceRecord_WriteTo_System_Xml_XmlWriter
-	.long LDIFF_SYM1536
+LDIFF_SYM1537=Lme_86 - System_Runtime_Diagnostics_DictionaryTraceRecord_WriteTo_System_Xml_XmlWriter
+	.long LDIFF_SYM1537
 	.long 0
 	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,150,14,151,13,68,152,12,153,11,68,154,10
 	.align 3
@@ -29459,16 +29464,16 @@ Lfde125_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1537=Lfde126_end - Lfde126_start
-	.long LDIFF_SYM1537
+LDIFF_SYM1538=Lfde126_end - Lfde126_start
+	.long LDIFF_SYM1538
 Lfde126_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace__cctor
 
-LDIFF_SYM1538=Lme_87 - System_Runtime_Diagnostics_EtwDiagnosticTrace__cctor
-	.long LDIFF_SYM1538
+LDIFF_SYM1539=Lme_87 - System_Runtime_Diagnostics_EtwDiagnosticTrace__cctor
+	.long LDIFF_SYM1539
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29
 	.align 3
@@ -29487,42 +29492,42 @@ Lfde126_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1539=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1539
+LDIFF_SYM1540=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1540
 	.byte 2,141,16,3
 	.asciz "traceSourceName"
 
-LDIFF_SYM1540=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1540
+LDIFF_SYM1541=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1541
 	.byte 2,141,24,3
 	.asciz "etwProviderId"
 
-LDIFF_SYM1541=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1541
-	.byte 2,141,32,11
-	.asciz "exception"
-
-LDIFF_SYM1542=LTDIE_3_REFERENCE - Ldebug_info_start
+LDIFF_SYM1542=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM1542
-	.byte 3,141,192,0,11
+	.byte 2,141,32,11
 	.asciz "exception"
 
 LDIFF_SYM1543=LTDIE_3_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM1543
+	.byte 3,141,192,0,11
+	.asciz "exception"
+
+LDIFF_SYM1544=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1544
 	.byte 3,141,200,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1544=Lfde127_end - Lfde127_start
-	.long LDIFF_SYM1544
+LDIFF_SYM1545=Lfde127_end - Lfde127_start
+	.long LDIFF_SYM1545
 Lfde127_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace__ctor_string_System_Guid
 
-LDIFF_SYM1545=Lme_88 - System_Runtime_Diagnostics_EtwDiagnosticTrace__ctor_string_System_Guid
-	.long LDIFF_SYM1545
+LDIFF_SYM1546=Lme_88 - System_Runtime_Diagnostics_EtwDiagnosticTrace__ctor_string_System_Guid
+	.long LDIFF_SYM1546
 	.long 0
 	.byte 12,31,0,68,14,240,1,157,30,158,29,68,13,29
 	.align 3
@@ -29542,16 +29547,16 @@ Lfde127_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1546=Lfde128_end - Lfde128_start
-	.long LDIFF_SYM1546
+LDIFF_SYM1547=Lfde128_end - Lfde128_start
+	.long LDIFF_SYM1547
 Lfde128_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_get_DefaultEtwProviderId
 
-LDIFF_SYM1547=Lme_89 - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_DefaultEtwProviderId
-	.long LDIFF_SYM1547
+LDIFF_SYM1548=Lme_89 - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_DefaultEtwProviderId
+	.long LDIFF_SYM1548
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29570,22 +29575,22 @@ Lfde128_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1548=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1548
+LDIFF_SYM1549=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1549
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1549=Lfde129_end - Lfde129_start
-	.long LDIFF_SYM1549
+LDIFF_SYM1550=Lfde129_end - Lfde129_start
+	.long LDIFF_SYM1550
 Lfde129_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwProvider
 
-LDIFF_SYM1550=Lme_8a - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwProvider
-	.long LDIFF_SYM1550
+LDIFF_SYM1551=Lme_8a - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwProvider
+	.long LDIFF_SYM1551
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29604,22 +29609,22 @@ Lfde129_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1551=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1551
+LDIFF_SYM1552=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1552
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1552=Lfde130_end - Lfde130_start
-	.long LDIFF_SYM1552
+LDIFF_SYM1553=Lfde130_end - Lfde130_start
+	.long LDIFF_SYM1553
 Lfde130_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_get_IsEtwProviderEnabled
 
-LDIFF_SYM1553=Lme_8b - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_IsEtwProviderEnabled
-	.long LDIFF_SYM1553
+LDIFF_SYM1554=Lme_8b - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_IsEtwProviderEnabled
+	.long LDIFF_SYM1554
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29638,22 +29643,22 @@ Lfde130_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1554=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1554
+LDIFF_SYM1555=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1555
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1555=Lfde131_end - Lfde131_start
-	.long LDIFF_SYM1555
+LDIFF_SYM1556=Lfde131_end - Lfde131_start
+	.long LDIFF_SYM1556
 Lfde131_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_get_RefreshState
 
-LDIFF_SYM1556=Lme_8c - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_RefreshState
-	.long LDIFF_SYM1556
+LDIFF_SYM1557=Lme_8c - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_RefreshState
+	.long LDIFF_SYM1557
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29672,27 +29677,27 @@ Lfde131_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1557=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1557
+LDIFF_SYM1558=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1558
 	.byte 2,141,16,3
 	.asciz "value"
 
-LDIFF_SYM1558=LTDIE_50_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1558
+LDIFF_SYM1559=LTDIE_50_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1559
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1559=Lfde132_end - Lfde132_start
-	.long LDIFF_SYM1559
+LDIFF_SYM1560=Lfde132_end - Lfde132_start
+	.long LDIFF_SYM1560
 Lfde132_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_set_RefreshState_System_Action
 
-LDIFF_SYM1560=Lme_8d - System_Runtime_Diagnostics_EtwDiagnosticTrace_set_RefreshState_System_Action
-	.long LDIFF_SYM1560
+LDIFF_SYM1561=Lme_8d - System_Runtime_Diagnostics_EtwDiagnosticTrace_set_RefreshState_System_Action
+	.long LDIFF_SYM1561
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29711,22 +29716,22 @@ Lfde132_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1561=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1561
+LDIFF_SYM1562=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1562
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1562=Lfde133_end - Lfde133_start
-	.long LDIFF_SYM1562
+LDIFF_SYM1563=Lfde133_end - Lfde133_start
+	.long LDIFF_SYM1563
 Lfde133_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwTracingEnabled
 
-LDIFF_SYM1563=Lme_8e - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwTracingEnabled
-	.long LDIFF_SYM1563
+LDIFF_SYM1564=Lme_8e - System_Runtime_Diagnostics_EtwDiagnosticTrace_get_EtwTracingEnabled
+	.long LDIFF_SYM1564
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29745,27 +29750,27 @@ Lfde133_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1564=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1564
+LDIFF_SYM1565=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1565
 	.byte 2,141,16,3
 	.asciz "isEnd2EndTracingEnabled"
 
-LDIFF_SYM1565=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1565
+LDIFF_SYM1566=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1566
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1566=Lfde134_end - Lfde134_start
-	.long LDIFF_SYM1566
+LDIFF_SYM1567=Lfde134_end - Lfde134_start
+	.long LDIFF_SYM1567
 Lfde134_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_SetEnd2EndActivityTracingEnabled_bool
 
-LDIFF_SYM1567=Lme_8f - System_Runtime_Diagnostics_EtwDiagnosticTrace_SetEnd2EndActivityTracingEnabled_bool
-	.long LDIFF_SYM1567
+LDIFF_SYM1568=Lme_8f - System_Runtime_Diagnostics_EtwDiagnosticTrace_SetEnd2EndActivityTracingEnabled_bool
+	.long LDIFF_SYM1568
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29784,27 +29789,27 @@ Lfde134_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1568=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1568
+LDIFF_SYM1569=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1569
 	.byte 2,141,16,3
 	.asciz "level"
 
-LDIFF_SYM1569=LTDIE_57 - Ldebug_info_start
-	.long LDIFF_SYM1569
+LDIFF_SYM1570=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM1570
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1570=Lfde135_end - Lfde135_start
-	.long LDIFF_SYM1570
+LDIFF_SYM1571=Lfde135_end - Lfde135_start
+	.long LDIFF_SYM1571
 Lfde135_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTrace_System_Runtime_TraceEventLevel
 
-LDIFF_SYM1571=Lme_90 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTrace_System_Runtime_TraceEventLevel
-	.long LDIFF_SYM1571
+LDIFF_SYM1572=Lme_90 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTrace_System_Runtime_TraceEventLevel
+	.long LDIFF_SYM1572
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29823,27 +29828,27 @@ Lfde135_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1572=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1572
+LDIFF_SYM1573=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1573
 	.byte 2,141,16,3
 	.asciz "level"
 
-LDIFF_SYM1573=LTDIE_57 - Ldebug_info_start
-	.long LDIFF_SYM1573
+LDIFF_SYM1574=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM1574
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1574=Lfde136_end - Lfde136_start
-	.long LDIFF_SYM1574
+LDIFF_SYM1575=Lfde136_end - Lfde136_start
+	.long LDIFF_SYM1575
 Lfde136_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTraceToEtw_System_Runtime_TraceEventLevel
 
-LDIFF_SYM1575=Lme_91 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTraceToEtw_System_Runtime_TraceEventLevel
-	.long LDIFF_SYM1575
+LDIFF_SYM1576=Lme_91 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShouldTraceToEtw_System_Runtime_TraceEventLevel
+	.long LDIFF_SYM1576
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -29856,46 +29861,46 @@ LTDIE_149:
 	.asciz "System_Xml_XPath_XPathItem"
 
 	.byte 16,16
-LDIFF_SYM1576=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1576
+LDIFF_SYM1577=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1577
 	.byte 2,35,0,0,7
 	.asciz "System_Xml_XPath_XPathItem"
 
-LDIFF_SYM1577=LTDIE_149 - Ldebug_info_start
-	.long LDIFF_SYM1577
+LDIFF_SYM1578=LTDIE_149 - Ldebug_info_start
+	.long LDIFF_SYM1578
 LTDIE_149_POINTER:
 
 	.byte 13
-LDIFF_SYM1578=LTDIE_149 - Ldebug_info_start
-	.long LDIFF_SYM1578
+LDIFF_SYM1579=LTDIE_149 - Ldebug_info_start
+	.long LDIFF_SYM1579
 LTDIE_149_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1579=LTDIE_149 - Ldebug_info_start
-	.long LDIFF_SYM1579
+LDIFF_SYM1580=LTDIE_149 - Ldebug_info_start
+	.long LDIFF_SYM1580
 LTDIE_148:
 
 	.byte 5
 	.asciz "System_Xml_XPath_XPathNavigator"
 
 	.byte 16,16
-LDIFF_SYM1580=LTDIE_149 - Ldebug_info_start
-	.long LDIFF_SYM1580
+LDIFF_SYM1581=LTDIE_149 - Ldebug_info_start
+	.long LDIFF_SYM1581
 	.byte 2,35,0,0,7
 	.asciz "System_Xml_XPath_XPathNavigator"
 
-LDIFF_SYM1581=LTDIE_148 - Ldebug_info_start
-	.long LDIFF_SYM1581
+LDIFF_SYM1582=LTDIE_148 - Ldebug_info_start
+	.long LDIFF_SYM1582
 LTDIE_148_POINTER:
 
 	.byte 13
-LDIFF_SYM1582=LTDIE_148 - Ldebug_info_start
-	.long LDIFF_SYM1582
+LDIFF_SYM1583=LTDIE_148 - Ldebug_info_start
+	.long LDIFF_SYM1583
 LTDIE_148_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1583=LTDIE_148 - Ldebug_info_start
-	.long LDIFF_SYM1583
+LDIFF_SYM1584=LTDIE_148 - Ldebug_info_start
+	.long LDIFF_SYM1584
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EtwDiagnosticTrace:WriteTraceSource"
 	.asciz "System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload"
@@ -29907,62 +29912,62 @@ LDIFF_SYM1583=LTDIE_148 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1584=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1584
+LDIFF_SYM1585=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1585
 	.byte 2,141,24,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1585=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1585
+LDIFF_SYM1586=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1586
 	.byte 2,141,32,3
 	.asciz "description"
 
-LDIFF_SYM1586=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1586
+LDIFF_SYM1587=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1587
 	.byte 2,141,40,3
 	.asciz "payload"
 
-LDIFF_SYM1587=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1587
+LDIFF_SYM1588=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1588
 	.byte 1,80,11
 	.asciz "navigator"
 
-LDIFF_SYM1588=LTDIE_148_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1588
+LDIFF_SYM1589=LTDIE_148_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1589
 	.byte 3,141,224,0,11
 	.asciz "msdnTraceCode"
 
-LDIFF_SYM1589=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1589
+LDIFF_SYM1590=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1590
 	.byte 3,141,232,0,11
 	.asciz "legacyEventId"
 
-LDIFF_SYM1590=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1590
+LDIFF_SYM1591=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1591
 	.byte 3,141,240,0,11
 	.asciz "traceString"
 
-LDIFF_SYM1591=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1591
+LDIFF_SYM1592=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1592
 	.byte 1,106,11
 	.asciz "exception"
 
-LDIFF_SYM1592=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1592
+LDIFF_SYM1593=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1593
 	.byte 3,141,248,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1593=Lfde137_end - Lfde137_start
-	.long LDIFF_SYM1593
+LDIFF_SYM1594=Lfde137_end - Lfde137_start
+	.long LDIFF_SYM1594
 Lfde137_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload
 
-LDIFF_SYM1594=Lme_92 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload
-	.long LDIFF_SYM1594
+LDIFF_SYM1595=Lme_92 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteTraceSource_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload
+	.long LDIFF_SYM1595
 	.long 0
 	.byte 12,31,0,68,14,208,1,157,26,158,25,68,13,29,68,154,24
 	.align 3
@@ -29975,94 +29980,94 @@ LTDIE_150:
 	.asciz "System_IO_StringWriter"
 
 	.byte 56,16
-LDIFF_SYM1595=LTDIE_124 - Ldebug_info_start
-	.long LDIFF_SYM1595
+LDIFF_SYM1596=LTDIE_124 - Ldebug_info_start
+	.long LDIFF_SYM1596
 	.byte 2,35,0,6
 	.asciz "_sb"
 
-LDIFF_SYM1596=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1596
+LDIFF_SYM1597=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1597
 	.byte 2,35,40,6
 	.asciz "_isOpen"
 
-LDIFF_SYM1597=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1597
+LDIFF_SYM1598=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1598
 	.byte 2,35,48,0,7
 	.asciz "System_IO_StringWriter"
 
-LDIFF_SYM1598=LTDIE_150 - Ldebug_info_start
-	.long LDIFF_SYM1598
+LDIFF_SYM1599=LTDIE_150 - Ldebug_info_start
+	.long LDIFF_SYM1599
 LTDIE_150_POINTER:
 
 	.byte 13
-LDIFF_SYM1599=LTDIE_150 - Ldebug_info_start
-	.long LDIFF_SYM1599
+LDIFF_SYM1600=LTDIE_150 - Ldebug_info_start
+	.long LDIFF_SYM1600
 LTDIE_150_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1600=LTDIE_150 - Ldebug_info_start
-	.long LDIFF_SYM1600
+LDIFF_SYM1601=LTDIE_150 - Ldebug_info_start
+	.long LDIFF_SYM1601
 LTDIE_152:
 
 	.byte 5
 	.asciz "System_Xml_XmlTextEncoder"
 
 	.byte 48,16
-LDIFF_SYM1601=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1601
+LDIFF_SYM1602=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1602
 	.byte 2,35,0,6
 	.asciz "textWriter"
 
-LDIFF_SYM1602=LTDIE_124_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1602
+LDIFF_SYM1603=LTDIE_124_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1603
 	.byte 2,35,16,6
 	.asciz "inAttribute"
 
-LDIFF_SYM1603=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1603
+LDIFF_SYM1604=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1604
 	.byte 2,35,40,6
 	.asciz "quoteChar"
 
-LDIFF_SYM1604=LDIE_CHAR - Ldebug_info_start
-	.long LDIFF_SYM1604
+LDIFF_SYM1605=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM1605
 	.byte 2,35,42,6
 	.asciz "attrValue"
 
-LDIFF_SYM1605=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1605
+LDIFF_SYM1606=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1606
 	.byte 2,35,24,6
 	.asciz "cacheAttrValue"
 
-LDIFF_SYM1606=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1606
+LDIFF_SYM1607=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1607
 	.byte 2,35,44,6
 	.asciz "xmlCharType"
 
-LDIFF_SYM1607=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1607
+LDIFF_SYM1608=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1608
 	.byte 2,35,32,0,7
 	.asciz "System_Xml_XmlTextEncoder"
 
-LDIFF_SYM1608=LTDIE_152 - Ldebug_info_start
-	.long LDIFF_SYM1608
+LDIFF_SYM1609=LTDIE_152 - Ldebug_info_start
+	.long LDIFF_SYM1609
 LTDIE_152_POINTER:
 
 	.byte 13
-LDIFF_SYM1609=LTDIE_152 - Ldebug_info_start
-	.long LDIFF_SYM1609
+LDIFF_SYM1610=LTDIE_152 - Ldebug_info_start
+	.long LDIFF_SYM1610
 LTDIE_152_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1610=LTDIE_152 - Ldebug_info_start
-	.long LDIFF_SYM1610
+LDIFF_SYM1611=LTDIE_152 - Ldebug_info_start
+	.long LDIFF_SYM1611
 LTDIE_153:
 
 	.byte 8
 	.asciz "System_Xml_Formatting"
 
 	.byte 4
-LDIFF_SYM1611=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1611
+LDIFF_SYM1612=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1612
 	.byte 9
 	.asciz "None"
 
@@ -30072,26 +30077,26 @@ LDIFF_SYM1611=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "System_Xml_Formatting"
 
-LDIFF_SYM1612=LTDIE_153 - Ldebug_info_start
-	.long LDIFF_SYM1612
+LDIFF_SYM1613=LTDIE_153 - Ldebug_info_start
+	.long LDIFF_SYM1613
 LTDIE_153_POINTER:
 
 	.byte 13
-LDIFF_SYM1613=LTDIE_153 - Ldebug_info_start
-	.long LDIFF_SYM1613
+LDIFF_SYM1614=LTDIE_153 - Ldebug_info_start
+	.long LDIFF_SYM1614
 LTDIE_153_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1614=LTDIE_153 - Ldebug_info_start
-	.long LDIFF_SYM1614
+LDIFF_SYM1615=LTDIE_153 - Ldebug_info_start
+	.long LDIFF_SYM1615
 LTDIE_154:
 
 	.byte 8
 	.asciz "_State"
 
 	.byte 4
-LDIFF_SYM1615=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1615
+LDIFF_SYM1616=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1616
 	.byte 9
 	.asciz "Start"
 
@@ -30125,26 +30130,26 @@ LDIFF_SYM1615=LDIE_I4 - Ldebug_info_start
 	.byte 9,0,7
 	.asciz "_State"
 
-LDIFF_SYM1616=LTDIE_154 - Ldebug_info_start
-	.long LDIFF_SYM1616
+LDIFF_SYM1617=LTDIE_154 - Ldebug_info_start
+	.long LDIFF_SYM1617
 LTDIE_154_POINTER:
 
 	.byte 13
-LDIFF_SYM1617=LTDIE_154 - Ldebug_info_start
-	.long LDIFF_SYM1617
+LDIFF_SYM1618=LTDIE_154 - Ldebug_info_start
+	.long LDIFF_SYM1618
 LTDIE_154_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1618=LTDIE_154 - Ldebug_info_start
-	.long LDIFF_SYM1618
+LDIFF_SYM1619=LTDIE_154 - Ldebug_info_start
+	.long LDIFF_SYM1619
 LTDIE_155:
 
 	.byte 8
 	.asciz "_Token"
 
 	.byte 4
-LDIFF_SYM1619=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1619
+LDIFF_SYM1620=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1620
 	.byte 9
 	.asciz "PI"
 
@@ -30190,92 +30195,92 @@ LDIFF_SYM1619=LDIE_I4 - Ldebug_info_start
 	.byte 13,0,7
 	.asciz "_Token"
 
-LDIFF_SYM1620=LTDIE_155 - Ldebug_info_start
-	.long LDIFF_SYM1620
+LDIFF_SYM1621=LTDIE_155 - Ldebug_info_start
+	.long LDIFF_SYM1621
 LTDIE_155_POINTER:
 
 	.byte 13
-LDIFF_SYM1621=LTDIE_155 - Ldebug_info_start
-	.long LDIFF_SYM1621
+LDIFF_SYM1622=LTDIE_155 - Ldebug_info_start
+	.long LDIFF_SYM1622
 LTDIE_155_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1622=LTDIE_155 - Ldebug_info_start
-	.long LDIFF_SYM1622
+LDIFF_SYM1623=LTDIE_155 - Ldebug_info_start
+	.long LDIFF_SYM1623
 LTDIE_157:
 
 	.byte 5
 	.asciz "System_Xml_Base64Encoder"
 
 	.byte 40,16
-LDIFF_SYM1623=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1623
+LDIFF_SYM1624=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1624
 	.byte 2,35,0,6
 	.asciz "leftOverBytes"
 
-LDIFF_SYM1624=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1624
+LDIFF_SYM1625=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1625
 	.byte 2,35,16,6
 	.asciz "leftOverBytesCount"
 
-LDIFF_SYM1625=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1625
+LDIFF_SYM1626=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1626
 	.byte 2,35,32,6
 	.asciz "charsLine"
 
-LDIFF_SYM1626=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1626
+LDIFF_SYM1627=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1627
 	.byte 2,35,24,0,7
 	.asciz "System_Xml_Base64Encoder"
 
-LDIFF_SYM1627=LTDIE_157 - Ldebug_info_start
-	.long LDIFF_SYM1627
+LDIFF_SYM1628=LTDIE_157 - Ldebug_info_start
+	.long LDIFF_SYM1628
 LTDIE_157_POINTER:
 
 	.byte 13
-LDIFF_SYM1628=LTDIE_157 - Ldebug_info_start
-	.long LDIFF_SYM1628
+LDIFF_SYM1629=LTDIE_157 - Ldebug_info_start
+	.long LDIFF_SYM1629
 LTDIE_157_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1629=LTDIE_157 - Ldebug_info_start
-	.long LDIFF_SYM1629
+LDIFF_SYM1630=LTDIE_157 - Ldebug_info_start
+	.long LDIFF_SYM1630
 LTDIE_156:
 
 	.byte 5
 	.asciz "System_Xml_XmlTextWriterBase64Encoder"
 
 	.byte 48,16
-LDIFF_SYM1630=LTDIE_157 - Ldebug_info_start
-	.long LDIFF_SYM1630
+LDIFF_SYM1631=LTDIE_157 - Ldebug_info_start
+	.long LDIFF_SYM1631
 	.byte 2,35,0,6
 	.asciz "xmlTextEncoder"
 
-LDIFF_SYM1631=LTDIE_152_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1631
+LDIFF_SYM1632=LTDIE_152_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1632
 	.byte 2,35,40,0,7
 	.asciz "System_Xml_XmlTextWriterBase64Encoder"
 
-LDIFF_SYM1632=LTDIE_156 - Ldebug_info_start
-	.long LDIFF_SYM1632
+LDIFF_SYM1633=LTDIE_156 - Ldebug_info_start
+	.long LDIFF_SYM1633
 LTDIE_156_POINTER:
 
 	.byte 13
-LDIFF_SYM1633=LTDIE_156 - Ldebug_info_start
-	.long LDIFF_SYM1633
+LDIFF_SYM1634=LTDIE_156 - Ldebug_info_start
+	.long LDIFF_SYM1634
 LTDIE_156_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1634=LTDIE_156 - Ldebug_info_start
-	.long LDIFF_SYM1634
+LDIFF_SYM1635=LTDIE_156 - Ldebug_info_start
+	.long LDIFF_SYM1635
 LTDIE_158:
 
 	.byte 8
 	.asciz "_SpecialAttr"
 
 	.byte 4
-LDIFF_SYM1635=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1635
+LDIFF_SYM1636=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1636
 	.byte 9
 	.asciz "None"
 
@@ -30291,161 +30296,161 @@ LDIFF_SYM1635=LDIE_I4 - Ldebug_info_start
 	.byte 3,0,7
 	.asciz "_SpecialAttr"
 
-LDIFF_SYM1636=LTDIE_158 - Ldebug_info_start
-	.long LDIFF_SYM1636
+LDIFF_SYM1637=LTDIE_158 - Ldebug_info_start
+	.long LDIFF_SYM1637
 LTDIE_158_POINTER:
 
 	.byte 13
-LDIFF_SYM1637=LTDIE_158 - Ldebug_info_start
-	.long LDIFF_SYM1637
+LDIFF_SYM1638=LTDIE_158 - Ldebug_info_start
+	.long LDIFF_SYM1638
 LTDIE_158_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1638=LTDIE_158 - Ldebug_info_start
-	.long LDIFF_SYM1638
+LDIFF_SYM1639=LTDIE_158 - Ldebug_info_start
+	.long LDIFF_SYM1639
 LTDIE_151:
 
 	.byte 5
 	.asciz "System_Xml_XmlTextWriter"
 
-	.byte 152,1,16
-LDIFF_SYM1639=LTDIE_145 - Ldebug_info_start
-	.long LDIFF_SYM1639
+	.byte 160,1,16
+LDIFF_SYM1640=LTDIE_145 - Ldebug_info_start
+	.long LDIFF_SYM1640
 	.byte 2,35,0,6
 	.asciz "textWriter"
 
-LDIFF_SYM1640=LTDIE_124_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1640
-	.byte 2,35,16,6
-	.asciz "xmlEncoder"
-
-LDIFF_SYM1641=LTDIE_152_REFERENCE - Ldebug_info_start
+LDIFF_SYM1641=LTDIE_124_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM1641
 	.byte 2,35,24,6
-	.asciz "encoding"
+	.asciz "xmlEncoder"
 
-LDIFF_SYM1642=LTDIE_117_REFERENCE - Ldebug_info_start
+LDIFF_SYM1642=LTDIE_152_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM1642
 	.byte 2,35,32,6
+	.asciz "encoding"
+
+LDIFF_SYM1643=LTDIE_117_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1643
+	.byte 2,35,40,6
 	.asciz "formatting"
 
-LDIFF_SYM1643=LTDIE_153 - Ldebug_info_start
-	.long LDIFF_SYM1643
-	.byte 2,35,96,6
+LDIFF_SYM1644=LTDIE_153 - Ldebug_info_start
+	.long LDIFF_SYM1644
+	.byte 2,35,104,6
 	.asciz "indented"
 
-LDIFF_SYM1644=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1644
-	.byte 2,35,100,6
+LDIFF_SYM1645=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1645
+	.byte 2,35,108,6
 	.asciz "indentation"
 
-LDIFF_SYM1645=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1645
-	.byte 2,35,104,6
+LDIFF_SYM1646=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1646
+	.byte 2,35,112,6
 	.asciz "indentChar"
 
-LDIFF_SYM1646=LDIE_CHAR - Ldebug_info_start
-	.long LDIFF_SYM1646
-	.byte 2,35,108,6
+LDIFF_SYM1647=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM1647
+	.byte 2,35,116,6
 	.asciz "stack"
 
-LDIFF_SYM1647=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1647
-	.byte 2,35,40,6
+LDIFF_SYM1648=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1648
+	.byte 2,35,48,6
 	.asciz "top"
 
-LDIFF_SYM1648=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1648
-	.byte 2,35,112,6
+LDIFF_SYM1649=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1649
+	.byte 2,35,120,6
 	.asciz "stateTable"
 
-LDIFF_SYM1649=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1649
-	.byte 2,35,48,6
+LDIFF_SYM1650=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1650
+	.byte 2,35,56,6
 	.asciz "currentState"
 
-LDIFF_SYM1650=LTDIE_154 - Ldebug_info_start
-	.long LDIFF_SYM1650
-	.byte 2,35,116,6
+LDIFF_SYM1651=LTDIE_154 - Ldebug_info_start
+	.long LDIFF_SYM1651
+	.byte 2,35,124,6
 	.asciz "lastToken"
 
-LDIFF_SYM1651=LTDIE_155 - Ldebug_info_start
-	.long LDIFF_SYM1651
-	.byte 2,35,120,6
+LDIFF_SYM1652=LTDIE_155 - Ldebug_info_start
+	.long LDIFF_SYM1652
+	.byte 3,35,128,1,6
 	.asciz "base64Encoder"
 
-LDIFF_SYM1652=LTDIE_156_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1652
-	.byte 2,35,56,6
-	.asciz "quoteChar"
-
-LDIFF_SYM1653=LDIE_CHAR - Ldebug_info_start
+LDIFF_SYM1653=LTDIE_156_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM1653
-	.byte 2,35,124,6
-	.asciz "curQuoteChar"
+	.byte 2,35,64,6
+	.asciz "quoteChar"
 
 LDIFF_SYM1654=LDIE_CHAR - Ldebug_info_start
 	.long LDIFF_SYM1654
-	.byte 2,35,126,6
+	.byte 3,35,132,1,6
+	.asciz "curQuoteChar"
+
+LDIFF_SYM1655=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM1655
+	.byte 3,35,134,1,6
 	.asciz "namespaces"
 
-LDIFF_SYM1655=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1655
-	.byte 3,35,128,1,6
+LDIFF_SYM1656=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1656
+	.byte 3,35,136,1,6
 	.asciz "specialAttr"
 
-LDIFF_SYM1656=LTDIE_158 - Ldebug_info_start
-	.long LDIFF_SYM1656
-	.byte 3,35,132,1,6
+LDIFF_SYM1657=LTDIE_158 - Ldebug_info_start
+	.long LDIFF_SYM1657
+	.byte 3,35,140,1,6
 	.asciz "prefixForXmlNs"
 
-LDIFF_SYM1657=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1657
-	.byte 2,35,64,6
+LDIFF_SYM1658=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1658
+	.byte 2,35,72,6
 	.asciz "flush"
 
-LDIFF_SYM1658=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1658
-	.byte 3,35,136,1,6
+LDIFF_SYM1659=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1659
+	.byte 3,35,144,1,6
 	.asciz "nsStack"
 
-LDIFF_SYM1659=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1659
-	.byte 2,35,72,6
+LDIFF_SYM1660=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1660
+	.byte 2,35,80,6
 	.asciz "nsTop"
 
-LDIFF_SYM1660=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1660
-	.byte 3,35,140,1,6
+LDIFF_SYM1661=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1661
+	.byte 3,35,148,1,6
 	.asciz "nsHashtable"
 
-LDIFF_SYM1661=LTDIE_11_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1661
-	.byte 2,35,80,6
+LDIFF_SYM1662=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1662
+	.byte 2,35,88,6
 	.asciz "useNsHashtable"
 
-LDIFF_SYM1662=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1662
-	.byte 3,35,144,1,6
+LDIFF_SYM1663=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1663
+	.byte 3,35,152,1,6
 	.asciz "xmlCharType"
 
-LDIFF_SYM1663=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1663
-	.byte 2,35,88,0,7
+LDIFF_SYM1664=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1664
+	.byte 2,35,96,0,7
 	.asciz "System_Xml_XmlTextWriter"
 
-LDIFF_SYM1664=LTDIE_151 - Ldebug_info_start
-	.long LDIFF_SYM1664
+LDIFF_SYM1665=LTDIE_151 - Ldebug_info_start
+	.long LDIFF_SYM1665
 LTDIE_151_POINTER:
 
 	.byte 13
-LDIFF_SYM1665=LTDIE_151 - Ldebug_info_start
-	.long LDIFF_SYM1665
+LDIFF_SYM1666=LTDIE_151 - Ldebug_info_start
+	.long LDIFF_SYM1666
 LTDIE_151_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1666=LTDIE_151 - Ldebug_info_start
-	.long LDIFF_SYM1666
+LDIFF_SYM1667=LTDIE_151 - Ldebug_info_start
+	.long LDIFF_SYM1667
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EtwDiagnosticTrace:BuildTrace"
 	.asciz "System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string"
@@ -30457,57 +30462,57 @@ LDIFF_SYM1666=LTDIE_151 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1667=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1667
+LDIFF_SYM1668=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1668
 	.byte 2,141,24,3
 	.asciz "description"
 
-LDIFF_SYM1668=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1668
+LDIFF_SYM1669=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1669
 	.byte 2,141,32,3
 	.asciz "payload"
 
-LDIFF_SYM1669=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1669
+LDIFF_SYM1670=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1670
 	.byte 1,80,3
 	.asciz "msdnTraceCode"
 
-LDIFF_SYM1670=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1670
+LDIFF_SYM1671=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1671
 	.byte 1,106,11
 	.asciz "sb"
 
-LDIFF_SYM1671=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1671
+LDIFF_SYM1672=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1672
 	.byte 2,141,48,11
 	.asciz "stringWriter"
 
-LDIFF_SYM1672=LTDIE_150_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1672
+LDIFF_SYM1673=LTDIE_150_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1673
 	.byte 2,141,56,11
 	.asciz "writer"
 
-LDIFF_SYM1673=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1673
+LDIFF_SYM1674=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1674
 	.byte 3,141,192,0,11
 	.asciz "V_3"
 
-LDIFF_SYM1674=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1674
+LDIFF_SYM1675=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1675
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1675=Lfde138_end - Lfde138_start
-	.long LDIFF_SYM1675
+LDIFF_SYM1676=Lfde138_end - Lfde138_start
+	.long LDIFF_SYM1676
 Lfde138_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string
 
-LDIFF_SYM1676=Lme_93 - System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string
-	.long LDIFF_SYM1676
+LDIFF_SYM1677=Lme_93 - System_Runtime_Diagnostics_EtwDiagnosticTrace_BuildTrace_System_Runtime_Diagnostics_EventDescriptor__string_System_Runtime_TracePayload_string
+	.long LDIFF_SYM1677
 	.long 0
 	.byte 12,31,0,68,14,192,1,157,24,158,23,68,13,29,68,154,22
 	.align 3
@@ -30526,37 +30531,37 @@ Lfde138_end:
 	.byte 2,118,16,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1677=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1677
+LDIFF_SYM1678=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1678
 	.byte 2,141,40,3
 	.asciz "msdnTraceCode"
 
-LDIFF_SYM1678=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1678
+LDIFF_SYM1679=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1679
 	.byte 1,105,3
 	.asciz "legacyEventId"
 
-LDIFF_SYM1679=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1679
+LDIFF_SYM1680=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1680
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1680=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1680
+LDIFF_SYM1681=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1681
 	.byte 2,141,48,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1681=Lfde139_end - Lfde139_start
-	.long LDIFF_SYM1681
+LDIFF_SYM1682=Lfde139_end - Lfde139_start
+	.long LDIFF_SYM1682
 Lfde139_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateLegacyTraceCode_System_Runtime_Diagnostics_EventDescriptor__string__int_
 
-LDIFF_SYM1682=Lme_94 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateLegacyTraceCode_System_Runtime_Diagnostics_EventDescriptor__string__int_
-	.long LDIFF_SYM1682
+LDIFF_SYM1683=Lme_94 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateLegacyTraceCode_System_Runtime_Diagnostics_EventDescriptor__string__int_
+	.long LDIFF_SYM1683
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,68,153,7,154,6
 	.align 3
@@ -30575,27 +30580,27 @@ Lfde139_end:
 	.byte 2,118,16,3
 	.asciz "traceSource"
 
-LDIFF_SYM1683=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1683
+LDIFF_SYM1684=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1684
 	.byte 2,141,16,3
 	.asciz "traceCodeString"
 
-LDIFF_SYM1684=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1684
+LDIFF_SYM1685=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1685
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1685=Lfde140_end - Lfde140_start
-	.long LDIFF_SYM1685
+LDIFF_SYM1686=Lfde140_end - Lfde140_start
+	.long LDIFF_SYM1686
 Lfde140_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateMsdnTraceCode_string_string
 
-LDIFF_SYM1686=Lme_95 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateMsdnTraceCode_string_string
-	.long LDIFF_SYM1686
+LDIFF_SYM1687=Lme_95 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GenerateMsdnTraceCode_string_string
+	.long LDIFF_SYM1687
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -30608,8 +30613,8 @@ LTDIE_159:
 	.asciz "System_Runtime_TraceChannel"
 
 	.byte 4
-LDIFF_SYM1687=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1687
+LDIFF_SYM1688=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1688
 	.byte 9
 	.asciz "Admin"
 
@@ -30631,18 +30636,18 @@ LDIFF_SYM1687=LDIE_I4 - Ldebug_info_start
 	.byte 9,0,7
 	.asciz "System_Runtime_TraceChannel"
 
-LDIFF_SYM1688=LTDIE_159 - Ldebug_info_start
-	.long LDIFF_SYM1688
+LDIFF_SYM1689=LTDIE_159 - Ldebug_info_start
+	.long LDIFF_SYM1689
 LTDIE_159_POINTER:
 
 	.byte 13
-LDIFF_SYM1689=LTDIE_159 - Ldebug_info_start
-	.long LDIFF_SYM1689
+LDIFF_SYM1690=LTDIE_159 - Ldebug_info_start
+	.long LDIFF_SYM1690
 LTDIE_159_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1690=LTDIE_159 - Ldebug_info_start
-	.long LDIFF_SYM1690
+LDIFF_SYM1691=LTDIE_159 - Ldebug_info_start
+	.long LDIFF_SYM1691
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EtwDiagnosticTrace:LookupChannel"
 	.asciz "System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel"
@@ -30654,27 +30659,27 @@ LDIFF_SYM1690=LTDIE_159 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "traceChannel"
 
-LDIFF_SYM1691=LTDIE_159 - Ldebug_info_start
-	.long LDIFF_SYM1691
+LDIFF_SYM1692=LTDIE_159 - Ldebug_info_start
+	.long LDIFF_SYM1692
 	.byte 1,106,11
 	.asciz "channelName"
 
-LDIFF_SYM1692=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1692
+LDIFF_SYM1693=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1693
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1693=Lfde141_end - Lfde141_start
-	.long LDIFF_SYM1693
+LDIFF_SYM1694=Lfde141_end - Lfde141_start
+	.long LDIFF_SYM1694
 Lfde141_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel
 
-LDIFF_SYM1694=Lme_96 - System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel
-	.long LDIFF_SYM1694
+LDIFF_SYM1695=Lme_96 - System_Runtime_Diagnostics_EtwDiagnosticTrace_LookupChannel_System_Runtime_TraceChannel
+	.long LDIFF_SYM1695
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2,154,1
 	.align 3
@@ -30693,37 +30698,37 @@ Lfde141_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1695=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1695
+LDIFF_SYM1696=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1696
 	.byte 2,141,24,3
 	.asciz "source"
 
-LDIFF_SYM1696=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1696
+LDIFF_SYM1697=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1697
 	.byte 2,141,32,3
 	.asciz "traceRecord"
 
-LDIFF_SYM1697=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1697
+LDIFF_SYM1698=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1698
 	.byte 2,141,40,3
 	.asciz "exception"
 
-LDIFF_SYM1698=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1698
+LDIFF_SYM1699=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1699
 	.byte 2,141,48,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1699=Lfde142_end - Lfde142_start
-	.long LDIFF_SYM1699
+LDIFF_SYM1700=Lfde142_end - Lfde142_start
+	.long LDIFF_SYM1700
 Lfde142_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception
 
-LDIFF_SYM1700=Lme_97 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception
-	.long LDIFF_SYM1700
+LDIFF_SYM1701=Lme_97 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception
+	.long LDIFF_SYM1701
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29
 	.align 3
@@ -30742,72 +30747,72 @@ Lfde142_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1701=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1701
+LDIFF_SYM1702=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1702
 	.byte 0,3
 	.asciz "source"
 
-LDIFF_SYM1702=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1702
+LDIFF_SYM1703=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1703
 	.byte 2,141,56,3
 	.asciz "traceRecord"
 
-LDIFF_SYM1703=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1703
+LDIFF_SYM1704=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1704
 	.byte 3,141,192,0,3
 	.asciz "exception"
 
-LDIFF_SYM1704=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1704
+LDIFF_SYM1705=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1705
 	.byte 3,141,200,0,3
 	.asciz "getServiceReference"
 
-LDIFF_SYM1705=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1705
+LDIFF_SYM1706=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1706
 	.byte 3,141,208,0,11
 	.asciz "eventSource"
 
-LDIFF_SYM1706=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1706
+LDIFF_SYM1707=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1707
 	.byte 1,102,11
 	.asciz "extendedData"
 
-LDIFF_SYM1707=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1707
+LDIFF_SYM1708=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1708
 	.byte 1,101,11
 	.asciz "serializedException"
 
-LDIFF_SYM1708=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1708
+LDIFF_SYM1709=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1709
 	.byte 1,100,11
 	.asciz "sb"
 
-LDIFF_SYM1709=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1709
+LDIFF_SYM1710=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1710
 	.byte 3,141,248,1,11
 	.asciz "stringWriter"
 
-LDIFF_SYM1710=LTDIE_150_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1710
+LDIFF_SYM1711=LTDIE_150_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1711
 	.byte 3,141,128,2,11
 	.asciz "writer"
 
-LDIFF_SYM1711=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1711
+LDIFF_SYM1712=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1712
 	.byte 3,141,136,2,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1712=Lfde143_end - Lfde143_start
-	.long LDIFF_SYM1712
+LDIFF_SYM1713=Lfde143_end - Lfde143_start
+	.long LDIFF_SYM1713
 Lfde143_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception_bool
 
-LDIFF_SYM1713=Lme_98 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception_bool
-	.long LDIFF_SYM1713
+LDIFF_SYM1714=Lme_98 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetSerializedPayload_object_System_Runtime_Diagnostics_TraceRecord_System_Exception_bool
+	.long LDIFF_SYM1714
 	.long 0
 	.byte 12,31,0,68,14,128,3,157,48,158,47,68,13,29,68,148,46,149,45,68,150,44
 	.align 3
@@ -30826,32 +30831,32 @@ Lfde143_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1714=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1714
+LDIFF_SYM1715=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1715
 	.byte 1,104,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1715=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1715
+LDIFF_SYM1716=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1716
 	.byte 2,141,24,3
 	.asciz "fullCheck"
 
-LDIFF_SYM1716=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1716
+LDIFF_SYM1717=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1717
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1717=Lfde144_end - Lfde144_start
-	.long LDIFF_SYM1717
+LDIFF_SYM1718=Lfde144_end - Lfde144_start
+	.long LDIFF_SYM1718
 Lfde144_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEtwEventEnabled_System_Runtime_Diagnostics_EventDescriptor__bool
 
-LDIFF_SYM1718=Lme_99 - System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEtwEventEnabled_System_Runtime_Diagnostics_EventDescriptor__bool
-	.long LDIFF_SYM1718
+LDIFF_SYM1719=Lme_99 - System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEtwEventEnabled_System_Runtime_Diagnostics_EventDescriptor__bool
+	.long LDIFF_SYM1719
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4
 	.align 3
@@ -30870,22 +30875,22 @@ Lfde144_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1719=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1719
+LDIFF_SYM1720=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1720
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1720=Lfde145_end - Lfde145_start
-	.long LDIFF_SYM1720
+LDIFF_SYM1721=Lfde145_end - Lfde145_start
+	.long LDIFF_SYM1721
 Lfde145_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateTraceSource
 
-LDIFF_SYM1721=Lme_9a - System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateTraceSource
-	.long LDIFF_SYM1721
+LDIFF_SYM1722=Lme_9a - System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateTraceSource
+	.long LDIFF_SYM1722
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
 	.align 3
@@ -30904,37 +30909,37 @@ Lfde145_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1722=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1722
+LDIFF_SYM1723=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1723
 	.byte 1,106,3
 	.asciz "etwProviderId"
 
-LDIFF_SYM1723=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1723
+LDIFF_SYM1724=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1724
 	.byte 2,141,40,11
 	.asciz "V_0"
 
-LDIFF_SYM1724=LTDIE_41_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1724
+LDIFF_SYM1725=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1725
 	.byte 3,141,200,0,11
 	.asciz "V_1"
 
-LDIFF_SYM1725=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1725
+LDIFF_SYM1726=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1726
 	.byte 3,141,208,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1726=Lfde146_end - Lfde146_start
-	.long LDIFF_SYM1726
+LDIFF_SYM1727=Lfde146_end - Lfde146_start
+	.long LDIFF_SYM1727
 Lfde146_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateEtwProvider_System_Guid
 
-LDIFF_SYM1727=Lme_9b - System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateEtwProvider_System_Guid
-	.long LDIFF_SYM1727
+LDIFF_SYM1728=Lme_9b - System_Runtime_Diagnostics_EtwDiagnosticTrace_CreateEtwProvider_System_Guid
+	.long LDIFF_SYM1728
 	.long 0
 	.byte 12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,152,16,153,15,68,154,14
 	.align 3
@@ -30953,22 +30958,22 @@ Lfde146_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1728=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1728
+LDIFF_SYM1729=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1729
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1729=Lfde147_end - Lfde147_start
-	.long LDIFF_SYM1729
+LDIFF_SYM1730=Lfde147_end - Lfde147_start
+	.long LDIFF_SYM1730
 Lfde147_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_OnShutdownTracing
 
-LDIFF_SYM1730=Lme_9c - System_Runtime_Diagnostics_EtwDiagnosticTrace_OnShutdownTracing
-	.long LDIFF_SYM1730
+LDIFF_SYM1731=Lme_9c - System_Runtime_Diagnostics_EtwDiagnosticTrace_OnShutdownTracing
+	.long LDIFF_SYM1731
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -30987,32 +30992,32 @@ Lfde147_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1731=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1731
+LDIFF_SYM1732=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1732
 	.byte 2,141,16,11
 	.asciz "V_0"
 
-LDIFF_SYM1732=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1732
+LDIFF_SYM1733=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1733
 	.byte 2,141,24,11
 	.asciz "exception"
 
-LDIFF_SYM1733=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1733
+LDIFF_SYM1734=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1734
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1734=Lfde148_end - Lfde148_start
-	.long LDIFF_SYM1734
+LDIFF_SYM1735=Lfde148_end - Lfde148_start
+	.long LDIFF_SYM1735
 Lfde148_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownTraceSource
 
-LDIFF_SYM1735=Lme_9d - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownTraceSource
-	.long LDIFF_SYM1735
+LDIFF_SYM1736=Lme_9d - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownTraceSource
+	.long LDIFF_SYM1736
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29
 	.align 3
@@ -31031,27 +31036,27 @@ Lfde148_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1736=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1736
+LDIFF_SYM1737=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1737
 	.byte 2,141,16,11
 	.asciz "exception"
 
-LDIFF_SYM1737=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1737
+LDIFF_SYM1738=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1738
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1738=Lfde149_end - Lfde149_start
-	.long LDIFF_SYM1738
+LDIFF_SYM1739=Lfde149_end - Lfde149_start
+	.long LDIFF_SYM1739
 Lfde149_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownEtwProvider
 
-LDIFF_SYM1739=Lme_9e - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownEtwProvider
-	.long LDIFF_SYM1739
+LDIFF_SYM1740=Lme_9e - System_Runtime_Diagnostics_EtwDiagnosticTrace_ShutdownEtwProvider
+	.long LDIFF_SYM1740
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -31070,22 +31075,22 @@ Lfde149_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1740=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1740
+LDIFF_SYM1741=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1741
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1741=Lfde150_end - Lfde150_start
-	.long LDIFF_SYM1741
+LDIFF_SYM1742=Lfde150_end - Lfde150_start
+	.long LDIFF_SYM1742
 Lfde150_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEnabled
 
-LDIFF_SYM1742=Lme_9f - System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEnabled
-	.long LDIFF_SYM1742
+LDIFF_SYM1743=Lme_9f - System_Runtime_Diagnostics_EtwDiagnosticTrace_IsEnabled
+	.long LDIFF_SYM1743
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2
 	.align 3
@@ -31104,32 +31109,32 @@ Lfde150_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1743=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1743
+LDIFF_SYM1744=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1744
 	.byte 1,104,3
 	.asciz "type"
 
-LDIFF_SYM1744=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM1744
+LDIFF_SYM1745=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM1745
 	.byte 2,141,40,3
 	.asciz "traceRecord"
 
-LDIFF_SYM1745=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1745
+LDIFF_SYM1746=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1746
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1746=Lfde151_end - Lfde151_start
-	.long LDIFF_SYM1746
+LDIFF_SYM1747=Lfde151_end - Lfde151_start
+	.long LDIFF_SYM1747
 Lfde151_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_TraceEventLogEvent_System_Diagnostics_TraceEventType_System_Runtime_Diagnostics_TraceRecord
 
-LDIFF_SYM1747=Lme_a0 - System_Runtime_Diagnostics_EtwDiagnosticTrace_TraceEventLogEvent_System_Diagnostics_TraceEventType_System_Runtime_Diagnostics_TraceRecord
-	.long LDIFF_SYM1747
+LDIFF_SYM1748=Lme_a0 - System_Runtime_Diagnostics_EtwDiagnosticTrace_TraceEventLogEvent_System_Diagnostics_TraceEventType_System_Runtime_Diagnostics_TraceRecord
+	.long LDIFF_SYM1748
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4,152,3,68,154,2
 	.align 3
@@ -31148,27 +31153,27 @@ Lfde151_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1748=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1748
+LDIFF_SYM1749=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1749
 	.byte 1,105,3
 	.asciz "exception"
 
-LDIFF_SYM1749=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1749
+LDIFF_SYM1750=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1750
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1750=Lfde152_end - Lfde152_start
-	.long LDIFF_SYM1750
+LDIFF_SYM1751=Lfde152_end - Lfde152_start
+	.long LDIFF_SYM1751
 Lfde152_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_OnUnhandledException_System_Exception
 
-LDIFF_SYM1751=Lme_a1 - System_Runtime_Diagnostics_EtwDiagnosticTrace_OnUnhandledException_System_Exception
-	.long LDIFF_SYM1751
+LDIFF_SYM1752=Lme_a1 - System_Runtime_Diagnostics_EtwDiagnosticTrace_OnUnhandledException_System_Exception
+	.long LDIFF_SYM1752
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
 	.align 3
@@ -31187,47 +31192,47 @@ Lfde152_end:
 	.byte 2,118,16,3
 	.asciz "exception"
 
-LDIFF_SYM1752=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1752
+LDIFF_SYM1753=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1753
 	.byte 2,141,24,3
 	.asciz "maxTraceStringLength"
 
-LDIFF_SYM1753=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1753
+LDIFF_SYM1754=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1754
 	.byte 2,141,32,11
 	.asciz "sb"
 
-LDIFF_SYM1754=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1754
+LDIFF_SYM1755=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1755
 	.byte 2,141,40,11
 	.asciz "stringWriter"
 
-LDIFF_SYM1755=LTDIE_150_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1755
+LDIFF_SYM1756=LTDIE_150_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1756
 	.byte 2,141,48,11
 	.asciz "xml"
 
-LDIFF_SYM1756=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1756
+LDIFF_SYM1757=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1757
 	.byte 2,141,56,11
 	.asciz "V_3"
 
-LDIFF_SYM1757=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1757
+LDIFF_SYM1758=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1758
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1758=Lfde153_end - Lfde153_start
-	.long LDIFF_SYM1758
+LDIFF_SYM1759=Lfde153_end - Lfde153_start
+	.long LDIFF_SYM1759
 Lfde153_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_ExceptionToTraceString_System_Exception_int
 
-LDIFF_SYM1759=Lme_a2 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ExceptionToTraceString_System_Exception_int
-	.long LDIFF_SYM1759
+LDIFF_SYM1760=Lme_a2 - System_Runtime_Diagnostics_EtwDiagnosticTrace_ExceptionToTraceString_System_Exception_int
+	.long LDIFF_SYM1760
 	.long 0
 	.byte 12,31,0,68,14,176,1,157,22,158,21,68,13,29,68,154,20
 	.align 3
@@ -31242,69 +31247,69 @@ LTDIE_160:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IList`1"
 
-LDIFF_SYM1760=LTDIE_160 - Ldebug_info_start
-	.long LDIFF_SYM1760
+LDIFF_SYM1761=LTDIE_160 - Ldebug_info_start
+	.long LDIFF_SYM1761
 LTDIE_160_POINTER:
 
 	.byte 13
-LDIFF_SYM1761=LTDIE_160 - Ldebug_info_start
-	.long LDIFF_SYM1761
+LDIFF_SYM1762=LTDIE_160 - Ldebug_info_start
+	.long LDIFF_SYM1762
 LTDIE_160_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1762=LTDIE_160 - Ldebug_info_start
-	.long LDIFF_SYM1762
+LDIFF_SYM1763=LTDIE_160 - Ldebug_info_start
+	.long LDIFF_SYM1763
 LTDIE_162:
 
 	.byte 5
 	.asciz "System_Runtime_InteropServices_ExternalException"
 
 	.byte 136,1,16
-LDIFF_SYM1763=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM1763
+LDIFF_SYM1764=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM1764
 	.byte 2,35,0,0,7
 	.asciz "System_Runtime_InteropServices_ExternalException"
 
-LDIFF_SYM1764=LTDIE_162 - Ldebug_info_start
-	.long LDIFF_SYM1764
+LDIFF_SYM1765=LTDIE_162 - Ldebug_info_start
+	.long LDIFF_SYM1765
 LTDIE_162_POINTER:
 
 	.byte 13
-LDIFF_SYM1765=LTDIE_162 - Ldebug_info_start
-	.long LDIFF_SYM1765
+LDIFF_SYM1766=LTDIE_162 - Ldebug_info_start
+	.long LDIFF_SYM1766
 LTDIE_162_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1766=LTDIE_162 - Ldebug_info_start
-	.long LDIFF_SYM1766
+LDIFF_SYM1767=LTDIE_162 - Ldebug_info_start
+	.long LDIFF_SYM1767
 LTDIE_161:
 
 	.byte 5
 	.asciz "System_ComponentModel_Win32Exception"
 
 	.byte 144,1,16
-LDIFF_SYM1767=LTDIE_162 - Ldebug_info_start
-	.long LDIFF_SYM1767
+LDIFF_SYM1768=LTDIE_162 - Ldebug_info_start
+	.long LDIFF_SYM1768
 	.byte 2,35,0,6
 	.asciz "nativeErrorCode"
 
-LDIFF_SYM1768=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1768
+LDIFF_SYM1769=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1769
 	.byte 3,35,136,1,0,7
 	.asciz "System_ComponentModel_Win32Exception"
 
-LDIFF_SYM1769=LTDIE_161 - Ldebug_info_start
-	.long LDIFF_SYM1769
+LDIFF_SYM1770=LTDIE_161 - Ldebug_info_start
+	.long LDIFF_SYM1770
 LTDIE_161_POINTER:
 
 	.byte 13
-LDIFF_SYM1770=LTDIE_161 - Ldebug_info_start
-	.long LDIFF_SYM1770
+LDIFF_SYM1771=LTDIE_161 - Ldebug_info_start
+	.long LDIFF_SYM1771
 LTDIE_161_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1771=LTDIE_161 - Ldebug_info_start
-	.long LDIFF_SYM1771
+LDIFF_SYM1772=LTDIE_161 - Ldebug_info_start
+	.long LDIFF_SYM1772
 LTDIE_163:
 
 	.byte 17
@@ -31313,51 +31318,51 @@ LTDIE_163:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM1772=LTDIE_163 - Ldebug_info_start
-	.long LDIFF_SYM1772
+LDIFF_SYM1773=LTDIE_163 - Ldebug_info_start
+	.long LDIFF_SYM1773
 LTDIE_163_POINTER:
 
 	.byte 13
-LDIFF_SYM1773=LTDIE_163 - Ldebug_info_start
-	.long LDIFF_SYM1773
+LDIFF_SYM1774=LTDIE_163 - Ldebug_info_start
+	.long LDIFF_SYM1774
 LTDIE_163_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1774=LTDIE_163 - Ldebug_info_start
-	.long LDIFF_SYM1774
+LDIFF_SYM1775=LTDIE_163 - Ldebug_info_start
+	.long LDIFF_SYM1775
 LTDIE_164:
 
 	.byte 5
 	.asciz "System_Tuple`2"
 
 	.byte 32,16
-LDIFF_SYM1775=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1775
+LDIFF_SYM1776=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1776
 	.byte 2,35,0,6
 	.asciz "m_Item1"
 
-LDIFF_SYM1776=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1776
+LDIFF_SYM1777=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1777
 	.byte 2,35,16,6
 	.asciz "m_Item2"
 
-LDIFF_SYM1777=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1777
+LDIFF_SYM1778=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1778
 	.byte 2,35,24,0,7
 	.asciz "System_Tuple`2"
 
-LDIFF_SYM1778=LTDIE_164 - Ldebug_info_start
-	.long LDIFF_SYM1778
+LDIFF_SYM1779=LTDIE_164 - Ldebug_info_start
+	.long LDIFF_SYM1779
 LTDIE_164_POINTER:
 
 	.byte 13
-LDIFF_SYM1779=LTDIE_164 - Ldebug_info_start
-	.long LDIFF_SYM1779
+LDIFF_SYM1780=LTDIE_164 - Ldebug_info_start
+	.long LDIFF_SYM1780
 LTDIE_164_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1780=LTDIE_164 - Ldebug_info_start
-	.long LDIFF_SYM1780
+LDIFF_SYM1781=LTDIE_164 - Ldebug_info_start
+	.long LDIFF_SYM1781
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EtwDiagnosticTrace:WriteExceptionToTraceString"
 	.asciz "System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int"
@@ -31369,72 +31374,72 @@ LDIFF_SYM1780=LTDIE_164 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "xml"
 
-LDIFF_SYM1781=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1781
+LDIFF_SYM1782=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1782
 	.byte 2,141,56,3
 	.asciz "exception"
 
-LDIFF_SYM1782=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1782
+LDIFF_SYM1783=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1783
 	.byte 1,105,3
 	.asciz "remainingLength"
 
-LDIFF_SYM1783=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1783
+LDIFF_SYM1784=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1784
 	.byte 3,141,192,0,3
 	.asciz "remainingAllowedRecursionDepth"
 
-LDIFF_SYM1784=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1784
+LDIFF_SYM1785=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1785
 	.byte 1,106,11
 	.asciz "exceptionInfo"
 
-LDIFF_SYM1785=LTDIE_160_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1785
+LDIFF_SYM1786=LTDIE_160_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1786
 	.byte 1,104,11
 	.asciz "win32Exception"
 
-LDIFF_SYM1786=LTDIE_161_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1786
+LDIFF_SYM1787=LTDIE_161_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1787
 	.byte 1,102,11
 	.asciz "V_2"
 
-LDIFF_SYM1787=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1787
+LDIFF_SYM1788=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1788
 	.byte 3,141,200,0,11
 	.asciz "V_3"
 
-LDIFF_SYM1788=LTDIE_163_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1788
+LDIFF_SYM1789=LTDIE_163_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1789
 	.byte 3,141,208,0,11
 	.asciz "item"
 
-LDIFF_SYM1789=LTDIE_164_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1789
+LDIFF_SYM1790=LTDIE_164_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1790
 	.byte 1,104,11
 	.asciz "exceptionData"
 
-LDIFF_SYM1790=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1790
+LDIFF_SYM1791=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1791
 	.byte 1,104,11
 	.asciz "innerException"
 
-LDIFF_SYM1791=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1791
+LDIFF_SYM1792=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1792
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1792=Lfde154_end - Lfde154_start
-	.long LDIFF_SYM1792
+LDIFF_SYM1793=Lfde154_end - Lfde154_start
+	.long LDIFF_SYM1793
 Lfde154_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int
 
-LDIFF_SYM1793=Lme_a3 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int
-	.long LDIFF_SYM1793
+LDIFF_SYM1794=Lme_a3 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteExceptionToTraceString_System_Xml_XmlTextWriter_System_Exception_int_int
+	.long LDIFF_SYM1794
 	.long 0
 	.byte 12,31,0,68,14,176,2,157,38,158,37,68,13,29,68,150,36,151,35,68,152,34,153,33,68,154,32
 	.align 3
@@ -31453,52 +31458,52 @@ Lfde154_end:
 	.byte 2,118,16,3
 	.asciz "exception"
 
-LDIFF_SYM1794=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1794
+LDIFF_SYM1795=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1795
 	.byte 2,141,24,3
 	.asciz "remainingLength"
 
-LDIFF_SYM1795=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1795
+LDIFF_SYM1796=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1796
 	.byte 2,141,32,3
 	.asciz "remainingAllowedRecursionDepth"
 
-LDIFF_SYM1796=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1796
+LDIFF_SYM1797=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1797
 	.byte 1,106,11
 	.asciz "sb"
 
-LDIFF_SYM1797=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1797
+LDIFF_SYM1798=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1798
 	.byte 2,141,40,11
 	.asciz "stringWriter"
 
-LDIFF_SYM1798=LTDIE_150_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1798
+LDIFF_SYM1799=LTDIE_150_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1799
 	.byte 2,141,48,11
 	.asciz "xml"
 
-LDIFF_SYM1799=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1799
+LDIFF_SYM1800=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1800
 	.byte 2,141,56,11
 	.asciz "V_3"
 
-LDIFF_SYM1800=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1800
+LDIFF_SYM1801=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1801
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1801=Lfde155_end - Lfde155_start
-	.long LDIFF_SYM1801
+LDIFF_SYM1802=Lfde155_end - Lfde155_start
+	.long LDIFF_SYM1802
 Lfde155_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GetInnerException_System_Exception_int_int
 
-LDIFF_SYM1802=Lme_a4 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetInnerException_System_Exception_int_int
-	.long LDIFF_SYM1802
+LDIFF_SYM1803=Lme_a4 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetInnerException_System_Exception_int_int
+	.long LDIFF_SYM1803
 	.long 0
 	.byte 12,31,0,68,14,176,1,157,22,158,21,68,13,29,68,154,20
 	.align 3
@@ -31517,57 +31522,57 @@ Lfde155_end:
 	.byte 2,118,16,3
 	.asciz "exception"
 
-LDIFF_SYM1803=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1803
+LDIFF_SYM1804=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1804
 	.byte 1,106,11
 	.asciz "sb"
 
-LDIFF_SYM1804=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1804
+LDIFF_SYM1805=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1805
 	.byte 2,141,32,11
 	.asciz "stringWriter"
 
-LDIFF_SYM1805=LTDIE_150_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1805
+LDIFF_SYM1806=LTDIE_150_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1806
 	.byte 2,141,40,11
 	.asciz "xml"
 
-LDIFF_SYM1806=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1806
+LDIFF_SYM1807=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1807
 	.byte 2,141,48,11
 	.asciz "V_3"
 
-LDIFF_SYM1807=LTDIE_146_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1807
+LDIFF_SYM1808=LTDIE_146_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1808
 	.byte 2,141,56,11
 	.asciz "dataItem"
 
-LDIFF_SYM1808=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1808
+LDIFF_SYM1809=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1809
 	.byte 1,105,11
 	.asciz "V_5"
 
-LDIFF_SYM1809=LTDIE_147_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1809
+LDIFF_SYM1810=LTDIE_147_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1810
 	.byte 3,141,192,0,11
 	.asciz "V_6"
 
-LDIFF_SYM1810=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1810
+LDIFF_SYM1811=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1811
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1811=Lfde156_end - Lfde156_start
-	.long LDIFF_SYM1811
+LDIFF_SYM1812=Lfde156_end - Lfde156_start
+	.long LDIFF_SYM1812
 Lfde156_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_GetExceptionData_System_Exception
 
-LDIFF_SYM1812=Lme_a5 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetExceptionData_System_Exception
-	.long LDIFF_SYM1812
+LDIFF_SYM1813=Lme_a5 - System_Runtime_Diagnostics_EtwDiagnosticTrace_GetExceptionData_System_Exception
+	.long LDIFF_SYM1813
 	.long 0
 	.byte 12,31,0,68,14,240,1,157,30,158,29,68,13,29,68,153,28,154,27
 	.align 3
@@ -31586,37 +31591,37 @@ Lfde156_end:
 	.byte 2,118,16,3
 	.asciz "xml"
 
-LDIFF_SYM1813=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1813
+LDIFF_SYM1814=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1814
 	.byte 2,141,24,3
 	.asciz "localName"
 
-LDIFF_SYM1814=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1814
+LDIFF_SYM1815=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1815
 	.byte 2,141,32,3
 	.asciz "remainingLength"
 
-LDIFF_SYM1815=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1815
+LDIFF_SYM1816=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1816
 	.byte 2,141,40,11
 	.asciz "minXmlLength"
 
-LDIFF_SYM1816=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1816
+LDIFF_SYM1817=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1817
 	.byte 1,103,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1817=Lfde157_end - Lfde157_start
-	.long LDIFF_SYM1817
+LDIFF_SYM1818=Lfde157_end - Lfde157_start
+	.long LDIFF_SYM1818
 Lfde157_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteStartElement_System_Xml_XmlTextWriter_string_int_
 
-LDIFF_SYM1818=Lme_a6 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteStartElement_System_Xml_XmlTextWriter_string_int_
-	.long LDIFF_SYM1818
+LDIFF_SYM1819=Lme_a6 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteStartElement_System_Xml_XmlTextWriter_string_int_
+	.long LDIFF_SYM1819
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,151,4
 	.align 3
@@ -31635,42 +31640,42 @@ Lfde157_end:
 	.byte 2,118,16,3
 	.asciz "xml"
 
-LDIFF_SYM1819=LTDIE_151_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1819
+LDIFF_SYM1820=LTDIE_151_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1820
 	.byte 2,141,24,3
 	.asciz "localName"
 
-LDIFF_SYM1820=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1820
+LDIFF_SYM1821=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1821
 	.byte 2,141,32,3
 	.asciz "value"
 
-LDIFF_SYM1821=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1821
+LDIFF_SYM1822=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1822
 	.byte 2,141,40,3
 	.asciz "remainingLength"
 
-LDIFF_SYM1822=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1822
+LDIFF_SYM1823=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1823
 	.byte 2,141,48,11
 	.asciz "xmlElementLength"
 
-LDIFF_SYM1823=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1823
+LDIFF_SYM1824=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1824
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1824=Lfde158_end - Lfde158_start
-	.long LDIFF_SYM1824
+LDIFF_SYM1825=Lfde158_end - Lfde158_start
+	.long LDIFF_SYM1825
 Lfde158_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteXmlElementString_System_Xml_XmlTextWriter_string_string_int_
 
-LDIFF_SYM1825=Lme_a7 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteXmlElementString_System_Xml_XmlTextWriter_string_string_int_
-	.long LDIFF_SYM1825
+LDIFF_SYM1826=Lme_a7 - System_Runtime_Diagnostics_EtwDiagnosticTrace_WriteXmlElementString_System_Xml_XmlTextWriter_string_string_int_
+	.long LDIFF_SYM1826
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6
 	.align 3
@@ -31689,22 +31694,22 @@ Lfde158_end:
 	.byte 2,118,16,11
 	.asciz "sb"
 
-LDIFF_SYM1826=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1826
+LDIFF_SYM1827=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1827
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1827=Lfde159_end - Lfde159_start
-	.long LDIFF_SYM1827
+LDIFF_SYM1828=Lfde159_end - Lfde159_start
+	.long LDIFF_SYM1828
 Lfde159_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Take
 
-LDIFF_SYM1828=Lme_a8 - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Take
-	.long LDIFF_SYM1828
+LDIFF_SYM1829=Lme_a8 - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Take
+	.long LDIFF_SYM1829
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -31723,22 +31728,22 @@ Lfde159_end:
 	.byte 2,118,16,3
 	.asciz "sb"
 
-LDIFF_SYM1829=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1829
+LDIFF_SYM1830=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1830
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1830=Lfde160_end - Lfde160_start
-	.long LDIFF_SYM1830
+LDIFF_SYM1831=Lfde160_end - Lfde160_start
+	.long LDIFF_SYM1831
 Lfde160_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Return_System_Text_StringBuilder
 
-LDIFF_SYM1831=Lme_a9 - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Return_System_Text_StringBuilder
-	.long LDIFF_SYM1831
+LDIFF_SYM1832=Lme_a9 - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool_Return_System_Text_StringBuilder
+	.long LDIFF_SYM1832
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2
 	.align 3
@@ -31758,16 +31763,16 @@ Lfde160_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1832=Lfde161_end - Lfde161_start
-	.long LDIFF_SYM1832
+LDIFF_SYM1833=Lfde161_end - Lfde161_start
+	.long LDIFF_SYM1833
 Lfde161_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool__cctor
 
-LDIFF_SYM1833=Lme_aa - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool__cctor
-	.long LDIFF_SYM1833
+LDIFF_SYM1834=Lme_aa - System_Runtime_Diagnostics_EtwDiagnosticTrace_StringBuilderPool__cctor
+	.long LDIFF_SYM1834
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -31786,27 +31791,27 @@ Lfde161_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1834=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1834
+LDIFF_SYM1835=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1835
 	.byte 2,141,16,3
 	.asciz "id"
 
-LDIFF_SYM1835=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1835
+LDIFF_SYM1836=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1836
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1836=Lfde162_end - Lfde162_start
-	.long LDIFF_SYM1836
+LDIFF_SYM1837=Lfde162_end - Lfde162_start
+	.long LDIFF_SYM1837
 Lfde162_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider__ctor_System_Guid
 
-LDIFF_SYM1837=Lme_ab - System_Runtime_Diagnostics_EtwProvider__ctor_System_Guid
-	.long LDIFF_SYM1837
+LDIFF_SYM1838=Lme_ab - System_Runtime_Diagnostics_EtwProvider__ctor_System_Guid
+	.long LDIFF_SYM1838
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -31825,22 +31830,22 @@ Lfde162_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1838=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1838
+LDIFF_SYM1839=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1839
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1839=Lfde163_end - Lfde163_start
-	.long LDIFF_SYM1839
+LDIFF_SYM1840=Lfde163_end - Lfde163_start
+	.long LDIFF_SYM1840
 Lfde163_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_get_ControllerCallBack
 
-LDIFF_SYM1840=Lme_ac - System_Runtime_Diagnostics_EtwProvider_get_ControllerCallBack
-	.long LDIFF_SYM1840
+LDIFF_SYM1841=Lme_ac - System_Runtime_Diagnostics_EtwProvider_get_ControllerCallBack
+	.long LDIFF_SYM1841
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -31859,27 +31864,27 @@ Lfde163_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1841=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1841
+LDIFF_SYM1842=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1842
 	.byte 2,141,16,3
 	.asciz "value"
 
-LDIFF_SYM1842=LTDIE_50_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1842
+LDIFF_SYM1843=LTDIE_50_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1843
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1843=Lfde164_end - Lfde164_start
-	.long LDIFF_SYM1843
+LDIFF_SYM1844=Lfde164_end - Lfde164_start
+	.long LDIFF_SYM1844
 Lfde164_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_set_ControllerCallBack_System_Action
 
-LDIFF_SYM1844=Lme_ad - System_Runtime_Diagnostics_EtwProvider_set_ControllerCallBack_System_Action
-	.long LDIFF_SYM1844
+LDIFF_SYM1845=Lme_ad - System_Runtime_Diagnostics_EtwProvider_set_ControllerCallBack_System_Action
+	.long LDIFF_SYM1845
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -31898,22 +31903,22 @@ Lfde164_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1845=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1845
+LDIFF_SYM1846=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1846
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1846=Lfde165_end - Lfde165_start
-	.long LDIFF_SYM1846
+LDIFF_SYM1847=Lfde165_end - Lfde165_start
+	.long LDIFF_SYM1847
 Lfde165_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_OnControllerCommand
 
-LDIFF_SYM1847=Lme_ae - System_Runtime_Diagnostics_EtwProvider_OnControllerCommand
-	.long LDIFF_SYM1847
+LDIFF_SYM1848=Lme_ae - System_Runtime_Diagnostics_EtwProvider_OnControllerCommand
+	.long LDIFF_SYM1848
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -31932,27 +31937,27 @@ Lfde165_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1848=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1848
+LDIFF_SYM1849=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1849
 	.byte 2,141,16,3
 	.asciz "isEnd2EndActivityTracingEnabled"
 
-LDIFF_SYM1849=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1849
+LDIFF_SYM1850=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1850
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1850=Lfde166_end - Lfde166_start
-	.long LDIFF_SYM1850
+LDIFF_SYM1851=Lfde166_end - Lfde166_start
+	.long LDIFF_SYM1851
 Lfde166_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_SetEnd2EndActivityTracingEnabled_bool
 
-LDIFF_SYM1851=Lme_af - System_Runtime_Diagnostics_EtwProvider_SetEnd2EndActivityTracingEnabled_bool
-	.long LDIFF_SYM1851
+LDIFF_SYM1852=Lme_af - System_Runtime_Diagnostics_EtwProvider_SetEnd2EndActivityTracingEnabled_bool
+	.long LDIFF_SYM1852
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -31971,72 +31976,72 @@ Lfde166_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1852=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1852
+LDIFF_SYM1853=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1853
 	.byte 2,141,48,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1853=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1853
+LDIFF_SYM1854=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1854
 	.byte 2,141,56,3
 	.asciz "eventTraceActivity"
 
-LDIFF_SYM1854=LTDIE_61_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1854
+LDIFF_SYM1855=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1855
 	.byte 3,141,192,0,3
 	.asciz "value1"
 
-LDIFF_SYM1855=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1855
+LDIFF_SYM1856=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1856
 	.byte 1,105,3
 	.asciz "value2"
 
-LDIFF_SYM1856=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1856
+LDIFF_SYM1857=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1857
 	.byte 3,141,200,0,11
 	.asciz "string1Bytes"
 
-LDIFF_SYM1857=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1857
+LDIFF_SYM1858=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1858
 	.byte 1,100,11
 	.asciz "string2Bytes"
 
-LDIFF_SYM1858=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1858
+LDIFF_SYM1859=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1859
 	.byte 1,99,11
 	.asciz "V_2"
-
-LDIFF_SYM1859=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1859
-	.byte 1,101,11
-	.asciz "V_3"
 
 LDIFF_SYM1860=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1860
 	.byte 1,101,11
-	.asciz "eventData"
+	.asciz "V_3"
 
-LDIFF_SYM1861=LDIE_I - Ldebug_info_start
+LDIFF_SYM1861=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1861
-	.byte 3,141,216,0,11
-	.asciz "eventDataPtr"
+	.byte 1,101,11
+	.asciz "eventData"
 
 LDIFF_SYM1862=LDIE_I - Ldebug_info_start
 	.long LDIFF_SYM1862
+	.byte 3,141,216,0,11
+	.asciz "eventDataPtr"
+
+LDIFF_SYM1863=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1863
 	.byte 1,101,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1863=Lfde167_end - Lfde167_start
-	.long LDIFF_SYM1863
+LDIFF_SYM1864=Lfde167_end - Lfde167_start
+	.long LDIFF_SYM1864
 Lfde167_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string
 
-LDIFF_SYM1864=Lme_b0 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string
-	.long LDIFF_SYM1864
+LDIFF_SYM1865=Lme_b0 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string
+	.long LDIFF_SYM1865
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,147,10,148,9,68,149,8,68,153,7
 	.align 3
@@ -32055,87 +32060,87 @@ Lfde167_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1865=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1865
+LDIFF_SYM1866=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1866
 	.byte 2,141,48,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1866=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1866
+LDIFF_SYM1867=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1867
 	.byte 2,141,56,3
 	.asciz "eventTraceActivity"
 
-LDIFF_SYM1867=LTDIE_61_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1867
+LDIFF_SYM1868=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1868
 	.byte 3,141,192,0,3
 	.asciz "value1"
 
-LDIFF_SYM1868=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1868
+LDIFF_SYM1869=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1869
 	.byte 1,104,3
 	.asciz "value2"
 
-LDIFF_SYM1869=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1869
+LDIFF_SYM1870=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1870
 	.byte 1,105,3
 	.asciz "value3"
 
-LDIFF_SYM1870=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1870
+LDIFF_SYM1871=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1871
 	.byte 3,141,200,0,11
 	.asciz "string1Bytes"
 
-LDIFF_SYM1871=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1871
+LDIFF_SYM1872=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1872
 	.byte 1,99,11
 	.asciz "string2Bytes"
 
-LDIFF_SYM1872=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1872
+LDIFF_SYM1873=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1873
 	.byte 3,141,208,0,11
 	.asciz "string3Bytes"
 
-LDIFF_SYM1873=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1873
+LDIFF_SYM1874=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1874
 	.byte 3,141,216,0,11
 	.asciz "V_3"
-
-LDIFF_SYM1874=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1874
-	.byte 1,100,11
-	.asciz "V_4"
 
 LDIFF_SYM1875=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1875
 	.byte 1,100,11
-	.asciz "V_5"
+	.asciz "V_4"
 
 LDIFF_SYM1876=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1876
 	.byte 1,100,11
-	.asciz "eventData"
+	.asciz "V_5"
 
-LDIFF_SYM1877=LDIE_I - Ldebug_info_start
+LDIFF_SYM1877=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1877
-	.byte 3,141,232,0,11
-	.asciz "eventDataPtr"
+	.byte 1,100,11
+	.asciz "eventData"
 
 LDIFF_SYM1878=LDIE_I - Ldebug_info_start
 	.long LDIFF_SYM1878
+	.byte 3,141,232,0,11
+	.asciz "eventDataPtr"
+
+LDIFF_SYM1879=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1879
 	.byte 1,100,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1879=Lfde168_end - Lfde168_start
-	.long LDIFF_SYM1879
+LDIFF_SYM1880=Lfde168_end - Lfde168_start
+	.long LDIFF_SYM1880
 Lfde168_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string
 
-LDIFF_SYM1880=Lme_b1 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string
-	.long LDIFF_SYM1880
+LDIFF_SYM1881=Lme_b1 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string
+	.long LDIFF_SYM1881
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,147,12,148,11,68,152,10,153,9
 	.align 3
@@ -32154,102 +32159,102 @@ Lfde168_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1881=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1881
+LDIFF_SYM1882=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1882
 	.byte 2,141,48,3
 	.asciz "eventDescriptor"
 
-LDIFF_SYM1882=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1882
+LDIFF_SYM1883=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1883
 	.byte 2,141,56,3
 	.asciz "eventTraceActivity"
 
-LDIFF_SYM1883=LTDIE_61_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1883
+LDIFF_SYM1884=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1884
 	.byte 3,141,192,0,3
 	.asciz "value1"
 
-LDIFF_SYM1884=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1884
+LDIFF_SYM1885=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1885
 	.byte 1,103,3
 	.asciz "value2"
 
-LDIFF_SYM1885=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1885
+LDIFF_SYM1886=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1886
 	.byte 1,104,3
 	.asciz "value3"
 
-LDIFF_SYM1886=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1886
+LDIFF_SYM1887=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1887
 	.byte 1,105,3
 	.asciz "value4"
 
-LDIFF_SYM1887=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1887
+LDIFF_SYM1888=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1888
 	.byte 3,141,200,0,11
 	.asciz "string1Bytes"
 
-LDIFF_SYM1888=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1888
+LDIFF_SYM1889=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1889
 	.byte 3,141,208,0,11
 	.asciz "string2Bytes"
 
-LDIFF_SYM1889=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1889
+LDIFF_SYM1890=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1890
 	.byte 3,141,216,0,11
 	.asciz "string3Bytes"
 
-LDIFF_SYM1890=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1890
+LDIFF_SYM1891=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1891
 	.byte 3,141,224,0,11
 	.asciz "string4Bytes"
 
-LDIFF_SYM1891=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1891
+LDIFF_SYM1892=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1892
 	.byte 3,141,232,0,11
 	.asciz "V_4"
-
-LDIFF_SYM1892=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1892
-	.byte 1,99,11
-	.asciz "V_5"
 
 LDIFF_SYM1893=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1893
 	.byte 1,99,11
-	.asciz "V_6"
+	.asciz "V_5"
 
 LDIFF_SYM1894=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1894
 	.byte 1,99,11
-	.asciz "V_7"
+	.asciz "V_6"
 
 LDIFF_SYM1895=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1895
 	.byte 1,99,11
-	.asciz "eventData"
+	.asciz "V_7"
 
-LDIFF_SYM1896=LDIE_I - Ldebug_info_start
+LDIFF_SYM1896=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1896
-	.byte 3,141,248,0,11
-	.asciz "eventDataPtr"
+	.byte 1,99,11
+	.asciz "eventData"
 
 LDIFF_SYM1897=LDIE_I - Ldebug_info_start
 	.long LDIFF_SYM1897
+	.byte 3,141,248,0,11
+	.asciz "eventDataPtr"
+
+LDIFF_SYM1898=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1898
 	.byte 1,99,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1898=Lfde169_end - Lfde169_start
-	.long LDIFF_SYM1898
+LDIFF_SYM1899=Lfde169_end - Lfde169_start
+	.long LDIFF_SYM1899
 Lfde169_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string
 
-LDIFF_SYM1899=Lme_b2 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string
-	.long LDIFF_SYM1899
+LDIFF_SYM1900=Lme_b2 - System_Runtime_Diagnostics_EtwProvider_WriteEvent_System_Runtime_Diagnostics_EventDescriptor__System_Runtime_Diagnostics_EventTraceActivity_string_string_string_string
+	.long LDIFF_SYM1900
 	.long 0
 	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,147,14,68,151,13,152,12,68,153,11
 	.align 3
@@ -32268,57 +32273,57 @@ Lfde169_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1900=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1900
+LDIFF_SYM1901=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1901
 	.byte 1,99,3
 	.asciz "id"
 
-LDIFF_SYM1901=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1901
+LDIFF_SYM1902=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1902
 	.byte 1,100,3
 	.asciz "version"
 
-LDIFF_SYM1902=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM1902
+LDIFF_SYM1903=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM1903
 	.byte 2,141,40,3
 	.asciz "channel"
 
-LDIFF_SYM1903=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM1903
+LDIFF_SYM1904=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM1904
 	.byte 2,141,48,3
 	.asciz "level"
 
-LDIFF_SYM1904=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM1904
+LDIFF_SYM1905=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM1905
 	.byte 2,141,56,3
 	.asciz "opcode"
 
-LDIFF_SYM1905=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM1905
+LDIFF_SYM1906=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM1906
 	.byte 3,141,192,0,3
 	.asciz "task"
 
-LDIFF_SYM1906=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1906
+LDIFF_SYM1907=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1907
 	.byte 1,105,3
 	.asciz "keywords"
 
-LDIFF_SYM1907=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM1907
+LDIFF_SYM1908=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM1908
 	.byte 3,141,200,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1908=Lfde170_end - Lfde170_start
-	.long LDIFF_SYM1908
+LDIFF_SYM1909=Lfde170_end - Lfde170_start
+	.long LDIFF_SYM1909
 Lfde170_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor__ctor_int_byte_byte_byte_byte_int_long
 
-LDIFF_SYM1909=Lme_b3 - System_Runtime_Diagnostics_EventDescriptor__ctor_int_byte_byte_byte_byte_int_long
-	.long LDIFF_SYM1909
+LDIFF_SYM1910=Lme_b3 - System_Runtime_Diagnostics_EventDescriptor__ctor_int_byte_byte_byte_byte_int_long
+	.long LDIFF_SYM1910
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,147,12,148,11,68,153,10
 	.align 3
@@ -32337,22 +32342,22 @@ Lfde170_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1910=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1910
+LDIFF_SYM1911=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1911
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1911=Lfde171_end - Lfde171_start
-	.long LDIFF_SYM1911
+LDIFF_SYM1912=Lfde171_end - Lfde171_start
+	.long LDIFF_SYM1912
 Lfde171_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_get_EventId
 
-LDIFF_SYM1912=Lme_b4 - System_Runtime_Diagnostics_EventDescriptor_get_EventId
-	.long LDIFF_SYM1912
+LDIFF_SYM1913=Lme_b4 - System_Runtime_Diagnostics_EventDescriptor_get_EventId
+	.long LDIFF_SYM1913
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32371,22 +32376,22 @@ Lfde171_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1913=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1913
+LDIFF_SYM1914=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1914
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1914=Lfde172_end - Lfde172_start
-	.long LDIFF_SYM1914
+LDIFF_SYM1915=Lfde172_end - Lfde172_start
+	.long LDIFF_SYM1915
 Lfde172_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_get_Channel
 
-LDIFF_SYM1915=Lme_b5 - System_Runtime_Diagnostics_EventDescriptor_get_Channel
-	.long LDIFF_SYM1915
+LDIFF_SYM1916=Lme_b5 - System_Runtime_Diagnostics_EventDescriptor_get_Channel
+	.long LDIFF_SYM1916
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32405,22 +32410,22 @@ Lfde172_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1916=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1916
+LDIFF_SYM1917=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1917
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1917=Lfde173_end - Lfde173_start
-	.long LDIFF_SYM1917
+LDIFF_SYM1918=Lfde173_end - Lfde173_start
+	.long LDIFF_SYM1918
 Lfde173_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_get_Level
 
-LDIFF_SYM1918=Lme_b6 - System_Runtime_Diagnostics_EventDescriptor_get_Level
-	.long LDIFF_SYM1918
+LDIFF_SYM1919=Lme_b6 - System_Runtime_Diagnostics_EventDescriptor_get_Level
+	.long LDIFF_SYM1919
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32439,22 +32444,22 @@ Lfde173_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1919=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1919
+LDIFF_SYM1920=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1920
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1920=Lfde174_end - Lfde174_start
-	.long LDIFF_SYM1920
+LDIFF_SYM1921=Lfde174_end - Lfde174_start
+	.long LDIFF_SYM1921
 Lfde174_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_get_Opcode
 
-LDIFF_SYM1921=Lme_b7 - System_Runtime_Diagnostics_EventDescriptor_get_Opcode
-	.long LDIFF_SYM1921
+LDIFF_SYM1922=Lme_b7 - System_Runtime_Diagnostics_EventDescriptor_get_Opcode
+	.long LDIFF_SYM1922
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32473,22 +32478,22 @@ Lfde174_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1922=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1922
+LDIFF_SYM1923=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1923
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1923=Lfde175_end - Lfde175_start
-	.long LDIFF_SYM1923
+LDIFF_SYM1924=Lfde175_end - Lfde175_start
+	.long LDIFF_SYM1924
 Lfde175_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_get_Keywords
 
-LDIFF_SYM1924=Lme_b8 - System_Runtime_Diagnostics_EventDescriptor_get_Keywords
-	.long LDIFF_SYM1924
+LDIFF_SYM1925=Lme_b8 - System_Runtime_Diagnostics_EventDescriptor_get_Keywords
+	.long LDIFF_SYM1925
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32507,27 +32512,27 @@ Lfde175_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1925=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1925
+LDIFF_SYM1926=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1926
 	.byte 2,141,32,3
 	.asciz "obj"
 
-LDIFF_SYM1926=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1926
+LDIFF_SYM1927=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1927
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1927=Lfde176_end - Lfde176_start
-	.long LDIFF_SYM1927
+LDIFF_SYM1928=Lfde176_end - Lfde176_start
+	.long LDIFF_SYM1928
 Lfde176_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_Equals_object
 
-LDIFF_SYM1928=Lme_b9 - System_Runtime_Diagnostics_EventDescriptor_Equals_object
-	.long LDIFF_SYM1928
+LDIFF_SYM1929=Lme_b9 - System_Runtime_Diagnostics_EventDescriptor_Equals_object
+	.long LDIFF_SYM1929
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,68,154,5
 	.align 3
@@ -32546,22 +32551,22 @@ Lfde176_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1929=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1929
+LDIFF_SYM1930=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1930
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1930=Lfde177_end - Lfde177_start
-	.long LDIFF_SYM1930
+LDIFF_SYM1931=Lfde177_end - Lfde177_start
+	.long LDIFF_SYM1931
 Lfde177_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_GetHashCode
 
-LDIFF_SYM1931=Lme_ba - System_Runtime_Diagnostics_EventDescriptor_GetHashCode
-	.long LDIFF_SYM1931
+LDIFF_SYM1932=Lme_ba - System_Runtime_Diagnostics_EventDescriptor_GetHashCode
+	.long LDIFF_SYM1932
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2
 	.align 3
@@ -32580,27 +32585,27 @@ Lfde177_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1932=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1932
+LDIFF_SYM1933=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1933
 	.byte 1,106,3
 	.asciz "other"
 
-LDIFF_SYM1933=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1933
+LDIFF_SYM1934=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1934
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1934=Lfde178_end - Lfde178_start
-	.long LDIFF_SYM1934
+LDIFF_SYM1935=Lfde178_end - Lfde178_start
+	.long LDIFF_SYM1935
 Lfde178_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventDescriptor_Equals_System_Runtime_Diagnostics_EventDescriptor
 
-LDIFF_SYM1935=Lme_bb - System_Runtime_Diagnostics_EventDescriptor_Equals_System_Runtime_Diagnostics_EventDescriptor
-	.long LDIFF_SYM1935
+LDIFF_SYM1936=Lme_bb - System_Runtime_Diagnostics_EventDescriptor_Equals_System_Runtime_Diagnostics_EventDescriptor
+	.long LDIFF_SYM1936
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -32619,22 +32624,22 @@ Lfde178_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1936=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1936
+LDIFF_SYM1937=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1937
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1937=Lfde179_end - Lfde179_start
-	.long LDIFF_SYM1937
+LDIFF_SYM1938=Lfde179_end - Lfde179_start
+	.long LDIFF_SYM1938
 Lfde179_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger__ctor
 
-LDIFF_SYM1938=Lme_bc - System_Runtime_Diagnostics_EventLogger__ctor
-	.long LDIFF_SYM1938
+LDIFF_SYM1939=Lme_bc - System_Runtime_Diagnostics_EventLogger__ctor
+	.long LDIFF_SYM1939
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -32653,32 +32658,32 @@ Lfde179_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1939=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1939
+LDIFF_SYM1940=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1940
 	.byte 1,104,3
 	.asciz "eventLogSourceName"
 
-LDIFF_SYM1940=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1940
+LDIFF_SYM1941=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1941
 	.byte 2,141,24,3
 	.asciz "diagnosticTrace"
 
-LDIFF_SYM1941=LTDIE_33_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1941
+LDIFF_SYM1942=LTDIE_33_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1942
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1942=Lfde180_end - Lfde180_start
-	.long LDIFF_SYM1942
+LDIFF_SYM1943=Lfde180_end - Lfde180_start
+	.long LDIFF_SYM1943
 Lfde180_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger__ctor_string_System_Runtime_Diagnostics_DiagnosticTraceBase
 
-LDIFF_SYM1943=Lme_bd - System_Runtime_Diagnostics_EventLogger__ctor_string_System_Runtime_Diagnostics_DiagnosticTraceBase
-	.long LDIFF_SYM1943
+LDIFF_SYM1944=Lme_bd - System_Runtime_Diagnostics_EventLogger__ctor_string_System_Runtime_Diagnostics_DiagnosticTraceBase
+	.long LDIFF_SYM1944
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8
 	.align 3
@@ -32697,27 +32702,27 @@ Lfde180_end:
 	.byte 2,118,16,3
 	.asciz "eventLogSourceName"
 
-LDIFF_SYM1944=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1944
+LDIFF_SYM1945=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1945
 	.byte 2,141,16,3
 	.asciz "diagnosticTrace"
 
-LDIFF_SYM1945=LTDIE_33_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1945
+LDIFF_SYM1946=LTDIE_33_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1946
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1946=Lfde181_end - Lfde181_start
-	.long LDIFF_SYM1946
+LDIFF_SYM1947=Lfde181_end - Lfde181_start
+	.long LDIFF_SYM1947
 Lfde181_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_UnsafeCreateEventLogger_string_System_Runtime_Diagnostics_DiagnosticTraceBase
 
-LDIFF_SYM1947=Lme_be - System_Runtime_Diagnostics_EventLogger_UnsafeCreateEventLogger_string_System_Runtime_Diagnostics_DiagnosticTraceBase
-	.long LDIFF_SYM1947
+LDIFF_SYM1948=Lme_be - System_Runtime_Diagnostics_EventLogger_UnsafeCreateEventLogger_string_System_Runtime_Diagnostics_DiagnosticTraceBase
+	.long LDIFF_SYM1948
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -32730,129 +32735,129 @@ LTDIE_166:
 	.asciz "_KeyCollection"
 
 	.byte 24,16
-LDIFF_SYM1948=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1948
+LDIFF_SYM1949=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1949
 	.byte 2,35,0,6
 	.asciz "_dictionary"
 
-LDIFF_SYM1949=LTDIE_165_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1949
+LDIFF_SYM1950=LTDIE_165_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1950
 	.byte 2,35,16,0,7
 	.asciz "_KeyCollection"
 
-LDIFF_SYM1950=LTDIE_166 - Ldebug_info_start
-	.long LDIFF_SYM1950
+LDIFF_SYM1951=LTDIE_166 - Ldebug_info_start
+	.long LDIFF_SYM1951
 LTDIE_166_POINTER:
 
 	.byte 13
-LDIFF_SYM1951=LTDIE_166 - Ldebug_info_start
-	.long LDIFF_SYM1951
+LDIFF_SYM1952=LTDIE_166 - Ldebug_info_start
+	.long LDIFF_SYM1952
 LTDIE_166_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1952=LTDIE_166 - Ldebug_info_start
-	.long LDIFF_SYM1952
+LDIFF_SYM1953=LTDIE_166 - Ldebug_info_start
+	.long LDIFF_SYM1953
 LTDIE_167:
 
 	.byte 5
 	.asciz "_ValueCollection"
 
 	.byte 24,16
-LDIFF_SYM1953=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1953
+LDIFF_SYM1954=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1954
 	.byte 2,35,0,6
 	.asciz "_dictionary"
 
-LDIFF_SYM1954=LTDIE_165_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1954
+LDIFF_SYM1955=LTDIE_165_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1955
 	.byte 2,35,16,0,7
 	.asciz "_ValueCollection"
 
-LDIFF_SYM1955=LTDIE_167 - Ldebug_info_start
-	.long LDIFF_SYM1955
+LDIFF_SYM1956=LTDIE_167 - Ldebug_info_start
+	.long LDIFF_SYM1956
 LTDIE_167_POINTER:
 
 	.byte 13
-LDIFF_SYM1956=LTDIE_167 - Ldebug_info_start
-	.long LDIFF_SYM1956
+LDIFF_SYM1957=LTDIE_167 - Ldebug_info_start
+	.long LDIFF_SYM1957
 LTDIE_167_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1957=LTDIE_167 - Ldebug_info_start
-	.long LDIFF_SYM1957
+LDIFF_SYM1958=LTDIE_167 - Ldebug_info_start
+	.long LDIFF_SYM1958
 LTDIE_165:
 
 	.byte 5
 	.asciz "System_Collections_Generic_Dictionary`2"
 
 	.byte 80,16
-LDIFF_SYM1958=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM1958
+LDIFF_SYM1959=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM1959
 	.byte 2,35,0,6
 	.asciz "_buckets"
 
-LDIFF_SYM1959=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1959
+LDIFF_SYM1960=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1960
 	.byte 2,35,16,6
 	.asciz "_entries"
 
-LDIFF_SYM1960=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1960
+LDIFF_SYM1961=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1961
 	.byte 2,35,24,6
 	.asciz "_count"
 
-LDIFF_SYM1961=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1961
+LDIFF_SYM1962=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1962
 	.byte 2,35,64,6
 	.asciz "_freeList"
 
-LDIFF_SYM1962=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1962
+LDIFF_SYM1963=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1963
 	.byte 2,35,68,6
 	.asciz "_freeCount"
 
-LDIFF_SYM1963=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1963
+LDIFF_SYM1964=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1964
 	.byte 2,35,72,6
 	.asciz "_version"
 
-LDIFF_SYM1964=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1964
+LDIFF_SYM1965=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1965
 	.byte 2,35,76,6
 	.asciz "_comparer"
 
-LDIFF_SYM1965=LTDIE_12_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1965
+LDIFF_SYM1966=LTDIE_12_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1966
 	.byte 2,35,32,6
 	.asciz "_keys"
 
-LDIFF_SYM1966=LTDIE_166_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1966
+LDIFF_SYM1967=LTDIE_166_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1967
 	.byte 2,35,40,6
 	.asciz "_values"
 
-LDIFF_SYM1967=LTDIE_167_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1967
+LDIFF_SYM1968=LTDIE_167_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1968
 	.byte 2,35,48,6
 	.asciz "_syncRoot"
 
-LDIFF_SYM1968=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1968
+LDIFF_SYM1969=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1969
 	.byte 2,35,56,0,7
 	.asciz "System_Collections_Generic_Dictionary`2"
 
-LDIFF_SYM1969=LTDIE_165 - Ldebug_info_start
-	.long LDIFF_SYM1969
+LDIFF_SYM1970=LTDIE_165 - Ldebug_info_start
+	.long LDIFF_SYM1970
 LTDIE_165_POINTER:
 
 	.byte 13
-LDIFF_SYM1970=LTDIE_165 - Ldebug_info_start
-	.long LDIFF_SYM1970
+LDIFF_SYM1971=LTDIE_165 - Ldebug_info_start
+	.long LDIFF_SYM1971
 LTDIE_165_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1971=LTDIE_165 - Ldebug_info_start
-	.long LDIFF_SYM1971
+LDIFF_SYM1972=LTDIE_165 - Ldebug_info_start
+	.long LDIFF_SYM1972
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EventLogger:UnsafeLogEvent"
 	.asciz "System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__"
@@ -32864,137 +32869,137 @@ LDIFF_SYM1971=LTDIE_165 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1972=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1972
+LDIFF_SYM1973=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1973
 	.byte 3,141,200,0,3
 	.asciz "type"
 
-LDIFF_SYM1973=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM1973
+LDIFF_SYM1974=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM1974
 	.byte 3,141,208,0,3
 	.asciz "eventLogCategory"
 
-LDIFF_SYM1974=LDIE_U2 - Ldebug_info_start
-	.long LDIFF_SYM1974
+LDIFF_SYM1975=LDIE_U2 - Ldebug_info_start
+	.long LDIFF_SYM1975
 	.byte 3,141,216,0,3
 	.asciz "eventId"
 
-LDIFF_SYM1975=LDIE_U4 - Ldebug_info_start
-	.long LDIFF_SYM1975
+LDIFF_SYM1976=LDIE_U4 - Ldebug_info_start
+	.long LDIFF_SYM1976
 	.byte 3,141,224,0,3
 	.asciz "shouldTrace"
 
-LDIFF_SYM1976=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1976
+LDIFF_SYM1977=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1977
 	.byte 1,105,3
 	.asciz "values"
 
-LDIFF_SYM1977=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1977
+LDIFF_SYM1978=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1978
 	.byte 1,106,11
 	.asciz "eventLogEntryLength"
 
-LDIFF_SYM1978=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1978
+LDIFF_SYM1979=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1979
 	.byte 1,103,11
 	.asciz "logValues"
 
-LDIFF_SYM1979=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1979
+LDIFF_SYM1980=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1980
 	.byte 1,102,11
 	.asciz "normalizedProcessName"
-
-LDIFF_SYM1980=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1980
-	.byte 1,101,11
-	.asciz "invariantProcessId"
 
 LDIFF_SYM1981=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1981
 	.byte 1,101,11
-	.asciz "sidBA"
+	.asciz "invariantProcessId"
 
-LDIFF_SYM1982=LDIE_SZARRAY - Ldebug_info_start
+LDIFF_SYM1982=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM1982
-	.byte 1,103,11
-	.asciz "stringRoots"
+	.byte 1,101,11
+	.asciz "sidBA"
 
 LDIFF_SYM1983=LDIE_SZARRAY - Ldebug_info_start
 	.long LDIFF_SYM1983
+	.byte 1,103,11
+	.asciz "stringRoots"
+
+LDIFF_SYM1984=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1984
 	.byte 1,101,11
 	.asciz "stringsRootHandle"
 
-LDIFF_SYM1984=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1984
+LDIFF_SYM1985=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1985
 	.byte 3,141,128,1,11
 	.asciz "stringHandles"
 
-LDIFF_SYM1985=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1985
+LDIFF_SYM1986=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1986
 	.byte 3,141,136,1,11
 	.asciz "i"
 
-LDIFF_SYM1986=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1986
+LDIFF_SYM1987=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1987
 	.byte 1,101,11
 	.asciz "stringValue"
 
-LDIFF_SYM1987=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1987
+LDIFF_SYM1988=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1988
 	.byte 1,100,11
 	.asciz "V_10"
 
-LDIFF_SYM1988=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1988
+LDIFF_SYM1989=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1989
 	.byte 3,141,144,1,11
 	.asciz "truncationLength"
 
-LDIFF_SYM1989=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1989
+LDIFF_SYM1990=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1990
 	.byte 1,103,11
 	.asciz "i"
 
-LDIFF_SYM1990=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1990
+LDIFF_SYM1991=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1991
 	.byte 1,101,11
 	.asciz "strIndex"
 
-LDIFF_SYM1991=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1991
+LDIFF_SYM1992=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1992
 	.byte 1,100,11
 	.asciz "V_14"
 
-LDIFF_SYM1992=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1992
+LDIFF_SYM1993=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1993
 	.byte 3,141,152,1,11
 	.asciz "gcHandle"
 
-LDIFF_SYM1993=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1993
+LDIFF_SYM1994=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1994
 	.byte 3,141,248,0,11
 	.asciz "eventValues"
 
-LDIFF_SYM1994=LTDIE_165_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1994
+LDIFF_SYM1995=LTDIE_165_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1995
 	.byte 1,105,11
 	.asciz "i"
 
-LDIFF_SYM1995=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1995
+LDIFF_SYM1996=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1996
 	.byte 3,141,160,1,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1996=Lfde182_end - Lfde182_start
-	.long LDIFF_SYM1996
+LDIFF_SYM1997=Lfde182_end - Lfde182_start
+	.long LDIFF_SYM1997
 Lfde182_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 
-LDIFF_SYM1997=Lme_bf - System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
-	.long LDIFF_SYM1997
+LDIFF_SYM1998=Lme_bf - System_Runtime_Diagnostics_EventLogger_UnsafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
+	.long LDIFF_SYM1998
 	.long 0
 	.byte 12,31,0,68,14,176,2,157,38,158,37,68,13,29,68,147,36,148,35,68,149,34,150,33,68,151,32,68,153,31,154,30
 	.align 3
@@ -33007,28 +33012,28 @@ LTDIE_168:
 	.asciz "System_Security_SecurityException"
 
 	.byte 144,1,16
-LDIFF_SYM1998=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM1998
+LDIFF_SYM1999=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM1999
 	.byte 2,35,0,6
 	.asciz "permissionState"
 
-LDIFF_SYM1999=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1999
+LDIFF_SYM2000=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2000
 	.byte 3,35,136,1,0,7
 	.asciz "System_Security_SecurityException"
 
-LDIFF_SYM2000=LTDIE_168 - Ldebug_info_start
-	.long LDIFF_SYM2000
+LDIFF_SYM2001=LTDIE_168 - Ldebug_info_start
+	.long LDIFF_SYM2001
 LTDIE_168_POINTER:
 
 	.byte 13
-LDIFF_SYM2001=LTDIE_168 - Ldebug_info_start
-	.long LDIFF_SYM2001
+LDIFF_SYM2002=LTDIE_168 - Ldebug_info_start
+	.long LDIFF_SYM2002
 LTDIE_168_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2002=LTDIE_168 - Ldebug_info_start
-	.long LDIFF_SYM2002
+LDIFF_SYM2003=LTDIE_168 - Ldebug_info_start
+	.long LDIFF_SYM2003
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EventLogger:LogEvent"
 	.asciz "System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__"
@@ -33040,52 +33045,52 @@ LDIFF_SYM2002=LTDIE_168 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2003=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2003
+LDIFF_SYM2004=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2004
 	.byte 2,141,16,3
 	.asciz "type"
 
-LDIFF_SYM2004=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM2004
+LDIFF_SYM2005=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM2005
 	.byte 2,141,24,3
 	.asciz "eventLogCategory"
 
-LDIFF_SYM2005=LDIE_U2 - Ldebug_info_start
-	.long LDIFF_SYM2005
+LDIFF_SYM2006=LDIE_U2 - Ldebug_info_start
+	.long LDIFF_SYM2006
 	.byte 2,141,32,3
 	.asciz "eventId"
 
-LDIFF_SYM2006=LDIE_U4 - Ldebug_info_start
-	.long LDIFF_SYM2006
+LDIFF_SYM2007=LDIE_U4 - Ldebug_info_start
+	.long LDIFF_SYM2007
 	.byte 2,141,40,3
 	.asciz "shouldTrace"
 
-LDIFF_SYM2007=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2007
+LDIFF_SYM2008=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2008
 	.byte 2,141,48,3
 	.asciz "values"
 
-LDIFF_SYM2008=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM2008
+LDIFF_SYM2009=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM2009
 	.byte 2,141,56,11
 	.asciz "ex"
 
-LDIFF_SYM2009=LTDIE_168_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2009
+LDIFF_SYM2010=LTDIE_168_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2010
 	.byte 3,141,192,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2010=Lfde183_end - Lfde183_start
-	.long LDIFF_SYM2010
+LDIFF_SYM2011=Lfde183_end - Lfde183_start
+	.long LDIFF_SYM2011
 Lfde183_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 
-LDIFF_SYM2011=Lme_c0 - System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
-	.long LDIFF_SYM2011
+LDIFF_SYM2012=Lme_c0 - System_Runtime_Diagnostics_EventLogger_LogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
+	.long LDIFF_SYM2012
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29
 	.align 3
@@ -33098,8 +33103,8 @@ LTDIE_169:
 	.asciz "System_Diagnostics_EventLogEntryType"
 
 	.byte 4
-LDIFF_SYM2012=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2012
+LDIFF_SYM2013=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2013
 	.byte 9
 	.asciz "Error"
 
@@ -33118,18 +33123,18 @@ LDIFF_SYM2012=LDIE_I4 - Ldebug_info_start
 	.byte 16,0,7
 	.asciz "System_Diagnostics_EventLogEntryType"
 
-LDIFF_SYM2013=LTDIE_169 - Ldebug_info_start
-	.long LDIFF_SYM2013
+LDIFF_SYM2014=LTDIE_169 - Ldebug_info_start
+	.long LDIFF_SYM2014
 LTDIE_169_POINTER:
 
 	.byte 13
-LDIFF_SYM2014=LTDIE_169 - Ldebug_info_start
-	.long LDIFF_SYM2014
+LDIFF_SYM2015=LTDIE_169 - Ldebug_info_start
+	.long LDIFF_SYM2015
 LTDIE_169_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2015=LTDIE_169 - Ldebug_info_start
-	.long LDIFF_SYM2015
+LDIFF_SYM2016=LTDIE_169 - Ldebug_info_start
+	.long LDIFF_SYM2016
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.EventLogger:EventLogEntryTypeFromEventType"
 	.asciz "System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType"
@@ -33141,27 +33146,27 @@ LDIFF_SYM2015=LTDIE_169 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "type"
 
-LDIFF_SYM2016=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM2016
+LDIFF_SYM2017=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM2017
 	.byte 2,141,24,11
 	.asciz "retval"
 
-LDIFF_SYM2017=LTDIE_169 - Ldebug_info_start
-	.long LDIFF_SYM2017
+LDIFF_SYM2018=LTDIE_169 - Ldebug_info_start
+	.long LDIFF_SYM2018
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2018=Lfde184_end - Lfde184_start
-	.long LDIFF_SYM2018
+LDIFF_SYM2019=Lfde184_end - Lfde184_start
+	.long LDIFF_SYM2019
 Lfde184_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType
 
-LDIFF_SYM2019=Lme_c1 - System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType
-	.long LDIFF_SYM2019
+LDIFF_SYM2020=Lme_c1 - System_Runtime_Diagnostics_EventLogger_EventLogEntryTypeFromEventType_System_Diagnostics_TraceEventType
+	.long LDIFF_SYM2020
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,153,2
 	.align 3
@@ -33180,47 +33185,47 @@ Lfde184_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2020=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2020
+LDIFF_SYM2021=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2021
 	.byte 2,141,16,3
 	.asciz "type"
 
-LDIFF_SYM2021=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM2021
+LDIFF_SYM2022=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM2022
 	.byte 2,141,24,3
 	.asciz "eventLogCategory"
 
-LDIFF_SYM2022=LDIE_U2 - Ldebug_info_start
-	.long LDIFF_SYM2022
+LDIFF_SYM2023=LDIE_U2 - Ldebug_info_start
+	.long LDIFF_SYM2023
 	.byte 2,141,32,3
 	.asciz "eventId"
 
-LDIFF_SYM2023=LDIE_U4 - Ldebug_info_start
-	.long LDIFF_SYM2023
+LDIFF_SYM2024=LDIE_U4 - Ldebug_info_start
+	.long LDIFF_SYM2024
 	.byte 2,141,40,3
 	.asciz "shouldTrace"
 
-LDIFF_SYM2024=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2024
+LDIFF_SYM2025=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2025
 	.byte 2,141,48,3
 	.asciz "values"
 
-LDIFF_SYM2025=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM2025
+LDIFF_SYM2026=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM2026
 	.byte 2,141,56,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2026=Lfde185_end - Lfde185_start
-	.long LDIFF_SYM2026
+LDIFF_SYM2027=Lfde185_end - Lfde185_start
+	.long LDIFF_SYM2027
 Lfde185_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_SafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
 
-LDIFF_SYM2027=Lme_c2 - System_Runtime_Diagnostics_EventLogger_SafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
-	.long LDIFF_SYM2027
+LDIFF_SYM2028=Lme_c2 - System_Runtime_Diagnostics_EventLogger_SafeLogEvent_System_Diagnostics_TraceEventType_uint16_uint_bool_string__
+	.long LDIFF_SYM2028
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
 	.align 3
@@ -33239,27 +33244,27 @@ Lfde185_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2028=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2028
+LDIFF_SYM2029=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2029
 	.byte 2,141,16,3
 	.asciz "eventLogSourceName"
 
-LDIFF_SYM2029=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2029
+LDIFF_SYM2030=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2030
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2030=Lfde186_end - Lfde186_start
-	.long LDIFF_SYM2030
+LDIFF_SYM2031=Lfde186_end - Lfde186_start
+	.long LDIFF_SYM2031
 Lfde186_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_SafeSetLogSourceName_string
 
-LDIFF_SYM2031=Lme_c3 - System_Runtime_Diagnostics_EventLogger_SafeSetLogSourceName_string
-	.long LDIFF_SYM2031
+LDIFF_SYM2032=Lme_c3 - System_Runtime_Diagnostics_EventLogger_SafeSetLogSourceName_string
+	.long LDIFF_SYM2032
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -33278,32 +33283,32 @@ Lfde186_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2032=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2032
+LDIFF_SYM2033=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2033
 	.byte 1,104,3
 	.asciz "eventLogSourceName"
 
-LDIFF_SYM2033=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2033
+LDIFF_SYM2034=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2034
 	.byte 2,141,24,3
 	.asciz "diagnosticTrace"
 
-LDIFF_SYM2034=LTDIE_33_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2034
+LDIFF_SYM2035=LTDIE_33_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2035
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2035=Lfde187_end - Lfde187_start
-	.long LDIFF_SYM2035
+LDIFF_SYM2036=Lfde187_end - Lfde187_start
+	.long LDIFF_SYM2036
 Lfde187_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_SetLogSourceName_string_System_Runtime_Diagnostics_DiagnosticTraceBase
 
-LDIFF_SYM2036=Lme_c4 - System_Runtime_Diagnostics_EventLogger_SetLogSourceName_string_System_Runtime_Diagnostics_DiagnosticTraceBase
-	.long LDIFF_SYM2036
+LDIFF_SYM2037=Lme_c4 - System_Runtime_Diagnostics_EventLogger_SetLogSourceName_string_System_Runtime_Diagnostics_DiagnosticTraceBase
+	.long LDIFF_SYM2037
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4
 	.align 3
@@ -33322,32 +33327,32 @@ Lfde187_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2037=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2037
+LDIFF_SYM2038=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2038
 	.byte 0,11
 	.asciz "retval"
 
-LDIFF_SYM2038=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2038
+LDIFF_SYM2039=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2039
 	.byte 2,141,32,11
 	.asciz "process"
 
-LDIFF_SYM2039=LTDIE_70_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2039
+LDIFF_SYM2040=LTDIE_70_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2040
 	.byte 2,141,40,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2040=Lfde188_end - Lfde188_start
-	.long LDIFF_SYM2040
+LDIFF_SYM2041=Lfde188_end - Lfde188_start
+	.long LDIFF_SYM2041
 Lfde188_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_IsInPartialTrust
 
-LDIFF_SYM2041=Lme_c5 - System_Runtime_Diagnostics_EventLogger_IsInPartialTrust
-	.long LDIFF_SYM2041
+LDIFF_SYM2042=Lme_c5 - System_Runtime_Diagnostics_EventLogger_IsInPartialTrust
+	.long LDIFF_SYM2042
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,154,12
 	.align 3
@@ -33366,62 +33371,62 @@ Lfde188_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2042=LTDIE_142_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2042
+LDIFF_SYM2043=LTDIE_142_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2043
 	.byte 2,141,16,3
 	.asciz "type"
 
-LDIFF_SYM2043=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM2043
+LDIFF_SYM2044=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM2044
 	.byte 2,141,24,3
 	.asciz "eventLogCategory"
-
-LDIFF_SYM2044=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2044
-	.byte 0,3
-	.asciz "eventId"
 
 LDIFF_SYM2045=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2045
 	.byte 0,3
+	.asciz "eventId"
+
+LDIFF_SYM2046=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2046
+	.byte 0,3
 	.asciz "logValues"
 
-LDIFF_SYM2046=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM2046
+LDIFF_SYM2047=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM2047
 	.byte 2,141,48,3
 	.asciz "sidBA"
 
-LDIFF_SYM2047=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2047
+LDIFF_SYM2048=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2048
 	.byte 0,3
 	.asciz "stringsRootHandle"
 
-LDIFF_SYM2048=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2048
+LDIFF_SYM2049=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2049
 	.byte 3,141,192,0,11
 	.asciz "handle"
 
-LDIFF_SYM2049=LTDIE_62_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2049
+LDIFF_SYM2050=LTDIE_62_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2050
 	.byte 3,141,224,0,11
 	.asciz "data"
 
-LDIFF_SYM2050=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2050
+LDIFF_SYM2051=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2051
 	.byte 3,141,208,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2051=Lfde189_end - Lfde189_start
-	.long LDIFF_SYM2051
+LDIFF_SYM2052=Lfde189_end - Lfde189_start
+	.long LDIFF_SYM2052
 Lfde189_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_TraceEventType_uint16_uint_string___byte___System_Runtime_InteropServices_GCHandle
 
-LDIFF_SYM2052=Lme_c6 - System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_TraceEventType_uint16_uint_string___byte___System_Runtime_InteropServices_GCHandle
-	.long LDIFF_SYM2052
+LDIFF_SYM2053=Lme_c6 - System_Runtime_Diagnostics_EventLogger_UnsafeWriteEventLog_System_Diagnostics_TraceEventType_uint16_uint_string___byte___System_Runtime_InteropServices_GCHandle
+	.long LDIFF_SYM2053
 	.long 0
 	.byte 12,31,0,68,14,160,1,157,20,158,19,68,13,29
 	.align 3
@@ -33440,32 +33445,32 @@ Lfde189_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2053=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2053
+LDIFF_SYM2054=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2054
 	.byte 0,11
 	.asciz "retval"
 
-LDIFF_SYM2054=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2054
+LDIFF_SYM2055=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2055
 	.byte 2,141,32,11
 	.asciz "process"
 
-LDIFF_SYM2055=LTDIE_70_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2055
+LDIFF_SYM2056=LTDIE_70_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2056
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2056=Lfde190_end - Lfde190_start
-	.long LDIFF_SYM2056
+LDIFF_SYM2057=Lfde190_end - Lfde190_start
+	.long LDIFF_SYM2057
 Lfde190_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessName
 
-LDIFF_SYM2057=Lme_c7 - System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessName
-	.long LDIFF_SYM2057
+LDIFF_SYM2058=Lme_c7 - System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessName
+	.long LDIFF_SYM2058
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -33484,32 +33489,32 @@ Lfde190_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2058=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2058
+LDIFF_SYM2059=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2059
 	.byte 0,11
 	.asciz "retval"
 
-LDIFF_SYM2059=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2059
+LDIFF_SYM2060=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2060
 	.byte 2,141,32,11
 	.asciz "process"
 
-LDIFF_SYM2060=LTDIE_70_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2060
+LDIFF_SYM2061=LTDIE_70_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2061
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2061=Lfde191_end - Lfde191_start
-	.long LDIFF_SYM2061
+LDIFF_SYM2062=Lfde191_end - Lfde191_start
+	.long LDIFF_SYM2062
 Lfde191_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessId
 
-LDIFF_SYM2062=Lme_c8 - System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessId
-	.long LDIFF_SYM2062
+LDIFF_SYM2063=Lme_c8 - System_Runtime_Diagnostics_EventLogger_UnsafeGetProcessId
+	.long LDIFF_SYM2063
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -33528,47 +33533,47 @@ Lfde191_end:
 	.byte 2,118,16,3
 	.asciz "eventLogParameter"
 
-LDIFF_SYM2063=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2063
+LDIFF_SYM2064=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2064
 	.byte 1,106,11
 	.asciz "parameterBuilder"
 
-LDIFF_SYM2064=LTDIE_132_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2064
+LDIFF_SYM2065=LTDIE_132_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2065
 	.byte 1,105,11
 	.asciz "len"
 
-LDIFF_SYM2065=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2065
+LDIFF_SYM2066=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2066
 	.byte 1,104,11
 	.asciz "i"
 
-LDIFF_SYM2066=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2066
+LDIFF_SYM2067=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2067
 	.byte 1,103,11
 	.asciz "c"
 
-LDIFF_SYM2067=LDIE_CHAR - Ldebug_info_start
-	.long LDIFF_SYM2067
+LDIFF_SYM2068=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM2068
 	.byte 1,102,11
 	.asciz "j"
 
-LDIFF_SYM2068=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2068
+LDIFF_SYM2069=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2069
 	.byte 1,101,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2069=Lfde192_end - Lfde192_start
-	.long LDIFF_SYM2069
+LDIFF_SYM2070=Lfde192_end - Lfde192_start
+	.long LDIFF_SYM2070
 Lfde192_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger_NormalizeEventLogParameter_string
 
-LDIFF_SYM2070=Lme_c9 - System_Runtime_Diagnostics_EventLogger_NormalizeEventLogParameter_string
-	.long LDIFF_SYM2070
+LDIFF_SYM2071=Lme_c9 - System_Runtime_Diagnostics_EventLogger_NormalizeEventLogParameter_string
+	.long LDIFF_SYM2071
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -33588,16 +33593,16 @@ Lfde192_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2071=Lfde193_end - Lfde193_start
-	.long LDIFF_SYM2071
+LDIFF_SYM2072=Lfde193_end - Lfde193_start
+	.long LDIFF_SYM2072
 Lfde193_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_EventLogger__cctor
 
-LDIFF_SYM2072=Lme_ca - System_Runtime_Diagnostics_EventLogger__cctor
-	.long LDIFF_SYM2072
+LDIFF_SYM2073=Lme_ca - System_Runtime_Diagnostics_EventLogger__cctor
+	.long LDIFF_SYM2073
 	.long 0
 	.byte 12,31,0,68,14,16,157,2,158,1,68,13,29
 	.align 3
@@ -33610,33 +33615,33 @@ LTDIE_170:
 	.asciz "System_Runtime_Diagnostics_StringTraceRecord"
 
 	.byte 32,16
-LDIFF_SYM2073=LTDIE_60 - Ldebug_info_start
-	.long LDIFF_SYM2073
+LDIFF_SYM2074=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM2074
 	.byte 2,35,0,6
 	.asciz "elementName"
 
-LDIFF_SYM2074=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2074
+LDIFF_SYM2075=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2075
 	.byte 2,35,16,6
 	.asciz "content"
 
-LDIFF_SYM2075=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2075
+LDIFF_SYM2076=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2076
 	.byte 2,35,24,0,7
 	.asciz "System_Runtime_Diagnostics_StringTraceRecord"
 
-LDIFF_SYM2076=LTDIE_170 - Ldebug_info_start
-	.long LDIFF_SYM2076
+LDIFF_SYM2077=LTDIE_170 - Ldebug_info_start
+	.long LDIFF_SYM2077
 LTDIE_170_POINTER:
 
 	.byte 13
-LDIFF_SYM2077=LTDIE_170 - Ldebug_info_start
-	.long LDIFF_SYM2077
+LDIFF_SYM2078=LTDIE_170 - Ldebug_info_start
+	.long LDIFF_SYM2078
 LTDIE_170_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2078=LTDIE_170 - Ldebug_info_start
-	.long LDIFF_SYM2078
+LDIFF_SYM2079=LTDIE_170 - Ldebug_info_start
+	.long LDIFF_SYM2079
 	.byte 2
 	.asciz "System.Runtime.Diagnostics.StringTraceRecord:.ctor"
 	.asciz "System_Runtime_Diagnostics_StringTraceRecord__ctor_string_string"
@@ -33648,32 +33653,32 @@ LDIFF_SYM2078=LTDIE_170 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2079=LTDIE_170_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2079
+LDIFF_SYM2080=LTDIE_170_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2080
 	.byte 1,104,3
 	.asciz "elementName"
 
-LDIFF_SYM2080=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2080
+LDIFF_SYM2081=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2081
 	.byte 2,141,24,3
 	.asciz "content"
 
-LDIFF_SYM2081=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2081
+LDIFF_SYM2082=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2082
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2082=Lfde194_end - Lfde194_start
-	.long LDIFF_SYM2082
+LDIFF_SYM2083=Lfde194_end - Lfde194_start
+	.long LDIFF_SYM2083
 Lfde194_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_StringTraceRecord__ctor_string_string
 
-LDIFF_SYM2083=Lme_cc - System_Runtime_Diagnostics_StringTraceRecord__ctor_string_string
-	.long LDIFF_SYM2083
+LDIFF_SYM2084=Lme_cc - System_Runtime_Diagnostics_StringTraceRecord__ctor_string_string
+	.long LDIFF_SYM2084
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4
 	.align 3
@@ -33692,27 +33697,27 @@ Lfde194_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2084=LTDIE_170_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2084
+LDIFF_SYM2085=LTDIE_170_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2085
 	.byte 2,141,16,3
 	.asciz "writer"
 
-LDIFF_SYM2085=LTDIE_145_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2085
+LDIFF_SYM2086=LTDIE_145_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2086
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2086=Lfde195_end - Lfde195_start
-	.long LDIFF_SYM2086
+LDIFF_SYM2087=Lfde195_end - Lfde195_start
+	.long LDIFF_SYM2087
 Lfde195_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_StringTraceRecord_WriteTo_System_Xml_XmlWriter
 
-LDIFF_SYM2087=Lme_cd - System_Runtime_Diagnostics_StringTraceRecord_WriteTo_System_Xml_XmlWriter
-	.long LDIFF_SYM2087
+LDIFF_SYM2088=Lme_cd - System_Runtime_Diagnostics_StringTraceRecord_WriteTo_System_Xml_XmlWriter
+	.long LDIFF_SYM2088
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -33731,27 +33736,27 @@ Lfde195_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2088=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2088
+LDIFF_SYM2089=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2089
 	.byte 0,3
 	.asciz "writer"
 
-LDIFF_SYM2089=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2089
+LDIFF_SYM2090=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2090
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2090=Lfde196_end - Lfde196_start
-	.long LDIFF_SYM2090
+LDIFF_SYM2091=Lfde196_end - Lfde196_start
+	.long LDIFF_SYM2091
 Lfde196_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_TraceRecord_WriteTo_System_Xml_XmlWriter
 
-LDIFF_SYM2091=Lme_ce - System_Runtime_Diagnostics_TraceRecord_WriteTo_System_Xml_XmlWriter
-	.long LDIFF_SYM2091
+LDIFF_SYM2092=Lme_ce - System_Runtime_Diagnostics_TraceRecord_WriteTo_System_Xml_XmlWriter
+	.long LDIFF_SYM2092
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -33770,22 +33775,22 @@ Lfde196_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2092=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2092
+LDIFF_SYM2093=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2093
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2093=Lfde197_end - Lfde197_start
-	.long LDIFF_SYM2093
+LDIFF_SYM2094=Lfde197_end - Lfde197_start
+	.long LDIFF_SYM2094
 Lfde197_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_Diagnostics_TraceRecord__ctor
 
-LDIFF_SYM2094=Lme_cf - System_Runtime_Diagnostics_TraceRecord__ctor
-	.long LDIFF_SYM2094
+LDIFF_SYM2095=Lme_cf - System_Runtime_Diagnostics_TraceRecord__ctor
+	.long LDIFF_SYM2095
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -33804,27 +33809,27 @@ Lfde197_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2095=LTDIE_31_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2095
+LDIFF_SYM2096=LTDIE_31_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2096
 	.byte 2,141,40,3
 	.asciz "exception"
 
-LDIFF_SYM2096=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2096
+LDIFF_SYM2097=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2097
 	.byte 1,80,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2097=Lfde198_end - Lfde198_start
-	.long LDIFF_SYM2097
+LDIFF_SYM2098=Lfde198_end - Lfde198_start
+	.long LDIFF_SYM2098
 Lfde198_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT
 
-LDIFF_SYM2098=Lme_d1 - System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT
-	.long LDIFF_SYM2098
+LDIFF_SYM2099=Lme_d1 - System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT
+	.long LDIFF_SYM2099
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9
 	.align 3
@@ -33843,32 +33848,32 @@ Lfde198_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2099=LTDIE_31_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2099
+LDIFF_SYM2100=LTDIE_31_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2100
 	.byte 1,105,3
 	.asciz "exception"
 
-LDIFF_SYM2100=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2100
+LDIFF_SYM2101=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2101
 	.byte 1,80,3
 	.asciz "eventSource"
 
-LDIFF_SYM2101=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2101
+LDIFF_SYM2102=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2102
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2102=Lfde199_end - Lfde199_start
-	.long LDIFF_SYM2102
+LDIFF_SYM2103=Lfde199_end - Lfde199_start
+	.long LDIFF_SYM2103
 Lfde199_start:
 
 	.long 0
 	.align 3
 	.quad System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT_string
 
-LDIFF_SYM2103=Lme_d2 - System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT_string
-	.long LDIFF_SYM2103
+LDIFF_SYM2104=Lme_d2 - System_Runtime_ExceptionTrace_TraceException_TException_GSHAREDVT_TException_GSHAREDVT_string
+	.long LDIFF_SYM2104
 	.long 0
 	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,148,14,149,13,68,150,12,151,11,68,152,10,153,9,68,154,8
 	.align 3
@@ -33881,23 +33886,23 @@ LTDIE_171:
 	.asciz "System_Array"
 
 	.byte 16,16
-LDIFF_SYM2104=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM2104
+LDIFF_SYM2105=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM2105
 	.byte 2,35,0,0,7
 	.asciz "System_Array"
 
-LDIFF_SYM2105=LTDIE_171 - Ldebug_info_start
-	.long LDIFF_SYM2105
+LDIFF_SYM2106=LTDIE_171 - Ldebug_info_start
+	.long LDIFF_SYM2106
 LTDIE_171_POINTER:
 
 	.byte 13
-LDIFF_SYM2106=LTDIE_171 - Ldebug_info_start
-	.long LDIFF_SYM2106
+LDIFF_SYM2107=LTDIE_171 - Ldebug_info_start
+	.long LDIFF_SYM2107
 LTDIE_171_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2107=LTDIE_171 - Ldebug_info_start
-	.long LDIFF_SYM2107
+LDIFF_SYM2108=LTDIE_171 - Ldebug_info_start
+	.long LDIFF_SYM2108
 	.byte 2
 	.asciz "System.Array:InternalArray__Insert<T_REF>"
 	.asciz "System_Array_InternalArray__Insert_T_REF_int_T_REF"
@@ -33909,32 +33914,32 @@ LDIFF_SYM2107=LTDIE_171 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2108=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2108
+LDIFF_SYM2109=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2109
 	.byte 2,141,16,3
 	.asciz "index"
 
-LDIFF_SYM2109=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2109
+LDIFF_SYM2110=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2110
 	.byte 0,3
 	.asciz "item"
 
-LDIFF_SYM2110=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2110
+LDIFF_SYM2111=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2111
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2111=Lfde200_end - Lfde200_start
-	.long LDIFF_SYM2111
+LDIFF_SYM2112=Lfde200_end - Lfde200_start
+	.long LDIFF_SYM2112
 Lfde200_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__Insert_T_REF_int_T_REF
 
-LDIFF_SYM2112=Lme_d3 - System_Array_InternalArray__Insert_T_REF_int_T_REF
-	.long LDIFF_SYM2112
+LDIFF_SYM2113=Lme_d3 - System_Array_InternalArray__Insert_T_REF_int_T_REF
+	.long LDIFF_SYM2113
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -33953,27 +33958,27 @@ Lfde200_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2113=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2113
+LDIFF_SYM2114=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2114
 	.byte 0,3
 	.asciz "index"
 
-LDIFF_SYM2114=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2114
+LDIFF_SYM2115=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2115
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2115=Lfde201_end - Lfde201_start
-	.long LDIFF_SYM2115
+LDIFF_SYM2116=Lfde201_end - Lfde201_start
+	.long LDIFF_SYM2116
 Lfde201_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__RemoveAt_int
 
-LDIFF_SYM2116=Lme_d4 - System_Array_InternalArray__RemoveAt_int
-	.long LDIFF_SYM2116
+LDIFF_SYM2117=Lme_d4 - System_Array_InternalArray__RemoveAt_int
+	.long LDIFF_SYM2117
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -33992,42 +33997,42 @@ Lfde201_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2117=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2117
+LDIFF_SYM2118=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2118
 	.byte 1,105,3
 	.asciz "item"
 
-LDIFF_SYM2118=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2118
+LDIFF_SYM2119=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2119
 	.byte 1,106,11
 	.asciz "length"
 
-LDIFF_SYM2119=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2119
+LDIFF_SYM2120=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2120
 	.byte 1,104,11
 	.asciz "i"
 
-LDIFF_SYM2120=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2120
+LDIFF_SYM2121=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2121
 	.byte 1,103,11
 	.asciz "value"
 
-LDIFF_SYM2121=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2121
+LDIFF_SYM2122=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2122
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2122=Lfde202_end - Lfde202_start
-	.long LDIFF_SYM2122
+LDIFF_SYM2123=Lfde202_end - Lfde202_start
+	.long LDIFF_SYM2123
 Lfde202_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__IndexOf_T_REF_T_REF
 
-LDIFF_SYM2123=Lme_d5 - System_Array_InternalArray__IndexOf_T_REF_T_REF
-	.long LDIFF_SYM2123
+LDIFF_SYM2124=Lme_d5 - System_Array_InternalArray__IndexOf_T_REF_T_REF
+	.long LDIFF_SYM2124
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68,154,2
 	.align 3
@@ -34046,32 +34051,32 @@ Lfde202_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2124=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2124
+LDIFF_SYM2125=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2125
 	.byte 2,141,24,3
 	.asciz "index"
 
-LDIFF_SYM2125=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2125
+LDIFF_SYM2126=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2126
 	.byte 1,106,11
 	.asciz "value"
 
-LDIFF_SYM2126=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2126
+LDIFF_SYM2127=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2127
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2127=Lfde203_end - Lfde203_start
-	.long LDIFF_SYM2127
+LDIFF_SYM2128=Lfde203_end - Lfde203_start
+	.long LDIFF_SYM2128
 Lfde203_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__get_Item_T_REF_int
 
-LDIFF_SYM2128=Lme_d6 - System_Array_InternalArray__get_Item_T_REF_int
-	.long LDIFF_SYM2128
+LDIFF_SYM2129=Lme_d6 - System_Array_InternalArray__get_Item_T_REF_int
+	.long LDIFF_SYM2129
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -34090,37 +34095,37 @@ Lfde203_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2129=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2129
+LDIFF_SYM2130=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2130
 	.byte 1,104,3
 	.asciz "index"
 
-LDIFF_SYM2130=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2130
+LDIFF_SYM2131=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2131
 	.byte 2,141,40,3
 	.asciz "item"
 
-LDIFF_SYM2131=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2131
+LDIFF_SYM2132=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2132
 	.byte 2,141,48,11
 	.asciz "oarray"
 
-LDIFF_SYM2132=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM2132
+LDIFF_SYM2133=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM2133
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2133=Lfde204_end - Lfde204_start
-	.long LDIFF_SYM2133
+LDIFF_SYM2134=Lfde204_end - Lfde204_start
+	.long LDIFF_SYM2134
 Lfde204_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__set_Item_T_REF_int_T_REF
 
-LDIFF_SYM2134=Lme_d7 - System_Array_InternalArray__set_Item_T_REF_int_T_REF
-	.long LDIFF_SYM2134
+LDIFF_SYM2135=Lme_d7 - System_Array_InternalArray__set_Item_T_REF_int_T_REF
+	.long LDIFF_SYM2135
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4
 	.align 3
@@ -34139,22 +34144,22 @@ Lfde204_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2135=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2135
+LDIFF_SYM2136=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2136
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2136=Lfde205_end - Lfde205_start
-	.long LDIFF_SYM2136
+LDIFF_SYM2137=Lfde205_end - Lfde205_start
+	.long LDIFF_SYM2137
 Lfde205_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
 
-LDIFF_SYM2137=Lme_d8 - System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
-	.long LDIFF_SYM2137
+LDIFF_SYM2138=Lme_d8 - System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF
+	.long LDIFF_SYM2138
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -34167,23 +34172,23 @@ LTDIE_172:
 	.asciz "System_Func`1"
 
 	.byte 112,16
-LDIFF_SYM2138=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM2138
+LDIFF_SYM2139=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM2139
 	.byte 2,35,0,0,7
 	.asciz "System_Func`1"
 
-LDIFF_SYM2139=LTDIE_172 - Ldebug_info_start
-	.long LDIFF_SYM2139
+LDIFF_SYM2140=LTDIE_172 - Ldebug_info_start
+	.long LDIFF_SYM2140
 LTDIE_172_POINTER:
 
 	.byte 13
-LDIFF_SYM2140=LTDIE_172 - Ldebug_info_start
-	.long LDIFF_SYM2140
+LDIFF_SYM2141=LTDIE_172 - Ldebug_info_start
+	.long LDIFF_SYM2141
 LTDIE_172_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2141=LTDIE_172 - Ldebug_info_start
-	.long LDIFF_SYM2141
+LDIFF_SYM2142=LTDIE_172 - Ldebug_info_start
+	.long LDIFF_SYM2142
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.Func`1<string>:invoke_TResult"
 	.asciz "wrapper_delegate_invoke_System_Func_1_string_invoke_TResult"
@@ -34195,52 +34200,52 @@ LDIFF_SYM2141=LTDIE_172 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2142=LTDIE_172_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2142
+LDIFF_SYM2143=LTDIE_172_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2143
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2143=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2143
+LDIFF_SYM2144=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2144
 	.byte 1,104,11
 	.asciz "V_1"
 
-LDIFF_SYM2144=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2144
+LDIFF_SYM2145=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2145
 	.byte 1,106,11
 	.asciz "V_2"
 
-LDIFF_SYM2145=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2145
+LDIFF_SYM2146=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2146
 	.byte 1,105,11
 	.asciz "V_3"
 
-LDIFF_SYM2146=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2146
+LDIFF_SYM2147=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2147
 	.byte 1,103,11
 	.asciz "V_4"
 
-LDIFF_SYM2147=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2147
+LDIFF_SYM2148=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2148
 	.byte 1,105,11
 	.asciz "V_5"
 
-LDIFF_SYM2148=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM2148
+LDIFF_SYM2149=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM2149
 	.byte 1,103,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2149=Lfde206_end - Lfde206_start
-	.long LDIFF_SYM2149
+LDIFF_SYM2150=Lfde206_end - Lfde206_start
+	.long LDIFF_SYM2150
 Lfde206_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_Func_1_string_invoke_TResult
 
-LDIFF_SYM2150=Lme_d9 - wrapper_delegate_invoke_System_Func_1_string_invoke_TResult
-	.long LDIFF_SYM2150
+LDIFF_SYM2151=Lme_d9 - wrapper_delegate_invoke_System_Func_1_string_invoke_TResult
+	.long LDIFF_SYM2151
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -34259,22 +34264,22 @@ Lfde206_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2151=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2151
+LDIFF_SYM2152=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2152
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2152=Lfde207_end - Lfde207_start
-	.long LDIFF_SYM2152
+LDIFF_SYM2153=Lfde207_end - Lfde207_start
+	.long LDIFF_SYM2153
 Lfde207_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_get_Count
 
-LDIFF_SYM2153=Lme_da - System_Array_InternalArray__ICollection_get_Count
-	.long LDIFF_SYM2153
+LDIFF_SYM2154=Lme_da - System_Array_InternalArray__ICollection_get_Count
+	.long LDIFF_SYM2154
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -34293,22 +34298,22 @@ Lfde207_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2154=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2154
+LDIFF_SYM2155=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2155
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2155=Lfde208_end - Lfde208_start
-	.long LDIFF_SYM2155
+LDIFF_SYM2156=Lfde208_end - Lfde208_start
+	.long LDIFF_SYM2156
 Lfde208_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_get_IsReadOnly
 
-LDIFF_SYM2156=Lme_db - System_Array_InternalArray__ICollection_get_IsReadOnly
-	.long LDIFF_SYM2156
+LDIFF_SYM2157=Lme_db - System_Array_InternalArray__ICollection_get_IsReadOnly
+	.long LDIFF_SYM2157
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -34327,22 +34332,22 @@ Lfde208_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2157=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2157
+LDIFF_SYM2158=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2158
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2158=Lfde209_end - Lfde209_start
-	.long LDIFF_SYM2158
+LDIFF_SYM2159=Lfde209_end - Lfde209_start
+	.long LDIFF_SYM2159
 Lfde209_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_Clear
 
-LDIFF_SYM2159=Lme_dc - System_Array_InternalArray__ICollection_Clear
-	.long LDIFF_SYM2159
+LDIFF_SYM2160=Lme_dc - System_Array_InternalArray__ICollection_Clear
+	.long LDIFF_SYM2160
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -34361,27 +34366,27 @@ Lfde209_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2160=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2160
+LDIFF_SYM2161=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2161
 	.byte 2,141,16,3
 	.asciz "item"
 
-LDIFF_SYM2161=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2161
+LDIFF_SYM2162=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2162
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2162=Lfde210_end - Lfde210_start
-	.long LDIFF_SYM2162
+LDIFF_SYM2163=Lfde210_end - Lfde210_start
+	.long LDIFF_SYM2163
 Lfde210_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_Add_T_REF_T_REF
 
-LDIFF_SYM2163=Lme_dd - System_Array_InternalArray__ICollection_Add_T_REF_T_REF
-	.long LDIFF_SYM2163
+LDIFF_SYM2164=Lme_dd - System_Array_InternalArray__ICollection_Add_T_REF_T_REF
+	.long LDIFF_SYM2164
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -34400,27 +34405,27 @@ Lfde210_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2164=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2164
+LDIFF_SYM2165=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2165
 	.byte 2,141,16,3
 	.asciz "item"
 
-LDIFF_SYM2165=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2165
+LDIFF_SYM2166=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2166
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2166=Lfde211_end - Lfde211_start
-	.long LDIFF_SYM2166
+LDIFF_SYM2167=Lfde211_end - Lfde211_start
+	.long LDIFF_SYM2167
 Lfde211_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_Remove_T_REF_T_REF
 
-LDIFF_SYM2167=Lme_de - System_Array_InternalArray__ICollection_Remove_T_REF_T_REF
-	.long LDIFF_SYM2167
+LDIFF_SYM2168=Lme_de - System_Array_InternalArray__ICollection_Remove_T_REF_T_REF
+	.long LDIFF_SYM2168
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -34439,42 +34444,42 @@ Lfde211_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2168=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2168
+LDIFF_SYM2169=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2169
 	.byte 1,105,3
 	.asciz "item"
 
-LDIFF_SYM2169=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2169
+LDIFF_SYM2170=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2170
 	.byte 1,106,11
 	.asciz "length"
 
-LDIFF_SYM2170=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2170
+LDIFF_SYM2171=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2171
 	.byte 1,104,11
 	.asciz "i"
 
-LDIFF_SYM2171=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2171
+LDIFF_SYM2172=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2172
 	.byte 1,103,11
 	.asciz "value"
 
-LDIFF_SYM2172=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2172
+LDIFF_SYM2173=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2173
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2173=Lfde212_end - Lfde212_start
-	.long LDIFF_SYM2173
+LDIFF_SYM2174=Lfde212_end - Lfde212_start
+	.long LDIFF_SYM2174
 Lfde212_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_Contains_T_REF_T_REF
 
-LDIFF_SYM2174=Lme_df - System_Array_InternalArray__ICollection_Contains_T_REF_T_REF
-	.long LDIFF_SYM2174
+LDIFF_SYM2175=Lme_df - System_Array_InternalArray__ICollection_Contains_T_REF_T_REF
+	.long LDIFF_SYM2175
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68,154,2
 	.align 3
@@ -34493,32 +34498,32 @@ Lfde212_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2175=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2175
+LDIFF_SYM2176=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2176
 	.byte 2,141,24,3
 	.asciz "array"
 
-LDIFF_SYM2176=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM2176
+LDIFF_SYM2177=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM2177
 	.byte 2,141,32,3
 	.asciz "arrayIndex"
 
-LDIFF_SYM2177=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2177
+LDIFF_SYM2178=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2178
 	.byte 2,141,40,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2178=Lfde213_end - Lfde213_start
-	.long LDIFF_SYM2178
+LDIFF_SYM2179=Lfde213_end - Lfde213_start
+	.long LDIFF_SYM2179
 Lfde213_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
 
-LDIFF_SYM2179=Lme_e0 - System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
-	.long LDIFF_SYM2179
+LDIFF_SYM2180=Lme_e0 - System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int
+	.long LDIFF_SYM2180
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6
 	.align 3
@@ -34531,23 +34536,23 @@ LTDIE_173:
 	.asciz "System_Predicate`1"
 
 	.byte 112,16
-LDIFF_SYM2180=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM2180
+LDIFF_SYM2181=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM2181
 	.byte 2,35,0,0,7
 	.asciz "System_Predicate`1"
 
-LDIFF_SYM2181=LTDIE_173 - Ldebug_info_start
-	.long LDIFF_SYM2181
+LDIFF_SYM2182=LTDIE_173 - Ldebug_info_start
+	.long LDIFF_SYM2182
 LTDIE_173_POINTER:
 
 	.byte 13
-LDIFF_SYM2182=LTDIE_173 - Ldebug_info_start
-	.long LDIFF_SYM2182
+LDIFF_SYM2183=LTDIE_173 - Ldebug_info_start
+	.long LDIFF_SYM2183
 LTDIE_173_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2183=LTDIE_173 - Ldebug_info_start
-	.long LDIFF_SYM2183
+LDIFF_SYM2184=LTDIE_173 - Ldebug_info_start
+	.long LDIFF_SYM2184
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.Predicate`1<System.Tuple`2<string,_string>>:invoke_bool_T"
 	.asciz "wrapper_delegate_invoke_System_Predicate_1_System_Tuple_2_string_string_invoke_bool_T_System_Tuple_2_string_string"
@@ -34559,57 +34564,57 @@ LDIFF_SYM2183=LTDIE_173 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2184=LTDIE_173_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2184
+LDIFF_SYM2185=LTDIE_173_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2185
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM2185=LTDIE_164_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2185
+LDIFF_SYM2186=LTDIE_164_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2186
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2186=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2186
+LDIFF_SYM2187=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2187
 	.byte 1,103,11
 	.asciz "V_1"
 
-LDIFF_SYM2187=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2187
+LDIFF_SYM2188=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2188
 	.byte 1,105,11
 	.asciz "V_2"
 
-LDIFF_SYM2188=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2188
+LDIFF_SYM2189=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2189
 	.byte 1,104,11
 	.asciz "V_3"
 
-LDIFF_SYM2189=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2189
+LDIFF_SYM2190=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2190
 	.byte 1,102,11
 	.asciz "V_4"
 
-LDIFF_SYM2190=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2190
+LDIFF_SYM2191=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2191
 	.byte 1,104,11
 	.asciz "V_5"
 
-LDIFF_SYM2191=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2191
+LDIFF_SYM2192=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2192
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2192=Lfde214_end - Lfde214_start
-	.long LDIFF_SYM2192
+LDIFF_SYM2193=Lfde214_end - Lfde214_start
+	.long LDIFF_SYM2193
 Lfde214_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_Predicate_1_System_Tuple_2_string_string_invoke_bool_T_System_Tuple_2_string_string
 
-LDIFF_SYM2193=Lme_e1 - wrapper_delegate_invoke_System_Predicate_1_System_Tuple_2_string_string_invoke_bool_T_System_Tuple_2_string_string
-	.long LDIFF_SYM2193
+LDIFF_SYM2194=Lme_e1 - wrapper_delegate_invoke_System_Predicate_1_System_Tuple_2_string_string_invoke_bool_T_System_Tuple_2_string_string
+	.long LDIFF_SYM2194
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,153,5,68,154,4
 	.align 3
@@ -34622,23 +34627,23 @@ LTDIE_174:
 	.asciz "System_Action`1"
 
 	.byte 112,16
-LDIFF_SYM2194=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM2194
+LDIFF_SYM2195=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM2195
 	.byte 2,35,0,0,7
 	.asciz "System_Action`1"
 
-LDIFF_SYM2195=LTDIE_174 - Ldebug_info_start
-	.long LDIFF_SYM2195
+LDIFF_SYM2196=LTDIE_174 - Ldebug_info_start
+	.long LDIFF_SYM2196
 LTDIE_174_POINTER:
 
 	.byte 13
-LDIFF_SYM2196=LTDIE_174 - Ldebug_info_start
-	.long LDIFF_SYM2196
+LDIFF_SYM2197=LTDIE_174 - Ldebug_info_start
+	.long LDIFF_SYM2197
 LTDIE_174_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2197=LTDIE_174 - Ldebug_info_start
-	.long LDIFF_SYM2197
+LDIFF_SYM2198=LTDIE_174 - Ldebug_info_start
+	.long LDIFF_SYM2198
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.Action`1<System.Tuple`2<string,_string>>:invoke_void_T"
 	.asciz "wrapper_delegate_invoke_System_Action_1_System_Tuple_2_string_string_invoke_void_T_System_Tuple_2_string_string"
@@ -34650,52 +34655,52 @@ LDIFF_SYM2197=LTDIE_174 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2198=LTDIE_174_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2198
+LDIFF_SYM2199=LTDIE_174_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2199
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM2199=LTDIE_164_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2199
+LDIFF_SYM2200=LTDIE_164_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2200
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2200=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2200
+LDIFF_SYM2201=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2201
 	.byte 1,103,11
 	.asciz "V_1"
 
-LDIFF_SYM2201=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2201
+LDIFF_SYM2202=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2202
 	.byte 1,105,11
 	.asciz "V_2"
 
-LDIFF_SYM2202=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2202
+LDIFF_SYM2203=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2203
 	.byte 1,104,11
 	.asciz "V_3"
 
-LDIFF_SYM2203=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2203
+LDIFF_SYM2204=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2204
 	.byte 1,102,11
 	.asciz "V_4"
 
-LDIFF_SYM2204=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2204
+LDIFF_SYM2205=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2205
 	.byte 1,104,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2205=Lfde215_end - Lfde215_start
-	.long LDIFF_SYM2205
+LDIFF_SYM2206=Lfde215_end - Lfde215_start
+	.long LDIFF_SYM2206
 Lfde215_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_Action_1_System_Tuple_2_string_string_invoke_void_T_System_Tuple_2_string_string
 
-LDIFF_SYM2206=Lme_e2 - wrapper_delegate_invoke_System_Action_1_System_Tuple_2_string_string_invoke_void_T_System_Tuple_2_string_string
-	.long LDIFF_SYM2206
+LDIFF_SYM2207=Lme_e2 - wrapper_delegate_invoke_System_Action_1_System_Tuple_2_string_string_invoke_void_T_System_Tuple_2_string_string
+	.long LDIFF_SYM2207
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,150,8,151,7,68,152,6,153,5,68,154,4
 	.align 3
@@ -34708,23 +34713,23 @@ LTDIE_175:
 	.asciz "System_Comparison`1"
 
 	.byte 112,16
-LDIFF_SYM2207=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM2207
+LDIFF_SYM2208=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM2208
 	.byte 2,35,0,0,7
 	.asciz "System_Comparison`1"
 
-LDIFF_SYM2208=LTDIE_175 - Ldebug_info_start
-	.long LDIFF_SYM2208
+LDIFF_SYM2209=LTDIE_175 - Ldebug_info_start
+	.long LDIFF_SYM2209
 LTDIE_175_POINTER:
 
 	.byte 13
-LDIFF_SYM2209=LTDIE_175 - Ldebug_info_start
-	.long LDIFF_SYM2209
+LDIFF_SYM2210=LTDIE_175 - Ldebug_info_start
+	.long LDIFF_SYM2210
 LTDIE_175_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2210=LTDIE_175 - Ldebug_info_start
-	.long LDIFF_SYM2210
+LDIFF_SYM2211=LTDIE_175 - Ldebug_info_start
+	.long LDIFF_SYM2211
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.Comparison`1<System.Tuple`2<string,_string>>:invoke_int_T_T"
 	.asciz "wrapper_delegate_invoke_System_Comparison_1_System_Tuple_2_string_string_invoke_int_T_T_System_Tuple_2_string_string_System_Tuple_2_string_string"
@@ -34736,62 +34741,62 @@ LDIFF_SYM2210=LTDIE_175 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2211=LTDIE_175_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2211
+LDIFF_SYM2212=LTDIE_175_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2212
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM2212=LTDIE_164_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2212
+LDIFF_SYM2213=LTDIE_164_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2213
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM2213=LTDIE_164_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2213
+LDIFF_SYM2214=LTDIE_164_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2214
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2214=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2214
+LDIFF_SYM2215=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2215
 	.byte 1,102,11
 	.asciz "V_1"
 
-LDIFF_SYM2215=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2215
+LDIFF_SYM2216=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2216
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM2216=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2216
+LDIFF_SYM2217=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2217
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM2217=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2217
+LDIFF_SYM2218=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2218
 	.byte 1,101,11
 	.asciz "V_4"
 
-LDIFF_SYM2218=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2218
+LDIFF_SYM2219=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2219
 	.byte 1,103,11
 	.asciz "V_5"
 
-LDIFF_SYM2219=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2219
+LDIFF_SYM2220=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2220
 	.byte 1,101,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2220=Lfde216_end - Lfde216_start
-	.long LDIFF_SYM2220
+LDIFF_SYM2221=Lfde216_end - Lfde216_start
+	.long LDIFF_SYM2221
 Lfde216_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_Comparison_1_System_Tuple_2_string_string_invoke_int_T_T_System_Tuple_2_string_string_System_Tuple_2_string_string
 
-LDIFF_SYM2221=Lme_e3 - wrapper_delegate_invoke_System_Comparison_1_System_Tuple_2_string_string_invoke_int_T_T_System_Tuple_2_string_string_System_Tuple_2_string_string
-	.long LDIFF_SYM2221
+LDIFF_SYM2222=Lme_e3 - wrapper_delegate_invoke_System_Comparison_1_System_Tuple_2_string_string_invoke_int_T_T_System_Tuple_2_string_string_System_Tuple_2_string_string
+	.long LDIFF_SYM2222
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -34804,33 +34809,33 @@ LTDIE_176:
 	.asciz "_InternalEnumerator`1"
 
 	.byte 32,16
-LDIFF_SYM2222=LTDIE_7 - Ldebug_info_start
-	.long LDIFF_SYM2222
+LDIFF_SYM2223=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM2223
 	.byte 2,35,0,6
 	.asciz "array"
 
-LDIFF_SYM2223=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2223
+LDIFF_SYM2224=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2224
 	.byte 2,35,16,6
 	.asciz "idx"
 
-LDIFF_SYM2224=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2224
+LDIFF_SYM2225=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2225
 	.byte 2,35,24,0,7
 	.asciz "_InternalEnumerator`1"
 
-LDIFF_SYM2225=LTDIE_176 - Ldebug_info_start
-	.long LDIFF_SYM2225
+LDIFF_SYM2226=LTDIE_176 - Ldebug_info_start
+	.long LDIFF_SYM2226
 LTDIE_176_POINTER:
 
 	.byte 13
-LDIFF_SYM2226=LTDIE_176 - Ldebug_info_start
-	.long LDIFF_SYM2226
+LDIFF_SYM2227=LTDIE_176 - Ldebug_info_start
+	.long LDIFF_SYM2227
 LTDIE_176_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2227=LTDIE_176 - Ldebug_info_start
-	.long LDIFF_SYM2227
+LDIFF_SYM2228=LTDIE_176 - Ldebug_info_start
+	.long LDIFF_SYM2228
 	.byte 2
 	.asciz "System.Array/InternalEnumerator`1<T_INST>:.ctor"
 	.asciz "System_Array_InternalEnumerator_1_T_INST__ctor_System_Array"
@@ -34842,27 +34847,27 @@ LDIFF_SYM2227=LTDIE_176 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2228=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2228
+LDIFF_SYM2229=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2229
 	.byte 2,141,16,3
 	.asciz "array"
 
-LDIFF_SYM2229=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2229
+LDIFF_SYM2230=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2230
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2230=Lfde217_end - Lfde217_start
-	.long LDIFF_SYM2230
+LDIFF_SYM2231=Lfde217_end - Lfde217_start
+	.long LDIFF_SYM2231
 Lfde217_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST__ctor_System_Array
 
-LDIFF_SYM2231=Lme_e5 - System_Array_InternalEnumerator_1_T_INST__ctor_System_Array
-	.long LDIFF_SYM2231
+LDIFF_SYM2232=Lme_e5 - System_Array_InternalEnumerator_1_T_INST__ctor_System_Array
+	.long LDIFF_SYM2232
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -34881,22 +34886,22 @@ Lfde217_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2232=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2232
+LDIFF_SYM2233=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2233
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2233=Lfde218_end - Lfde218_start
-	.long LDIFF_SYM2233
+LDIFF_SYM2234=Lfde218_end - Lfde218_start
+	.long LDIFF_SYM2234
 Lfde218_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST_Dispose
 
-LDIFF_SYM2234=Lme_e6 - System_Array_InternalEnumerator_1_T_INST_Dispose
-	.long LDIFF_SYM2234
+LDIFF_SYM2235=Lme_e6 - System_Array_InternalEnumerator_1_T_INST_Dispose
+	.long LDIFF_SYM2235
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -34915,27 +34920,27 @@ Lfde218_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2235=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2235
+LDIFF_SYM2236=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2236
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2236=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2236
+LDIFF_SYM2237=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2237
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2237=Lfde219_end - Lfde219_start
-	.long LDIFF_SYM2237
+LDIFF_SYM2238=Lfde219_end - Lfde219_start
+	.long LDIFF_SYM2238
 Lfde219_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST_MoveNext
 
-LDIFF_SYM2238=Lme_e7 - System_Array_InternalEnumerator_1_T_INST_MoveNext
-	.long LDIFF_SYM2238
+LDIFF_SYM2239=Lme_e7 - System_Array_InternalEnumerator_1_T_INST_MoveNext
+	.long LDIFF_SYM2239
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
 	.align 3
@@ -34954,22 +34959,22 @@ Lfde219_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2239=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2239
+LDIFF_SYM2240=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2240
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2240=Lfde220_end - Lfde220_start
-	.long LDIFF_SYM2240
+LDIFF_SYM2241=Lfde220_end - Lfde220_start
+	.long LDIFF_SYM2241
 Lfde220_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST_get_Current
 
-LDIFF_SYM2241=Lme_e8 - System_Array_InternalEnumerator_1_T_INST_get_Current
-	.long LDIFF_SYM2241
+LDIFF_SYM2242=Lme_e8 - System_Array_InternalEnumerator_1_T_INST_get_Current
+	.long LDIFF_SYM2242
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
 	.align 3
@@ -34988,22 +34993,22 @@ Lfde220_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2242=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2242
+LDIFF_SYM2243=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2243
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2243=Lfde221_end - Lfde221_start
-	.long LDIFF_SYM2243
+LDIFF_SYM2244=Lfde221_end - Lfde221_start
+	.long LDIFF_SYM2244
 Lfde221_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_Reset
 
-LDIFF_SYM2244=Lme_e9 - System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_Reset
-	.long LDIFF_SYM2244
+LDIFF_SYM2245=Lme_e9 - System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_Reset
+	.long LDIFF_SYM2245
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -35022,22 +35027,22 @@ Lfde221_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2245=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2245
+LDIFF_SYM2246=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2246
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2246=Lfde222_end - Lfde222_start
-	.long LDIFF_SYM2246
+LDIFF_SYM2247=Lfde222_end - Lfde222_start
+	.long LDIFF_SYM2247
 Lfde222_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_get_Current
 
-LDIFF_SYM2247=Lme_ea - System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_get_Current
-	.long LDIFF_SYM2247
+LDIFF_SYM2248=Lme_ea - System_Array_InternalEnumerator_1_T_INST_System_Collections_IEnumerator_get_Current
+	.long LDIFF_SYM2248
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -35056,22 +35061,22 @@ Lfde222_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2248=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2248
+LDIFF_SYM2249=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2249
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2249=Lfde223_end - Lfde223_start
-	.long LDIFF_SYM2249
+LDIFF_SYM2250=Lfde223_end - Lfde223_start
+	.long LDIFF_SYM2250
 Lfde223_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__IEnumerable_GetEnumerator_T_INST
 
-LDIFF_SYM2250=Lme_eb - System_Array_InternalArray__IEnumerable_GetEnumerator_T_INST
-	.long LDIFF_SYM2250
+LDIFF_SYM2251=Lme_eb - System_Array_InternalArray__IEnumerable_GetEnumerator_T_INST
+	.long LDIFF_SYM2251
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29
 	.align 3
@@ -35086,18 +35091,18 @@ LTDIE_177:
 	.byte 16,7
 	.asciz "_<Module>"
 
-LDIFF_SYM2251=LTDIE_177 - Ldebug_info_start
-	.long LDIFF_SYM2251
+LDIFF_SYM2252=LTDIE_177 - Ldebug_info_start
+	.long LDIFF_SYM2252
 LTDIE_177_POINTER:
 
 	.byte 13
-LDIFF_SYM2252=LTDIE_177 - Ldebug_info_start
-	.long LDIFF_SYM2252
+LDIFF_SYM2253=LTDIE_177 - Ldebug_info_start
+	.long LDIFF_SYM2253
 LTDIE_177_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2253=LTDIE_177 - Ldebug_info_start
-	.long LDIFF_SYM2253
+LDIFF_SYM2254=LTDIE_177 - Ldebug_info_start
+	.long LDIFF_SYM2254
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_<Module>:invoke_void_Guid__int_byte_long_long_void__void_"
 	.asciz "wrapper_delegate_invoke__Module_invoke_void_Guid__int_byte_long_long_void__void__System_Guid__int_byte_long_long_void__void_"
@@ -35109,82 +35114,82 @@ LDIFF_SYM2253=LTDIE_177 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2254=LTDIE_177_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2254
+LDIFF_SYM2255=LTDIE_177_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2255
 	.byte 1,99,3
 	.asciz "param0"
 
-LDIFF_SYM2255=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2255
+LDIFF_SYM2256=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2256
 	.byte 1,100,3
 	.asciz "param1"
 
-LDIFF_SYM2256=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2256
+LDIFF_SYM2257=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2257
 	.byte 1,101,3
 	.asciz "param2"
 
-LDIFF_SYM2257=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM2257
+LDIFF_SYM2258=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM2258
 	.byte 1,102,3
 	.asciz "param3"
 
-LDIFF_SYM2258=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM2258
+LDIFF_SYM2259=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM2259
 	.byte 1,103,3
 	.asciz "param4"
 
-LDIFF_SYM2259=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM2259
+LDIFF_SYM2260=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM2260
 	.byte 1,104,3
 	.asciz "param5"
 
-LDIFF_SYM2260=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2260
+LDIFF_SYM2261=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2261
 	.byte 3,141,200,0,3
 	.asciz "param6"
 
-LDIFF_SYM2261=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2261
+LDIFF_SYM2262=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2262
 	.byte 3,141,208,0,11
 	.asciz "V_0"
 
-LDIFF_SYM2262=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2262
+LDIFF_SYM2263=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2263
 	.byte 1,99,11
 	.asciz "V_1"
 
-LDIFF_SYM2263=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2263
+LDIFF_SYM2264=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2264
 	.byte 1,106,11
 	.asciz "V_2"
 
-LDIFF_SYM2264=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2264
+LDIFF_SYM2265=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2265
 	.byte 3,141,216,0,11
 	.asciz "V_3"
 
-LDIFF_SYM2265=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2265
+LDIFF_SYM2266=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2266
 	.byte 3,141,224,0,11
 	.asciz "V_4"
 
-LDIFF_SYM2266=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2266
+LDIFF_SYM2267=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2267
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2267=Lfde224_end - Lfde224_start
-	.long LDIFF_SYM2267
+LDIFF_SYM2268=Lfde224_end - Lfde224_start
+	.long LDIFF_SYM2268
 Lfde224_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke__Module_invoke_void_Guid__int_byte_long_long_void__void__System_Guid__int_byte_long_long_void__void_
 
-LDIFF_SYM2268=Lme_ec - wrapper_delegate_invoke__Module_invoke_void_Guid__int_byte_long_long_void__void__System_Guid__int_byte_long_long_void__void_
-	.long LDIFF_SYM2268
+LDIFF_SYM2269=Lme_ec - wrapper_delegate_invoke__Module_invoke_void_Guid__int_byte_long_long_void__void__System_Guid__int_byte_long_long_void__void_
+	.long LDIFF_SYM2269
 	.long 0
 	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,147,14,148,13,68,149,12,150,11,68,151,10,152,9,68,154,8
 	.align 3
@@ -35203,77 +35208,77 @@ Lfde224_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2269=LTDIE_177_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2269
+LDIFF_SYM2270=LTDIE_177_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2270
 	.byte 2,141,40,3
 	.asciz "param0"
 
-LDIFF_SYM2270=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2270
+LDIFF_SYM2271=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2271
 	.byte 2,141,48,3
 	.asciz "param1"
 
-LDIFF_SYM2271=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2271
+LDIFF_SYM2272=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2272
 	.byte 2,141,56,3
 	.asciz "param2"
 
-LDIFF_SYM2272=LDIE_U1 - Ldebug_info_start
-	.long LDIFF_SYM2272
+LDIFF_SYM2273=LDIE_U1 - Ldebug_info_start
+	.long LDIFF_SYM2273
 	.byte 3,141,192,0,3
 	.asciz "param3"
 
-LDIFF_SYM2273=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM2273
+LDIFF_SYM2274=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM2274
 	.byte 3,141,200,0,3
 	.asciz "param4"
 
-LDIFF_SYM2274=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM2274
+LDIFF_SYM2275=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM2275
 	.byte 3,141,208,0,3
 	.asciz "param5"
 
-LDIFF_SYM2275=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2275
+LDIFF_SYM2276=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2276
 	.byte 3,141,216,0,3
 	.asciz "param6"
 
-LDIFF_SYM2276=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2276
+LDIFF_SYM2277=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2277
 	.byte 3,141,224,0,3
 	.asciz "param7"
 
-LDIFF_SYM2277=LTDIE_113_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2277
+LDIFF_SYM2278=LTDIE_113_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2278
 	.byte 2,140,0,3
 	.asciz "param8"
 
-LDIFF_SYM2278=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2278
+LDIFF_SYM2279=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2279
 	.byte 2,140,8,11
 	.asciz "V_0"
 
-LDIFF_SYM2279=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2279
+LDIFF_SYM2280=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2280
 	.byte 1,105,11
 	.asciz "V_1"
 
-LDIFF_SYM2280=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2280
+LDIFF_SYM2281=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2281
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2281=Lfde225_end - Lfde225_start
-	.long LDIFF_SYM2281
+LDIFF_SYM2282=Lfde225_end - Lfde225_start
+	.long LDIFF_SYM2282
 Lfde225_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_begin_invoke__Module_begin_invoke_IAsyncResult__this___Guid__int_byte_long_long_void__void__AsyncCallback_object_System_Guid__int_byte_long_long_void__void__System_AsyncCallback_object
 
-LDIFF_SYM2282=Lme_ed - wrapper_delegate_begin_invoke__Module_begin_invoke_IAsyncResult__this___Guid__int_byte_long_long_void__void__AsyncCallback_object_System_Guid__int_byte_long_long_void__void__System_AsyncCallback_object
-	.long LDIFF_SYM2282
+LDIFF_SYM2283=Lme_ed - wrapper_delegate_begin_invoke__Module_begin_invoke_IAsyncResult__this___Guid__int_byte_long_long_void__void__AsyncCallback_object_System_Guid__int_byte_long_long_void__void__System_AsyncCallback_object
+	.long LDIFF_SYM2283
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,153,11,68,156,10
 	.align 3
@@ -35288,18 +35293,18 @@ LTDIE_178:
 	.byte 16,7
 	.asciz "System_IAsyncResult"
 
-LDIFF_SYM2283=LTDIE_178 - Ldebug_info_start
-	.long LDIFF_SYM2283
+LDIFF_SYM2284=LTDIE_178 - Ldebug_info_start
+	.long LDIFF_SYM2284
 LTDIE_178_POINTER:
 
 	.byte 13
-LDIFF_SYM2284=LTDIE_178 - Ldebug_info_start
-	.long LDIFF_SYM2284
+LDIFF_SYM2285=LTDIE_178 - Ldebug_info_start
+	.long LDIFF_SYM2285
 LTDIE_178_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2285=LTDIE_178 - Ldebug_info_start
-	.long LDIFF_SYM2285
+LDIFF_SYM2286=LTDIE_178 - Ldebug_info_start
+	.long LDIFF_SYM2286
 	.byte 2
 	.asciz "(wrapper_delegate-end-invoke)_<Module>:end_invoke_void__this___Guid__IAsyncResult"
 	.asciz "wrapper_delegate_end_invoke__Module_end_invoke_void__this___Guid__IAsyncResult_System_Guid__System_IAsyncResult"
@@ -35311,42 +35316,42 @@ LDIFF_SYM2285=LTDIE_178 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2286=LTDIE_177_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2286
+LDIFF_SYM2287=LTDIE_177_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2287
 	.byte 2,141,32,3
 	.asciz "param0"
 
-LDIFF_SYM2287=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2287
+LDIFF_SYM2288=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2288
 	.byte 2,141,40,3
 	.asciz "param1"
 
-LDIFF_SYM2288=LTDIE_178_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2288
+LDIFF_SYM2289=LTDIE_178_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2289
 	.byte 2,141,48,11
 	.asciz "V_0"
 
-LDIFF_SYM2289=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2289
+LDIFF_SYM2290=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2290
 	.byte 1,105,11
 	.asciz "V_1"
 
-LDIFF_SYM2290=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2290
+LDIFF_SYM2291=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2291
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2291=Lfde226_end - Lfde226_start
-	.long LDIFF_SYM2291
+LDIFF_SYM2292=Lfde226_end - Lfde226_start
+	.long LDIFF_SYM2292
 Lfde226_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_end_invoke__Module_end_invoke_void__this___Guid__IAsyncResult_System_Guid__System_IAsyncResult
 
-LDIFF_SYM2292=Lme_ee - wrapper_delegate_end_invoke__Module_end_invoke_void__this___Guid__IAsyncResult_System_Guid__System_IAsyncResult
-	.long LDIFF_SYM2292
+LDIFF_SYM2293=Lme_ee - wrapper_delegate_end_invoke__Module_end_invoke_void__this___Guid__IAsyncResult_System_Guid__System_IAsyncResult
+	.long LDIFF_SYM2293
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5
 	.align 3
@@ -35365,97 +35370,97 @@ Lfde226_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2293=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2293
+LDIFF_SYM2294=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2294
 	.byte 1,104,3
 	.asciz "param1"
 
-LDIFF_SYM2294=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2294
+LDIFF_SYM2295=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2295
 	.byte 1,105,3
 	.asciz "param2"
 
-LDIFF_SYM2295=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2295
+LDIFF_SYM2296=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2296
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM2296=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2296
+LDIFF_SYM2297=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2297
 	.byte 1,106,11
 	.asciz "V_1"
 
-LDIFF_SYM2297=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2297
+LDIFF_SYM2298=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2298
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM2298=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM2298
+LDIFF_SYM2299=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM2299
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM2299=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2299
+LDIFF_SYM2300=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2300
 	.byte 1,102,11
 	.asciz "V_4"
 
-LDIFF_SYM2300=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2300
+LDIFF_SYM2301=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2301
 	.byte 2,141,56,11
 	.asciz "V_5"
 
-LDIFF_SYM2301=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2301
+LDIFF_SYM2302=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2302
 	.byte 1,105,11
 	.asciz "V_6"
 
-LDIFF_SYM2302=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2302
+LDIFF_SYM2303=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2303
 	.byte 1,102,11
 	.asciz "V_7"
 
-LDIFF_SYM2303=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2303
+LDIFF_SYM2304=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2304
 	.byte 1,105,11
 	.asciz "V_8"
 
-LDIFF_SYM2304=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2304
+LDIFF_SYM2305=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2305
 	.byte 1,102,11
 	.asciz "V_9"
 
-LDIFF_SYM2305=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2305
+LDIFF_SYM2306=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2306
 	.byte 1,105,11
 	.asciz "V_10"
 
-LDIFF_SYM2306=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2306
+LDIFF_SYM2307=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2307
 	.byte 1,102,11
 	.asciz "V_11"
 
-LDIFF_SYM2307=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2307
+LDIFF_SYM2308=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2308
 	.byte 1,105,11
 	.asciz "V_12"
 
-LDIFF_SYM2308=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2308
+LDIFF_SYM2309=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2309
 	.byte 1,102,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2309=Lfde227_end - Lfde227_start
-	.long LDIFF_SYM2309
+LDIFF_SYM2310=Lfde227_end - Lfde227_start
+	.long LDIFF_SYM2310
 Lfde227_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_TracePayload_StructureToPtr_object_intptr_bool
 
-LDIFF_SYM2310=Lme_ef - wrapper_unknown_System_Runtime_TracePayload_StructureToPtr_object_intptr_bool
-	.long LDIFF_SYM2310
+LDIFF_SYM2311=Lme_ef - wrapper_unknown_System_Runtime_TracePayload_StructureToPtr_object_intptr_bool
+	.long LDIFF_SYM2311
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68,154,2
 	.align 3
@@ -35474,87 +35479,87 @@ Lfde227_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2311=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2311
+LDIFF_SYM2312=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2312
 	.byte 2,141,16,3
 	.asciz "param1"
 
-LDIFF_SYM2312=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2312
+LDIFF_SYM2313=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2313
 	.byte 2,141,24,11
 	.asciz "V_0"
-
-LDIFF_SYM2313=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2313
-	.byte 0,11
-	.asciz "V_1"
 
 LDIFF_SYM2314=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2314
 	.byte 0,11
-	.asciz "V_2"
+	.asciz "V_1"
 
 LDIFF_SYM2315=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2315
 	.byte 0,11
-	.asciz "V_3"
+	.asciz "V_2"
 
 LDIFF_SYM2316=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2316
 	.byte 0,11
-	.asciz "V_4"
+	.asciz "V_3"
 
 LDIFF_SYM2317=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2317
 	.byte 0,11
-	.asciz "V_5"
+	.asciz "V_4"
 
 LDIFF_SYM2318=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2318
 	.byte 0,11
-	.asciz "V_6"
+	.asciz "V_5"
 
 LDIFF_SYM2319=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2319
 	.byte 0,11
-	.asciz "V_7"
+	.asciz "V_6"
 
 LDIFF_SYM2320=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2320
 	.byte 0,11
-	.asciz "V_8"
+	.asciz "V_7"
 
 LDIFF_SYM2321=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2321
 	.byte 0,11
-	.asciz "V_9"
+	.asciz "V_8"
 
 LDIFF_SYM2322=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2322
 	.byte 0,11
-	.asciz "V_10"
+	.asciz "V_9"
 
 LDIFF_SYM2323=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2323
 	.byte 0,11
-	.asciz "V_11"
+	.asciz "V_10"
 
 LDIFF_SYM2324=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM2324
+	.byte 0,11
+	.asciz "V_11"
+
+LDIFF_SYM2325=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2325
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2325=Lfde228_end - Lfde228_start
-	.long LDIFF_SYM2325
+LDIFF_SYM2326=Lfde228_end - Lfde228_start
+	.long LDIFF_SYM2326
 Lfde228_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_TracePayload_PtrToStructure_intptr_object
 
-LDIFF_SYM2326=Lme_f0 - wrapper_unknown_System_Runtime_TracePayload_PtrToStructure_intptr_object
-	.long LDIFF_SYM2326
+LDIFF_SYM2327=Lme_f0 - wrapper_unknown_System_Runtime_TracePayload_PtrToStructure_intptr_object
+	.long LDIFF_SYM2327
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29
 	.align 3
@@ -35573,32 +35578,32 @@ Lfde228_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2327=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2327
+LDIFF_SYM2328=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2328
 	.byte 2,141,16,3
 	.asciz "param1"
 
-LDIFF_SYM2328=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2328
+LDIFF_SYM2329=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2329
 	.byte 2,141,24,3
 	.asciz "param2"
 
-LDIFF_SYM2329=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2329
+LDIFF_SYM2330=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2330
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2330=Lfde229_end - Lfde229_start
-	.long LDIFF_SYM2330
+LDIFF_SYM2331=Lfde229_end - Lfde229_start
+	.long LDIFF_SYM2331
 Lfde229_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_StructureToPtr_object_intptr_bool
 
-LDIFF_SYM2331=Lme_f1 - wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_StructureToPtr_object_intptr_bool
-	.long LDIFF_SYM2331
+LDIFF_SYM2332=Lme_f1 - wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_StructureToPtr_object_intptr_bool
+	.long LDIFF_SYM2332
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -35617,27 +35622,27 @@ Lfde229_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2332=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2332
+LDIFF_SYM2333=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2333
 	.byte 2,141,16,3
 	.asciz "param1"
 
-LDIFF_SYM2333=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2333
+LDIFF_SYM2334=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2334
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2334=Lfde230_end - Lfde230_start
-	.long LDIFF_SYM2334
+LDIFF_SYM2335=Lfde230_end - Lfde230_start
+	.long LDIFF_SYM2335
 Lfde230_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_PtrToStructure_intptr_object
 
-LDIFF_SYM2335=Lme_f2 - wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_PtrToStructure_intptr_object
-	.long LDIFF_SYM2335
+LDIFF_SYM2336=Lme_f2 - wrapper_unknown_System_Runtime_Interop_UnsafeNativeMethods_EventData_PtrToStructure_intptr_object
+	.long LDIFF_SYM2336
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -35656,32 +35661,32 @@ Lfde230_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2336=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2336
+LDIFF_SYM2337=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2337
 	.byte 2,141,16,3
 	.asciz "param1"
 
-LDIFF_SYM2337=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2337
+LDIFF_SYM2338=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2338
 	.byte 2,141,24,3
 	.asciz "param2"
 
-LDIFF_SYM2338=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2338
+LDIFF_SYM2339=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2339
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2339=Lfde231_end - Lfde231_start
-	.long LDIFF_SYM2339
+LDIFF_SYM2340=Lfde231_end - Lfde231_start
+	.long LDIFF_SYM2340
 Lfde231_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_StructureToPtr_object_intptr_bool
 
-LDIFF_SYM2340=Lme_f3 - wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_StructureToPtr_object_intptr_bool
-	.long LDIFF_SYM2340
+LDIFF_SYM2341=Lme_f3 - wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_StructureToPtr_object_intptr_bool
+	.long LDIFF_SYM2341
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -35700,27 +35705,27 @@ Lfde231_end:
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM2341=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2341
+LDIFF_SYM2342=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2342
 	.byte 2,141,16,3
 	.asciz "param1"
 
-LDIFF_SYM2342=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM2342
+LDIFF_SYM2343=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM2343
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2343=Lfde232_end - Lfde232_start
-	.long LDIFF_SYM2343
+LDIFF_SYM2344=Lfde232_end - Lfde232_start
+	.long LDIFF_SYM2344
 Lfde232_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_PtrToStructure_intptr_object
 
-LDIFF_SYM2344=Lme_f4 - wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_PtrToStructure_intptr_object
-	.long LDIFF_SYM2344
+LDIFF_SYM2345=Lme_f4 - wrapper_unknown_System_Runtime_Diagnostics_EventDescriptor_PtrToStructure_intptr_object
+	.long LDIFF_SYM2345
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -35733,33 +35738,33 @@ LTDIE_179:
 	.asciz "_InternalEnumerator`1"
 
 	.byte 32,16
-LDIFF_SYM2345=LTDIE_7 - Ldebug_info_start
-	.long LDIFF_SYM2345
+LDIFF_SYM2346=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM2346
 	.byte 2,35,0,6
 	.asciz "array"
 
-LDIFF_SYM2346=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2346
+LDIFF_SYM2347=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2347
 	.byte 2,35,16,6
 	.asciz "idx"
 
-LDIFF_SYM2347=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2347
+LDIFF_SYM2348=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2348
 	.byte 2,35,24,0,7
 	.asciz "_InternalEnumerator`1"
 
-LDIFF_SYM2348=LTDIE_179 - Ldebug_info_start
-	.long LDIFF_SYM2348
+LDIFF_SYM2349=LTDIE_179 - Ldebug_info_start
+	.long LDIFF_SYM2349
 LTDIE_179_POINTER:
 
 	.byte 13
-LDIFF_SYM2349=LTDIE_179 - Ldebug_info_start
-	.long LDIFF_SYM2349
+LDIFF_SYM2350=LTDIE_179 - Ldebug_info_start
+	.long LDIFF_SYM2350
 LTDIE_179_REFERENCE:
 
 	.byte 14
-LDIFF_SYM2350=LTDIE_179 - Ldebug_info_start
-	.long LDIFF_SYM2350
+LDIFF_SYM2351=LTDIE_179 - Ldebug_info_start
+	.long LDIFF_SYM2351
 	.byte 2
 	.asciz "System.Array/InternalEnumerator`1<T_REF>:.ctor"
 	.asciz "System_Array_InternalEnumerator_1_T_REF__ctor_System_Array"
@@ -35771,27 +35776,27 @@ LDIFF_SYM2350=LTDIE_179 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2351=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM2351
+LDIFF_SYM2352=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM2352
 	.byte 2,141,16,3
 	.asciz "array"
 
-LDIFF_SYM2352=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2352
+LDIFF_SYM2353=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2353
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2353=Lfde233_end - Lfde233_start
-	.long LDIFF_SYM2353
+LDIFF_SYM2354=Lfde233_end - Lfde233_start
+	.long LDIFF_SYM2354
 Lfde233_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 
-LDIFF_SYM2354=Lme_f5 - System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
-	.long LDIFF_SYM2354
+LDIFF_SYM2355=Lme_f5 - System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
+	.long LDIFF_SYM2355
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -35810,32 +35815,32 @@ Lfde233_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM2355=LTDIE_171_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM2355
+LDIFF_SYM2356=LTDIE_171_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM2356
 	.byte 2,141,32,3
 	.asciz "index"
 
-LDIFF_SYM2356=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2356
+LDIFF_SYM2357=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2357
 	.byte 2,141,40,11
 	.asciz "value"
 
-LDIFF_SYM2357=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM2357
+LDIFF_SYM2358=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM2358
 	.byte 3,141,200,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM2358=Lfde234_end - Lfde234_start
-	.long LDIFF_SYM2358
+LDIFF_SYM2359=Lfde234_end - Lfde234_start
+	.long LDIFF_SYM2359
 Lfde234_start:
 
 	.long 0
 	.align 3
 	.quad System_Array_InternalArray__get_Item_T_INST_int
 
-LDIFF_SYM2359=Lme_f6 - System_Array_InternalArray__get_Item_T_INST_int
-	.long LDIFF_SYM2359
+LDIFF_SYM2360=Lme_f6 - System_Array_InternalArray__get_Item_T_INST_int
+	.long LDIFF_SYM2360
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29
 	.align 3

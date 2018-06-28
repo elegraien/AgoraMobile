@@ -15,15 +15,15 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @class UIApplicationDelegate;
-@class UIScrollViewDelegate;
-@class UITableViewSource;
-@class UIActionSheetDelegate;
 @class GLKViewDelegate;
-@class UIPickerViewModel;
-@class UISplitViewControllerDelegate;
-@class UIWebViewDelegate;
-@class UICollectionViewDataSource;
 @class UIKit_UIControlEventProxy;
+@class UIActionSheetDelegate;
+@class UICollectionViewDataSource;
+@class UIPickerViewModel;
+@class UIScrollViewDelegate;
+@class UISplitViewControllerDelegate;
+@class UITableViewSource;
+@class UIWebViewDelegate;
 @class Foundation_InternalNSNotificationHandler;
 @class __MonoMac_NSActionDispatcher;
 @class __Xamarin_NSTimerActionDispatcher;
@@ -32,74 +32,8 @@
 @class AVCaptureVideoDataOutputSampleBufferDelegate;
 @class Xamarin_Forms_Platform_iOS_FormsApplicationDelegate;
 @class AppDelegate;
-@class Xamarin_Forms_Platform_iOS_iOS7ButtonContainer;
-@class Xamarin_Forms_Platform_iOS_GlobalCloseContextGestureRecognizer;
-@class Xamarin_Forms_Platform_iOS_ModalWrapper;
-@class Xamarin_Forms_Platform_iOS_PlatformRenderer;
-@class Xamarin_Forms_Platform_iOS_VisualElementRenderer_1;
-@class Xamarin_Forms_Platform_iOS_ViewRenderer_2;
-@class Xamarin_Forms_Platform_iOS_ViewRenderer;
-@class Xamarin_Forms_Platform_iOS_CellTableViewCell;
-@class Xamarin_Forms_Platform_iOS_ActivityIndicatorRenderer;
-@class Xamarin_Forms_Platform_iOS_BoxRenderer;
-@class Xamarin_Forms_Platform_iOS_NoCaretField;
-@class Xamarin_Forms_Platform_iOS_EditorRenderer;
-@class Xamarin_Forms_Platform_iOS_EntryRenderer;
-@class Xamarin_Forms_Platform_iOS_FrameRenderer;
-@class Xamarin_Forms_Platform_iOS_LabelRenderer;
-@class Xamarin_Forms_Platform_iOS_HeaderWrapperView;
-@class Xamarin_Forms_Platform_iOS_FormsUITableViewController;
-@class Xamarin_Forms_Platform_iOS_ProgressBarRenderer;
-@class Xamarin_Forms_Platform_iOS_ScrollViewRenderer;
-@class Xamarin_Forms_Platform_iOS_SearchBarRenderer;
-@class Xamarin_Forms_Platform_iOS_SliderRenderer;
-@class Xamarin_Forms_Platform_iOS_StepperRenderer;
-@class Xamarin_Forms_Platform_iOS_SwitchRenderer;
-@class Xamarin_Forms_Platform_iOS_TableViewModelRenderer;
-@class Xamarin_Forms_Platform_iOS_UnEvenTableViewModelRenderer;
-@class Xamarin_Forms_Platform_iOS_TableViewRenderer;
-@class Xamarin_Forms_Platform_iOS_ChildViewController;
-@class Xamarin_Forms_Platform_iOS_EventedViewController;
-@class Xamarin_Forms_Platform_iOS_NativeViewWrapperRenderer;
-@class Xamarin_Forms_Platform_iOS_NativeViewPropertyListener;
-@class Xamarin_Forms_Platform_iOS_ContextActionsCell_SelectGestureRecognizer;
-@class Xamarin_Forms_Platform_iOS_ContextActionsCell_MoreActionSheetController;
-@class Xamarin_Forms_Platform_iOS_ContextActionsCell_MoreActionSheetDelegate;
-@class Xamarin_Forms_Platform_iOS_ContextActionsCell;
-@class Xamarin_Forms_Platform_iOS_ContextScrollViewDelegate;
-@class Xamarin_Forms_Platform_iOS_Platform_DefaultRenderer;
-@class Xamarin_Forms_Platform_iOS_EntryCellRenderer_EntryCellTableViewCell;
-@class Xamarin_Forms_Platform_iOS_ViewCellRenderer_ViewTableCell;
-@class Xamarin_Forms_Platform_iOS_ButtonRenderer;
-@class Xamarin_Forms_Platform_iOS_CarouselPageRenderer_PageContainer;
-@class Xamarin_Forms_Platform_iOS_CarouselPageRenderer;
-@class Xamarin_Forms_Platform_iOS_DatePickerRenderer;
-@class Xamarin_Forms_Platform_iOS_ImageRenderer;
-@class Xamarin_Forms_Platform_iOS_ListViewRenderer_ListViewDataSource;
-@class Xamarin_Forms_Platform_iOS_ListViewRenderer_UnevenListViewDataSource;
-@class Xamarin_Forms_Platform_iOS_ListViewRenderer;
-@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer_NavigationCell;
-@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer;
-@class Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController;
-@class Xamarin_Forms_Platform_iOS_NavigationRenderer;
-@class Xamarin_Forms_Platform_iOS_OpenGLViewRenderer_Delegate;
-@class Xamarin_Forms_Platform_iOS_OpenGLViewRenderer;
-@class Xamarin_Forms_Platform_iOS_PageRenderer;
-@class Xamarin_Forms_Platform_iOS_PhoneMasterDetailRenderer_ChildViewController;
-@class Xamarin_Forms_Platform_iOS_PhoneMasterDetailRenderer;
-@class Xamarin_Forms_Platform_iOS_PickerRenderer_PickerSource;
-@class Xamarin_Forms_Platform_iOS_PickerRenderer;
-@class Xamarin_Forms_Platform_iOS_TabbedRenderer;
-@class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer_InnerDelegate;
-@class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer;
-@class Xamarin_Forms_Platform_iOS_TimePickerRenderer;
-@class Xamarin_Forms_Platform_iOS_WebViewRenderer_CustomWebViewDelegate;
-@class Xamarin_Forms_Platform_iOS_WebViewRenderer;
-@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_PrimaryToolbarItem;
-@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_SecondaryToolbarItem_SecondaryToolbarItemContent;
-@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_SecondaryToolbarItem;
-@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer_DataSource;
-@class Xamarin_Forms_Platform_iOS_NavigationRenderer_SecondaryToolbar;
+@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
+@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 @class GLKit_GLKView__GLKViewDelegate;
 @class UIKit_UIBarButtonItem_Callback;
 @class UIKit_UIView_UIViewAppearance;
@@ -121,10 +55,78 @@
 @class UIKit_UITabBarController__UITabBarControllerDelegate;
 @class UIKit_UIWebView__UIWebViewDelegate;
 @class __NSObject_Disposer;
+@class Xamarin_Forms_Platform_iOS_iOS7ButtonContainer;
+@class Xamarin_Forms_Platform_iOS_GlobalCloseContextGestureRecognizer;
+@class Xamarin_Forms_Platform_iOS_ModalWrapper;
+@class Xamarin_Forms_Platform_iOS_PlatformRenderer;
+@class Xamarin_Forms_Platform_iOS_VisualElementRenderer_1;
+@class Xamarin_Forms_Platform_iOS_ViewRenderer_2;
+@class Xamarin_Forms_Platform_iOS_ViewRenderer;
+@class Xamarin_Forms_Platform_iOS_CellTableViewCell;
+@class Xamarin_Forms_Platform_iOS_ActivityIndicatorRenderer;
+@class Xamarin_Forms_Platform_iOS_BoxRenderer;
+@class Xamarin_Forms_Platform_iOS_NoCaretField;
+@class Xamarin_Forms_Platform_iOS_EntryRenderer;
+@class Xamarin_Forms_Platform_iOS_FrameRenderer;
+@class Xamarin_Forms_Platform_iOS_LabelRenderer;
+@class Xamarin_Forms_Platform_iOS_HeaderWrapperView;
+@class Xamarin_Forms_Platform_iOS_FormsRefreshControl;
+@class Xamarin_Forms_Platform_iOS_ProgressBarRenderer;
+@class Xamarin_Forms_Platform_iOS_ScrollViewRenderer;
+@class Xamarin_Forms_Platform_iOS_SearchBarRenderer;
+@class Xamarin_Forms_Platform_iOS_StepperRenderer;
+@class Xamarin_Forms_Platform_iOS_SwitchRenderer;
+@class Xamarin_Forms_Platform_iOS_TableViewModelRenderer;
+@class Xamarin_Forms_Platform_iOS_UnEvenTableViewModelRenderer;
+@class Xamarin_Forms_Platform_iOS_TableViewRenderer;
+@class Xamarin_Forms_Platform_iOS_ChildViewController;
+@class Xamarin_Forms_Platform_iOS_EventedViewController;
+@class Xamarin_Forms_Platform_iOS_NativeViewWrapperRenderer;
+@class Xamarin_Forms_Platform_iOS_NativeViewPropertyListener;
+@class Xamarin_Forms_Platform_iOS_ContextActionsCell_SelectGestureRecognizer;
+@class Xamarin_Forms_Platform_iOS_ContextActionsCell_MoreActionSheetController;
+@class Xamarin_Forms_Platform_iOS_ContextActionsCell_MoreActionSheetDelegate;
+@class Xamarin_Forms_Platform_iOS_ContextActionsCell;
+@class Xamarin_Forms_Platform_iOS_ContextScrollViewDelegate;
+@class Xamarin_Forms_Platform_iOS_Platform_DefaultRenderer;
+@class Xamarin_Forms_Platform_iOS_EntryCellRenderer_EntryCellTableViewCell;
+@class Xamarin_Forms_Platform_iOS_ViewCellRenderer_ViewTableCell;
+@class Xamarin_Forms_Platform_iOS_ButtonRenderer;
+@class Xamarin_Forms_Platform_iOS_CarouselPageRenderer_PageContainer;
+@class Xamarin_Forms_Platform_iOS_CarouselPageRenderer;
+@class Xamarin_Forms_Platform_iOS_DatePickerRenderer;
+@class Xamarin_Forms_Platform_iOS_EditorRenderer_FormsUITextView;
+@class Xamarin_Forms_Platform_iOS_EditorRenderer;
+@class Xamarin_Forms_Platform_iOS_ImageRenderer;
+@class Xamarin_Forms_Platform_iOS_ListViewRenderer_ListViewDataSource;
+@class Xamarin_Forms_Platform_iOS_ListViewRenderer_UnevenListViewDataSource;
+@class Xamarin_Forms_Platform_iOS_ListViewRenderer;
+@class Xamarin_Forms_Platform_iOS_FormsUITableViewController;
+@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer_NavigationCell;
+@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer;
+@class Xamarin_Forms_Platform_iOS_NavigationRenderer;
+@class Xamarin_Forms_Platform_iOS_OpenGLViewRenderer_Delegate;
+@class Xamarin_Forms_Platform_iOS_OpenGLViewRenderer;
+@class Xamarin_Forms_Platform_iOS_PageRenderer;
+@class Xamarin_Forms_Platform_iOS_PhoneMasterDetailRenderer_ChildViewController;
+@class Xamarin_Forms_Platform_iOS_PhoneMasterDetailRenderer;
+@class Xamarin_Forms_Platform_iOS_PickerRenderer_PickerSource;
+@class Xamarin_Forms_Platform_iOS_PickerRenderer;
+@class Xamarin_Forms_Platform_iOS_SliderRenderer;
+@class Xamarin_Forms_Platform_iOS_TabbedRenderer;
+@class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer_InnerDelegate;
+@class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer;
+@class Xamarin_Forms_Platform_iOS_TimePickerRenderer;
+@class Xamarin_Forms_Platform_iOS_WebViewRenderer_CustomWebViewDelegate;
+@class Xamarin_Forms_Platform_iOS_WebViewRenderer;
+@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_PrimaryToolbarItem;
+@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_SecondaryToolbarItem_SecondaryToolbarItemContent;
+@class Xamarin_Forms_Platform_iOS_ToolbarItemExtensions_SecondaryToolbarItem;
+@class Xamarin_Forms_Platform_iOS_NavigationMenuRenderer_DataSource;
+@class Xamarin_Forms_Platform_iOS_NavigationRenderer_SecondaryToolbar;
+@class Xamarin_Forms_Platform_iOS_NavigationRenderer_ParentingViewController;
 @class TTG_TTGSnackbar;
 @class AIDatePickerController;
-@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
-@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 @class BigTed_ProgressHUD;
 @class ZXing_Net_Mobile_Forms_iOS_ZXingScannerViewRenderer;
 @class ZXing_Net_Mobile_Forms_iOS_ZXingBarcodeImageViewRenderer;
@@ -141,12 +143,7 @@
 	-(id) init;
 @end
 
-@interface UIScrollViewDelegate : NSObject<UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITableViewSource : NSObject<UIScrollViewDelegate> {
+@interface GLKViewDelegate : NSObject<GLKViewDelegate> {
 }
 	-(id) init;
 @end
@@ -156,7 +153,7 @@
 	-(id) init;
 @end
 
-@interface GLKViewDelegate : NSObject<GLKViewDelegate> {
+@interface UICollectionViewDataSource : NSObject<UICollectionViewDataSource> {
 }
 	-(id) init;
 @end
@@ -166,17 +163,22 @@
 	-(id) init;
 @end
 
+@interface UIScrollViewDelegate : NSObject<UIScrollViewDelegate> {
+}
+	-(id) init;
+@end
+
 @interface UISplitViewControllerDelegate : NSObject<UISplitViewControllerDelegate> {
 }
 	-(id) init;
 @end
 
-@interface UIWebViewDelegate : NSObject<UIWebViewDelegate> {
+@interface UITableViewSource : NSObject<UIScrollViewDelegate> {
 }
 	-(id) init;
 @end
 
-@interface UICollectionViewDataSource : NSObject<UICollectionViewDataSource> {
+@interface UIWebViewDelegate : NSObject<UIWebViewDelegate> {
 }
 	-(id) init;
 @end
@@ -197,6 +199,8 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIWindow *) window;
+	-(void) setWindow:(UIWindow *)p0;
 	-(BOOL) application:(UIApplication *)p0 continueUserActivity:(NSUserActivity *)p1 restorationHandler:(id)p2;
 	-(void) applicationDidEnterBackground:(UIApplication *)p0;
 	-(BOOL) application:(UIApplication *)p0 didFinishLaunchingWithOptions:(NSDictionary *)p1;
@@ -214,6 +218,63 @@
 }
 	-(BOOL) application:(UIApplication *)p0 didFinishLaunchingWithOptions:(NSDictionary *)p1;
 	-(id) init;
+@end
+
+@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	+(Class) layerClass;
+	-(void) layoutSubviews;
+	-(void) willMoveToWindow:(UIWindow *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithFrame:(CGRect)p0;
+@end
+
+@interface UIKit_UIView_UIViewAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIColor *) tintColor;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface UIKit_UIControl_UIControlAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface UIKit_UIButton_UIButtonAppearance : UIKit_UIControl_UIControlAppearance {
+}
+	-(UIImage *) backgroundImageForState:(NSUInteger)p0;
+	-(UIColor *) titleColorForState:(NSUInteger)p0;
+	-(UIColor *) titleShadowColorForState:(NSUInteger)p0;
+@end
+
+@interface __UIGestureRecognizerToken : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface __UIGestureRecognizerParameterlessToken : __UIGestureRecognizerToken {
+}
+	-(void) target;
+@end
+
+@interface UIKit_UINavigationBar_UINavigationBarAppearance : UIKit_UIView_UIViewAppearance {
+}
+	-(UIColor *) barTintColor;
+	-(NSDictionary *) largeTitleTextAttributes;
+	-(NSDictionary *) titleTextAttributes;
 @end
 
 @interface Xamarin_Forms_Platform_iOS_VisualElementRenderer_1 : UIView {
@@ -263,11 +324,6 @@
 	-(id) init;
 @end
 
-@interface Xamarin_Forms_Platform_iOS_EditorRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
-}
-	-(id) init;
-@end
-
 @interface Xamarin_Forms_Platform_iOS_EntryRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
 }
 	-(id) init;
@@ -282,6 +338,18 @@
 }
 	-(void) layoutSubviews;
 	-(id) init;
+@end
+
+@interface Xamarin_Forms_Platform_iOS_FormsRefreshControl : UIRefreshControl {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) isHidden;
+	-(void) setHidden:(BOOL)p0;
+	-(void) beginRefreshing;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface Xamarin_Forms_Platform_iOS_ProgressBarRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
@@ -302,12 +370,6 @@
 @end
 
 @interface Xamarin_Forms_Platform_iOS_SearchBarRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
-}
-	-(CGSize) sizeThatFits:(CGSize)p0;
-	-(id) init;
-@end
-
-@interface Xamarin_Forms_Platform_iOS_SliderRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
 }
 	-(CGSize) sizeThatFits:(CGSize)p0;
 	-(id) init;
@@ -386,6 +448,11 @@
 	-(id) init;
 @end
 
+@interface Xamarin_Forms_Platform_iOS_EditorRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
+}
+	-(id) init;
+@end
+
 @interface Xamarin_Forms_Platform_iOS_ImageRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
 }
 	-(id) init;
@@ -412,6 +479,7 @@
 	-(NSArray *) popToRootViewControllerAnimated:(BOOL)p0;
 	-(UIViewController *) popViewControllerAnimated:(BOOL)p0;
 	-(void) viewDidAppear:(BOOL)p0;
+	-(void) viewWillAppear:(BOOL)p0;
 	-(void) viewDidDisappear:(BOOL)p0;
 	-(void) viewDidLayoutSubviews;
 	-(void) viewDidLoad;
@@ -455,6 +523,12 @@
 
 @interface Xamarin_Forms_Platform_iOS_PickerRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
 }
+	-(id) init;
+@end
+
+@interface Xamarin_Forms_Platform_iOS_SliderRenderer : Xamarin_Forms_Platform_iOS_ViewRenderer_2 {
+}
+	-(CGSize) sizeThatFits:(CGSize)p0;
 	-(id) init;
 @end
 
@@ -509,48 +583,6 @@
 	-(id) init;
 @end
 
-@interface UIKit_UIView_UIViewAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIColor *) tintColor;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface UIKit_UIControl_UIControlAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UIButton_UIButtonAppearance : UIKit_UIControl_UIControlAppearance {
-}
-	-(UIImage *) backgroundImageForState:(NSUInteger)p0;
-	-(UIColor *) titleColorForState:(NSUInteger)p0;
-	-(UIColor *) titleShadowColorForState:(NSUInteger)p0;
-@end
-
-@interface __UIGestureRecognizerToken : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-@end
-
-@interface __UIGestureRecognizerParameterlessToken : __UIGestureRecognizerToken {
-}
-	-(void) target;
-@end
-
-@interface UIKit_UINavigationBar_UINavigationBarAppearance : UIKit_UIView_UIViewAppearance {
-}
-	-(UIColor *) barTintColor;
-	-(NSDictionary *) titleTextAttributes;
-@end
-
 @interface TTG_TTGSnackbar : UIView {
 }
 	-(void) release;
@@ -574,20 +606,6 @@
 	-(id) animationControllerForDismissedController:(UIViewController *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
-@end
-
-@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	+(Class) layerClass;
-	-(void) layoutSubviews;
-	-(void) willMoveToWindow:(UIWindow *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) initWithCoder:(NSCoder *)p0;
-	-(id) initWithFrame:(CGRect)p0;
 @end
 
 @interface BigTed_ProgressHUD : UIView {

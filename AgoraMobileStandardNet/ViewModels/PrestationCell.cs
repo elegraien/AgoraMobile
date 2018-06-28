@@ -24,7 +24,7 @@ namespace AgoraMobileStandardNet.ViewModels
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Orientation = StackOrientation.Horizontal,
-                Padding = new Thickness(20, 10, 60, 10),
+                Padding = new Thickness(20, 10, 20, 10),
                 Children = { image, titleLayout }
             };
 
