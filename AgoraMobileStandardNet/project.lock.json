@@ -488,32 +488,36 @@
     ".NETPortable,Version=v4.5,Profile=Profile111": []
   },
   "packageFolders": {
-    "/Users/christiannavelot/.nuget/packages/": {}
+    "C:\\Users\\elegr\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
+      "projectUniqueName": "D:\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
       "projectName": "AgoraMobileStandardNet",
-      "projectPath": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/AgoraMobileStandardNet.csproj",
-      "projectJsonPath": "/Volumes/Storage/Github/AgoraMobile/AgoraMobileStandardNet/project.json",
-      "packagesPath": "/Users/christiannavelot/.nuget/packages/",
+      "projectPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
+      "projectJsonPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\project.json",
+      "packagesPath": "C:\\Users\\elegr\\.nuget\\packages\\",
+      "outputPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "/Users/christiannavelot/.config/NuGet/NuGet.Config"
+        "C:\\Users\\elegr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://nuget.telerik.com/nuget": {},
+        "https://www.nuget.org/api/v2/": {}
       }
     },
     "dependencies": {
-      "sqlite-net-pcl": "1.4.118",
-      "SQLitePCLRaw.bundle_green": "1.1.11",
-      "SQLitePCLRaw.core": "1.1.11",
-      "System.Json": "4.5.0",
-      "Xam.Plugins.Settings": "3.1.1",
-      "Xamarin.Forms": "3.1.0.583944",
-      "ZXing.Net.Mobile": "2.4.1",
-      "ZXing.Net.Mobile.Forms": "2.4.1"
+      "SQLitePCLRaw.bundle_green": "[1.1.11, )",
+      "SQLitePCLRaw.core": "[1.1.11, )",
+      "System.Json": "[4.5.0, )",
+      "Xam.Plugins.Settings": "[3.1.1, )",
+      "Xamarin.Forms": "[3.1.0.583944, )",
+      "ZXing.Net.Mobile": "[2.4.1, )",
+      "ZXing.Net.Mobile.Forms": "[2.4.1, )",
+      "sqlite-net-pcl": "[1.4.118, )"
     },
     "frameworks": {
       "portable45-net45+win8+wpa81": {}

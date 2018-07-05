@@ -152,46 +152,126 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\nonetwork.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\nonetwork.imageset\nonetwork.png" />
-    <ImageAsset Include="Assets.xcassets\backarrow.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\backarrow.imageset\backarrow.png" />
-    <ImageAsset Include="Assets.xcassets\hamburger.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\hamburger.imageset\hamburger.png" />
-    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\haut_accueil.png" />
-    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\bas_accueil.png" />
-    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\logo_agora_check_in.png" />
-    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\bouton_connexion.png" />
-    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\bouton_hors_ligne.png" />
-    <ImageAsset Include="Assets.xcassets\retour.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\retour.imageset\retour.png" />
-    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\picto_manifestation.png" />
-    <ImageAsset Include="Assets.xcassets\picto_prestation.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_prestation.imageset\picto_prestation.png" />
-    <ImageAsset Include="Assets.xcassets\picto_accueil.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_accueil.imageset\picto_accueil.png" />
-    <ImageAsset Include="Assets.xcassets\picto_invite.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_invite.imageset\picto_invite.png" />
-    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\fond_profil_utilisateur.png" />
-    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\picto_profil_utilisateur.png" />
-    <ImageAsset Include="Assets.xcassets\accueil.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\accueil.imageset\accueil.png" />
-    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\picto_atelier.png" />
-    <ImageAsset Include="Assets.xcassets\menu.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\menu.imageset\menu.png" />
-    <ImageAsset Include="Assets.xcassets\check.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\check.imageset\check.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\nonetwork.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\nonetwork.imageset\nonetwork.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backarrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backarrow.imageset\backarrow.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\hamburger.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\hamburger.imageset\hamburger.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\haut_accueil.imageset\haut_accueil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\bas_accueil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bas_accueil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_agora_check_in.imageset\logo_agora_check_in.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bouton_connexion.imageset\bouton_connexion.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bouton_hors_ligne.imageset\bouton_hors_ligne.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\retour.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\retour.imageset\retour.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_manifestation.imageset\picto_manifestation.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_prestation.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_prestation.imageset\picto_prestation.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_accueil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_accueil.imageset\picto_accueil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_invite.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_invite.imageset\picto_invite.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\fond_profil_utilisateur.imageset\fond_profil_utilisateur.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_profil_utilisateur.imageset\picto_profil_utilisateur.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\accueil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\accueil.imageset\accueil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\picto_atelier.imageset\picto_atelier.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\menu.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\menu.imageset\menu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\check.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\check.imageset\check.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
