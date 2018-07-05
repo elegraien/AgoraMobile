@@ -492,12 +492,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
+      "projectUniqueName": "C:\\Devs\\GitHub\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
       "projectName": "AgoraMobileStandardNet",
-      "projectPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
-      "projectJsonPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\project.json",
+      "projectPath": "C:\\Devs\\GitHub\\AgoraMobile\\AgoraMobileStandardNet\\AgoraMobileStandardNet.csproj",
+      "projectJsonPath": "C:\\Devs\\GitHub\\AgoraMobile\\AgoraMobileStandardNet\\project.json",
       "packagesPath": "C:\\Users\\elegr\\.nuget\\packages\\",
-      "outputPath": "D:\\AgoraMobile\\AgoraMobileStandardNet\\obj\\",
+      "outputPath": "C:\\Devs\\GitHub\\AgoraMobile\\AgoraMobileStandardNet\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\elegr\\AppData\\Roaming\\NuGet\\NuGet.Config",
