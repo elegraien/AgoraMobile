@@ -25,3 +25,17 @@ C:\Users\Dev1\Downloads\AgoraMobile-master\AgoraMobile-master\AgoraMobileStandar
 C:\Users\Dev1\Downloads\AgoraMobile-master\AgoraMobile-master\AgoraMobileStandardNet\obj\Release\XamlC.stamp
 C:\Users\Dev1\Downloads\AgoraMobile-master\AgoraMobile-master\AgoraMobileStandardNet\obj\Release\AgoraMobileStandardNet.dll
 C:\Users\Dev1\Downloads\AgoraMobile-master\AgoraMobile-master\AgoraMobileStandardNet\obj\Release\AgoraMobileStandardNet.csprojAssemblyReference.cache
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\bin\Release\nonetwork.png
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\bin\Release\AgoraMobileStandardNet.dll
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\AgoraMobileStandardNet.csprojAssemblyReference.cache
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\App.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\LoginPage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\SearchDialogPage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\ListPrestationsPage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\ListPeoplePage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\ListEventsPage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\DetailPeoplePage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\Pages\CustomContentPage.xaml.g.cs
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\AgoraMobileStandardNet.csproj.CoreCompileInputs.cache
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\XamlC.stamp
+C:\Devs\GitHub\AgoraMobile\AgoraMobileStandardNet\obj\Release\AgoraMobileStandardNet.dll
