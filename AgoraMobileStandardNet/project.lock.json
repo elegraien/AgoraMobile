@@ -57,7 +57,7 @@
           "lib/netstandard1.0/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Forms/3.1.0.583944": {
+      "Xamarin.Forms/3.1.0.637273": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/Xamarin.Forms.Core.dll": {},
@@ -282,10 +282,10 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.Forms/3.1.0.583944": {
-      "sha512": "q4AGFr8k9z6v5u++COV6M5TEZ8Oh8iiU3inVysapL5j75bhKfbcU2RizgZxTQ7+2CdlzVK+Dz+nyFx4JFh0Cwg==",
+    "Xamarin.Forms/3.1.0.637273": {
+      "sha512": "iYIMlhf5BFutJiVYYfawEtMzq4vo9m5qdT7R/IeDD40ENsqxqMBmvwp1/VzfD0las3ptkE0vgUG57O7QcUJlow==",
       "type": "package",
-      "path": "xamarin.forms/3.1.0.583944",
+      "path": "xamarin.forms/3.1.0.637273",
       "files": [
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
@@ -315,13 +315,11 @@
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
-        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
@@ -429,7 +427,7 @@
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.1.0.583944.nupkg.sha512",
+        "xamarin.forms.3.1.0.637273.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -480,7 +478,7 @@
       "SQLitePCLRaw.core >= 1.1.11",
       "System.Json >= 4.5.0",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.Forms >= 3.1.0.583944",
+      "Xamarin.Forms >= 3.1.0.637273",
       "ZXing.Net.Mobile >= 2.4.1",
       "ZXing.Net.Mobile.Forms >= 2.4.1",
       "sqlite-net-pcl >= 1.4.118"
@@ -514,7 +512,7 @@
       "SQLitePCLRaw.core": "[1.1.11, )",
       "System.Json": "[4.5.0, )",
       "Xam.Plugins.Settings": "[3.1.1, )",
-      "Xamarin.Forms": "[3.1.0.583944, )",
+      "Xamarin.Forms": "[3.1.0.637273, )",
       "ZXing.Net.Mobile": "[2.4.1, )",
       "ZXing.Net.Mobile.Forms": "[2.4.1, )",
       "sqlite-net-pcl": "[1.4.118, )"

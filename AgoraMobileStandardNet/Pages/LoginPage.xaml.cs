@@ -90,7 +90,7 @@ namespace AgoraMobileStandardNet.Pages
                     if (await validateService.SendAll())
                     {
                         // Pour l'instant, on ne fait rien du retour...
-                        await this.DisplayAlert("Information", "Les modifiations faites en Hors Connexion viennent d'être exportées.", "OK");
+                        await this.DisplayAlert("Information", "Les modifications faites en Hors Connexion viennent d'être exportées.", "OK");
                     }
 
                 }

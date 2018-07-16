@@ -140,15 +140,18 @@ namespace AgoraMobileStandardNet.Services
         {
             // Uniquement la 1ère ligne
             this.InscriptionsCells.Clear();
-            if (presences.Count >= 1)
+            if (presences.Count > 0)
             {
                 var cell = new TempInscriptionForCell(presences[0]);
                 // On ajoute la / les dates
-                for (int i = 1; i < presences.Count; i++)
+                if (presences.Count > 1)
                 {
+                    for (int i = 1; i < presences.Count; i++)
+                    {
 
-                    cell.ValidationDateList.Add(TempInscriptionForCell.GetValidationDateText(presences[i].DatePresence));
+                        cell.ValidationDateList.Add(TempInscriptionForCell.GetValidationDateText(presences[i].DatePresence));
 
+                    }
                 }
                 InscriptionsCells.Add(cell);
             }

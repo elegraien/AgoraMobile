@@ -13,7 +13,7 @@
 namespace AgoraMobileStandardNet.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/DetailPeoplePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\DetailPeoplePage.xaml")]
     public partial class DetailPeoplePage : global::AgoraMobileStandardNet.Pages.CustomContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

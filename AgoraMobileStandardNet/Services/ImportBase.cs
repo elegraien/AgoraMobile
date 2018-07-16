@@ -3,6 +3,7 @@ using AgoraMobileStandardNet.Pages;
 using AgoraMobileStandardNet.Models;
 using AgoraMobileStandardNet.Services;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AgoraMobileStandardNet.Services
 {
@@ -29,6 +30,8 @@ namespace AgoraMobileStandardNet.Services
             // Liste participants pour chaque prestation
             foreach (Prestation prestation in prestations)
             {
+                Debug.WriteLine("Download prestation : " + prestation.Title);
+                     
                 // Remarque : pour idPrestation=0 : on transforme en null
                 int? prestationId = prestation.Id;
                 if (prestationId == 0)
@@ -39,6 +42,8 @@ namespace AgoraMobileStandardNet.Services
                 // Pour chaque participant, on va récupérer les datas
                 foreach (Participant participant in participants)
                 {
+                    Debug.WriteLine("* Download participant : " + participant.FirstName + " " + participant.LastName);
+
                     var participantData = new DetailPeopleData(token);
                     var participantDetail = await participantData.GetInstances(idEvent, prestationId, participant.Id);
                     var inscriptionCells = participantData.InscriptionsCells;

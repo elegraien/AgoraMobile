@@ -20,7 +20,7 @@
                                FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" 
                                VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" />
                         <Image x:Name="ImgNoNetwork" Source="nonetwork.png" IsVisible="{TemplateBinding BindingContext.IsHorsConnexionVisible}" HeightRequest="25" WidthRequest="25" />
-                        <Image Source="menu.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" >
+                        <Image Source="menu.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="DisplayActionSheet" />
                             </Image.GestureRecognizers>

@@ -16,7 +16,7 @@ namespace AgoraMobileStandardNet.Models
         public DateTime? DatePresence { get; set; }
         public int IdParticipant { get; set; }
         public int IdStatusA39 { get; set; }
-        public int? IdPrestation { get; set; }
+        public Nullable<int> IdPrestation { get; set; }
 
         public InscriptionParticipant()
         {
@@ -88,12 +88,15 @@ namespace AgoraMobileStandardNet.Models
 
         public TempInscriptionForCell(InscriptionParticipant ip)
         {
-            this.Title = ip.Libelle;
+            this.Title = (ip.Libelle == null ? "" : ip.Libelle);
             this.ValidationDateList = new List<string>();
             this.ValidationDateList.Add(GetValidationDateText(ip.DatePresence));
 
-            this.Status = Global.StatutsParticipant[ip.IdStatusA39];
-            this.StatusColor = Global.StatusColors[ip.IdStatusA39];
+            if (Global.StatutsParticipant.Length > ip.IdStatusA39)
+            {
+                this.Status = Global.StatutsParticipant[ip.IdStatusA39];
+                this.StatusColor = Global.StatusColors[ip.IdStatusA39];
+            }
         }
 
         public TempInscriptionForCell(PresenceParticipant pp)
@@ -102,8 +105,11 @@ namespace AgoraMobileStandardNet.Models
             this.ValidationDateList = new List<string>();
             this.ValidationDateList.Add(GetValidationDateText(pp.DatePresence));
 
-            this.Status = Global.StatutsParticipant[pp.StatusPartA09];
-            this.StatusColor = Global.StatusColors[pp.StatusPartA09];
+            if (Global.StatutsParticipant.Length > pp.StatusPartA09)
+            {
+                this.Status = Global.StatutsParticipant[pp.StatusPartA09];
+                this.StatusColor = Global.StatusColors[pp.StatusPartA09];
+            }
         }
 
         /// <summary>

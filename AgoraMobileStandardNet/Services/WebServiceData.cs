@@ -306,14 +306,15 @@ namespace AgoraMobileStandardNet.Services
         public void InsertData(T instance)
         {
             // Attention : Si id=0 : on n'ajoute pas
-            if (instance.Id == 0)
+            // TEST
+            /*if (instance.Id == 0)
             {
 
                 // Debug
                 Debug.WriteLine("ERREUR d'Insert - id=0 : " + instance.ToString());
 
                 return;
-            }
+            }*/
 
             // On vérifie si l'instance n'existe pas déjà, auquel cas on l'update
             if (instance.Id != 0 && sqlData.GetT(instance.Id) != null)
